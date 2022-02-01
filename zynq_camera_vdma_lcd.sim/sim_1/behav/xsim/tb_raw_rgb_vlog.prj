@@ -1,0 +1,33 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" --include "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" --include "D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_blc.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_bnr.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_ccm.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_csc.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_demosaic.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_dgain.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_dpc.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_ee.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_gamma.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_stat_ae.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_stat_awb.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_top.v" \
+"../../../../zynq_camera_vdma_lcd.srcs/sim_1/new/isp_top_wrapper.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v" \
+"../../../../xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/isp_wb.v" \
+"../../../../zynq_camera_vdma_lcd.srcs/sim_1/new/tb_dvp_raw_send.v" \
+"../../../../zynq_camera_vdma_lcd.srcs/sim_1/new/tb_dvp_xrgb_recv.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_crop.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_dscale.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_hist_equ.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_sobel.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_top.v" \
+"../../../../zynq_camera_vdma_lcd.srcs/sim_1/new/vip_top_wrapper.v" \
+"../../../../xil_ip_repo/xil_vip_1.0/hdl/vip/vip_yuv2rgb.v" \
+"../../../../zynq_camera_vdma_lcd.srcs/sim_1/new/tb_raw_rgb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

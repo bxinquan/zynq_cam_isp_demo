@@ -1,0 +1,1170 @@
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
+| Date         : Thu Jan 20 00:28:14 2022
+| Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_1_wrapper_methodology_drc_routed.rpt -pb design_1_wrapper_methodology_drc_routed.pb -rpx design_1_wrapper_methodology_drc_routed.rpx
+| Design       : design_1_wrapper
+| Device       : xc7z020clg400-2
+| Speed File   : -2
+| Design State : Fully Routed
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 225
++-----------+----------+------------------------------------------------------+------------+
+| Rule      | Severity | Description                                          | Violations |
++-----------+----------+------------------------------------------------------+------------+
+| DPIR-1    | Warning  | Asynchronous driver check                            | 140        |
+| LUTAR-1   | Warning  | LUT drives async reset alert                         | 41         |
+| TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree   | 2          |
+| TIMING-9  | Warning  | Unknown CDC Logic                                    | 1          |
+| TIMING-10 | Warning  | Missing property on synchronizer                     | 1          |
+| TIMING-14 | Warning  | LUT on the clock tree                                | 11         |
+| TIMING-18 | Warning  | Missing input or output delay                        | 12         |
+| TIMING-24 | Warning  | Overridden Max delay datapath only                   | 11         |
+| TIMING-27 | Warning  | Invalid primary clock on hierarchical pin            | 2          |
+| TIMING-28 | Warning  | Auto-derived clock referenced by a timing constraint | 2          |
+| TIMING-38 | Warning  | Bus skew constraint applied on multiple clocks       | 2          |
++-----------+----------+------------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#14 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#15 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#16 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#17 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#18 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#19 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#20 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#21 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#22 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#23 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#24 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#25 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#26 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#27 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#28 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#29 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#30 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#31 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#32 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#33 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#34 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#35 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#36 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#37 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#38 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#39 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#40 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#41 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#42 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#43 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#44 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#45 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#46 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#47 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#48 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#49 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#50 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#51 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#52 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#53 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#54 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#55 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#56 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#57 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#58 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#59 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#60 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#61 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#62 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#63 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#64 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#65 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#66 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#67 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#68 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#69 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#70 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#71 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#72 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#73 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#74 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#75 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#76 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#77 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#78 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#79 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#80 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#81 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#82 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#83 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#84 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#85 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#86 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#87 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#88 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#89 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#90 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#91 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#92 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#93 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#94 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#95 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#96 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#97 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#98 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[13] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#99 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[14] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#100 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[15] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#101 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[16] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#102 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[17] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#103 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[18] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#104 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[19] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#105 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#106 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[20] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#107 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[21] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#108 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[22] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#109 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#110 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#111 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#112 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#113 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#114 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#115 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#116 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_data_20__0/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#117 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#118 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#119 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#120 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#121 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#122 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#123 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#124 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r20/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#125 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#126 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#127 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#128 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#129 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#130 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#131 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#132 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r10/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#133 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#134 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#135 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#136 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#137 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#138 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#139 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#140 Warning
+Asynchronous driver check  
+DSP design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10 input pin design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r10/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+LUTAR-1#1 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_pix_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_line_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_pix_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/prev_href_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[8]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/odd_pix_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/href_dly_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_rb_1_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_rb_1_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_rb_1_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_rb_1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_rb_1_reg[5]/CLR (the first 15 of 467 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_r[17]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_reg[1]/CLR (the first 15 of 74 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/in_g_1[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_bb_reg[6]/CLR (the first 15 of 189 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#5 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/href_dly[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_g_reg[5]/CLR (the first 15 of 178 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#6 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_line_rep_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_line_reg_rep/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_pix_reg_rep/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p21_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p21_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p21_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p21_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p21_reg[4]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#7 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_pix_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_line_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_pix_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[18]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[19]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g2_reg[20]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#8 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12[0]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p12_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb1_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb2_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb2_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb2_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb2_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_rb2_reg[4]/CLR (the first 15 of 73 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#9 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p35[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/in_raw_r_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p13_reg[5]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#10 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_fmt[1]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/g_now_reg[5]/CLR (the first 15 of 160 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#11 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t2_g2[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[18]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[19]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[20]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[21]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/t1_g1_reg[22]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#12 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/href_dly[2]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_1_reg[10]/CLR (the first 15 of 43 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#13 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/odd_pix_i_2__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/odd_line_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/odd_pix_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p14_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p15_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p15_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p15_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p15_reg[3]/CLR (the first 15 of 101 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#14 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p25[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p13_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p22_reg[5]/CLR (the first 15 of 101 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#15 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35[8]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p35_reg[6]/CLR (the first 15 of 101 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#16 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1[9]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff1_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff2_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff2_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff2_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff2_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff2_reg[4]/CLR (the first 15 of 70 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#17 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t3_diff7[9]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[7]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#18 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t4_diff1[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max1_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max2_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_max3_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_med1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_med1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_med1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t2_med1_reg[3]/CLR (the first 15 of 109 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#19 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t4_diff7[8]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/href_dly_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t4_diff7_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/t6_center_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg_c/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg_c_0/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg_c_1/CLR (the first 15 of 21 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#20 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c_20/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c_21/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c_22/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c_23/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1_reg[8]/CLR (the first 15 of 157 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#21 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/href_dly_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_u_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_i0/data_v_reg[7]/CLR (the first 15 of 26 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#22 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/prev_flip_trigger_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/done_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/line_idx_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/pix_cnt_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/pix_cnt_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/pix_cnt_reg[11]/CLR (the first 15 of 167 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#23 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/in_href_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/b_vaild_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/g_vaild_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_b_reg_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_g_reg_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_g_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_g_reg_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_g_reg_reg[3]/CLR (the first 15 of 96 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#24 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/cur_clr_done_i_2__2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/done_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_r_reg_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[15]/CLR (the first 15 of 96 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#25 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/in_vsync_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/in_vsync_reg_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[18]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[19]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[20]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[21]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[22]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[23]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[18]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[19]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[20]/CLR (the first 15 of 67 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#26 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt[31]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[24]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[25]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[26]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[27]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[28]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[29]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[30]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_cnt_reg[31]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[24]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[25]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[26]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[27]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[28]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[29]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/pix_sum_b_reg[30]/CLR (the first 15 of 64 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#27 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ccm_i0/href_reg_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[3]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/data_reg_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/href_reg_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_blc_i0/vsync_reg_reg/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_dgain_i0/data_reg_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_dgain_i0/data_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_dgain_i0/data_reg_reg[2]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_dgain_i0/data_reg_reg[3]/CLR (the first 15 of 168 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#28 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_gamma_i0/href_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[17]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[19]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[1]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[20]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[21]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[22]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[23]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_ee_i0/data_reg_reg[24]/CLR (the first 15 of 53 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#29 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/href_dly[2]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[10]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[11]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[12]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[13]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[14]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[15]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[16]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[4]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[5]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[6]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[7]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[8]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[9]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_2_reg[0]/CLR, design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_2_reg[1]/CLR (the first 15 of 99 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#30 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/prev_href_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[10]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[11]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[12]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[13]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[14]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[15]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[16]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[17]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[18]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[19]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[20]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[21]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[22]/CLR (the first 15 of 58 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#31 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_r_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[10]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[11]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[12]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[13]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[14]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[15]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[16]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[17]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[18]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[19]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[20]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[21]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[22]/CLR (the first 15 of 35 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#32 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/prev_flip_trigger_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/hist_sum_data_3_reg[19]_i_4/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[2]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[3]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[4]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[5]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[6]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[7]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_0_reg_c/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_1_reg_c/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_2_reg_c/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_3_reg_c/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_4_reg_c/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_5_reg[0]/CLR (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#33 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_yuv2rgb_i0/vsync_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[10]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[11]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[12]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[13]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[14]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[15]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[16]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[17]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[18]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[19]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[20]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[21]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[22]/CLR (the first 15 of 130 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#34 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/p31[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[10]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[2]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[3]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[4]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[5]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[6]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[7]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[8]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[9]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[2]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[3]/CLR (the first 15 of 159 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#35 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/in_v_reg[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_0/XOUT_reg[19]_i_7/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[2]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[3]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[4]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[5]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[6]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[7]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[0]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[1]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[2]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[3]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[4]/CLR, design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[5]/CLR (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#36 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/prev_href_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[10]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[11]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[12]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[13]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[14]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[15]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[16]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[17]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[18]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[19]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[20]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[21]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[22]/CLR (the first 15 of 58 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#37 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_r_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[10]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[11]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[12]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[13]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[14]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[15]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[16]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[17]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[18]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[19]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[20]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[21]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[22]/CLR (the first 15 of 35 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#38 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/prev_flip_trigger_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/hist_sum_data_3_reg[19]_i_4/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[2]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[3]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[4]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[5]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[6]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_addr_reg[7]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_0_reg_c/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_1_reg_c/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_2_reg_c/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_3_reg_c/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_4_reg_c/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_sum_addr_5_reg[0]/CLR (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#39 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_yuv2rgb_i0/vsync_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[10]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[11]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[12]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[13]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[14]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[15]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[16]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[17]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[18]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[19]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[20]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[21]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[22]/CLR (the first 15 of 130 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#40 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/p31[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[10]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[2]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[3]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[4]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[5]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[6]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[7]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[8]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[9]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[2]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[3]/CLR (the first 15 of 159 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#41 Warning
+LUT drives async reset alert  
+LUT cell design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/in_v_reg[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) design_1_i/xil_vip_1/XOUT_reg[19]_i_7/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[2]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[3]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[4]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[5]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[6]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[7]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[0]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[1]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[2]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[3]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[4]/CLR, design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[5]/CLR (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+TIMING-4#1 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock design_1_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-4#2 Warning
+Invalid primary clock redefinition on a clock tree  
+Invalid clock redefinition on a clock tree. The primary clock design_1_i/clk_wiz_1/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
+Related violations: <none>
+
+TIMING-9#1 Warning
+Unknown CDC Logic  
+One or more asynchronous Clock Domain Crossing has been detected between 2 clock domains through a set_false_path or a set_clock_groups or set_max_delay -datapath_only constraint but no double-registers logic synchronizer has been found on the side of the capture clock. It is recommended to run report_cdc for a complete and detailed CDC coverage. Please consider using XPM_CDC to avoid Critical severities
+Related violations: <none>
+
+TIMING-10#1 Warning
+Missing property on synchronizer  
+One or more logic synchronizer has been detected between 2 clock domains but the synchronizer does not have the property ASYNC_REG defined on one or both registers. It is recommended to run report_cdc for a complete and detailed CDC coverage
+Related violations: <none>
+
+TIMING-14#1 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/out_pclk_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#2 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/ram0/mem_reg_0_i_1__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#3 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/ram1/mem_reg_0_i_1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#4 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/ram0/mem_reg_i_1__5 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#5 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/ram1/mem_reg_i_1__4 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#6 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_g/ram0/mem_reg_i_1__3 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#7 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_g/ram1/mem_reg_i_1__2 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#8 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/ram0/mem_reg_i_1__1 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#9 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/ram1/mem_reg_i_1__0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#10 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-14#11 Warning
+LUT on the clock tree  
+The LUT design_1_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_INST_0 has been found on the clock tree. Run opt_design to optimize the clock trees, then re-run report_methodology. If LUT(s) are still present in the clock trees, modify the RTL or the synthesis options accordingly to move the clock gating logic to dedicated clock enable resources. Keep in mind that post-opt_design database cannot be used for pin-planning tasks
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on cam_active_video relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[0] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[1] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[2] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[3] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[4] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[5] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#8 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[6] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An input delay is missing on cam_data[7] relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An input delay is missing on cam_vsync relative to clock(s) cam_pclk
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An input delay is missing on iic_scl_io relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An input delay is missing on iic_sda_io relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-24#1 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks cam_pclk and clk_fpga_0 overrides a set_max_delay -datapath_only (position 44). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#2 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks cam_xclk_design_1_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 44). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#3 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and cam_pclk overrides a set_max_delay -datapath_only (position 42). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#4 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and cam_xclk_design_1_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 42). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#5 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_design_1_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 20). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#6 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_design_1_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 22). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#7 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_design_1_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 50). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#8 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_design_1_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 58). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#9 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_design_1_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 18). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#10 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_design_1_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 52). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-24#11 Warning
+Overridden Max delay datapath only  
+A set_clock_groups or a set_false path (see constraint position 17 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_design_1_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 60). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
+Related violations: <none>
+
+TIMING-27#1 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock design_1_i/clk_wiz_0/inst/clk_in1 is created on an inappropriate internal pin design_1_i/clk_wiz_0/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-27#2 Warning
+Invalid primary clock on hierarchical pin  
+A primary clock design_1_i/clk_wiz_1/inst/clk_in1 is created on an inappropriate internal pin design_1_i/clk_wiz_1/inst/clk_in1. It is not recommended to create a primary clock on a hierarchical pin when its driver pin has a fanout connected to multiple clock pins
+Related violations: <none>
+
+TIMING-28#1 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock cam_xclk_design_1_clk_wiz_0_0 is referenced by name inside timing constraint (see constraint position 17 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
+Related violations: <none>
+
+TIMING-28#2 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock isp_pclk_design_1_clk_wiz_0_0 is referenced by name inside timing constraint (see constraint position 17 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1]
+Related violations: <none>
+
+TIMING-38#1 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 43 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: design_1_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+TIMING-38#2 Warning
+Bus skew constraint applied on multiple clocks  
+Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 45 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: design_1_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+Related violations: <none>
+
+
