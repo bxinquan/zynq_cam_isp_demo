@@ -3,8 +3,10 @@
 #96M
 create_clock -period 10.416 -name cam_pclk [get_ports cam_pclk]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets cam_pclk_IBUF]
-set_clock_groups -async -group [get_clocks cam_pclk] -group [get_clocks clk_fpga_0] \
-        -group [get_clocks cam_xclk_design_1_clk_wiz_0_0] -group [get_clocks isp_pclk_design_1_clk_wiz_0_0]
+set_clock_groups -async -group [get_clocks cam_pclk] \
+        -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] \
+        -group [get_clocks cam_xclk_design_1_clk_wiz_0_0] \
+        -group [get_clocks isp_pclk_design_1_clk_wiz_0_0]
 
 #----------------------ÉãÏñÍ·½Ó¿Ú---------------------------
 set_property -dict {PACKAGE_PIN P15 IOSTANDARD LVCMOS33} [get_ports cam_rst_n]

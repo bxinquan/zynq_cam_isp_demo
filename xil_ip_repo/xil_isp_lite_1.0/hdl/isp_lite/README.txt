@@ -8,7 +8,9 @@
     isp_ccm - 色彩校正矩阵 (RGB三通道乘以配置的3x3矩阵)
     isp_csc - 色彩空间转换 (基于整数优化的RGB2YUV转换公式)
     isp_gamma - Gamma校正 (对亮度基于查表的Gamma校正)
+    isp_2dnr - 2d降噪(7x7双边滤波降噪)
     isp_ee - 边缘增强 (基于特定的3x3滤波器)
 统计模块:
     isp_stat_ae - 自动曝光统计 (支持统计选取区域内亮度总和与像素个数，支持RGGB四通道直方图统计)
     isp_stat_awb - 自动白平衡统计 (支持符合白点限定条件的RGB三通道数值总和与白像素个数，支持RGB三通道直方图统计)
+注：接口时序为DVP(参考tb_dvp_helper)

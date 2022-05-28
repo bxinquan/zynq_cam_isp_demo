@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="design_1_axi_smc_0_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1640535302">
+<GenRun Id="design_1_axi_smc_0_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1653720525">
   <File Type="PA-TCL" Name="design_1_axi_smc_0.tcl"/>
   <File Type="REPORTS-TCL" Name="design_1_axi_smc_0_reports.tcl"/>
   <File Type="RDS-RDS" Name="design_1_axi_smc_0.vds"/>
@@ -9,9 +9,11 @@
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_axi_smc_0">
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -22,9 +24,11 @@
   <FileSet Name="constrs_in" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_1_axi_smc_0">
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_axi_smc_0/design_1_axi_smc_0.xci">
       <FileInfo>
+        <Attr Name="Library" Val="xil_defaultlib"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
+        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>

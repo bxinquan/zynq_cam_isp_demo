@@ -616,7 +616,7 @@ int cmos_set_exposure(unsigned exposure)
 	if (exposure == cmos_exposure) {
 		return 0;
 	}
-	printf("cmos_exposure %u -> %u\n", cmos_exposure, exposure);
+	//printf("cmos_exposure %u -> %u\n", cmos_exposure, exposure);
 	cmos_exposure = exposure;
     sccb_write_reg16(0x3500, (exposure>>12)&0x0ff);// Exposure [19:16]
 	sccb_write_reg16(0x3501, (exposure>>4)&0x0ff);// Exposure [15:8]
@@ -638,7 +638,7 @@ int cmos_set_gain(unsigned gain)
 	if (gain == cmos_gain) {
 		return 0;
 	}
-	printf("cmos_gain 0x%03X -> 0x%03X\n", cmos_gain, gain);
+	//printf("cmos_gain 0x%03X -> 0x%03X\n", cmos_gain, gain);
 	cmos_gain = gain;
 	sccb_write_reg16(0x350a, (gain>>8)&0x3);// Real gain[9:8]
 	sccb_write_reg16(0x350b, gain&0x0ff);// Real gain[7:0]

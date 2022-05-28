@@ -6,12 +6,10 @@
 		<Parent Id="design_1_axi_vdma_2_0_synth_1"/>
 	</Run>
 	<Run Id="design_1_axi_vdma_0_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_axi_vdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
-	<Run Id="design_1_axi_iic_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_axi_iic_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="design_1_xil_vip_0_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="design_1_xil_vip_1_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
 		<Parent Id="design_1_xil_vip_0_0_synth_1"/>
 	</Run>
-	<Run Id="design_1_xil_camif_0_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_camif_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="design_1_xil_isp_lite_0_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_isp_lite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="design_1_auto_pc_0_synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
 	<Run Id="synth_1" LaunchDir="D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
@@ -19,10 +17,8 @@
 		<Parent Id="design_1_axi_vdma_2_0_synth_1"/>
 		<Parent Id="design_1_axi_vdma_1_0_synth_1"/>
 		<Parent Id="design_1_axi_vdma_0_0_synth_1"/>
-		<Parent Id="design_1_axi_iic_0_synth_1"/>
 		<Parent Id="design_1_xil_vip_0_0_synth_1"/>
 		<Parent Id="design_1_xil_vip_1_0_synth_1"/>
-		<Parent Id="design_1_xil_camif_0_0_synth_1"/>
 		<Parent Id="design_1_xil_isp_lite_0_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_0_synth_1"/>
 	</Run>
@@ -32,10 +28,8 @@
 		<Parent Id="design_1_axi_vdma_2_0_synth_1"/>
 		<Parent Id="design_1_axi_vdma_1_0_synth_1"/>
 		<Parent Id="design_1_axi_vdma_0_0_synth_1"/>
-		<Parent Id="design_1_axi_iic_0_synth_1"/>
 		<Parent Id="design_1_xil_vip_0_0_synth_1"/>
 		<Parent Id="design_1_xil_vip_1_0_synth_1"/>
-		<Parent Id="design_1_xil_camif_0_0_synth_1"/>
 		<Parent Id="design_1_xil_isp_lite_0_0_synth_1"/>
 		<Parent Id="design_1_auto_pc_0_synth_1"/>
 	</Run>

@@ -17,12 +17,12 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 10880 
+INFO: Helper process launched with PID 7888 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.211 ; gain = 102.934
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.215 ; gain = 102.586
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_xil_camif_0_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/synth/design_1_xil_camif_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0.v:6]
+INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0.v:6]
 	Parameter BITS bound to: 8 - type: integer 
 	Parameter COLORBAR_H_FRONT bound to: 50 - type: integer 
 	Parameter COLORBAR_H_PULSE bound to: 100 - type: integer 
@@ -35,7 +35,7 @@ INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0' [d:/Work/fpga/zynq_cam
 	Parameter COLORBAR_BAYER bound to: 3 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0_S00_AXI' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0_S00_AXI' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0_S00_AXI.v:4]
 	Parameter BITS bound to: 8 - type: integer 
 	Parameter COLORBAR_H_FRONT bound to: 50 - type: integer 
 	Parameter COLORBAR_H_PULSE bound to: 100 - type: integer 
@@ -57,7 +57,7 @@ INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0_S00_AXI' [d:/Work/fpga/
 	Parameter REG_COLORBAR_EN bound to: 4 - type: integer 
 	Parameter REG_INT_STATUS bound to: 5 - type: integer 
 	Parameter REG_INT_MASK bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dvp_raw_timing_colorbar' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:5]
+INFO: [Synth 8-6157] synthesizing module 'dvp_raw_timing_colorbar' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:5]
 	Parameter BITS bound to: 8 - type: integer 
 	Parameter BAYER bound to: 3 - type: integer 
 	Parameter H_FRONT bound to: 50 - type: integer 
@@ -72,17 +72,17 @@ INFO: [Synth 8-6157] synthesizing module 'dvp_raw_timing_colorbar' [d:/Work/fpga
 	Parameter V_POL bound to: 1'b1 
 	Parameter H_TOTAL bound to: 2760 - type: integer 
 	Parameter V_TOTAL bound to: 1940 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-6155] done synthesizing module 'dvp_raw_timing_colorbar' (1#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0_S00_AXI' (2#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0' (3#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0.v:6]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:127]
+INFO: [Synth 8-6155] done synthesizing module 'dvp_raw_timing_colorbar' (1#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0_S00_AXI' (2#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0' (3#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_camif_0_0' (4#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/synth/design_1_xil_camif_0_0.v:56]
 WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
 WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
@@ -126,7 +126,7 @@ WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI
 WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.793 ; gain = 159.516
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 462.695 ; gain = 159.066
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -139,10 +139,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.793 ; gain = 159.516
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.695 ; gain = 159.066
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.793 ; gain = 159.516
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 462.695 ; gain = 159.066
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -151,33 +151,33 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 806.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 806.375 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 806.973 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 806.375 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.060 . Memory (MB): peak = 810.688 ; gain = 3.715
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.083 . Memory (MB): peak = 808.812 ; gain = 2.438
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 810.688 ; gain = 507.410
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 808.812 ; gain = 505.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 810.688 ; gain = 507.410
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 808.812 ; gain = 505.184
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 810.688 ; gain = 507.410
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 808.812 ; gain = 505.184
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 810.688 ; gain = 507.410
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 808.812 ; gain = 505.184
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -326,7 +326,7 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil
 INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 810.688 ; gain = 507.410
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 808.812 ; gain = 505.184
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -338,13 +338,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 811.316 ; gain = 508.039
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 809.609 ; gain = 505.980
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 811.539 ; gain = 508.262
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 809.832 ; gain = 506.203
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -356,7 +356,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -380,7 +380,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -393,7 +393,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -405,25 +405,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -462,37 +462,33 @@ Report Instance Areas:
 |4     |      dvp_colorbar_timing_generator |dvp_raw_timing_colorbar |    97|
 +------+------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 822.078 ; gain = 518.449
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:18 . Memory (MB): peak = 823.191 ; gain = 172.020
-Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 823.191 ; gain = 519.914
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 822.078 ; gain = 172.332
+Synthesis Optimization Complete : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 822.078 ; gain = 518.449
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.875 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 58 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 836.395 ; gain = 539.496
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.395 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 836.875 ; gain = 540.355
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.875 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_camif_0_0_synth_1/design_1_xil_camif_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_camif_0_0, cache-ID = 07d7c8d8abcd3ad0
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_camif_0_0, cache-ID = b65ac3a32fdd7c5e
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.395 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 836.875 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_camif_0_0_synth_1/design_1_xil_camif_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_xil_camif_0_0_utilization_synth.rpt -pb design_1_xil_camif_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 27 00:15:11 2021...
-
-*** Running vivado
-    with args -log design_1_xil_camif_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_camif_0_0.tcl
-
+INFO: [Common 17-206] Exiting Vivado at Sat May 28 14:48:14 2022...

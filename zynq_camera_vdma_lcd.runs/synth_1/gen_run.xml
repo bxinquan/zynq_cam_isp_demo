@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1642609376">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1653755480">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -20,22 +20,6 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/hdl/design_1_wrapper.v">
       <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_2/design_2.bd">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/design_2/hdl/design_2_wrapper.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -78,7 +62,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_camif_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_isp_lite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DVI_Transmitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_2_0"/>
@@ -93,4 +76,6 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_vip_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
 </GenRun>

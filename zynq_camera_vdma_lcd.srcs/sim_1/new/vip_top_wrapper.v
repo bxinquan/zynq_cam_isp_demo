@@ -32,7 +32,7 @@ module vip_top_wrapper
 
 	localparam EN_HIST_EQU = 1'b0;
 	localparam EN_SOBEL = 1'b0;
-	localparam EN_YUV2RGB = 1'b1;
+	localparam EN_YUV2RGB = 1'b0;
 	localparam EN_CROP = 1'b0;
 	localparam EN_DSCALE = 1'b0;
 	

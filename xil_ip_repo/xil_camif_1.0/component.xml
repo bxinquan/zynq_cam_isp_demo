@@ -363,6 +363,123 @@
         </spirit:portMap>
       </spirit:portMaps>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>raw_aux1</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_raw</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ACTIVE_VIDEO</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_href</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>VSYNC</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_vsync</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:vendorExtensions>
+        <xilinx:busInterfaceInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.raw_aux1" xilinx:dependency="$RAW_AUX_NUM >= 1">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:busInterfaceInfo>
+      </spirit:vendorExtensions>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>raw_aux2</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_raw</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ACTIVE_VIDEO</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_href</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>VSYNC</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_vsync</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:vendorExtensions>
+        <xilinx:busInterfaceInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.raw_aux2" xilinx:dependency="$RAW_AUX_NUM >= 2">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:busInterfaceInfo>
+      </spirit:vendorExtensions>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>raw_aux3</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="vid_io_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>DATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_raw</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ACTIVE_VIDEO</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_href</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>VSYNC</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>out_vsync</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:vendorExtensions>
+        <xilinx:busInterfaceInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:resolve="dependent" xilinx:id="BUSIF_ENABLEMENT.raw_aux3" xilinx:dependency="$RAW_AUX_NUM >= 3">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:busInterfaceInfo>
+      </spirit:vendorExtensions>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -444,7 +561,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>69a186b9</spirit:value>
+            <spirit:value>f1a68174</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1069,7 +1186,7 @@
       <spirit:file>
         <spirit:name>xgui/xil_camif_v1_0.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_69a186b9</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_f1a68174</spirit:userFileType>
         <spirit:userFileType>XGUI_VERSION_2</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1187,6 +1304,11 @@
       <spirit:displayName>Colorbar Bayer</spirit:displayName>
       <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.COLORBAR_BAYER">0</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>RAW_AUX_NUM</spirit:name>
+      <spirit:displayName>Raw Aux Num</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.RAW_AUX_NUM" spirit:minimum="0" spirit:maximum="3" spirit:rangeType="long">0</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
@@ -1212,11 +1334,11 @@
       </xilinx:taxonomies>
       <xilinx:displayName>xil_camif_v1.0</xilinx:displayName>
       <xilinx:vendorDisplayName>bxq</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>7</xilinx:coreRevision>
+      <xilinx:coreRevision>9</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:xil_camif:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2021-12-26T13:24:55Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-05-28T06:04:10Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@29f78639_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec8ef97_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
@@ -1311,16 +1433,34 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2f5e6588_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@bf6d4d4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@7b8712eb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6065c553_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3026bb28_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@52a248e4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d30493_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@da12cb3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@417bed1f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51cab8e8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29c72a47_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@620953f2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@337c696a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dce2a51_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef750fa_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d331ae8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f899b6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d629e78_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@38859e99_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@161d9e70_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29df06ca_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_camif_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="910977a7"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="54485f01"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2398ca67"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2be5b5cc"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="8b037b2b"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="e5263e27"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="37406e2e"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="20cb87e6"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

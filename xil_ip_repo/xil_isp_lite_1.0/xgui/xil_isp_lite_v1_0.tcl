@@ -16,7 +16,6 @@ proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "BAYER" -parent ${ISP}
   ipgui::add_param $IPINST -name "WIDTH" -parent ${ISP}
   ipgui::add_param $IPINST -name "HEIGHT" -parent ${ISP}
-  ipgui::add_param $IPINST -name "STAT_BITS" -parent ${ISP}
   ipgui::add_param $IPINST -name "FEATURE_FULL" -parent ${ISP}
 
 
@@ -85,15 +84,6 @@ proc validate_PARAM_VALUE.IO_BITS { PARAM_VALUE.IO_BITS } {
 	return true
 }
 
-proc update_PARAM_VALUE.STAT_BITS { PARAM_VALUE.STAT_BITS } {
-	# Procedure called to update STAT_BITS when any of the dependent parameters in the arguments change
-}
-
-proc validate_PARAM_VALUE.STAT_BITS { PARAM_VALUE.STAT_BITS } {
-	# Procedure called to validate STAT_BITS
-	return true
-}
-
 proc update_PARAM_VALUE.WIDTH { PARAM_VALUE.WIDTH } {
 	# Procedure called to update WIDTH when any of the dependent parameters in the arguments change
 }
@@ -154,11 +144,6 @@ proc update_MODELPARAM_VALUE.HEIGHT { MODELPARAM_VALUE.HEIGHT PARAM_VALUE.HEIGHT
 proc update_MODELPARAM_VALUE.BAYER { MODELPARAM_VALUE.BAYER PARAM_VALUE.BAYER } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.BAYER}] ${MODELPARAM_VALUE.BAYER}
-}
-
-proc update_MODELPARAM_VALUE.STAT_BITS { MODELPARAM_VALUE.STAT_BITS PARAM_VALUE.STAT_BITS } {
-	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
-	set_property value [get_property value ${PARAM_VALUE.STAT_BITS}] ${MODELPARAM_VALUE.STAT_BITS}
 }
 
 proc update_MODELPARAM_VALUE.FEATURE_FULL { MODELPARAM_VALUE.FEATURE_FULL PARAM_VALUE.FEATURE_FULL } {

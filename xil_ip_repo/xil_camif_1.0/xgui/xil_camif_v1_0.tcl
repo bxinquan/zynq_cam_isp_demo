@@ -5,6 +5,7 @@ proc init_gui { IPINST } {
   set_property tooltip {Width of S_AXI address bus} ${C_S00_AXI_ADDR_WIDTH}
   set C_S00_AXI_DATA_WIDTH [ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -widget comboBox]
   set_property tooltip {Width of S_AXI data bus} ${C_S00_AXI_DATA_WIDTH}
+  ipgui::add_param $IPINST -name "RAW_AUX_NUM"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]
   ipgui::add_param $IPINST -name "C_S00_AXI_BASEADDR" -parent ${Page_0}
@@ -115,6 +116,15 @@ proc update_PARAM_VALUE.COLORBAR_V_PULSE { PARAM_VALUE.COLORBAR_V_PULSE } {
 
 proc validate_PARAM_VALUE.COLORBAR_V_PULSE { PARAM_VALUE.COLORBAR_V_PULSE } {
 	# Procedure called to validate COLORBAR_V_PULSE
+	return true
+}
+
+proc update_PARAM_VALUE.RAW_AUX_NUM { PARAM_VALUE.RAW_AUX_NUM } {
+	# Procedure called to update RAW_AUX_NUM when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.RAW_AUX_NUM { PARAM_VALUE.RAW_AUX_NUM } {
+	# Procedure called to validate RAW_AUX_NUM
 	return true
 }
 

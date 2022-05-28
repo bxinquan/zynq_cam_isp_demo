@@ -11,39 +11,6 @@
  */
 
 
-/* @Deprecated
-module shift_register
-#(
-	parameter BITS = 8,
-	parameter WIDTH = 480,
-	parameter LINES = 3
-)
-(
-	input                 clock,
-	input                 clken,
-	input [BITS-1:0]      shiftin,
-	output reg [BITS-1:0] shiftout,
-	output reg [BITS*LINES-1:0] tapsx
-);
-	localparam SIZE = WIDTH * LINES;
-	reg [BITS-1:0] mem [SIZE-1:0];
-
-	integer i;
-	always @ (posedge clock) begin
-		if (clken) begin
-			shiftout <= mem[SIZE-1];
-			for (i = 0; i < LINES; i = i + 1) begin
-                tapsx[(BITS*i)+:BITS] <= mem[WIDTH*(i+1)-1];
-			end
-			for (i = SIZE-1; i > 0; i = i - 1) begin
-				mem[i] <= mem[i-1];
-			end
-			mem[0] <= shiftin;
-		end
-	end
-endmodule
-*/
-
 /* Simple Dual-Port RAM */
 module simple_dp_ram
 #(
@@ -52,27 +19,73 @@ module simple_dp_ram
 	parameter SZ = 2**AW
 )
 (
-	input          clk,
-	input          wren,
-	input [AW-1:0] wraddr,
-	input [DW-1:0] data,
-	input          rden,
-	input [AW-1:0] rdaddr,
-	output reg [DW-1:0] q
+	input           clk,
+	input           wen,
+	input  [AW-1:0] waddr,
+	input  [DW-1:0] wdata,
+	input           ren,
+	input  [AW-1:0] raddr,
+	output [DW-1:0] rdata
 );
-
 	reg [DW-1:0] mem [SZ-1:0];
 	always @ (posedge clk) begin
-		if (wren) begin
-			mem[wraddr] <= data;
+		if (wen) begin
+			mem[waddr] <= wdata;
 		end
 	end
+	reg [DW-1:0] q;
 	always @ (posedge clk) begin
-		if (rden) begin
-			q <= mem[rdaddr];
+		if (ren) begin
+			q <= mem[raddr];
 		end
 	end
+	assign rdata = q;
 endmodule
+
+/* Full/True Dual-Port RAM */
+module full_dp_ram
+#(
+	parameter DW = 8,
+	parameter AW = 4,
+	parameter SZ = 2**AW
+)
+(
+	input           clk_a,
+	input           wen_a,
+	input           ren_a,
+	input  [AW-1:0] addr_a,
+	input  [DW-1:0] wdata_a,
+	output [DW-1:0] rdata_a,
+	input           clk_b,
+	input           wen_b,
+	input           ren_b,
+	input  [AW-1:0] addr_b,
+	input  [DW-1:0] wdata_b,
+	output [DW-1:0] rdata_b
+);
+	reg [DW-1:0] mem [SZ-1:0];
+	reg [DW-1:0] q_a;
+	always @ (posedge clk_a) begin
+		if (wen_a) begin
+			mem[addr_a] <= wdata_a;
+		end
+		if (ren_a) begin
+			q_a <= mem[addr_a];
+		end
+	end
+	reg [DW-1:0] q_b;
+	always @ (posedge clk_b) begin
+		if (wen_b) begin
+			mem[addr_b] <= wdata_b;
+		end
+		if (ren_b) begin
+			q_b <= mem[addr_b];
+		end
+	end
+	assign rdata_a = q_a;
+	assign rdata_b = q_b;
+endmodule
+
 
 /* Shift Register based on Simple Dual-Port RAM */
 module shift_register
@@ -248,8 +261,78 @@ module shift_div
 	end
 endmodule
 
-//image histogram statistics
-module hist_ram
+/*
+def div32(a, b):
+    a = a & 0xffffffff
+    b = b << 32
+    for i in range(32) :
+        a = (a << 1) & 0xffffffffffffffff
+        if a >= b :
+            a = a - b + 1
+    return (a & 0xffffffff, (a >> 32) & 0xffffffff)
+*/
+
+//移位正整数除法器，支持流水线，节拍数为BITS
+//quo = num // den;  rem = num % den;
+module shift_div_uint
+#(
+	parameter BITS = 32
+)
+(
+	input clk,
+	input rst_n,
+
+	input [BITS-1:0] num, //被除数
+	input [BITS-1:0] den, //除数
+	
+	output [BITS-1:0] quo, //商
+	output [BITS-1:0] rem  //余数
+);
+
+	//被除数&除数buffer  因需要BITS级流水线 故需要BITS个寄存器
+	reg  [BITS*2-1:0] num_tmp [BITS-1:0];
+	reg  [BITS*2-1:0] den_tmp [BITS-1:0];
+	wire [BITS*2-1:0] num_tmp_in = {{BITS{1'b0}}, num};
+	wire [BITS*2-1:0] den_tmp_in = {den, {BITS{1'b0}}};
+	always @ (posedge clk or negedge rst_n) begin : _blk_run
+		integer i;
+		if (!rst_n) begin
+			for (i = 0; i < BITS; i = i + 1) begin
+				num_tmp[i] <= 0;
+				den_tmp[i] <= 0;
+			end
+		end
+		else begin
+			if ({num_tmp_in[BITS*2-2:0],1'b0} >= den_tmp_in) begin
+				num_tmp[0] <= {num_tmp_in[BITS*2-2:0],1'b0} - den_tmp_in + 1'b1;
+				den_tmp[0] <= den_tmp_in;
+			end
+			else begin
+				num_tmp[0] <= {num_tmp_in[BITS*2-2:0],1'b0};
+				den_tmp[0] <= den_tmp_in;
+			end
+				
+			for (i = 0; i < BITS - 1; i = i + 1) begin
+				if ({num_tmp[i][BITS*2-2:0],1'b0} >= den_tmp[i]) begin
+					num_tmp[i+1] <= {num_tmp[i][BITS*2-2:0],1'b0} - den_tmp[i] + 1'b1;
+					den_tmp[i+1] <= den_tmp[i];
+				end
+				else begin
+					num_tmp[i+1] <= {num_tmp[i][BITS*2-2:0],1'b0};
+					den_tmp[i+1] <= den_tmp[i];
+				end
+			end
+		end
+	end
+
+	assign quo = num_tmp[BITS-1][BITS-1:0];
+	assign rem = num_tmp[BITS-1][BITS*2-1:BITS];
+endmodule
+
+//histogram statistics(直方图统计)
+//ping&pong双RAM实现,一个用于统计,另一个用于读出
+//注:in_vsync上升沿之后至少延迟(2**ADDR_BITS)时钟后才能开始统计(in_valid有效),以保证有足够的时钟把统计RAM清零
+module hist_stat
 #(
 	parameter ADDR_BITS = 8,
 	parameter DATA_BITS = 24
@@ -257,8 +340,8 @@ module hist_ram
 (
 	input in_clk,
 	input in_rst_n,
-	input in_valid,
-	input in_flip_trigger,
+	input in_valid, 
+	input in_vsync, //上升沿表征当前帧统计结束,下一个时钟即可读取统计结果
 	input [ADDR_BITS-1:0] in_addr,
 
 	input out_clk,
@@ -267,45 +350,48 @@ module hist_ram
 	output [DATA_BITS-1:0] out_data
 );
 
-	wire ram0_clk, ram0_wren, ram0_rden;
-	wire [ADDR_BITS-1:0] ram0_wraddr, ram0_rdaddr;
-	wire [DATA_BITS-1:0] ram0_data, ram0_q;
-	simple_dp_ram #(DATA_BITS, ADDR_BITS) ram0(ram0_clk, ram0_wren, ram0_wraddr, ram0_data, ram0_rden, ram0_rdaddr, ram0_q);
+	//ping ram
+	wire ping_clk, ping_wen, ping_ren;
+	wire [ADDR_BITS-1:0] ping_waddr, ping_raddr;
+	wire [DATA_BITS-1:0] ping_wdata, ping_rdata;
+	simple_dp_ram #(DATA_BITS, ADDR_BITS) ping_ram(ping_clk, ping_wen, ping_waddr, ping_wdata, ping_ren, ping_raddr, ping_rdata);
 
-	wire ram1_clk, ram1_wren, ram1_rden;
-	wire [ADDR_BITS-1:0] ram1_wraddr, ram1_rdaddr;
-	wire [DATA_BITS-1:0] ram1_data, ram1_q;
-	simple_dp_ram #(DATA_BITS, ADDR_BITS) ram1(ram1_clk, ram1_wren, ram1_wraddr, ram1_data, ram1_rden, ram1_rdaddr, ram1_q);
+	//ping ram
+	wire pong_clk, pong_wen, pong_ren;
+	wire [ADDR_BITS-1:0] pong_waddr, pong_raddr;
+	wire [DATA_BITS-1:0] pong_wdata, pong_rdata;
+	simple_dp_ram #(DATA_BITS, ADDR_BITS) pong_ram(pong_clk, pong_wen, pong_waddr, pong_wdata, pong_ren, pong_raddr, pong_rdata);
 	
-	reg cur_ram;
-	wire cur_clk, cur_wren, cur_rden;
-	wire [ADDR_BITS-1:0] cur_wraddr, cur_rdaddr;
-	wire [DATA_BITS-1:0] cur_data, cur_q;
-	wire bak_clk, bak_wren, bak_rden;
-	wire [ADDR_BITS-1:0] bak_wraddr, bak_rdaddr;
-	wire [DATA_BITS-1:0] bak_data, bak_q;
-	assign ram0_clk = !cur_ram ? cur_clk : bak_clk;
-	assign ram0_wren = !cur_ram ? cur_wren : bak_wren;
-	assign ram0_rden = !cur_ram ? cur_rden : bak_rden;
-	assign ram0_wraddr = !cur_ram ? cur_wraddr : bak_wraddr;
-	assign ram0_rdaddr = !cur_ram ? cur_rdaddr : bak_rdaddr;
-	assign ram0_data = !cur_ram ? cur_data : bak_data;
-	assign ram1_clk = cur_ram ? cur_clk : bak_clk;
-	assign ram1_wren = cur_ram ? cur_wren : bak_wren;
-	assign ram1_rden = cur_ram ? cur_rden : bak_rden;
-	assign ram1_wraddr = cur_ram ? cur_wraddr : bak_wraddr;
-	assign ram1_rdaddr = cur_ram ? cur_rdaddr : bak_rdaddr;
-	assign ram1_data = cur_ram ? cur_data : bak_data;
-	assign cur_q = !cur_ram ? ram0_q : ram1_q;
-	assign bak_q = cur_ram ? ram0_q : ram1_q;
-	
-	reg prev_flip_trigger;
+	//当前统计RAM
+	reg cur_ram; //0-统计使用ping,读出使用pong 1-统计使用pong,读出使用ping
+	//统计RAM信号线
+	wire cur_clk, cur_wen, cur_ren;
+	wire [ADDR_BITS-1:0] cur_waddr, cur_raddr;
+	wire [DATA_BITS-1:0] cur_wdata, cur_rdata;
+	//读出RAM信号线
+	wire bak_clk, bak_wen, bak_ren;
+	wire [ADDR_BITS-1:0] bak_waddr, bak_raddr;
+	wire [DATA_BITS-1:0] bak_wdata, bak_rdata;
+	//连接ping_ram输入驱动线
+	assign {ping_clk,ping_wen,ping_ren,ping_waddr,ping_raddr,ping_wdata} = cur_ram
+				? {bak_clk,bak_wen,bak_ren,bak_waddr,bak_raddr,bak_wdata}  /*统计使用pong, ping作为读出RAM*/
+				: {cur_clk,cur_wen,cur_ren,cur_waddr,cur_raddr,cur_wdata}; /*统计使用ping, ping作为统计RAM*/
+	//连接pong_ram输入驱动线
+	assign {pong_clk,pong_wen,pong_ren,pong_waddr,pong_raddr,pong_wdata} = cur_ram
+				? {cur_clk,cur_wen,cur_ren,cur_waddr,cur_raddr,cur_wdata}  /*统计使用pong, pong作为统计RAM*/
+				: {bak_clk,bak_wen,bak_ren,bak_waddr,bak_raddr,bak_wdata}; /*统计使用pong, pong作为读出RAM*/
+	assign cur_rdata = cur_ram ? pong_rdata : ping_rdata; //连接统计RAM输出线
+	assign bak_rdata = cur_ram ? ping_rdata : pong_rdata; //连接读出RAM输出线
+
+	//对vsync打拍
+	reg prev_vsync;
 	always @ (posedge in_clk or negedge in_rst_n)
 		if (!in_rst_n)
-			prev_flip_trigger <= 0;
+			prev_vsync <= 0;
 		else
-			prev_flip_trigger <= in_flip_trigger;
+			prev_vsync <= in_vsync;
 
+	//检测帧结束,切换统计RAM,触发统计RAM清零逻辑
 	reg cur_clr_done;
 	reg [ADDR_BITS-1:0] cur_clr_addr;
 	always @ (posedge in_clk or negedge in_rst_n) begin
@@ -314,49 +400,83 @@ module hist_ram
 			cur_clr_done <= 0;
 			cur_clr_addr <= 0;
 		end
-		else if (in_flip_trigger & ~prev_flip_trigger) begin
-			cur_ram <= ~cur_ram;
-			cur_clr_done <= 0;
-			cur_clr_addr <= 0;
+		else if (in_vsync & ~prev_vsync) begin
+			//检测到帧结束
+			cur_ram <= ~cur_ram; //切换统计RAM
+			cur_clr_done <= 0; //触发统计RAM清零
+			cur_clr_addr <= 0; //清零地址初始化
 		end
 		else if (!cur_clr_done) begin
+			//清零中
 			cur_ram <= cur_ram;
-			cur_clr_addr <= cur_clr_addr + 1'b1;
+			cur_clr_addr <= cur_clr_addr + 1'b1;  //清零地址增长
 			if (cur_clr_addr == {ADDR_BITS{1'b1}})
-				cur_clr_done <= 1'b1;
+				cur_clr_done <= 1'b1; //清零地址达到最大址,下个时钟结束
 			else
 				cur_clr_done <= cur_clr_done;
 		end
 		else begin
+			//统计中
 			cur_ram <= cur_ram;
 			cur_clr_done <= cur_clr_done;
 			cur_clr_addr <= cur_clr_addr;
 		end
 	end
 
+    //以下统计逻辑(先读出原值,在下一个时钟+1回写)
+
+	//输入接口连接到统计RAM读线(先读后写)
 	assign cur_clk = in_clk;
-	assign cur_rden = in_valid;
-	assign cur_rdaddr = in_addr;
+	assign cur_ren = in_valid;
+	assign cur_raddr = in_addr;
 
-	reg cur_rden_r;
-	always @ (posedge in_clk) cur_rden_r <= cur_rden;
-	assign cur_wren = !cur_clr_done ? 1'b1 : cur_rden_r;
+	//统计写使能逻辑
+	reg cur_ren_r;
+	always @ (posedge in_clk or negedge in_rst_n) begin
+		if (!in_rst_n)
+			cur_ren_r <= 0;
+		else
+			cur_ren_r <= cur_ren;
+	end
+	assign cur_wen = cur_clr_done ? cur_ren_r : 1'b1; //统计时就是上次的读使能, 清零时置1
 
-	reg [ADDR_BITS-1:0] cur_rdaddr_r;
-	always @ (posedge in_clk) cur_rdaddr_r <= cur_rdaddr;
-	assign cur_wraddr = !cur_clr_done ? cur_clr_addr : cur_rdaddr_r;
+	//统计写地址逻辑
+	reg [ADDR_BITS-1:0] cur_raddr_r;
+	always @ (posedge in_clk or negedge in_rst_n) begin
+		if (!in_rst_n)
+			cur_raddr_r <= 0;
+		else
+			cur_raddr_r <= cur_raddr;
+	end
+	assign cur_waddr = cur_clr_done ? cur_raddr_r : cur_clr_addr; //统计时就是上次的读地址, 清零时为清零地址计数
 
-	reg [ADDR_BITS-1:0] cur_wraddr_r;
-	reg [DATA_BITS-1:0] cur_data_r;
-	always @ (posedge in_clk) cur_wraddr_r <= cur_wraddr;
-	always @ (posedge in_clk) cur_data_r <= cur_data;
-	assign cur_data = !cur_clr_done ? {DATA_BITS{1'b0}} : (cur_wraddr == cur_wraddr_r ? cur_data_r + 1'b1 : cur_q + 1'b1);
+	//统计写数据逻辑
+	reg                 cur_wen_r;   //上次写使能
+	reg [ADDR_BITS-1:0] cur_waddr_r; //上次写地址
+	reg [DATA_BITS-1:0] cur_wdata_r; //上次写数据
+	always @ (posedge in_clk or negedge in_rst_n) begin
+		if (!in_rst_n) begin
+			cur_wen_r   <= 0;
+			cur_waddr_r <= 0;
+			cur_wdata_r <= 0;
+		end
+		else begin
+			cur_wen_r   <= cur_wen;
+			cur_waddr_r <= cur_waddr;
+			cur_wdata_r <= cur_wdata;
+		end
+	end
+	assign cur_wdata = cur_clr_done ? (cur_wen_r && cur_raddr_r/*上次读地址即本次写地址*/ == cur_waddr_r/*上一次写地址*/
+                                        ? cur_wdata_r + 1'b1 /*地址相同则上次写数据+1(规避RAM是first_read特性带来的数据老旧,使用在该地址上最后写入的数据)*/
+                                        : cur_rdata + 1'b1) /*地址不同则在上次读出数据+1(上次读出的数据就是该地址最新数据了)*/
+                                    : {DATA_BITS{1'b0}}; /*清零时数据置0*/  //本条表达式可能有较高的逻辑延迟
 
+	//读出接口连接到读出RAM
 	assign bak_clk = out_clk;
-	assign bak_rden = out_en;
-	assign bak_rdaddr = out_addr;
-	assign out_data = bak_q;
-	assign bak_wren = 1'b0;
-	assign bak_wraddr = 0;
-	assign bak_data = 0;
+	assign bak_ren = out_en;
+	assign bak_raddr = out_addr;
+	assign out_data = bak_rdata;
+	assign bak_wen = 1'b0;
+	assign bak_waddr = 0;
+	assign bak_wdata = 0;
 endmodule

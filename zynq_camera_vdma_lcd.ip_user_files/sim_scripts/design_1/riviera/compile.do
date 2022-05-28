@@ -336,38 +336,42 @@ vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_axi_intc_0_0/sim/design_1_axi_intc_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_crop.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_dscale.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_hist_equ.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_sobel.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_top.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/vip/vip_yuv2rgb.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/xil_vip_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/48bb/hdl/xil_vip_v1_0.v" \
+"../../../bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v" \
+"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0.v" \
+"../../../bd/design_1/ip/design_1_xil_camif_0_0/sim/design_1_xil_camif_0_0.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_2dnr.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_blc.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_bnr.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_ccm.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_csc.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_demosaic.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_dgain.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_dpc.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_ee.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_gamma.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_stat_ae.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_stat_awb.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_top.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_utils.v" \
+"../../../bd/design_1/ipshared/c305/hdl/isp_lite/isp_wb.v" \
+"../../../bd/design_1/ipshared/c305/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/c305/hdl/xil_isp_lite_v1_0.v" \
+"../../../bd/design_1/ip/design_1_xil_isp_lite_0_0/sim/design_1_xil_isp_lite_0_0.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_crop.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_dscale.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_sobel.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_top.v" \
+"../../../bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v" \
+"../../../bd/design_1/ipshared/654a/hdl/xil_vip_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/654a/hdl/xil_vip_v1_0.v" \
 "../../../bd/design_1/ip/design_1_xil_vip_0_0/sim/design_1_xil_vip_0_0.v" \
 "../../../bd/design_1/ip/design_1_xil_vip_1_0/sim/design_1_xil_vip_1_0.v" \
-"../../../bd/design_1/ipshared/c5cf/hdl/dvp_raw_timing_colorbar.v" \
-"../../../bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/c5cf/hdl/xil_camif_v1_0.v" \
-"../../../bd/design_1/ip/design_1_xil_camif_0_0/sim/design_1_xil_camif_0_0.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_blc.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_bnr.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_ccm.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_csc.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_demosaic.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_dgain.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_dpc.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_ee.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_gamma.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_stat_ae.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_stat_awb.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_top.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/isp_lite/isp_wb.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/5ebd/hdl/xil_isp_lite_v1_0.v" \
-"../../../bd/design_1/ip/design_1_xil_isp_lite_0_0/sim/design_1_xil_isp_lite_0_0.v" \
 "../../../bd/design_1/sim/design_1.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

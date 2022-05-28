@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Dec 27 00:14:55 2021
+-- Date        : Sun May 29 00:23:13 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_sim_netlist.vhdl
+--               D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_sim_netlist.vhdl
 -- Design      : design_1_axi_intc_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -1623,6 +1623,18 @@ architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
   attribute async_reg of \intr_ff__1\ : signal is "true";
   signal \intr_ff__2\ : STD_LOGIC_VECTOR ( 0 to 1 );
   attribute async_reg of \intr_ff__2\ : signal is "true";
+  signal \intr_ff__3\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__3\ : signal is "true";
+  signal \intr_ff__4\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__4\ : signal is "true";
+  signal \intr_ff__5\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__5\ : signal is "true";
+  signal \intr_ff__6\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__6\ : signal is "true";
+  signal \intr_ff__7\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__7\ : signal is "true";
+  signal \intr_ff__8\ : STD_LOGIC_VECTOR ( 0 to 1 );
+  attribute async_reg of \intr_ff__8\ : signal is "true";
   signal \^irq\ : STD_LOGIC;
   signal irq_gen : STD_LOGIC;
   signal irq_gen_i : STD_LOGIC;
@@ -1690,8 +1702,10 @@ architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
   attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
   attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
   attribute KEEP of \INTR_DETECT_GEN[0].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
-  attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[10].LVL_DETECT_GEN.hw_intr[10]_i_1\ : label is "soft_lutpair26";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
   attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[1].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
   attribute KEEP of \INTR_DETECT_GEN[1].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
   attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[1].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
@@ -1704,36 +1718,52 @@ architecture STRUCTURE of design_1_axi_intc_0_0_intc_core is
   attribute KEEP of \INTR_DETECT_GEN[3].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
   attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[3].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
   attribute KEEP of \INTR_DETECT_GEN[3].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[4].LVL_DETECT_GEN.hw_intr[4]_i_1\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[5].LVL_DETECT_GEN.hw_intr[5]_i_1\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[6].LVL_DETECT_GEN.hw_intr[6]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[7].LVL_DETECT_GEN.hw_intr[7]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[8].LVL_DETECT_GEN.hw_intr[8]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[9].LVL_DETECT_GEN.hw_intr[9]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \IPR_GEN.ipr[10]_i_1\ : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM : string;
+  attribute SOFT_HLUTNM of \INTR_DETECT_GEN[4].LVL_DETECT_GEN.hw_intr[4]_i_1\ : label is "soft_lutpair26";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0]\ : label is "yes";
+  attribute ASYNC_REG_boolean of \INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[1]\ : label is std.standard.true;
+  attribute KEEP of \INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[1]\ : label is "yes";
+  attribute SOFT_HLUTNM of \IPR_GEN.ipr[10]_i_1\ : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of \IPR_GEN.ipr[2]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \IPR_GEN.ipr[3]_i_1\ : label is "soft_lutpair32";
-  attribute SOFT_HLUTNM of \IPR_GEN.ipr[5]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \IPR_GEN.ipr[3]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \IPR_GEN.ipr[5]_i_1\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \IPR_GEN.ipr[6]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \IRQ_LEVEL_GEN.IRQ_LEVEL_NORMAL_ON_AXI_CLK_GEN.Irq_i_1\ : label is "soft_lutpair27";
   attribute SOFT_HLUTNM of \IVR_GEN.ivr[0]_i_3\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \IVR_GEN.ivr[1]_i_1\ : label is "soft_lutpair36";
+  attribute SOFT_HLUTNM of \IVR_GEN.ivr[1]_i_1\ : label is "soft_lutpair30";
   attribute SOFT_HLUTNM of \IVR_GEN.ivr[2]_i_2\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \IVR_GEN.ivr[2]_i_3\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \IVR_GEN.ivr[3]_i_1\ : label is "soft_lutpair34";
-  attribute SOFT_HLUTNM of \REG_GEN[10].isr[10]_i_2\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \REG_GEN[1].isr[1]_i_2\ : label is "soft_lutpair36";
-  attribute SOFT_HLUTNM of \REG_GEN[2].isr[2]_i_2\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \REG_GEN[3].isr[3]_i_2\ : label is "soft_lutpair38";
-  attribute SOFT_HLUTNM of \REG_GEN[4].isr[4]_i_2\ : label is "soft_lutpair33";
-  attribute SOFT_HLUTNM of \REG_GEN[5].isr[5]_i_2\ : label is "soft_lutpair35";
-  attribute SOFT_HLUTNM of \REG_GEN[6].isr[6]_i_2\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \REG_GEN[7].isr[7]_i_2\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \REG_GEN[8].isr[8]_i_2\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \REG_GEN[9].isr[9]_i_2\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of irq_gen_i_1 : label is "soft_lutpair37";
+  attribute SOFT_HLUTNM of \IVR_GEN.ivr[2]_i_3\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \IVR_GEN.ivr[3]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \REG_GEN[10].isr[10]_i_2\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of \REG_GEN[1].isr[1]_i_2\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \REG_GEN[2].isr[2]_i_2\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \REG_GEN[3].isr[3]_i_2\ : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of \REG_GEN[4].isr[4]_i_2\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \REG_GEN[5].isr[5]_i_2\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \REG_GEN[6].isr[6]_i_2\ : label is "soft_lutpair33";
+  attribute SOFT_HLUTNM of \REG_GEN[7].isr[7]_i_2\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \REG_GEN[8].isr[8]_i_2\ : label is "soft_lutpair34";
+  attribute SOFT_HLUTNM of \REG_GEN[9].isr[9]_i_2\ : label is "soft_lutpair35";
+  attribute SOFT_HLUTNM of irq_gen_i_1 : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of irq_gen_i_3 : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of irq_gen_i_4 : label is "soft_lutpair32";
+  attribute SOFT_HLUTNM of irq_gen_i_4 : label is "soft_lutpair29";
   attribute SOFT_HLUTNM of \s_axi_rdata_i[2]_i_2\ : label is "soft_lutpair23";
 begin
   \CIE_GEN.CIE_BIT_GEN[0].cie_reg[0]_0\ <= \^cie_gen.cie_bit_gen[0].cie_reg[0]_0\;
@@ -1925,13 +1955,35 @@ begin
       Q => \INTR_DETECT_GEN[0].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(10),
+      Q => \intr_ff__8\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__8\(0),
+      Q => \intr_ff__8\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[10].LVL_DETECT_GEN.hw_intr[10]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[10].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(10),
+      I1 => \intr_ff__8\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[10].iar_normal_mode_gen.iar_reg[10]_0\,
       O => \INTR_DETECT_GEN[10].LVL_DETECT_GEN.hw_intr[10]_i_1_n_0\
@@ -2086,13 +2138,35 @@ begin
       Q => \INTR_DETECT_GEN[4].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(5),
+      Q => \intr_ff__3\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__3\(0),
+      Q => \intr_ff__3\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[5].LVL_DETECT_GEN.hw_intr[5]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[5].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(5),
+      I1 => \intr_ff__3\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[5].iar_normal_mode_gen.iar_reg[5]_0\,
       O => \INTR_DETECT_GEN[5].LVL_DETECT_GEN.hw_intr[5]_i_1_n_0\
@@ -2105,13 +2179,35 @@ begin
       Q => \INTR_DETECT_GEN[5].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(6),
+      Q => \intr_ff__4\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__4\(0),
+      Q => \intr_ff__4\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[6].LVL_DETECT_GEN.hw_intr[6]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[6].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(6),
+      I1 => \intr_ff__4\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[6].iar_normal_mode_gen.iar_reg[6]_0\,
       O => \INTR_DETECT_GEN[6].LVL_DETECT_GEN.hw_intr[6]_i_1_n_0\
@@ -2124,13 +2220,35 @@ begin
       Q => \INTR_DETECT_GEN[6].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(7),
+      Q => \intr_ff__5\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__5\(0),
+      Q => \intr_ff__5\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[7].LVL_DETECT_GEN.hw_intr[7]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[7].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(7),
+      I1 => \intr_ff__5\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[7].iar_normal_mode_gen.iar_reg[7]_0\,
       O => \INTR_DETECT_GEN[7].LVL_DETECT_GEN.hw_intr[7]_i_1_n_0\
@@ -2143,13 +2261,35 @@ begin
       Q => \INTR_DETECT_GEN[7].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(8),
+      Q => \intr_ff__6\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__6\(0),
+      Q => \intr_ff__6\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[8].LVL_DETECT_GEN.hw_intr[8]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[8].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(8),
+      I1 => \intr_ff__6\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[8].iar_normal_mode_gen.iar_reg[8]_0\,
       O => \INTR_DETECT_GEN[8].LVL_DETECT_GEN.hw_intr[8]_i_1_n_0\
@@ -2162,13 +2302,35 @@ begin
       Q => \INTR_DETECT_GEN[8].LVL_DETECT_GEN.hw_intr_reg\,
       R => '0'
     );
+\INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => intr(9),
+      Q => \intr_ff__7\(0),
+      R => '0'
+    );
+\INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => s_axi_aclk,
+      CE => '1',
+      D => \intr_ff__7\(0),
+      Q => \intr_ff__7\(1),
+      R => '0'
+    );
 \INTR_DETECT_GEN[9].LVL_DETECT_GEN.hw_intr[9]_i_1\: unisim.vcomponents.LUT4
     generic map(
       INIT => X"00E0"
     )
         port map (
       I0 => \INTR_DETECT_GEN[9].LVL_DETECT_GEN.hw_intr_reg\,
-      I1 => intr(9),
+      I1 => \intr_ff__7\(1),
       I2 => s_axi_aresetn,
       I3 => \^reg_gen[9].iar_normal_mode_gen.iar_reg[9]_0\,
       O => \INTR_DETECT_GEN[9].LVL_DETECT_GEN.hw_intr[9]_i_1_n_0\
@@ -4916,7 +5078,7 @@ entity design_1_axi_intc_0_0_axi_intc is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of design_1_axi_intc_0_0_axi_intc : entity is 32;
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of design_1_axi_intc_0_0_axi_intc : entity is -2033;
+  attribute C_ASYNC_INTR of design_1_axi_intc_0_0_axi_intc : entity is -17;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of design_1_axi_intc_0_0_axi_intc : entity is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -5482,7 +5644,7 @@ architecture STRUCTURE of design_1_axi_intc_0_0 is
   attribute C_ADDR_WIDTH : integer;
   attribute C_ADDR_WIDTH of U0 : label is 32;
   attribute C_ASYNC_INTR : integer;
-  attribute C_ASYNC_INTR of U0 : label is -2033;
+  attribute C_ASYNC_INTR of U0 : label is -17;
   attribute C_CASCADE_MASTER : integer;
   attribute C_CASCADE_MASTER of U0 : label is 0;
   attribute C_DISABLE_SYNCHRONIZERS : integer;
@@ -5548,7 +5710,7 @@ architecture STRUCTURE of design_1_axi_intc_0_0 is
   attribute x_interface_parameter : string;
   attribute x_interface_parameter of irq : signal is "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, LOW_LATENCY 0";
   attribute x_interface_info of s_axi_aclk : signal is "xilinx.com:signal:clock:1.0 s_axi_aclk CLK";
-  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_aclk : signal is "XIL_INTERFACENAME s_axi_aclk, ASSOCIATED_BUSIF s_axi, ASSOCIATED_RESET s_axi_aresetn, FREQ_HZ 50000000, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0";
   attribute x_interface_info of s_axi_aresetn : signal is "xilinx.com:signal:reset:1.0 s_resetn RST";
   attribute x_interface_parameter of s_axi_aresetn : signal is "XIL_INTERFACENAME s_resetn, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   attribute x_interface_info of s_axi_arready : signal is "xilinx.com:interface:aximm:1.0 s_axi ARREADY";
@@ -5565,7 +5727,7 @@ architecture STRUCTURE of design_1_axi_intc_0_0 is
   attribute x_interface_parameter of intr : signal is "XIL_INTERFACENAME interrupt_input, SENSITIVITY LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH, PortWidth 11";
   attribute x_interface_info of s_axi_araddr : signal is "xilinx.com:interface:aximm:1.0 s_axi ARADDR";
   attribute x_interface_info of s_axi_awaddr : signal is "xilinx.com:interface:aximm:1.0 s_axi AWADDR";
-  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
+  attribute x_interface_parameter of s_axi_awaddr : signal is "XIL_INTERFACENAME s_axi, DATA_WIDTH 32, PROTOCOL AXI4LITE, FREQ_HZ 50000000, ID_WIDTH 0, ADDR_WIDTH 9, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 1, PHASE 0.000, CLK_DOMAIN design_1_processing_system7_0_0_FCLK_CLK1, NUM_READ_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0";
   attribute x_interface_info of s_axi_bresp : signal is "xilinx.com:interface:aximm:1.0 s_axi BRESP";
   attribute x_interface_info of s_axi_rdata : signal is "xilinx.com:interface:aximm:1.0 s_axi RDATA";
   attribute x_interface_info of s_axi_rresp : signal is "xilinx.com:interface:aximm:1.0 s_axi RRESP";

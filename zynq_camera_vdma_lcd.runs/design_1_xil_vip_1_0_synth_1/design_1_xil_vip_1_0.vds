@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Dec 27 00:15:10 2021
-# Process ID: 6924
+# Start of session at: Sat May 28 14:48:42 2022
+# Process ID: 6588
 # Current directory: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_1_0_synth_1
 # Command line: vivado.exe -log design_1_xil_vip_1_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_vip_1_0.tcl
 # Log file: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_1_0_synth_1/design_1_xil_vip_1_0.vds
@@ -13,5 +13,993 @@ source design_1_xil_vip_1_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_xil_vip_1_0, cache-ID = 51dd3a0aaee4c688.
-INFO: [Common 17-206] Exiting Vivado at Mon Dec 27 00:15:14 2021...
+Command: synth_design -top design_1_xil_vip_1_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 39324 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 407.191 ; gain = 100.309
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_1_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/synth/design_1_xil_vip_1_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/xil_vip_v1_0.v:4]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+	Parameter FEATURE_FULL bound to: 1'b1 
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0_S00_AXI' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/xil_vip_v1_0_S00_AXI.v:4]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+	Parameter FEATURE_FULL bound to: 1'b1 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 6 - type: integer 
+	Parameter ADDR_LSB bound to: 2 - type: integer 
+	Parameter OPT_MEM_ADDR_BITS bound to: 3 - type: integer 
+	Parameter REG_RESET bound to: 0 - type: integer 
+	Parameter REG_TOP_EN bound to: 1 - type: integer 
+	Parameter REG_EQU_MIN bound to: 2 - type: integer 
+	Parameter REG_EQU_MAX bound to: 3 - type: integer 
+	Parameter REG_CROP_X bound to: 4 - type: integer 
+	Parameter REG_CROP_Y bound to: 5 - type: integer 
+	Parameter REG_CROP_W bound to: 6 - type: integer 
+	Parameter REG_CROP_H bound to: 7 - type: integer 
+	Parameter REG_DSCALE_H bound to: 8 - type: integer 
+	Parameter REG_DSCALE_V bound to: 9 - type: integer 
+	Parameter REG_INT_STATUS bound to: 10 - type: integer 
+	Parameter REG_INT_MASK bound to: 11 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vip_top' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_top.v:9]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_top.v:143]
+	Parameter BITS bound to: 24 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (1#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_top.v:143]
+INFO: [Synth 8-6157] synthesizing module 'vip_hist_equ' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:12]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+	Parameter PIX_TOTAL bound to: 4915200 - type: integer 
+	Parameter HIST_BITS bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:335]
+	Parameter ADDR_BITS bound to: 8 - type: integer 
+	Parameter DATA_BITS bound to: 23 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+	Parameter DW bound to: 23 - type: integer 
+	Parameter AW bound to: 8 - type: integer 
+	Parameter SZ bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (2#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (3#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:335]
+INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:277]
+	Parameter BITS bound to: 31 - type: integer 
+WARNING: [Synth 8-6014] Unused sequential element den_tmp_reg[30] was removed.  [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:302]
+INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (4#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:277]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter AW bound to: 8 - type: integer 
+	Parameter SZ bound to: 256 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (4#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:198]
+INFO: [Synth 8-6155] done synthesizing module 'vip_hist_equ' (5#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:12]
+INFO: [Synth 8-6157] synthesizing module 'vip_sobel' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_sobel.v:31]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+	Parameter DLY_CLK bound to: 7 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:91]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter LINES bound to: 2 - type: integer 
+	Parameter RAM_SZ bound to: 2559 - type: integer 
+	Parameter RAM_AW bound to: 12 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+	Parameter DW bound to: 8 - type: integer 
+	Parameter AW bound to: 12 - type: integer 
+	Parameter SZ bound to: 2559 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (5#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+WARNING: [Synth 8-6104] Input port 'depth' has an internal driver [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:145]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register' (6#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'vip_sobel' (7#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_sobel.v:31]
+INFO: [Synth 8-6157] synthesizing module 'vip_yuv2rgb' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:14]
+	Parameter BITS bound to: 8 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vip_yuv2rgb' (8#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:14]
+INFO: [Synth 8-6157] synthesizing module 'vip_crop' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_crop.v:13]
+	Parameter BITS bound to: 24 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vip_crop' (9#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_crop.v:13]
+INFO: [Synth 8-6157] synthesizing module 'vip_dscale' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_dscale.v:13]
+	Parameter BITS bound to: 24 - type: integer 
+	Parameter WIDTH bound to: 2560 - type: integer 
+	Parameter HEIGHT bound to: 1920 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'vip_dscale' (10#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_dscale.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_top' (11#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0_S00_AXI' (12#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/xil_vip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0' (13#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/xil_vip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_1_0' (14#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/synth/design_1_xil_vip_1_0.v:56]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 467.477 ; gain = 160.594
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 467.477 ; gain = 160.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 467.477 ; gain = 160.594
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 828.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 828.945 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.274 . Memory (MB): peak = 834.898 ; gain = 5.953
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 834.898 ; gain = 528.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 834.898 ; gain = 528.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 834.898 ; gain = 528.016
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:470]
+INFO: [Synth 8-5546] ROM "cur_clr_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "hist_sum_done" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_sobel.v:102]
+INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_sobel.v:101]
+INFO: [Synth 8-5544] ROM "out_pclk_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 834.898 ; gain = 528.016
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     62 Bit       Adders := 31    
+	   2 Input     23 Bit       Adders := 1     
+	   3 Input     20 Bit       Adders := 2     
+	   4 Input     20 Bit       Adders := 1     
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 6     
+	   2 Input      8 Bit       Adders := 3     
+	   3 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               62 Bit    Registers := 61    
+	               32 Bit    Registers := 1     
+	               31 Bit    Registers := 1     
+	               24 Bit    Registers := 7     
+	               23 Bit    Registers := 3     
+	               20 Bit    Registers := 8     
+	               16 Bit    Registers := 8     
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 67    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 8     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 81    
++---RAMs : 
+	              19K Bit         RAMs := 2     
+	               5K Bit         RAMs := 2     
+	               2K Bit         RAMs := 1     
++---Muxes : 
+	   2 Input     62 Bit        Muxes := 31    
+	   2 Input     42 Bit        Muxes := 2     
+	   2 Input     24 Bit        Muxes := 7     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 19    
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 25    
+	   3 Input      1 Bit        Muxes := 2     
+	  13 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module vid_mux 
+Detailed RTL Component Info : 
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module simple_dp_ram 
+Detailed RTL Component Info : 
++---Registers : 
+	               23 Bit    Registers := 1     
++---RAMs : 
+	               5K Bit         RAMs := 1     
+Module hist_stat 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     23 Bit       Adders := 1     
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	               23 Bit    Registers := 1     
+	                8 Bit    Registers := 3     
+	                1 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     42 Bit        Muxes := 2     
+	   2 Input     23 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 2     
+	   3 Input      1 Bit        Muxes := 1     
+Module shift_div_uint 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     62 Bit       Adders := 31    
++---Registers : 
+	               62 Bit    Registers := 61    
++---Muxes : 
+	   2 Input     62 Bit        Muxes := 31    
+Module simple_dp_ram__parameterized0 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	               2K Bit         RAMs := 1     
+Module vip_hist_equ 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 2     
+	   3 Input      8 Bit       Adders := 1     
++---Registers : 
+	               31 Bit    Registers := 1     
+	                8 Bit    Registers := 38    
+	                1 Bit    Registers := 39    
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 1     
+	   3 Input      1 Bit        Muxes := 1     
+Module simple_dp_ram__parameterized1 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---RAMs : 
+	              19K Bit         RAMs := 1     
+Module shift_register 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     12 Bit        Muxes := 1     
+Module vip_sobel 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     11 Bit       Adders := 1     
+	   3 Input     10 Bit       Adders := 6     
++---Registers : 
+	               11 Bit    Registers := 1     
+	               10 Bit    Registers := 6     
+	                8 Bit    Registers := 10    
+	                7 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 4     
+	   2 Input      8 Bit        Muxes := 2     
+Module vip_yuv2rgb 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     20 Bit       Adders := 2     
+	   4 Input     20 Bit       Adders := 1     
++---Registers : 
+	               20 Bit    Registers := 8     
+	                8 Bit    Registers := 6     
+	                4 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 9     
+Module vip_crop 
+Detailed RTL Component Info : 
++---Adders : 
+	   3 Input     17 Bit       Adders := 2     
+	   2 Input     16 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                1 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module vip_dscale 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 2     
++---Registers : 
+	               24 Bit    Registers := 1     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     24 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 2     
+Module vip_top 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 2     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 3     
+Module xil_vip_v1_0_S00_AXI 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 8     
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 2     
+	                4 Bit    Registers := 4     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 22    
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 5     
+	  13 Input      1 Bit        Muxes := 12    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'prev_vsync_reg' into 'hist_ram_data/prev_vsync_reg' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:40]
+DSP Report: Generating DSP hist_sum_data_20, operation Mode is: A*B.
+DSP Report: operator hist_sum_data_20 is absorbed into DSP hist_sum_data_20.
+DSP Report: Generating DSP img_Cr_r10, operation Mode is: (A:0x331)*B.
+DSP Report: operator img_Cr_r10 is absorbed into DSP img_Cr_r10.
+DSP Report: Generating DSP img_Y_r10, operation Mode is: (A:0x254)*B.
+DSP Report: operator img_Y_r10 is absorbed into DSP img_Y_r10.
+DSP Report: Generating DSP img_Cb_r20, operation Mode is: (A:0x409)*B.
+DSP Report: operator img_Cb_r20 is absorbed into DSP img_Cb_r20.
+INFO: [Synth 8-5544] ROM "out_pclk_r" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[31]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[30]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[29]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[28]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[27]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[26]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[25]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[24]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[23]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[22]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[21]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[20]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[19]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[18]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[17]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wdata[16]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wstrb[3]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wstrb[2]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wstrb[1]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_wstrb[0]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design design_1_xil_vip_1_0 has unconnected port s00_axi_arprot[0]
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_map_ram/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[0].u_ram/mem_reg to conserve power
+INFO: [Synth 8-4652] Swapped enable and write-enable on 1 RAM instances of RAM inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[1].u_ram/mem_reg to conserve power
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[0][38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\den_tmp_reg[0][0] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r2_reg[19]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[0]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[0]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[1]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[1]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[2]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[2]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[3]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[16]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[17]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[17]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[19]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cb_r1_reg[19]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r1_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r1_reg[19]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[10]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[11]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[12]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[13]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[14]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[15]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[16]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[17]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[10]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[11]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[12]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[13]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[14]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[15]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[16]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[17]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/YOUT_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[10]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[11]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[12]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[13]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[14]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[15]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[16]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[17]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/XOUT_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[16]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[17]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[18]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[19]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[20]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[21]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[22]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[23]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[24]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[25]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[26]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[27]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[28]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[29]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[30]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[30]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[31] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][34]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][35]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][35]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][36]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][36]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][37]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][37]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][38]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][40]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][41]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][44]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][44]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][45]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][45]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][46]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][46]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][51]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][52]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][54]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][55]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][55]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][56]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][56]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][57]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][57]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][58]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][58]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][59]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][59]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][60]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][36]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][37]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][37]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][38]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][39]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][41]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][44]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][44]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][45]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][45]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][46]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][46]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][56]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][57]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][57]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][58]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][58]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][59]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][59]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][60]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][39]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][40]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][44]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[1][1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[2][2] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 834.898 ; gain = 528.016
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping  Report (see note below)
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized0: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+DSP: Preliminary Mapping  Report (see note below)
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name  | DSP Mapping | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|vip_hist_equ | A*B         | 23     | 8      | -      | -      | 31     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vip_yuv2rgb  | (A:0x331)*B | 8      | 10     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vip_yuv2rgb  | (A:0x254)*B | 8      | 10     | -      | -      | 18     | 0    | 0    | -    | -    | -     | 0    | 0    | 
+|vip_yuv2rgb  | (A:0x409)*B | 8      | 11     | -      | -      | 19     | 0    | 0    | -    | -    | -     | 0    | 0    | 
++-------------+-------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+
+Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i___0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i___1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i___2/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_map_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance xil_vip_v1_0_S00_AXI_insti_94/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[0].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance xil_vip_v1_0_S00_AXI_insti_95/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[1].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:127]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:44]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:42]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:43]
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 879.746 ; gain = 572.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 887.227 ; gain = 580.344
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping  Report
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized0: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
++-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:126]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:74]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:72]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:73]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:106]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_hist_equ.v:127]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:44]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:42]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/654a/hdl/vip/vip_yuv2rgb.v:43]
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_map_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[0].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[1].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:48 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_wen_reg      | 34     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_waddr_reg[7] | 35     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/href_dly_reg[6]          | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/vsync_dly_reg[6]         | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/href_r_reg[3]          | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_1_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/vsync_r_reg[3]         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP and Shift Register Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----------+------+
+|      |Cell       |Count |
++------+-----------+------+
+|1     |CARRY4     |   764|
+|2     |DSP48E1    |     4|
+|3     |LUT1       |    85|
+|4     |LUT2       |  3299|
+|5     |LUT3       |  2287|
+|6     |LUT4       |   301|
+|7     |LUT5       |   113|
+|8     |LUT6       |    80|
+|9     |RAMB18E1   |     2|
+|10    |RAMB18E1_1 |     1|
+|11    |RAMB36E1   |     2|
+|12    |SRL16E     |     4|
+|13    |SRLC32E    |    17|
+|14    |FDCE       |  2494|
+|15    |FDPE       |    16|
+|16    |FDRE       |   254|
+|17    |FDSE       |    19|
++------+-----------+------+
+
+Report Instance Areas: 
++------+------------------------------------+--------------------------------+------+
+|      |Instance                            |Module                          |Cells |
++------+------------------------------------+--------------------------------+------+
+|1     |top                                 |                                |  9742|
+|2     |  inst                              |xil_vip_v1_0                    |  9740|
+|3     |    xil_vip_v1_0_S00_AXI_inst       |xil_vip_v1_0_S00_AXI            |  9740|
+|4     |      vip_top_i0                    |vip_top                         |  9449|
+|5     |        crop_i0                     |vip_crop                        |   247|
+|6     |        dscale_i0                   |vip_dscale                      |    79|
+|7     |        hist_equ_i0                 |vip_hist_equ                    |  8199|
+|8     |          div_hist_sum_3            |shift_div_uint                  |  7765|
+|9     |          hist_map_ram              |simple_dp_ram__parameterized0   |     9|
+|10    |          hist_ram_data             |hist_stat                       |   269|
+|11    |            ping_ram                |simple_dp_ram                   |    65|
+|12    |            pong_ram                |simple_dp_ram_5                 |    88|
+|13    |        mux_crop_i0                 |vid_mux                         |    27|
+|14    |        mux_hist_equ_i0             |vid_mux_0                       |    42|
+|15    |        mux_in                      |vid_mux_1                       |    44|
+|16    |        mux_sobel_i0                |vid_mux_2                       |    26|
+|17    |        mux_yuv2rgb_i0              |vid_mux_3                       |    28|
+|18    |        sobel_i0                    |vip_sobel                       |   378|
+|19    |          line2buf                  |shift_register                  |    41|
+|20    |            \gen_ram_inst[0].u_ram  |simple_dp_ram__parameterized1   |     1|
+|21    |            \gen_ram_inst[1].u_ram  |simple_dp_ram__parameterized1_4 |    15|
+|22    |        yuv2rgb_i0                  |vip_yuv2rgb                     |   357|
++------+------------------------------------+--------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 921.492 ; gain = 614.609
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 26 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:37 ; elapsed = 00:00:42 . Memory (MB): peak = 921.492 ; gain = 247.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 921.492 ; gain = 614.609
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 773 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 921.492 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+276 Infos, 124 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 921.492 ; gain = 624.918
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 921.492 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_1_0_synth_1/design_1_xil_vip_1_0.dcp' has been generated.
+INFO: [Coretcl 2-1174] Renamed 21 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 921.492 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_1_0_synth_1/design_1_xil_vip_1_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xil_vip_1_0_utilization_synth.rpt -pb design_1_xil_vip_1_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat May 28 14:49:44 2022...

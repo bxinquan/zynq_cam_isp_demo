@@ -1,11 +1,11 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Mon Dec 27 00:17:27 2021
+-- Date        : Sat May 28 14:52:23 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_axi_vdma_1_0 -prefix
---               design_1_axi_vdma_1_0_ design_1_axi_vdma_2_0_stub.vhdl
--- Design      : design_1_axi_vdma_2_0
+-- Command     : write_vhdl -force -mode synth_stub
+--               D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0_stub.vhdl
+-- Design      : design_1_axi_vdma_1_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2
 -- --------------------------------------------------------------------------------
