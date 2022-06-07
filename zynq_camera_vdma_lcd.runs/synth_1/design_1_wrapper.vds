@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun May 29 00:31:21 2022
-# Process ID: 41780
+# Start of session at: Tue Jun  7 07:42:16 2022
+# Process ID: 45704
 # Current directory: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/design_1_wrapper.vds
@@ -13,14 +13,15 @@ source design_1_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+add_files: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 333.629 ; gain = 48.035
 Command: synth_design -top design_1_wrapper -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 31336 
+INFO: Helper process launched with PID 66624 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 464.910 ; gain = 109.422
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 455.598 ; gain = 109.094
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_wrapper' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
@@ -30,28 +31,28 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2018.3/script
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
 INFO: [Synth 8-6157] synthesizing module 'design_1' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6157] synthesizing module 'design_1_DVI_Transmitter_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_DVI_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_DVI_Transmitter_0_0' (2#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_DVI_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0' (3#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_iic' of module 'design_1_axi_iic_0' requires 27 connections, but only 26 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:609]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (4#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (5#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (6#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:793]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_1_0' (7#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_vdma_1' of module 'design_1_axi_vdma_1_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:858]
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_2_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_2_0' (8#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'axi_vdma_2' of module 'design_1_axi_vdma_2_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:923]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (9#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (10#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_DVI_Transmitter_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_DVI_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_DVI_Transmitter_0_0' (2#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_DVI_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_0_0' (3#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_iic_0' of module 'design_1_axi_iic_0_0' requires 27 connections, but only 26 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:656]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_iic_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_iic_1_0' (4#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_iic_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_iic_1' of module 'design_1_axi_iic_1_0' requires 27 connections, but only 26 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:683]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_intc_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_intc_0_0' (5#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (6#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_0_0' (7#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_vdma_0' of module 'design_1_axi_vdma_0_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:834]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_vdma_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_vdma_1_0' (8#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_axi_vdma_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'axi_vdma_1' of module 'design_1_axi_vdma_1_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:899]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_0_0' (9#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'design_1_clk_wiz_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_clk_wiz_1_0' (10#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_clk_wiz_1_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'design_1_cmos_pwdn_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_cmos_pwdn_0/synth/design_1_cmos_pwdn_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
@@ -66,78 +67,77 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__par
 INFO: [Synth 8-6155] done synthesizing module 'design_1_cmos_rst_n_0' (13#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_cmos_rst_n_0/synth/design_1_cmos_rst_n_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'design_1_lcd_bl_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_lcd_bl_0/synth/design_1_lcd_bl_0.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_lcd_bl_0' (14#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_lcd_bl_0/synth/design_1_lcd_bl_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (15#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_processing_system7_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' requires 113 connections, but only 107 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1005]
-INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1651]
-INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3132]
-INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (16#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3132]
-INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3257]
-INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (17#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3257]
-INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3382]
-INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (18#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3382]
-INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_YFYJ3U' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3528]
-INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_YFYJ3U' (19#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3528]
-INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_17KQ732' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3674]
-INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_17KQ732' (20#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3674]
-INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_VQEDA7' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3799]
-INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_VQEDA7' (21#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3799]
-INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_16EQN6L' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3945]
-INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_16EQN6L' (22#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3945]
-INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_X61OAK' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
-INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_X61OAK' (23#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4091]
-INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1024TAS' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4223]
-INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1024TAS' (24#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4223]
-INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4355]
-INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (25#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (26#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4355]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (27#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:6]
-WARNING: [Synth 8-689] width (21) of port connection 'm_axi_arprot' does not match port width (27) of module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3093]
-WARNING: [Synth 8-689] width (21) of port connection 'm_axi_awprot' does not match port width (27) of module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3097]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (28#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1651]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (29#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1332]
-INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (30#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1339]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_0_0' (31#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_0' of module 'design_1_v_axi4s_vid_out_0_0' requires 31 connections, but only 23 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1346]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_1_0' (32#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_1' of module 'design_1_v_axi4s_vid_out_1_0' requires 31 connections, but only 23 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1370]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_2_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_2_0' (33#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_2' of module 'design_1_v_axi4s_vid_out_2_0' requires 31 connections, but only 24 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1394]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_0_0' (34#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_tc_0' of module 'design_1_v_tc_0_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1419]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_1_0' (35#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_tc_1' of module 'design_1_v_tc_1_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1429]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_2_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_2_0' (36#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_tc_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_tc_2' of module 'design_1_v_tc_2_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1439]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_0_0' (37#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_0' of module 'design_1_v_vid_in_axi4s_0_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1449]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_1_0' (38#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_1_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_1' of module 'design_1_v_vid_in_axi4s_1_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1469]
-INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_2_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_2_0' (39#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_2_0_stub.v:6]
-WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_2' of module 'design_1_v_vid_in_axi4s_2_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1489]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xil_camif_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_camif_0_0' (40#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_0_0' (41#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_0_0' (42#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_1_0' (43#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-41780-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_processing_system7_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_processing_system7_0_0' (15#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_processing_system7_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'design_1_processing_system7_0_0' requires 113 connections, but only 107 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:981]
+INFO: [Synth 8-6157] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1680]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3452]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_15SPJYW' (16#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3452]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_XU9C55' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3577]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_XU9C55' (17#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3577]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_14WQB4R' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3702]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_14WQB4R' (18#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3702]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_YFYJ3U' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3834]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_YFYJ3U' (19#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3834]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_17KQ732' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3966]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_17KQ732' (20#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3966]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_VQEDA7' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4112]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_VQEDA7' (21#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4112]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_16EQN6L' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4258]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_16EQN6L' (22#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4258]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_X61OAK' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4404]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_X61OAK' (23#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4404]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_1024TAS' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4550]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_1024TAS' (24#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4550]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_UP9YUT' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4696]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_UP9YUT' (25#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4696]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_I40Q9S' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4842]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_I40Q9S' (26#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4842]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_UYSKKA' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4974]
+INFO: [Synth 8-6157] synthesizing module 'design_1_auto_pc_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_auto_pc_0' (27#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_UYSKKA' (28#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:4974]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xbar_0' (29#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xbar_0_stub.v:6]
+WARNING: [Synth 8-689] width (30) of port connection 'm_axi_arprot' does not match port width (33) of module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3413]
+WARNING: [Synth 8-689] width (30) of port connection 'm_axi_awprot' does not match port width (33) of module 'design_1_xbar_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:3417]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_ps7_0_axi_periph_0' (30#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1680]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_100M_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_100M_0' (31#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_100M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'design_1_rst_ps7_0_100M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1351]
+INFO: [Synth 8-6157] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_rst_ps7_0_50M_0' (32#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_rst_ps7_0_50M_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'design_1_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1358]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_0_0' (33#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_0' of module 'design_1_v_axi4s_vid_out_0_0' requires 31 connections, but only 23 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1365]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_axi4s_vid_out_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_axi4s_vid_out_1_0' (34#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_axi4s_vid_out_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_1' of module 'design_1_v_axi4s_vid_out_1_0' requires 31 connections, but only 24 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1389]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_0_0' (35#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_tc_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_tc_0' of module 'design_1_v_tc_0_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1414]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_tc_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_tc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_tc_1_0' (36#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_tc_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_tc_1' of module 'design_1_v_tc_1_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1424]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_0_0' (37#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_0_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_0' of module 'design_1_v_vid_in_axi4s_0_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1434]
+INFO: [Synth 8-6157] synthesizing module 'design_1_v_vid_in_axi4s_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_v_vid_in_axi4s_1_0' (38#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_v_vid_in_axi4s_1_0_stub.v:6]
+WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_1' of module 'design_1_v_vid_in_axi4s_1_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:1454]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_camif_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_camif_0_0' (39#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_camif_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_camif_1_0' (40#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_camif_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_0_0' (41#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_isp_lite_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_isp_lite_1_0' (42#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_isp_lite_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_0_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_0_0' (43#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_1_0' [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xil_vip_1_0' (44#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/.Xil/Vivado-45704-LEGION-BIANXINQUAN/realtime/design_1_xil_vip_1_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -172,13 +172,12 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [d:/Work/fpg
 	Parameter IN29_WIDTH bound to: 1 - type: integer 
 	Parameter IN30_WIDTH bound to: 1 - type: integer 
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
-	Parameter dout_width bound to: 11 - type: integer 
-	Parameter NUM_PORTS bound to: 11 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (44#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (45#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'design_1' (46#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (47#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
-WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In11[0]
+	Parameter dout_width bound to: 12 - type: integer 
+	Parameter NUM_PORTS bound to: 12 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_1_xlconcat' (45#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (46#1) [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'design_1' (47#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/synth/design_1.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_wrapper' (48#1) [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.v:12]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In12[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In13[0]
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In14[0]
@@ -201,6 +200,14 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In3
 WARNING: [Synth 8-3331] design xlconcat_v2_1_1_xlconcat has unconnected port In31[0]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m10_couplers_imp_I40Q9S has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m10_couplers_imp_I40Q9S has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m10_couplers_imp_I40Q9S has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m10_couplers_imp_I40Q9S has unconnected port S_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port S_ACLK
@@ -255,10 +262,14 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M07_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M08_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M08_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M09_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M09_ARESETN
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M10_ACLK
+WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M10_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 522.059 ; gain = 166.570
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 512.559 ; gain = 166.055
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -271,12 +282,12 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 522.059 ; gain = 166.570
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 512.559 ; gain = 166.055
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 522.059 ; gain = 166.570
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 512.559 ; gain = 166.055
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -297,63 +308,58 @@ Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/so
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0/design_1_clk_wiz_1_0_in_context.xdc] for cell 'design_1_i/clk_wiz_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_DVI_Transmitter_0_0/design_1_DVI_Transmitter_0_0/design_1_DVI_Transmitter_0_0_in_context.xdc] for cell 'design_1_i/DVI_Transmitter_0'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_DVI_Transmitter_0_0/design_1_DVI_Transmitter_0_0/design_1_DVI_Transmitter_0_0_in_context.xdc] for cell 'design_1_i/DVI_Transmitter_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_2_0/design_1_v_axi4s_vid_out_2_0/design_1_v_axi4s_vid_out_2_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_2'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_2_0/design_1_v_axi4s_vid_out_2_0/design_1_v_axi4s_vid_out_2_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_2'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_2_0/design_1_v_tc_2_0/design_1_v_tc_2_0_in_context.xdc] for cell 'design_1_i/v_tc_2'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_2_0/design_1_v_tc_2_0/design_1_v_tc_2_0_in_context.xdc] for cell 'design_1_i/v_tc_2'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_2_0/design_1_axi_vdma_2_0/design_1_axi_vdma_2_0_in_context.xdc] for cell 'design_1_i/axi_vdma_2'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_2_0/design_1_axi_vdma_2_0/design_1_axi_vdma_2_0_in_context.xdc] for cell 'design_1_i/axi_vdma_2'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_2_0/design_1_v_vid_in_axi4s_2_0/design_1_v_vid_in_axi4s_2_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_2'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_2_0/design_1_v_vid_in_axi4s_2_0/design_1_v_vid_in_axi4s_2_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_2'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_1'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0/design_1_v_tc_1_0_in_context.xdc] for cell 'design_1_i/v_tc_1'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_1_0/design_1_v_tc_1_0/design_1_v_tc_1_0_in_context.xdc] for cell 'design_1_i/v_tc_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0_in_context.xdc] for cell 'design_1_i/axi_vdma_1'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0/design_1_axi_vdma_1_0_in_context.xdc] for cell 'design_1_i/axi_vdma_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_1_0/design_1_v_vid_in_axi4s_1_0/design_1_v_vid_in_axi4s_1_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_1'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_1_0/design_1_v_vid_in_axi4s_1_0/design_1_v_vid_in_axi4s_1_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_1'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_1'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0/design_1_v_axi4s_vid_out_1_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_1'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0/design_1_axi_vdma_0_0_in_context.xdc] for cell 'design_1_i/axi_vdma_0'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_0_0/design_1_v_vid_in_axi4s_0_0/design_1_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_0'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_vid_in_axi4s_0_0/design_1_v_vid_in_axi4s_0_0/design_1_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'design_1_i/v_vid_in_axi4s_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_tc_0_0/design_1_v_tc_0_0/design_1_v_tc_0_0_in_context.xdc] for cell 'design_1_i/v_tc_0'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0/design_1_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'design_1_i/v_axi4s_vid_out_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0/design_1_axi_iic_0/design_1_axi_iic_0_in_context.xdc] for cell 'design_1_i/axi_iic'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0/design_1_axi_iic_0/design_1_axi_iic_0_in_context.xdc] for cell 'design_1_i/axi_iic'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_0'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0/design_1_axi_intc_0_0_in_context.xdc] for cell 'design_1_i/axi_intc_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/design_1_xil_camif_0_0/design_1_xil_camif_0_0_in_context.xdc] for cell 'design_1_i/xil_camif_0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/design_1_xil_camif_0_0/design_1_xil_camif_0_0_in_context.xdc] for cell 'design_1_i/xil_camif_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_0'
-Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/design_1_xil_vip_1_0/design_1_xil_vip_1_0_in_context.xdc] for cell 'design_1_i/xil_vip_1'
-Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/design_1_xil_vip_1_0/design_1_xil_vip_1_0_in_context.xdc] for cell 'design_1_i/xil_vip_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0/design_1_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_1_i/rst_ps7_0_50M'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/design_1_xil_vip_0_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_0'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/design_1_xil_vip_1_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_1'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_1_0/design_1_xil_vip_1_0/design_1_xil_vip_0_0_in_context.xdc] for cell 'design_1_i/xil_vip_1'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0/design_1_xil_isp_lite_0_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_0'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_1_0/design_1_xil_isp_lite_1_0/design_1_xil_isp_lite_1_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_1'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_isp_lite_1_0/design_1_xil_isp_lite_1_0/design_1_xil_isp_lite_1_0_in_context.xdc] for cell 'design_1_i/xil_isp_lite_1'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_1'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_iic_1_0/design_1_axi_iic_1_0/design_1_axi_iic_0_0_in_context.xdc] for cell 'design_1_i/axi_iic_1'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/design_1_xil_camif_0_0/design_1_xil_camif_0_0_in_context.xdc] for cell 'design_1_i/xil_camif_0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_0_0/design_1_xil_camif_0_0/design_1_xil_camif_0_0_in_context.xdc] for cell 'design_1_i/xil_camif_0'
+Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_1_0/design_1_xil_camif_1_0/design_1_xil_camif_1_0_in_context.xdc] for cell 'design_1_i/xil_camif_1'
+Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_camif_1_0/design_1_xil_camif_1_0/design_1_xil_camif_1_0_in_context.xdc] for cell 'design_1_i/xil_camif_1'
 Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc]
-WARNING: [Vivado 12-507] No nets matched 'cam_pclk_IBUF'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:5]
-WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-WARNING: [Vivado 12-627] No clocks matched 'cam_xclk_design_1_clk_wiz_0_0'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-WARNING: [Vivado 12-627] No clocks matched 'isp_pclk_design_1_clk_wiz_0_0'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_0]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
+WARNING: [Vivado 12-507] No nets matched 'cam0_pclk_IBUF'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
+WARNING: [Vivado 12-507] No nets matched 'cam1_pclk_IBUF'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:7]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_0'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+WARNING: [Vivado 12-627] No clocks matched 'clk_fpga_1'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+WARNING: [Vivado 12-627] No clocks matched 'camif_xclk_design_1_clk_wiz_0_0'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_0]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_1]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks clk_fpga_1]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks cam_xclk_design_1_clk_wiz_0_0]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
-Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
-CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks isp_pclk_design_1_clk_wiz_0_0]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:6]
+CRITICAL WARNING: [Vivado 12-4739] set_clock_groups:No valid object(s) found for '-group [get_clocks camif_xclk_design_1_clk_wiz_0_0]'. [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc:8]
 Resolution: Check if the specified object(s) exists in the current design. If it does, ensure that the correct design hierarchy was specified for the object. If you are working with clocks, make sure create_clock was used to create the clock object before it is referenced.
 Finished Parsing XDC File [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc]
 WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/constrs_1/new/top.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/design_1_wrapper_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
@@ -361,31 +367,29 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 857.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 856.352 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 856.352 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 7 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 7 instances
+  A total of 9 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 9 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.559 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 857.559 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 856.352 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 856.352 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_vdma_0' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_vdma_1' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/axi_vdma_2' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_vid_in_axi4s_0' at clock pin 'vid_io_in_clk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_vid_in_axi4s_1' at clock pin 'vid_io_in_clk' is different from the actual clock period '8.333', this can lead to different synthesis results.
-WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/v_vid_in_axi4s_2' at clock pin 'vid_io_in_clk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 857.559 ; gain = 502.070
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 857.559 ; gain = 502.070
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -679,31 +683,30 @@ Applied set_property DONT_TOUCH = true for design_1_i/lcd_bl_RnM. (constraint fi
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/clk_wiz_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/DVI_Transmitter_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/v_tc_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_vdma_2. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/v_vid_in_axi4s_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_tc_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_vdma_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_vid_in_axi4s_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/v_tc_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_vdma_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_vid_in_axi4s_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/v_tc_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/axi_iic. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_iic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/axi_intc_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/xil_camif_0. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/xil_isp_lite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xil_vip_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/xil_vip_1. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for design_1_i/rst_ps7_0_50M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xil_isp_lite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xil_isp_lite_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/axi_iic_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xil_camif_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/xil_camif_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 857.559 ; gain = 502.070
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 857.559 ; gain = 502.070
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -748,18 +751,9 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M06_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M06_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M07_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M07_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M08_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M08_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 857.559 ; gain = 502.070
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -775,7 +769,7 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/processing_sys
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_in1' to pin 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/cam_xclk' to pin 'design_1_i/clk_wiz_0/bbstub_cam_xclk/O'
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_wiz_0/clk_in1' to 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
-INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/isp_pclk' to pin 'design_1_i/clk_wiz_0/bbstub_isp_pclk/O'
+INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/camif_xclk' to pin 'design_1_i/clk_wiz_0/bbstub_camif_xclk/O'
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_wiz_0/clk_in1' to 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/lcd_clk' to pin 'design_1_i/clk_wiz_0/bbstub_lcd_clk/O'
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_wiz_0/clk_in1' to 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
@@ -786,13 +780,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_1/dvi_
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'design_1_i/clk_wiz_1/clk_in1' to 'design_1_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 9 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 859.625 ; gain = 504.137
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 856.352 ; gain = 509.848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 859.910 ; gain = 504.422
+Finished Timing Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 856.488 ; gain = 509.984
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -804,7 +798,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Technology Mapping : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -828,7 +822,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -841,7 +835,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -853,25 +847,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -884,12 +878,12 @@ Report BlackBoxes:
 |1     |design_1_xbar_0                 |         1|
 |2     |design_1_auto_pc_0              |         1|
 |3     |design_1_DVI_Transmitter_0_0    |         1|
-|4     |design_1_axi_iic_0              |         1|
-|5     |design_1_axi_intc_0_0           |         1|
-|6     |design_1_axi_smc_0              |         1|
-|7     |design_1_axi_vdma_0_0           |         1|
-|8     |design_1_axi_vdma_1_0           |         1|
-|9     |design_1_axi_vdma_2_0           |         1|
+|4     |design_1_axi_iic_0_0            |         1|
+|5     |design_1_axi_iic_1_0            |         1|
+|6     |design_1_axi_intc_0_0           |         1|
+|7     |design_1_axi_smc_0              |         1|
+|8     |design_1_axi_vdma_0_0           |         1|
+|9     |design_1_axi_vdma_1_0           |         1|
 |10    |design_1_clk_wiz_0_0            |         1|
 |11    |design_1_clk_wiz_1_0            |         1|
 |12    |design_1_processing_system7_0_0 |         1|
@@ -897,17 +891,16 @@ Report BlackBoxes:
 |14    |design_1_rst_ps7_0_50M_0        |         1|
 |15    |design_1_v_axi4s_vid_out_0_0    |         1|
 |16    |design_1_v_axi4s_vid_out_1_0    |         1|
-|17    |design_1_v_axi4s_vid_out_2_0    |         1|
-|18    |design_1_v_tc_0_0               |         1|
-|19    |design_1_v_tc_1_0               |         1|
-|20    |design_1_v_tc_2_0               |         1|
-|21    |design_1_v_vid_in_axi4s_0_0     |         1|
-|22    |design_1_v_vid_in_axi4s_1_0     |         1|
-|23    |design_1_v_vid_in_axi4s_2_0     |         1|
-|24    |design_1_xil_camif_0_0          |         1|
-|25    |design_1_xil_isp_lite_0_0       |         1|
-|26    |design_1_xil_vip_0_0            |         1|
-|27    |design_1_xil_vip_1_0            |         1|
+|17    |design_1_v_tc_0_0               |         1|
+|18    |design_1_v_tc_1_0               |         1|
+|19    |design_1_v_vid_in_axi4s_0_0     |         1|
+|20    |design_1_v_vid_in_axi4s_1_0     |         1|
+|21    |design_1_xil_camif_0_0          |         1|
+|22    |design_1_xil_camif_1_0          |         1|
+|23    |design_1_xil_isp_lite_0_0       |         1|
+|24    |design_1_xil_isp_lite_1_0       |         1|
+|25    |design_1_xil_vip_0_0            |         1|
+|26    |design_1_xil_vip_1_0            |         1|
 +------+--------------------------------+----------+
 
 Report Cell Usage: 
@@ -916,12 +909,12 @@ Report Cell Usage:
 +------+--------------------------------+------+
 |1     |design_1_DVI_Transmitter_0_0    |     1|
 |2     |design_1_auto_pc_0              |     1|
-|3     |design_1_axi_iic_0              |     1|
-|4     |design_1_axi_intc_0_0           |     1|
-|5     |design_1_axi_smc_0              |     1|
-|6     |design_1_axi_vdma_0_0           |     1|
-|7     |design_1_axi_vdma_1_0           |     1|
-|8     |design_1_axi_vdma_2_0           |     1|
+|3     |design_1_axi_iic_0_0            |     1|
+|4     |design_1_axi_iic_1_0            |     1|
+|5     |design_1_axi_intc_0_0           |     1|
+|6     |design_1_axi_smc_0              |     1|
+|7     |design_1_axi_vdma_0_0           |     1|
+|8     |design_1_axi_vdma_1_0           |     1|
 |9     |design_1_clk_wiz_0_0            |     1|
 |10    |design_1_clk_wiz_1_0            |     1|
 |11    |design_1_processing_system7_0_0 |     1|
@@ -929,59 +922,58 @@ Report Cell Usage:
 |13    |design_1_rst_ps7_0_50M_0        |     1|
 |14    |design_1_v_axi4s_vid_out_0_0    |     1|
 |15    |design_1_v_axi4s_vid_out_1_0    |     1|
-|16    |design_1_v_axi4s_vid_out_2_0    |     1|
-|17    |design_1_v_tc_0_0               |     1|
-|18    |design_1_v_tc_1_0               |     1|
-|19    |design_1_v_tc_2_0               |     1|
-|20    |design_1_v_vid_in_axi4s_0_0     |     1|
-|21    |design_1_v_vid_in_axi4s_1_0     |     1|
-|22    |design_1_v_vid_in_axi4s_2_0     |     1|
-|23    |design_1_xbar_0                 |     1|
-|24    |design_1_xil_camif_0_0          |     1|
-|25    |design_1_xil_isp_lite_0_0       |     1|
-|26    |design_1_xil_vip_0_0            |     1|
-|27    |design_1_xil_vip_1_0            |     1|
-|28    |IBUF                            |    11|
-|29    |IOBUF                           |     7|
-|30    |OBUF                            |    32|
+|16    |design_1_v_tc_0_0               |     1|
+|17    |design_1_v_tc_1_0               |     1|
+|18    |design_1_v_vid_in_axi4s_0_0     |     1|
+|19    |design_1_v_vid_in_axi4s_1_0     |     1|
+|20    |design_1_xbar_0                 |     1|
+|21    |design_1_xil_camif_0_0          |     1|
+|22    |design_1_xil_camif_1_0          |     1|
+|23    |design_1_xil_isp_lite_0_0       |     1|
+|24    |design_1_xil_isp_lite_1_0       |     1|
+|25    |design_1_xil_vip_0_0            |     1|
+|26    |design_1_xil_vip_1_0            |     1|
+|27    |IBUF                            |    22|
+|28    |IOBUF                           |     9|
+|29    |OBUF                            |    35|
 +------+--------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+----------------------------+------+
 |      |Instance             |Module                      |Cells |
 +------+---------------------+----------------------------+------+
-|1     |top                  |                            |  3477|
-|2     |  design_1_i         |design_1                    |  3427|
+|1     |top                  |                            |  3469|
+|2     |  design_1_i         |design_1                    |  3403|
 |3     |    cmos_pwdn        |design_1_cmos_pwdn_0        |     0|
 |4     |    cmos_rst_n       |design_1_cmos_rst_n_0       |     0|
 |5     |    lcd_bl_RnM       |design_1_lcd_bl_0           |     0|
-|6     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |  1217|
+|6     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0 |  1439|
 |7     |      s00_couplers   |s00_couplers_imp_UYSKKA     |   177|
 |8     |    xlconcat_0       |design_1_xlconcat_0_0       |     0|
 +------+---------------------+----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 870.684 ; gain = 179.695
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 870.684 ; gain = 515.195
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 868.027 ; gain = 177.730
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 868.027 ; gain = 521.523
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 9 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.043 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 881.168 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 7 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 7 instances
+  A total of 9 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 9 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-132 Infos, 129 Warnings, 4 Critical Warnings and 0 Errors encountered.
+134 Infos, 125 Warnings, 3 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 886.043 ; gain = 543.195
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 886.043 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 881.168 ; gain = 547.539
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 881.168 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun May 29 00:31:47 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  7 07:42:45 2022...

@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sat May 28 14:47:16 2022
+-- Date        : Tue Jun  7 07:35:26 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
---               D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
+--               d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : design_1_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -16,8 +16,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
   port (
+    camif_xclk : out STD_LOGIC;
     cam_xclk : out STD_LOGIC;
-    isp_pclk : out STD_LOGIC;
     lcd_clk : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -28,10 +28,10 @@ end design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
   signal cam_xclk_design_1_clk_wiz_0_0 : STD_LOGIC;
+  signal camif_xclk_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clk_in1_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_design_1_clk_wiz_0_0 : STD_LOGIC;
-  signal isp_pclk_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal lcd_clk_design_1_clk_wiz_0_0 : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBOUTB_UNCONNECTED : STD_LOGIC;
   signal NLW_mmcm_adv_inst_CLKFBSTOPPED_UNCONNECTED : STD_LOGIC;
@@ -76,13 +76,13 @@ clkin1_ibufg: unisim.vcomponents.IBUF
     );
 clkout1_buf: unisim.vcomponents.BUFG
      port map (
-      I => cam_xclk_design_1_clk_wiz_0_0,
-      O => cam_xclk
+      I => camif_xclk_design_1_clk_wiz_0_0,
+      O => camif_xclk
     );
 clkout2_buf: unisim.vcomponents.BUFG
      port map (
-      I => isp_pclk_design_1_clk_wiz_0_0,
-      O => isp_pclk
+      I => cam_xclk_design_1_clk_wiz_0_0,
+      O => cam_xclk
     );
 clkout3_buf: unisim.vcomponents.BUFG
      port map (
@@ -101,7 +101,7 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKOUT0_DUTY_CYCLE => 0.500000,
       CLKOUT0_PHASE => 0.000000,
       CLKOUT0_USE_FINE_PS => false,
-      CLKOUT1_DIVIDE => 10,
+      CLKOUT1_DIVIDE => 50,
       CLKOUT1_DUTY_CYCLE => 0.500000,
       CLKOUT1_PHASE => 0.000000,
       CLKOUT1_USE_FINE_PS => false,
@@ -149,9 +149,9 @@ mmcm_adv_inst: unisim.vcomponents.MMCME2_ADV
       CLKIN2 => '0',
       CLKINSEL => '1',
       CLKINSTOPPED => NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED,
-      CLKOUT0 => cam_xclk_design_1_clk_wiz_0_0,
+      CLKOUT0 => camif_xclk_design_1_clk_wiz_0_0,
       CLKOUT0B => NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED,
-      CLKOUT1 => isp_pclk_design_1_clk_wiz_0_0,
+      CLKOUT1 => cam_xclk_design_1_clk_wiz_0_0,
       CLKOUT1B => NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED,
       CLKOUT2 => lcd_clk_design_1_clk_wiz_0_0,
       CLKOUT2B => NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED,
@@ -182,8 +182,8 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_clk_wiz_0_0 is
   port (
+    camif_xclk : out STD_LOGIC;
     cam_xclk : out STD_LOGIC;
-    isp_pclk : out STD_LOGIC;
     lcd_clk : out STD_LOGIC;
     locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
@@ -197,8 +197,8 @@ begin
 inst: entity work.design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
      port map (
       cam_xclk => cam_xclk,
+      camif_xclk => camif_xclk,
       clk_in1 => clk_in1,
-      isp_pclk => isp_pclk,
       lcd_clk => lcd_clk,
       locked => locked
     );

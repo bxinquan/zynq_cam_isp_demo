@@ -17,14 +17,24 @@
 #define VIP_REG_CROP_H             (7 * 4)
 #define VIP_REG_DSCALE_H           (8 * 4)
 #define VIP_REG_DSCALE_V           (9 * 4)
-#define VIP_REG_INT_STATUS         (10 * 4)
-#define VIP_REG_INT_MASK           (11 * 4)
+#define VIP_REG_OSD_X              (10 * 4)
+#define VIP_REG_OSD_Y              (11 * 4)
+#define VIP_REG_OSD_W              (12 * 4)
+#define VIP_REG_OSD_H              (13 * 4)
+#define VIP_REG_OSD_RGB_FG         (14 * 4)
+#define VIP_REG_OSD_RGB_BG         (15 * 4)
+#define VIP_REG_INT_STATUS         (16 * 4)
+#define VIP_REG_INT_MASK           (17 * 4)
+
+#define VIP_REG_OSD_RAM_ADDR       (1*512*4)
+#define VIP_REG_OSD_RAM_SIZE       (1*512*4)
 
 #define VIP_REG_TOP_EN_BIT_HIST_EQU_EN     (1<<0)
 #define VIP_REG_TOP_EN_BIT_SOBEL_EN        (1<<1)
 #define VIP_REG_TOP_EN_BIT_YUV2RGB_EN      (1<<2)
 #define VIP_REG_TOP_EN_BIT_CROP_EN         (1<<3)
 #define VIP_REG_TOP_EN_BIT_DSCALE_EN       (1<<4)
+#define VIP_REG_TOP_EN_BIT_OSD_EN          (1<<5)
 
 #define VIP_REG_INT_STATUS_BIT_FRAME_DONE  (1<<0)
 

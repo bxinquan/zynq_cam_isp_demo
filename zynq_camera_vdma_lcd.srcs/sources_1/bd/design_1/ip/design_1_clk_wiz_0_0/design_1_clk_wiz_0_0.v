@@ -56,8 +56,8 @@
 //  Output     Output      Phase    Duty Cycle   Pk-to-Pk     Phase
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
-// cam_xclk____96.000______0.000______50.0______114.420_____86.077
-// isp_pclk___120.000______0.000______50.0______109.763_____86.077
+// camif_xclk____96.000______0.000______50.0______114.420_____86.077
+// cam_xclk____24.000______0.000______50.0______152.237_____86.077
 // _lcd_clk____33.333______0.000______50.0______141.764_____86.077
 //
 //----------------------------------------------------------------------------
@@ -72,8 +72,8 @@
 module design_1_clk_wiz_0_0 
  (
   // Clock out ports
+  output        camif_xclk,
   output        cam_xclk,
-  output        isp_pclk,
   output        lcd_clk,
   // Status and control signals
   output        locked,
@@ -84,8 +84,8 @@ module design_1_clk_wiz_0_0
   design_1_clk_wiz_0_0_clk_wiz inst
   (
   // Clock out ports  
+  .camif_xclk(camif_xclk),
   .cam_xclk(cam_xclk),
-  .isp_pclk(isp_pclk),
   .lcd_clk(lcd_clk),
   // Status and control signals               
   .locked(locked),

@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sat May 28 14:47:15 2022
+// Date        : Tue Jun  7 07:35:26 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
+//               d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
 // Design      : design_1_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -14,52 +14,52 @@
 
 (* NotValidForBitStream *)
 module design_1_clk_wiz_0_0
-   (cam_xclk,
-    isp_pclk,
+   (camif_xclk,
+    cam_xclk,
     lcd_clk,
     locked,
     clk_in1);
+  output camif_xclk;
   output cam_xclk;
-  output isp_pclk;
   output lcd_clk;
   output locked;
   input clk_in1;
 
   wire cam_xclk;
+  wire camif_xclk;
   (* IBUF_LOW_PWR *) wire clk_in1;
-  wire isp_pclk;
   wire lcd_clk;
   wire locked;
 
   design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz inst
        (.cam_xclk(cam_xclk),
+        .camif_xclk(camif_xclk),
         .clk_in1(clk_in1),
-        .isp_pclk(isp_pclk),
         .lcd_clk(lcd_clk),
         .locked(locked));
 endmodule
 
 (* ORIG_REF_NAME = "design_1_clk_wiz_0_0_clk_wiz" *) 
 module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
-   (cam_xclk,
-    isp_pclk,
+   (camif_xclk,
+    cam_xclk,
     lcd_clk,
     locked,
     clk_in1);
+  output camif_xclk;
   output cam_xclk;
-  output isp_pclk;
   output lcd_clk;
   output locked;
   input clk_in1;
 
   wire cam_xclk;
   wire cam_xclk_design_1_clk_wiz_0_0;
+  wire camif_xclk;
+  wire camif_xclk_design_1_clk_wiz_0_0;
   wire clk_in1;
   wire clk_in1_design_1_clk_wiz_0_0;
   wire clkfbout_buf_design_1_clk_wiz_0_0;
   wire clkfbout_design_1_clk_wiz_0_0;
-  wire isp_pclk;
-  wire isp_pclk_design_1_clk_wiz_0_0;
   wire lcd_clk;
   wire lcd_clk_design_1_clk_wiz_0_0;
   wire locked;
@@ -93,12 +93,12 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
         .O(clk_in1_design_1_clk_wiz_0_0));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout1_buf
-       (.I(cam_xclk_design_1_clk_wiz_0_0),
-        .O(cam_xclk));
+       (.I(camif_xclk_design_1_clk_wiz_0_0),
+        .O(camif_xclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
-       (.I(isp_pclk_design_1_clk_wiz_0_0),
-        .O(isp_pclk));
+       (.I(cam_xclk_design_1_clk_wiz_0_0),
+        .O(cam_xclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout3_buf
        (.I(lcd_clk_design_1_clk_wiz_0_0),
@@ -115,7 +115,7 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(10),
+    .CLKOUT1_DIVIDE(50),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -162,9 +162,9 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
         .CLKIN2(1'b0),
         .CLKINSEL(1'b1),
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
-        .CLKOUT0(cam_xclk_design_1_clk_wiz_0_0),
+        .CLKOUT0(camif_xclk_design_1_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(isp_pclk_design_1_clk_wiz_0_0),
+        .CLKOUT1(cam_xclk_design_1_clk_wiz_0_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(lcd_clk_design_1_clk_wiz_0_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),

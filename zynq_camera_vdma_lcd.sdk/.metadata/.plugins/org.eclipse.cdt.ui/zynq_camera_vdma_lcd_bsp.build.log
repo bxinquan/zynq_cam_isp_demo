@@ -1,4 +1,4 @@
-00:41:02 **** Build of project zynq_camera_vdma_lcd_bsp ****
+08:10:11 **** Build of project zynq_camera_vdma_lcd_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_6/src"
 make -C ps7_cortexa9_0/libsrc/axivdma_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -41,7 +41,6 @@ make -C ps7_cortexa9_0/libsrc/xil_vip_v1_0/src -s include  "SHELL=CMD" "COMPILER
 "Running Make libs in ps7_cortexa9_0/libsrc/axivdma_v6_6/src"
 make -C ps7_cortexa9_0/libsrc/axivdma_v6_6/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling axivdma"
-arm-none-eabi-ar: creating ../../../lib/libxil.a
 "Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling coresightps_dcc"
@@ -117,16 +116,16 @@ xil_camif_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
 make -C ps7_cortexa9_0/libsrc/xil_isp_lite_v1_0/src -s libs  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
 "Compiling xil_isp_lite..."
 xil_isp_lite.c: In function 'isp_ae_handler':
-xil_isp_lite.c:78:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
+xil_isp_lite.c:80:3: warning: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
    printf("ALG_AEC: Exposure:%u Gain:0x%04X ISP_DGain:0x%02X (pixcnt:%llu sum_luma:%llu, avg_luma:%llu, target_luma:%u)\n",
    ^~~~~~
-xil_isp_lite.c:78:3: warning: incompatible implicit declaration of built-in function 'printf'
-xil_isp_lite.c:78:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+xil_isp_lite.c:80:3: warning: incompatible implicit declaration of built-in function 'printf'
+xil_isp_lite.c:80:3: note: include '<stdio.h>' or provide a declaration of 'printf'
 xil_isp_lite.c: In function 'isp_awb_handler':
-xil_isp_lite.c:134:3: warning: incompatible implicit declaration of built-in function 'printf'
+xil_isp_lite.c:136:3: warning: incompatible implicit declaration of built-in function 'printf'
    printf("ALG_AWB RGain:0x%02X BGain:0x%02X (pixcnt:%llu sum_rgb:%llu,%llu,%llu, avg_rgb:%llu,%llu,%llu)\n",
    ^~~~~~
-xil_isp_lite.c:134:3: note: include '<stdio.h>' or provide a declaration of 'printf'
+xil_isp_lite.c:136:3: note: include '<stdio.h>' or provide a declaration of 'printf'
 xil_isp_lite_selftest.c: In function 'XIL_ISP_LITE_Reg_SelfTest':
 xil_isp_lite_selftest.c:52:61: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
     if ( XIL_ISP_LITE_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
@@ -146,5 +145,5 @@ xil_vip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
       ^~~~~
 'Finished building libraries'
 
-00:41:23 Build Finished (took 20s.924ms)
+08:10:35 Build Finished (took 24s.483ms)
 

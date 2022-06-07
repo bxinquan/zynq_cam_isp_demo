@@ -1,4 +1,4 @@
-
+	
 #ifndef XIL_ISP_LITE_H
 #define XIL_ISP_LITE_H
 
@@ -172,9 +172,32 @@ XStatus XIL_ISP_LITE_Reg_SelfTest(void * baseaddr_p);
 extern "C" {
 #endif
 
-void isp_ae_handler(UINTPTR base, unsigned target_luminance, unsigned max_exposure, unsigned max_gain);
+typedef struct {
+	UINTPTR base;
 
-void isp_awb_handler(UINTPTR base);
+	//CMOS I/F
+	void (*pfn_set_exposure)(unsigned exposure, void* priv_data);
+	void (*pfn_set_gain)(unsigned gain, void* priv_data);
+	void *priv_data;
+
+	//AE config
+	unsigned ae_target_luminance;
+	unsigned ae_max_exposure;
+	unsigned ae_max_gain;
+
+	//AE runtime
+	unsigned ae_cur_exposure;
+	unsigned ae_cur_gain;
+	unsigned ae_cur_isp_dgain;
+
+	//AWB runtime
+	unsigned awb_cur_rgain;
+	unsigned awb_cur_bgain;
+} IspContext;
+
+void isp_ae_handler(IspContext *context);
+
+void isp_awb_handler(IspContext *context);
 
 #ifdef __cplusplus
 }

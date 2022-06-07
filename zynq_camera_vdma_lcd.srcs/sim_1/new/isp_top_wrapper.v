@@ -36,7 +36,7 @@ module isp_top_wrapper
 //`define USE_ALGO_AE 1
 //`define USE_ALGO_AWB 1
 
-	localparam EN_DPC = 1'b1;
+	localparam EN_DPC = 1'b0;
 	localparam EN_BLC = 1'b0;
 	localparam EN_BNR = 1'b0;
 	localparam EN_DGAIN = 1'b0;
@@ -44,8 +44,8 @@ module isp_top_wrapper
 	localparam EN_WB = 1'b0;
 	localparam EN_CCM = 1'b0;
 	localparam EN_CSC = 1'b1;
-	localparam EN_GAMMA = 1'b1;
-	localparam EN_2DNR = 1'b1;
+	localparam EN_GAMMA = 1'b0;
+	localparam EN_2DNR = 1'b0;
 	localparam EN_EE = 1'b0;
 	localparam EN_STAT_AE = 1'b0;
 	localparam EN_STAT_AWB = 1'b0;

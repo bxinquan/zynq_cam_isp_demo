@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Sun May 29 00:22:01 2022
+//Date        : Tue Jun  7 07:33:48 2022
 //Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 //Command     : generate_target design_1_wrapper.bd
 //Design      : design_1_wrapper
@@ -36,14 +36,23 @@ module design_1_wrapper
     TMDS_tmds_clk_p,
     TMDS_tmds_data_n,
     TMDS_tmds_data_p,
-    cam_active_video,
-    cam_data,
-    cam_pclk,
-    cam_pwdn,
-    cam_rst_n,
-    cam_vsync,
-    iic_scl_io,
-    iic_sda_io,
+    cam0_active_video,
+    cam0_data,
+    cam0_pclk,
+    cam0_pwdn,
+    cam0_rst_n,
+    cam0_vsync,
+    cam1_active_video,
+    cam1_data,
+    cam1_pclk,
+    cam1_pwdn,
+    cam1_rst_n,
+    cam1_vsync,
+    cam1_xclk,
+    iic0_scl_io,
+    iic0_sda_io,
+    iic1_scl_io,
+    iic1_sda_io,
     lcd_bl,
     lcd_clk,
     lcd_de,
@@ -77,14 +86,23 @@ module design_1_wrapper
   output TMDS_tmds_clk_p;
   output [2:0]TMDS_tmds_data_n;
   output [2:0]TMDS_tmds_data_p;
-  input cam_active_video;
-  input [7:0]cam_data;
-  input cam_pclk;
-  output [0:0]cam_pwdn;
-  output [0:0]cam_rst_n;
-  input cam_vsync;
-  inout iic_scl_io;
-  inout iic_sda_io;
+  input cam0_active_video;
+  input [7:0]cam0_data;
+  input cam0_pclk;
+  output [0:0]cam0_pwdn;
+  output [0:0]cam0_rst_n;
+  input cam0_vsync;
+  input cam1_active_video;
+  input [7:0]cam1_data;
+  input cam1_pclk;
+  output [0:0]cam1_pwdn;
+  output [0:0]cam1_rst_n;
+  input cam1_vsync;
+  output cam1_xclk;
+  inout iic0_scl_io;
+  inout iic0_sda_io;
+  inout iic1_scl_io;
+  inout iic1_sda_io;
   output [0:0]lcd_bl;
   output lcd_clk;
   output lcd_de;
@@ -138,20 +156,35 @@ module design_1_wrapper
   wire TMDS_tmds_clk_p;
   wire [2:0]TMDS_tmds_data_n;
   wire [2:0]TMDS_tmds_data_p;
-  wire cam_active_video;
-  wire [7:0]cam_data;
-  wire cam_pclk;
-  wire [0:0]cam_pwdn;
-  wire [0:0]cam_rst_n;
-  wire cam_vsync;
-  wire iic_scl_i;
-  wire iic_scl_io;
-  wire iic_scl_o;
-  wire iic_scl_t;
-  wire iic_sda_i;
-  wire iic_sda_io;
-  wire iic_sda_o;
-  wire iic_sda_t;
+  wire cam0_active_video;
+  wire [7:0]cam0_data;
+  wire cam0_pclk;
+  wire [0:0]cam0_pwdn;
+  wire [0:0]cam0_rst_n;
+  wire cam0_vsync;
+  wire cam1_active_video;
+  wire [7:0]cam1_data;
+  wire cam1_pclk;
+  wire [0:0]cam1_pwdn;
+  wire [0:0]cam1_rst_n;
+  wire cam1_vsync;
+  wire cam1_xclk;
+  wire iic0_scl_i;
+  wire iic0_scl_io;
+  wire iic0_scl_o;
+  wire iic0_scl_t;
+  wire iic0_sda_i;
+  wire iic0_sda_io;
+  wire iic0_sda_o;
+  wire iic0_sda_t;
+  wire iic1_scl_i;
+  wire iic1_scl_io;
+  wire iic1_scl_o;
+  wire iic1_scl_t;
+  wire iic1_sda_i;
+  wire iic1_sda_io;
+  wire iic1_sda_o;
+  wire iic1_sda_t;
   wire [0:0]lcd_bl;
   wire lcd_clk;
   wire lcd_de;
@@ -214,18 +247,31 @@ module design_1_wrapper
         .TMDS_tmds_clk_p(TMDS_tmds_clk_p),
         .TMDS_tmds_data_n(TMDS_tmds_data_n),
         .TMDS_tmds_data_p(TMDS_tmds_data_p),
-        .cam_active_video(cam_active_video),
-        .cam_data(cam_data),
-        .cam_pclk(cam_pclk),
-        .cam_pwdn(cam_pwdn),
-        .cam_rst_n(cam_rst_n),
-        .cam_vsync(cam_vsync),
-        .iic_scl_i(iic_scl_i),
-        .iic_scl_o(iic_scl_o),
-        .iic_scl_t(iic_scl_t),
-        .iic_sda_i(iic_sda_i),
-        .iic_sda_o(iic_sda_o),
-        .iic_sda_t(iic_sda_t),
+        .cam0_active_video(cam0_active_video),
+        .cam0_data(cam0_data),
+        .cam0_pclk(cam0_pclk),
+        .cam0_pwdn(cam0_pwdn),
+        .cam0_rst_n(cam0_rst_n),
+        .cam0_vsync(cam0_vsync),
+        .cam1_active_video(cam1_active_video),
+        .cam1_data(cam1_data),
+        .cam1_pclk(cam1_pclk),
+        .cam1_pwdn(cam1_pwdn),
+        .cam1_rst_n(cam1_rst_n),
+        .cam1_vsync(cam1_vsync),
+        .cam1_xclk(cam1_xclk),
+        .iic0_scl_i(iic0_scl_i),
+        .iic0_scl_o(iic0_scl_o),
+        .iic0_scl_t(iic0_scl_t),
+        .iic0_sda_i(iic0_sda_i),
+        .iic0_sda_o(iic0_sda_o),
+        .iic0_sda_t(iic0_sda_t),
+        .iic1_scl_i(iic1_scl_i),
+        .iic1_scl_o(iic1_scl_o),
+        .iic1_scl_t(iic1_scl_t),
+        .iic1_sda_i(iic1_sda_i),
+        .iic1_sda_o(iic1_sda_o),
+        .iic1_sda_t(iic1_sda_t),
         .lcd_bl(lcd_bl),
         .lcd_clk(lcd_clk),
         .lcd_de(lcd_de),
@@ -233,14 +279,24 @@ module design_1_wrapper
         .lcd_rgb(lcd_rgb),
         .lcd_vs(lcd_vs),
         .tmds_oen(tmds_oen));
-  IOBUF iic_scl_iobuf
-       (.I(iic_scl_o),
-        .IO(iic_scl_io),
-        .O(iic_scl_i),
-        .T(iic_scl_t));
-  IOBUF iic_sda_iobuf
-       (.I(iic_sda_o),
-        .IO(iic_sda_io),
-        .O(iic_sda_i),
-        .T(iic_sda_t));
+  IOBUF iic0_scl_iobuf
+       (.I(iic0_scl_o),
+        .IO(iic0_scl_io),
+        .O(iic0_scl_i),
+        .T(iic0_scl_t));
+  IOBUF iic0_sda_iobuf
+       (.I(iic0_sda_o),
+        .IO(iic0_sda_io),
+        .O(iic0_sda_i),
+        .T(iic0_sda_t));
+  IOBUF iic1_scl_iobuf
+       (.I(iic1_scl_o),
+        .IO(iic1_scl_io),
+        .O(iic1_scl_i),
+        .T(iic1_scl_t));
+  IOBUF iic1_sda_iobuf
+       (.I(iic1_sda_o),
+        .IO(iic1_sda_io),
+        .O(iic1_sda_i),
+        .T(iic1_sda_t));
 endmodule

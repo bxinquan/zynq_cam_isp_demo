@@ -108,7 +108,7 @@ input wire s_axis_video_tuser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 video_in TLAST" *)
 input wire s_axis_video_tlast;
 input wire fid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 33333333, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_clk_intf, ASSOCIATED_BUSIF vid_io_out, FREQ_HZ 74250000, PHASE 0.0, CLK_DOMAIN /clk_wiz_1_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_io_out_clk_intf CLK" *)
 input wire vid_io_out_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_out_ce_intf, POLARITY ACTIVE_HIGH" *)
@@ -147,7 +147,7 @@ output wire vtg_ce;
 output wire locked;
 output wire overflow;
 output wire underflow;
-output wire [10 : 0] fifo_read_level;
+output wire [11 : 0] fifo_read_level;
 output wire [31 : 0] status;
 
   v_axi4s_vid_out_v4_0_10 #(
@@ -159,7 +159,7 @@ output wire [31 : 0] status;
     .C_NATIVE_DATA_WIDTH(24),
     .C_S_AXIS_TDATA_WIDTH(24),
     .C_HAS_ASYNC_CLK(1),
-    .C_ADDR_WIDTH(10),
+    .C_ADDR_WIDTH(11),
     .C_VTG_MASTER_SLAVE(0),
     .C_HYSTERESIS_LEVEL(12),
     .C_SYNC_LOCK_THRESHOLD(4),

@@ -101,6 +101,6 @@ module tb_isp_vip();
 			.rst_n(rst_n),
 			.href(out_href),
 			.vsync(out_vsync),
-			.data({out_b, out_g, out_r})
+			.data({out_r, out_g, out_b})
 		);
 endmodule

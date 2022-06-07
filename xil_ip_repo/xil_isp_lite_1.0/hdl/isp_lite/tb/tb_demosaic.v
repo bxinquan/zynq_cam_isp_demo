@@ -13,10 +13,10 @@ module tb_demosaic();
 	end
 	
 	localparam BITS     = 8;
-	localparam WIDTH    = 960;
-	localparam HEIGHT   = 544;
-	localparam BAYER    = 3;
-	localparam IN_FILE  = "raw_bggr_960x544.bin";
+	localparam WIDTH    = 512;
+	localparam HEIGHT   = 768;
+	localparam BAYER    = 0;
+	localparam IN_FILE  = "raw_512x768_rggb.bin";
 	localparam OUT_FILE = "out_rgb.bin";
 
 	wire in_pclk, in_href, in_vsync;

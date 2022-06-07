@@ -34,7 +34,7 @@ static int iic_init(void)
 {
 	int rc;
 
-	XIic_Config *cfg_ptr = XIic_LookupConfig(XPAR_AXI_IIC_DEVICE_ID);
+	XIic_Config *cfg_ptr = XIic_LookupConfig(XPAR_AXI_IIC_0_DEVICE_ID);
 	if (!cfg_ptr) {
 		xil_printf("[iic] XIic_LookupConfig() failed\r\n");
 		return XST_FAILURE;

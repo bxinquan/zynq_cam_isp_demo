@@ -412,7 +412,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>01093474</spirit:value>
+            <spirit:value>774cbff0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -428,7 +428,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>01093474</spirit:value>
+            <spirit:value>774cbff0</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -442,7 +442,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>819329e2</spirit:value>
+            <spirit:value>f0536e22</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -619,7 +619,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -782,7 +782,7 @@
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
-            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">5</spirit:left>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">11</spirit:left>
             <spirit:right spirit:format="long">0</spirit:right>
           </spirit:vector>
           <spirit:wireTypeDefs>
@@ -948,7 +948,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
         <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
-        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH">6</spirit:value>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH">12</spirit:value>
       </spirit:modelParameter>
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>FEATURE_FULL</spirit:name>
@@ -1000,6 +1000,10 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vip/vip_osd.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/vip/vip_sobel.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
@@ -1018,7 +1022,7 @@
       <spirit:file>
         <spirit:name>hdl/xil_vip_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_4e4f497f</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_446378a7</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1037,6 +1041,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vip/vip_hist_equ.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vip/vip_osd.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1169,7 +1177,7 @@
     <spirit:parameter>
       <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
       <spirit:displayName>C S00 Axi Addr Width</spirit:displayName>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH">6</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH">12</spirit:value>
       <spirit:vendorExtensions>
         <xilinx:parameterInfo>
           <xilinx:enablement>
@@ -1208,12 +1216,12 @@
       </xilinx:taxonomies>
       <xilinx:displayName>xil_vip_v1.0</xilinx:displayName>
       <xilinx:vendorDisplayName>bxq</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
+      <xilinx:coreRevision>23</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:xil_vip:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>example.com:user:xil_vip:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2022-05-28T05:52:58Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-05-30T15:13:16Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@6a7982f1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@558f908d_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
@@ -1683,16 +1691,46 @@
         <xilinx:tag xilinx:name="ui.data.coregen.dd@64094dd7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad5fefa_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3b256a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6afb17_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1707bc15_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af06b89_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f87d47e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@87a78d5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1754dbe6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f3c6d9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc64b39_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e513f4a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78142d75_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c2748e3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@349daa47_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c24e594_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3836e4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@354fd9d7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78ea6a4c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@709cff56_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2076ad7f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@65bafaf3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe62571_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b652d1a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd60011_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@147ef2ec_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ac0f85f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd2eeb9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4842e2c5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76ab760_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5229edd9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e09a8a4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e31600d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="db275b9c"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="0f698f37"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="d62e6f3d"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="79cc00cd"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="94dd67f5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8f799bc7"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="34255d99"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bcd8a6c0"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="efc5dc16"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>
