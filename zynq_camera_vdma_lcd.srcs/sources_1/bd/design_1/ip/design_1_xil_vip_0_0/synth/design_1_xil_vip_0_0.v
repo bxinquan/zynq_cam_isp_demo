@@ -87,7 +87,7 @@ module design_1_xil_vip_0_0 (
   s00_axi_aresetn
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pclk, ASSOCIATED_RESET rst_n, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_xil_camif_0_0_out_pclk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pclk, ASSOCIATED_RESET rst_n, FREQ_HZ 120000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pclk CLK" *)
 input wire pclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -164,7 +164,7 @@ input wire s00_axi_aresetn;
     .HEIGHT(1920),
     .C_S00_AXI_DATA_WIDTH(32),
     .C_S00_AXI_ADDR_WIDTH(12),
-    .FEATURE_FULL(1'B0)
+    .FEATURE_FULL(1'B1)
   ) inst (
     .pclk(pclk),
     .rst_n(rst_n),

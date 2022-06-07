@@ -17,21 +17,21 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 56456 
+INFO: Helper process launched with PID 63792 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 406.602 ; gain = 102.020
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 406.949 ; gain = 101.555
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_axi_intc_0_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/synth/design_1_axi_intc_0_0.vhd:85]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_INSTANCE bound to: design_1_axi_intc_0_0 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 12 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 11 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111000000000000 
+	Parameter C_KIND_OF_INTR bound to: 32'b11111111111111111111100000000000 
 	Parameter C_KIND_OF_EDGE bound to: 32'b11111111111111111111111111111111 
 	Parameter C_KIND_OF_LVL bound to: 32'b11111111111111111111111111111111 
-	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111011111101111 
+	Parameter C_ASYNC_INTR bound to: 32'b11111111111111111111111111101111 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
@@ -54,12 +54,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_intc' [d:/Work/fpga/zynq_camera_vdm
 	Parameter C_INSTANCE bound to: design_1_axi_intc_0_0 - type: string 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 12 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 11 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: -4096 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -2048 - type: integer 
 	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
 	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
-	Parameter C_ASYNC_INTR bound to: -2065 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -17 - type: integer 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_IVAR_RESET_VALUE bound to: 64'b0000000000000000000000000000000000000000000000000000000000010000 
 	Parameter C_ADDR_WIDTH bound to: 32 - type: integer 
@@ -79,12 +79,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_intc' [d:/Work/fpga/zynq_camera_vdm
 INFO: [Synth 8-638] synthesizing module 'intc_core' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/31e4/hdl/axi_intc_v4_1_vh_rfs.vhd:794]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_DWIDTH bound to: 32 - type: integer 
-	Parameter C_NUM_INTR_INPUTS bound to: 12 - type: integer 
+	Parameter C_NUM_INTR_INPUTS bound to: 11 - type: integer 
 	Parameter C_NUM_SW_INTR bound to: 0 - type: integer 
-	Parameter C_KIND_OF_INTR bound to: -4096 - type: integer 
+	Parameter C_KIND_OF_INTR bound to: -2048 - type: integer 
 	Parameter C_KIND_OF_EDGE bound to: -1 - type: integer 
 	Parameter C_KIND_OF_LVL bound to: -1 - type: integer 
-	Parameter C_ASYNC_INTR bound to: -2065 - type: integer 
+	Parameter C_ASYNC_INTR bound to: -17 - type: integer 
 	Parameter C_NUM_SYNC_FF bound to: 2 - type: integer 
 	Parameter C_HAS_IPR bound to: 1 - type: integer 
 	Parameter C_HAS_SIE bound to: 1 - type: integer 
@@ -328,6 +328,7 @@ WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[15]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[14]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[13]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[12]
+WARNING: [Synth 8-3331] design intc_core has unconnected port Wr_data[11]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Processor_clk
 WARNING: [Synth 8-3331] design intc_core has unconnected port processor_rst
 WARNING: [Synth 8-3331] design intc_core has unconnected port Processor_ack[1]
@@ -360,10 +361,9 @@ WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[6]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[5]
 WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[4]
-WARNING: [Synth 8-3331] design intc_core has unconnected port Interrupt_address_in[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 465.652 ; gain = 161.070
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 465.762 ; gain = 160.367
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -376,10 +376,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 465.652 ; gain = 161.070
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 465.762 ; gain = 160.367
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 465.652 ; gain = 161.070
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 465.762 ; gain = 160.367
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -396,28 +396,28 @@ Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/so
 Finished Parsing XDC File [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_axi_intc_0_0/design_1_axi_intc_0_0_clocks.xdc] for cell 'U0'
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.773 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 825.758 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.773 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 827.891 ; gain = 1.117
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 825.758 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 827.273 ; gain = 1.516
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_axi_intc_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5544] ROM "ivr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "ivr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
@@ -447,7 +447,7 @@ INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address si
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:28 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -466,19 +466,19 @@ Detailed RTL Component Info :
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 13    
-	                1 Bit    Registers := 110   
+	                1 Bit    Registers := 104   
 +---Muxes : 
 	   7 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     28 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
 	   2 Input      9 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 17    
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 16    
 	   4 Input      4 Bit        Muxes := 1     
 	   7 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 2     
-	   2 Input      1 Bit        Muxes := 35    
+	   2 Input      1 Bit        Muxes := 33    
 	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -493,15 +493,15 @@ Detailed RTL Component Info :
 	               32 Bit    Registers := 1     
 	                4 Bit    Registers := 1     
 	                2 Bit    Registers := 10    
-	                1 Bit    Registers := 76    
+	                1 Bit    Registers := 70    
 +---Muxes : 
 	   7 Input     32 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     28 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 1     
-	   6 Input      4 Bit        Muxes := 1     
-	   2 Input      4 Bit        Muxes := 11    
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input     11 Bit        Muxes := 1     
+	   5 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 11    
 Module pselect_f 
 Detailed RTL Component Info : 
 +---Muxes : 
@@ -617,6 +617,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 INFO: [Synth 8-5544] ROM "INTC_CORE_I/ivr_out" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[11]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[12]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[13]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
 INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[14]' (FDR) to 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[31]'
@@ -639,6 +640,7 @@ INFO: [Synth 8-3886] merging instance 'U0/INTC_CORE_I/IPR_GEN.ipr_reg[30]' (FDR)
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\INTC_CORE_I/IPR_GEN.ipr_reg[31] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[11]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[12]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[12]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[13]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[13]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[14]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[14]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[15]'
@@ -659,7 +661,7 @@ INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_a
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]'
 INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[31]'
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -671,13 +673,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:51 . Memory (MB): peak = 827.891 ; gain = 523.309
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 827.273 ; gain = 521.879
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:44 ; elapsed = 00:00:53 . Memory (MB): peak = 843.719 ; gain = 539.137
+Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 842.680 ; gain = 537.285
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -689,7 +691,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:45 ; elapsed = 00:00:54 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -713,7 +715,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -726,7 +728,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -738,25 +740,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -774,51 +776,51 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT1 |     2|
 |2     |LUT2 |    33|
-|3     |LUT3 |    18|
-|4     |LUT4 |    41|
-|5     |LUT5 |    68|
-|6     |LUT6 |    59|
-|7     |FDRE |   173|
-|8     |FDSE |     2|
+|3     |LUT3 |    19|
+|4     |LUT4 |    38|
+|5     |LUT5 |    61|
+|6     |LUT6 |    54|
+|7     |FDRE |   164|
+|8     |FDSE |     3|
 +------+-----+------+
 
 Report Instance Areas: 
 +------+-------------------------+-----------------+------+
 |      |Instance                 |Module           |Cells |
 +------+-------------------------+-----------------+------+
-|1     |top                      |                 |   396|
-|2     |  U0                     |axi_intc         |   396|
-|3     |    AXI_LITE_IPIF_I      |axi_lite_ipif    |   187|
-|4     |      I_SLAVE_ATTACHMENT |slave_attachment |   187|
-|5     |        I_DECODER        |address_decoder  |   114|
-|6     |    INTC_CORE_I          |intc_core        |   205|
+|1     |top                      |                 |   374|
+|2     |  U0                     |axi_intc         |   374|
+|3     |    AXI_LITE_IPIF_I      |axi_lite_ipif    |   191|
+|4     |      I_SLAVE_ATTACHMENT |slave_attachment |   191|
+|5     |        I_DECODER        |address_decoder  |   109|
+|6     |    INTC_CORE_I          |intc_core        |   179|
 +------+-------------------------+-----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 57 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:44 . Memory (MB): peak = 845.602 ; gain = 178.781
-Synthesis Optimization Complete : Time (s): cpu = 00:00:47 ; elapsed = 00:00:56 . Memory (MB): peak = 845.602 ; gain = 541.020
+Synthesis finished with 0 errors, 0 critical warnings and 58 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 844.316 ; gain = 177.410
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 844.316 ; gain = 538.922
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 847.984 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.719 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-132 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
+134 Infos, 101 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:50 ; elapsed = 00:01:00 . Memory (MB): peak = 847.996 ; gain = 550.773
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 847.996 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 844.719 ; gain = 548.062
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 844.719 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_intc_0_0, cache-ID = 28561ef47d38154e
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_intc_0_0, cache-ID = 5309b1d4810769da
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 847.996 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 844.719 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_axi_intc_0_0_synth_1/design_1_axi_intc_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_intc_0_0_utilization_synth.rpt -pb design_1_axi_intc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  7 07:36:49 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 21:05:56 2022...

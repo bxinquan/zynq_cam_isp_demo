@@ -10,7 +10,6 @@ C_SRCS += \
 ../src/main.c \
 ../src/main_h264.c \
 ../src/ov5640_init.c \
-../src/ov5640_init2.c \
 ../src/sys_intr.c \
 ../src/vdma_api.c 
 
@@ -18,7 +17,6 @@ OBJS += \
 ./src/main.o \
 ./src/main_h264.o \
 ./src/ov5640_init.o \
-./src/ov5640_init2.o \
 ./src/sys_intr.o \
 ./src/vdma_api.o 
 
@@ -26,7 +24,6 @@ C_DEPS += \
 ./src/main.d \
 ./src/main_h264.d \
 ./src/ov5640_init.d \
-./src/ov5640_init2.d \
 ./src/sys_intr.d \
 ./src/vdma_api.d 
 

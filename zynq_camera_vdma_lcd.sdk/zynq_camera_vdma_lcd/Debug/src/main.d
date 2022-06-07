@@ -31,7 +31,7 @@ src/main.o src/main.o: ../src/main.c \
  ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xintc_l.h \
  ../src/vdma_api.h \
  ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_exception.h \
- ../src/ov5640_init.h ../src/ov5640_init2.h \
+ ../src/ov5640_init.h \
  ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_camif.h \
  ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_isp_lite.h \
  ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_vip.h
@@ -101,8 +101,6 @@ src/main.o src/main.o: ../src/main.c \
 ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_exception.h:
 
 ../src/ov5640_init.h:
-
-../src/ov5640_init2.h:
 
 ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xil_camif.h:
 

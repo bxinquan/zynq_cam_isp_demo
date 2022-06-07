@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1654558697">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1654520944">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -120,30 +120,31 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_vip_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_camif_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clk_wiz_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_isp_lite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DVI_Transmitter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_vid_in_axi4s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_camif_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_v_tc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_v_axi4s_vid_out_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_rst_ps7_0_50M_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_xil_vip_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_xil_isp_lite_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_iic_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_auto_pc_0"/>
 </GenRun>

@@ -86,7 +86,7 @@ module design_1_xil_isp_lite_0_0 (
   s00_axi_aresetn
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pclk, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_xil_camif_0_0_out_pclk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME pclk, FREQ_HZ 120000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 pclk CLK" *)
 input wire pclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -98,11 +98,11 @@ input wire in_href;
 input wire in_vsync;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 raw DATA" *)
 input wire [7 : 0] in_raw;
-(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv ACTIVE_VIDEO" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv ACTIVE_VIDEO, xilinx.com:interface:vid_io:1.0 yuv_aux1 ACTIVE_VIDEO" *)
 output wire out_href;
-(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv VSYNC" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv VSYNC, xilinx.com:interface:vid_io:1.0 yuv_aux1 VSYNC" *)
 output wire out_vsync;
-(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv DATA" *)
+(* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 yuv DATA, xilinx.com:interface:vid_io:1.0 yuv_aux1 DATA" *)
 output wire [23 : 0] out_yuv;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME irq, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 irq INTERRUPT" *)
@@ -156,7 +156,7 @@ input wire s00_axi_aresetn;
 
   xil_isp_lite_v1_0 #(
     .IO_BITS(8),
-    .EXT_BITS(0),
+    .EXT_BITS(1),
     .WIDTH(2560),
     .HEIGHT(1920),
     .BAYER(3),

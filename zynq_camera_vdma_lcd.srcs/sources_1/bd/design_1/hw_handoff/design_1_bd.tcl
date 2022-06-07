@@ -159,22 +159,17 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
   set GPIO_EMIO [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 GPIO_EMIO ]
   set TMDS [ create_bd_intf_port -mode Master -vlnv openedv.com:user:TMDS_rtl:1.0 TMDS ]
-  set cam0 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:vid_io_rtl:1.0 cam0 ]
-  set cam1 [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:vid_io_rtl:1.0 cam1 ]
-  set iic0 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 iic0 ]
-  set iic1 [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 iic1 ]
+  set cam [ create_bd_intf_port -mode Slave -vlnv xilinx.com:interface:vid_io_rtl:1.0 cam ]
+  set iic [ create_bd_intf_port -mode Master -vlnv xilinx.com:interface:iic_rtl:1.0 iic ]
 
   # Create ports
-  set cam0_pclk [ create_bd_port -dir I -type clk cam0_pclk ]
-  set cam0_pwdn [ create_bd_port -dir O -from 0 -to 0 cam0_pwdn ]
-  set cam0_rst_n [ create_bd_port -dir O -from 0 -to 0 cam0_rst_n ]
-  set cam1_pclk [ create_bd_port -dir I -type clk cam1_pclk ]
-  set cam1_pwdn [ create_bd_port -dir O -from 0 -to 0 cam1_pwdn ]
-  set cam1_rst_n [ create_bd_port -dir O -from 0 -to 0 cam1_rst_n ]
-  set cam1_xclk [ create_bd_port -dir O -type clk cam1_xclk ]
+  set cam_pclk [ create_bd_port -dir I -type clk cam_pclk ]
+  set cam_pwdn [ create_bd_port -dir O -from 0 -to 0 cam_pwdn ]
+  set cam_rst_n [ create_bd_port -dir O -from 0 -to 0 cam_rst_n ]
+  set cam_xclk [ create_bd_port -dir O -type clk cam_xclk ]
   set_property -dict [ list \
    CONFIG.FREQ_HZ {24000000} \
- ] $cam1_xclk
+ ] $cam_xclk
   set lcd_bl [ create_bd_port -dir O -from 0 -to 0 lcd_bl ]
   set lcd_clk [ create_bd_port -dir O -type clk lcd_clk ]
   set lcd_de [ create_bd_port -dir O lcd_de ]
@@ -186,11 +181,8 @@ proc create_root_design { parentCell } {
   # Create instance: DVI_Transmitter_0, and set properties
   set DVI_Transmitter_0 [ create_bd_cell -type ip -vlnv openedv.com:user:DVI_Transmitter:1.0 DVI_Transmitter_0 ]
 
-  # Create instance: axi_iic_0, and set properties
-  set axi_iic_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_0 ]
-
-  # Create instance: axi_iic_1, and set properties
-  set axi_iic_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic_1 ]
+  # Create instance: axi_iic, and set properties
+  set axi_iic [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_iic:2.0 axi_iic ]
 
   # Create instance: axi_intc_0, and set properties
   set axi_intc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_intc:4.1 axi_intc_0 ]
@@ -198,17 +190,17 @@ proc create_root_design { parentCell } {
   # Create instance: axi_smc, and set properties
   set axi_smc [ create_bd_cell -type ip -vlnv xilinx.com:ip:smartconnect:1.0 axi_smc ]
   set_property -dict [ list \
-   CONFIG.NUM_SI {4} \
+   CONFIG.NUM_SI {6} \
  ] $axi_smc
 
   # Create instance: axi_vdma_0, and set properties
   set axi_vdma_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_0 ]
   set_property -dict [ list \
-   CONFIG.c_m_axis_mm2s_tdata_width {24} \
+   CONFIG.c_m_axis_mm2s_tdata_width {8} \
    CONFIG.c_mm2s_linebuffer_depth {4096} \
-   CONFIG.c_mm2s_max_burst_length {32} \
+   CONFIG.c_mm2s_max_burst_length {256} \
    CONFIG.c_s2mm_linebuffer_depth {4096} \
-   CONFIG.c_s2mm_max_burst_length {32} \
+   CONFIG.c_s2mm_max_burst_length {256} \
  ] $axi_vdma_0
 
   # Create instance: axi_vdma_1, and set properties
@@ -221,15 +213,25 @@ proc create_root_design { parentCell } {
    CONFIG.c_s2mm_max_burst_length {32} \
  ] $axi_vdma_1
 
+  # Create instance: axi_vdma_2, and set properties
+  set axi_vdma_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_2 ]
+  set_property -dict [ list \
+   CONFIG.c_m_axis_mm2s_tdata_width {24} \
+   CONFIG.c_mm2s_linebuffer_depth {4096} \
+   CONFIG.c_mm2s_max_burst_length {32} \
+   CONFIG.c_s2mm_linebuffer_depth {4096} \
+   CONFIG.c_s2mm_max_burst_length {32} \
+ ] $axi_vdma_2
+
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:6.0 clk_wiz_0 ]
   set_property -dict [ list \
    CONFIG.CLKOUT1_JITTER {114.420} \
    CONFIG.CLKOUT1_PHASE_ERROR {86.077} \
    CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {96} \
-   CONFIG.CLKOUT2_JITTER {152.237} \
+   CONFIG.CLKOUT2_JITTER {109.763} \
    CONFIG.CLKOUT2_PHASE_ERROR {86.077} \
-   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {24} \
+   CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {120} \
    CONFIG.CLKOUT2_USED {true} \
    CONFIG.CLKOUT3_JITTER {141.764} \
    CONFIG.CLKOUT3_PHASE_ERROR {86.077} \
@@ -237,20 +239,20 @@ proc create_root_design { parentCell } {
    CONFIG.CLKOUT3_USED {true} \
    CONFIG.CLKOUT4_JITTER {152.237} \
    CONFIG.CLKOUT4_PHASE_ERROR {86.077} \
-   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {100.000} \
-   CONFIG.CLKOUT4_USED {false} \
+   CONFIG.CLKOUT4_REQUESTED_OUT_FREQ {24} \
+   CONFIG.CLKOUT4_USED {true} \
    CONFIG.CLK_OUT1_PORT {camif_xclk} \
-   CONFIG.CLK_OUT2_PORT {cam_xclk} \
+   CONFIG.CLK_OUT2_PORT {isp_pclk} \
    CONFIG.CLK_OUT3_PORT {lcd_clk} \
-   CONFIG.CLK_OUT4_PORT {clk_out4} \
+   CONFIG.CLK_OUT4_PORT {cam_xclk} \
    CONFIG.MMCM_CLKFBOUT_MULT_F {10.000} \
    CONFIG.MMCM_CLKIN2_PERIOD {10.000} \
    CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
-   CONFIG.MMCM_CLKOUT1_DIVIDE {50} \
+   CONFIG.MMCM_CLKOUT1_DIVIDE {10} \
    CONFIG.MMCM_CLKOUT2_DIVIDE {36} \
-   CONFIG.MMCM_CLKOUT3_DIVIDE {1} \
+   CONFIG.MMCM_CLKOUT3_DIVIDE {50} \
    CONFIG.MMCM_DIVCLK_DIVIDE {1} \
-   CONFIG.NUM_OUT_CLKS {3} \
+   CONFIG.NUM_OUT_CLKS {4} \
    CONFIG.USE_RESET {false} \
  ] $clk_wiz_0
 
@@ -648,7 +650,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {11} \
+   CONFIG.NUM_MI {9} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_100M, and set properties
@@ -660,18 +662,48 @@ proc create_root_design { parentCell } {
   # Create instance: v_axi4s_vid_out_0, and set properties
   set v_axi4s_vid_out_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_0 ]
   set_property -dict [ list \
+   CONFIG.C_ADDR_WIDTH {12} \
    CONFIG.C_HAS_ASYNC_CLK {1} \
+   CONFIG.C_HYSTERESIS_LEVEL {32} \
+   CONFIG.C_S_AXIS_VIDEO_FORMAT {12} \
+   CONFIG.C_VTG_MASTER_SLAVE {0} \
  ] $v_axi4s_vid_out_0
 
   # Create instance: v_axi4s_vid_out_1, and set properties
   set v_axi4s_vid_out_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_1 ]
   set_property -dict [ list \
-   CONFIG.C_ADDR_WIDTH {11} \
    CONFIG.C_HAS_ASYNC_CLK {1} \
  ] $v_axi4s_vid_out_1
 
+  # Create instance: v_axi4s_vid_out_2, and set properties
+  set v_axi4s_vid_out_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_axi4s_vid_out:4.0 v_axi4s_vid_out_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ADDR_WIDTH {11} \
+   CONFIG.C_HAS_ASYNC_CLK {1} \
+ ] $v_axi4s_vid_out_2
+
   # Create instance: v_tc_0, and set properties
   set v_tc_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_0 ]
+  set_property -dict [ list \
+   CONFIG.GEN_F0_VBLANK_HEND {2560} \
+   CONFIG.GEN_F0_VBLANK_HSTART {2560} \
+   CONFIG.GEN_F0_VFRAME_SIZE {1940} \
+   CONFIG.GEN_F0_VSYNC_HEND {2560} \
+   CONFIG.GEN_F0_VSYNC_HSTART {2560} \
+   CONFIG.GEN_F0_VSYNC_VEND {1935} \
+   CONFIG.GEN_F0_VSYNC_VSTART {1925} \
+   CONFIG.GEN_HACTIVE_SIZE {2560} \
+   CONFIG.GEN_HFRAME_SIZE {2760} \
+   CONFIG.GEN_HSYNC_END {2710} \
+   CONFIG.GEN_HSYNC_START {2610} \
+   CONFIG.GEN_VACTIVE_SIZE {1920} \
+   CONFIG.HAS_AXI4_LITE {false} \
+   CONFIG.VIDEO_MODE {Custom} \
+   CONFIG.enable_detection {false} \
+ ] $v_tc_0
+
+  # Create instance: v_tc_1, and set properties
+  set v_tc_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_1 ]
   set_property -dict [ list \
    CONFIG.GEN_F0_VBLANK_HEND {800} \
    CONFIG.GEN_F0_VBLANK_HSTART {800} \
@@ -688,28 +720,36 @@ proc create_root_design { parentCell } {
    CONFIG.HAS_AXI4_LITE {false} \
    CONFIG.VIDEO_MODE {Custom} \
    CONFIG.enable_detection {false} \
- ] $v_tc_0
+ ] $v_tc_1
 
-  # Create instance: v_tc_1, and set properties
-  set v_tc_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_1 ]
+  # Create instance: v_tc_2, and set properties
+  set v_tc_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_tc:6.1 v_tc_2 ]
   set_property -dict [ list \
    CONFIG.HAS_AXI4_LITE {false} \
    CONFIG.VIDEO_MODE {720p} \
    CONFIG.enable_detection {false} \
- ] $v_tc_1
+ ] $v_tc_2
 
   # Create instance: v_vid_in_axi4s_0, and set properties
   set v_vid_in_axi4s_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_0 ]
   set_property -dict [ list \
+   CONFIG.C_ADDR_WIDTH {12} \
    CONFIG.C_HAS_ASYNC_CLK {1} \
+   CONFIG.C_M_AXIS_VIDEO_FORMAT {12} \
  ] $v_vid_in_axi4s_0
 
   # Create instance: v_vid_in_axi4s_1, and set properties
   set v_vid_in_axi4s_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_1 ]
   set_property -dict [ list \
-   CONFIG.C_ADDR_WIDTH {11} \
    CONFIG.C_HAS_ASYNC_CLK {1} \
  ] $v_vid_in_axi4s_1
+
+  # Create instance: v_vid_in_axi4s_2, and set properties
+  set v_vid_in_axi4s_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_2 ]
+  set_property -dict [ list \
+   CONFIG.C_ADDR_WIDTH {11} \
+   CONFIG.C_HAS_ASYNC_CLK {1} \
+ ] $v_vid_in_axi4s_2
 
   # Create instance: xil_camif_0, and set properties
   set xil_camif_0 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_camif:1.0 xil_camif_0 ]
@@ -725,45 +765,23 @@ proc create_root_design { parentCell } {
    CONFIG.COLORBAR_V_PULSE {10} \
  ] $xil_camif_0
 
-  # Create instance: xil_camif_1, and set properties
-  set xil_camif_1 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_camif:1.0 xil_camif_1 ]
-  set_property -dict [ list \
-   CONFIG.COLORBAR_H_BACK {50} \
-   CONFIG.COLORBAR_H_DISP {2560} \
-   CONFIG.COLORBAR_H_FRONT {50} \
-   CONFIG.COLORBAR_H_PULSE {100} \
-   CONFIG.COLORBAR_V_BACK {5} \
-   CONFIG.COLORBAR_V_DISP {1920} \
-   CONFIG.COLORBAR_V_FRONT {5} \
-   CONFIG.COLORBAR_V_PULSE {10} \
- ] $xil_camif_1
-
   # Create instance: xil_isp_lite_0, and set properties
   set xil_isp_lite_0 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_isp_lite:1.0 xil_isp_lite_0 ]
   set_property -dict [ list \
    CONFIG.BAYER {3} \
-   CONFIG.EXT_BITS {0} \
+   CONFIG.EXT_BITS {1} \
    CONFIG.FEATURE_FULL {true} \
    CONFIG.HEIGHT {1920} \
    CONFIG.IO_BITS {8} \
    CONFIG.WIDTH {2560} \
-   CONFIG.YUV_AUX_NUM {0} \
+   CONFIG.YUV_AUX_NUM {1} \
  ] $xil_isp_lite_0
-
-  # Create instance: xil_isp_lite_1, and set properties
-  set xil_isp_lite_1 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_isp_lite:1.0 xil_isp_lite_1 ]
-  set_property -dict [ list \
-   CONFIG.BAYER {3} \
-   CONFIG.FEATURE_FULL {true} \
-   CONFIG.HEIGHT {1920} \
-   CONFIG.WIDTH {2560} \
- ] $xil_isp_lite_1
 
   # Create instance: xil_vip_0, and set properties
   set xil_vip_0 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_vip:1.0 xil_vip_0 ]
   set_property -dict [ list \
    CONFIG.BITS {8} \
-   CONFIG.FEATURE_FULL {false} \
+   CONFIG.FEATURE_FULL {true} \
    CONFIG.HEIGHT {1920} \
    CONFIG.WIDTH {2560} \
  ] $xil_vip_0
@@ -771,7 +789,7 @@ proc create_root_design { parentCell } {
   # Create instance: xil_vip_1, and set properties
   set xil_vip_1 [ create_bd_cell -type ip -vlnv bxq.com:user:xil_vip:1.0 xil_vip_1 ]
   set_property -dict [ list \
-   CONFIG.FEATURE_FULL {false} \
+   CONFIG.FEATURE_FULL {true} \
    CONFIG.HEIGHT {1920} \
    CONFIG.WIDTH {2560} \
  ] $xil_vip_1
@@ -779,93 +797,94 @@ proc create_root_design { parentCell } {
   # Create instance: xlconcat_0, and set properties
   set xlconcat_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 ]
   set_property -dict [ list \
-   CONFIG.NUM_PORTS {12} \
+   CONFIG.NUM_PORTS {11} \
  ] $xlconcat_0
 
   # Create interface connections
   connect_bd_intf_net -intf_net DVI_Transmitter_0_TMDS [get_bd_intf_ports TMDS] [get_bd_intf_pins DVI_Transmitter_0/TMDS]
-  connect_bd_intf_net -intf_net axi_iic_0_IIC [get_bd_intf_ports iic1] [get_bd_intf_pins axi_iic_1/IIC]
-  connect_bd_intf_net -intf_net axi_iic_IIC [get_bd_intf_ports iic0] [get_bd_intf_pins axi_iic_0/IIC]
+  connect_bd_intf_net -intf_net axi_iic_IIC [get_bd_intf_ports iic] [get_bd_intf_pins axi_iic/IIC]
   connect_bd_intf_net -intf_net axi_smc_M00_AXI [get_bd_intf_pins axi_smc/M00_AXI] [get_bd_intf_pins processing_system7_0/S_AXI_HP0]
-  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_1/video_in]
+  connect_bd_intf_net -intf_net axi_vdma_0_M_AXIS_MM2S1 [get_bd_intf_pins axi_vdma_0/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_0/video_in]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_MM2S [get_bd_intf_pins axi_smc/S02_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_0_M_AXI_S2MM [get_bd_intf_pins axi_smc/S03_AXI] [get_bd_intf_pins axi_vdma_0/M_AXI_S2MM]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXI_MM2S [get_bd_intf_pins axi_smc/S00_AXI] [get_bd_intf_pins axi_vdma_1/M_AXI_MM2S]
   connect_bd_intf_net -intf_net axi_vdma_1_M_AXI_S2MM [get_bd_intf_pins axi_smc/S01_AXI] [get_bd_intf_pins axi_vdma_1/M_AXI_S2MM]
-  connect_bd_intf_net -intf_net axi_vdma_2_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_1/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_1/video_in]
-  connect_bd_intf_net -intf_net camera_0_1 [get_bd_intf_ports cam0] [get_bd_intf_pins xil_camif_0/camera]
-  connect_bd_intf_net -intf_net camera_0_2 [get_bd_intf_ports cam1] [get_bd_intf_pins xil_camif_1/camera]
+  connect_bd_intf_net -intf_net axi_vdma_2_M_AXIS_MM2S [get_bd_intf_pins axi_vdma_2/M_AXIS_MM2S] [get_bd_intf_pins v_axi4s_vid_out_2/video_in]
+  connect_bd_intf_net -intf_net axi_vdma_2_M_AXI_MM2S [get_bd_intf_pins axi_smc/S04_AXI] [get_bd_intf_pins axi_vdma_2/M_AXI_MM2S]
+  connect_bd_intf_net -intf_net axi_vdma_2_M_AXI_S2MM [get_bd_intf_pins axi_smc/S05_AXI] [get_bd_intf_pins axi_vdma_2/M_AXI_S2MM]
+  connect_bd_intf_net -intf_net camera_0_1 [get_bd_intf_ports cam] [get_bd_intf_pins xil_camif_0/camera]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_GPIO_0 [get_bd_intf_ports GPIO_EMIO] [get_bd_intf_pins processing_system7_0/GPIO_0]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins axi_vdma_1/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins axi_vdma_0/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_iic_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins axi_intc_0/s_axi] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins ps7_0_axi_periph/M04_AXI] [get_bd_intf_pins xil_camif_0/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins ps7_0_axi_periph/M05_AXI] [get_bd_intf_pins xil_vip_0/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins ps7_0_axi_periph/M06_AXI] [get_bd_intf_pins xil_vip_1/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M07_AXI [get_bd_intf_pins ps7_0_axi_periph/M07_AXI] [get_bd_intf_pins xil_isp_lite_0/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M08_AXI [get_bd_intf_pins ps7_0_axi_periph/M08_AXI] [get_bd_intf_pins xil_camif_1/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M09_AXI [get_bd_intf_pins ps7_0_axi_periph/M09_AXI] [get_bd_intf_pins xil_isp_lite_1/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M10_AXI [get_bd_intf_pins axi_iic_1/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M10_AXI]
-  connect_bd_intf_net -intf_net v_axi4s_vid_out_2_vid_io_out [get_bd_intf_pins DVI_Transmitter_0/Video_In] [get_bd_intf_pins v_axi4s_vid_out_1/vid_io_out]
-  connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
-  connect_bd_intf_net -intf_net v_tc_2_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_1/vtiming_in] [get_bd_intf_pins v_tc_1/vtiming_out]
-  connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
-  connect_bd_intf_net -intf_net v_vid_in_axi4s_2_video_out [get_bd_intf_pins axi_vdma_1/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_1/video_out]
-  connect_bd_intf_net -intf_net xil_camif_0_raw [get_bd_intf_pins xil_camif_0/raw] [get_bd_intf_pins xil_isp_lite_0/raw]
-  connect_bd_intf_net -intf_net xil_camif_1_raw [get_bd_intf_pins xil_camif_1/raw] [get_bd_intf_pins xil_isp_lite_1/raw]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins ps7_0_axi_periph/M02_AXI] [get_bd_intf_pins xil_vip_0/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins ps7_0_axi_periph/M03_AXI] [get_bd_intf_pins xil_vip_1/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_vdma_2/S_AXI_LITE] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins ps7_0_axi_periph/M05_AXI] [get_bd_intf_pins xil_isp_lite_0/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins ps7_0_axi_periph/M06_AXI] [get_bd_intf_pins xil_camif_0/S00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M07_AXI [get_bd_intf_pins axi_iic/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M07_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M08_AXI [get_bd_intf_pins axi_intc_0/s_axi] [get_bd_intf_pins ps7_0_axi_periph/M08_AXI]
+  connect_bd_intf_net -intf_net v_axi4s_vid_out_1_vid_io_out [get_bd_intf_pins v_axi4s_vid_out_0/vid_io_out] [get_bd_intf_pins xil_isp_lite_0/raw]
+  connect_bd_intf_net -intf_net v_axi4s_vid_out_2_vid_io_out [get_bd_intf_pins DVI_Transmitter_0/Video_In] [get_bd_intf_pins v_axi4s_vid_out_2/vid_io_out]
+  connect_bd_intf_net -intf_net v_tc_0_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_1/vtiming_in] [get_bd_intf_pins v_tc_1/vtiming_out]
+  connect_bd_intf_net -intf_net v_tc_1_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_0/vtiming_in] [get_bd_intf_pins v_tc_0/vtiming_out]
+  connect_bd_intf_net -intf_net v_tc_2_vtiming_out [get_bd_intf_pins v_axi4s_vid_out_2/vtiming_in] [get_bd_intf_pins v_tc_2/vtiming_out]
+  connect_bd_intf_net -intf_net v_vid_in_axi4s_0_video_out [get_bd_intf_pins axi_vdma_1/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_1/video_out]
+  connect_bd_intf_net -intf_net v_vid_in_axi4s_1_video_out [get_bd_intf_pins axi_vdma_0/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_0/video_out]
+  connect_bd_intf_net -intf_net v_vid_in_axi4s_2_video_out [get_bd_intf_pins axi_vdma_2/S_AXIS_S2MM] [get_bd_intf_pins v_vid_in_axi4s_2/video_out]
+  connect_bd_intf_net -intf_net xil_camif_0_raw [get_bd_intf_pins v_vid_in_axi4s_0/vid_io_in] [get_bd_intf_pins xil_camif_0/raw]
   connect_bd_intf_net -intf_net xil_isp_lite_0_yuv [get_bd_intf_pins xil_isp_lite_0/yuv] [get_bd_intf_pins xil_vip_0/yuv]
-  connect_bd_intf_net -intf_net xil_isp_lite_1_yuv [get_bd_intf_pins xil_isp_lite_1/yuv] [get_bd_intf_pins xil_vip_1/yuv]
-  connect_bd_intf_net -intf_net xil_vip_0_rgb [get_bd_intf_pins v_vid_in_axi4s_0/vid_io_in] [get_bd_intf_pins xil_vip_0/rgb]
-  connect_bd_intf_net -intf_net xil_vip_1_rgb [get_bd_intf_pins v_vid_in_axi4s_1/vid_io_in] [get_bd_intf_pins xil_vip_1/rgb]
+  connect_bd_intf_net -intf_net xil_isp_lite_0_yuv_aux1 [get_bd_intf_pins xil_isp_lite_0/yuv_aux1] [get_bd_intf_pins xil_vip_1/yuv]
+  connect_bd_intf_net -intf_net xil_vip_0_rgb [get_bd_intf_pins v_vid_in_axi4s_1/vid_io_in] [get_bd_intf_pins xil_vip_0/rgb]
+  connect_bd_intf_net -intf_net xil_vip_1_rgb [get_bd_intf_pins v_vid_in_axi4s_2/vid_io_in] [get_bd_intf_pins xil_vip_1/rgb]
 
   # Create port connections
   connect_bd_net -net DVI_Transmitter_0_tmds_oen [get_bd_ports tmds_oen] [get_bd_pins DVI_Transmitter_0/tmds_oen]
-  connect_bd_net -net GND_dout [get_bd_ports cam0_pwdn] [get_bd_ports cam1_pwdn] [get_bd_pins cmos_pwdn/dout]
-  connect_bd_net -net VCC_dout [get_bd_ports cam0_rst_n] [get_bd_ports cam1_rst_n] [get_bd_pins cmos_rst_n/dout]
-  connect_bd_net -net axi_iic_0_iic2intc_irpt [get_bd_pins axi_iic_1/iic2intc_irpt] [get_bd_pins xlconcat_0/In11]
-  connect_bd_net -net axi_iic_iic2intc_irpt [get_bd_pins axi_iic_0/iic2intc_irpt] [get_bd_pins xlconcat_0/In4]
+  connect_bd_net -net GND_dout [get_bd_ports cam_pwdn] [get_bd_pins cmos_pwdn/dout]
+  connect_bd_net -net VCC_dout [get_bd_ports cam_rst_n] [get_bd_pins cmos_rst_n/dout]
+  connect_bd_net -net axi_iic_iic2intc_irpt [get_bd_pins axi_iic/iic2intc_irpt] [get_bd_pins xlconcat_0/In4]
   connect_bd_net -net axi_intc_0_irq [get_bd_pins axi_intc_0/irq] [get_bd_pins processing_system7_0/IRQ_F2P]
-  connect_bd_net -net axi_vdma_1_mm2s_introut [get_bd_pins axi_vdma_0/mm2s_introut] [get_bd_pins xlconcat_0/In7]
-  connect_bd_net -net axi_vdma_1_s2mm_introut [get_bd_pins axi_vdma_0/s2mm_introut] [get_bd_pins xlconcat_0/In8]
-  connect_bd_net -net axi_vdma_2_mm2s_introut [get_bd_pins axi_vdma_1/mm2s_introut] [get_bd_pins xlconcat_0/In9]
-  connect_bd_net -net axi_vdma_2_s2mm_introut [get_bd_pins axi_vdma_1/s2mm_introut] [get_bd_pins xlconcat_0/In10]
-  connect_bd_net -net cam_pclk_0_1 [get_bd_ports cam0_pclk] [get_bd_pins xil_camif_0/cam_pclk]
-  connect_bd_net -net cam_pclk_0_2 [get_bd_ports cam1_pclk] [get_bd_pins xil_camif_1/cam_pclk]
-  connect_bd_net -net clk_wiz_0_cam_xclk [get_bd_ports cam1_xclk] [get_bd_pins clk_wiz_0/cam_xclk]
-  connect_bd_net -net clk_wiz_0_camif_xclk [get_bd_pins clk_wiz_0/camif_xclk] [get_bd_pins xil_camif_0/cam_xclk] [get_bd_pins xil_camif_1/cam_xclk]
-  connect_bd_net -net clk_wiz_0_clk_160 [get_bd_pins xil_camif_0/out_pclk] [get_bd_pins xil_isp_lite_0/pclk] [get_bd_pins xil_vip_0/pclk]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins v_tc_0/resetn] [get_bd_pins xil_isp_lite_0/rst_n] [get_bd_pins xil_isp_lite_1/rst_n] [get_bd_pins xil_vip_0/rst_n] [get_bd_pins xil_vip_1/rst_n]
-  connect_bd_net -net clk_wiz_1_dvi_clk [get_bd_pins DVI_Transmitter_0/pclk] [get_bd_pins clk_wiz_1/dvi_clk] [get_bd_pins v_axi4s_vid_out_1/vid_io_out_clk] [get_bd_pins v_tc_1/clk]
+  connect_bd_net -net axi_vdma_0_mm2s_introut [get_bd_pins axi_vdma_0/mm2s_introut] [get_bd_pins xlconcat_0/In5]
+  connect_bd_net -net axi_vdma_0_s2mm_introut [get_bd_pins axi_vdma_0/s2mm_introut] [get_bd_pins xlconcat_0/In6]
+  connect_bd_net -net axi_vdma_1_mm2s_introut [get_bd_pins axi_vdma_1/mm2s_introut] [get_bd_pins xlconcat_0/In7]
+  connect_bd_net -net axi_vdma_1_s2mm_introut [get_bd_pins axi_vdma_1/s2mm_introut] [get_bd_pins xlconcat_0/In8]
+  connect_bd_net -net axi_vdma_2_mm2s_introut [get_bd_pins axi_vdma_2/mm2s_introut] [get_bd_pins xlconcat_0/In9]
+  connect_bd_net -net axi_vdma_2_s2mm_introut [get_bd_pins axi_vdma_2/s2mm_introut] [get_bd_pins xlconcat_0/In10]
+  connect_bd_net -net cam_pclk_0_1 [get_bd_ports cam_pclk] [get_bd_pins xil_camif_0/cam_pclk]
+  connect_bd_net -net clk_wiz_0_cam_xclk [get_bd_ports cam_xclk] [get_bd_pins clk_wiz_0/cam_xclk]
+  connect_bd_net -net clk_wiz_0_camif_xclk [get_bd_pins clk_wiz_0/camif_xclk] [get_bd_pins xil_camif_0/cam_xclk]
+  connect_bd_net -net clk_wiz_0_clk_160 [get_bd_pins clk_wiz_0/isp_pclk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk] [get_bd_pins xil_isp_lite_0/pclk] [get_bd_pins xil_vip_0/pclk] [get_bd_pins xil_vip_1/pclk]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins v_tc_0/resetn] [get_bd_pins v_tc_1/resetn]
+  connect_bd_net -net clk_wiz_1_dvi_clk [get_bd_pins DVI_Transmitter_0/pclk] [get_bd_pins clk_wiz_1/dvi_clk] [get_bd_pins v_axi4s_vid_out_2/vid_io_out_clk] [get_bd_pins v_tc_2/clk]
   connect_bd_net -net clk_wiz_1_dvi_clk_x5 [get_bd_pins DVI_Transmitter_0/pclk_x5] [get_bd_pins clk_wiz_1/dvi_clk_x5]
-  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins v_tc_1/resetn]
+  connect_bd_net -net clk_wiz_1_locked [get_bd_pins clk_wiz_1/locked] [get_bd_pins v_tc_2/resetn]
   connect_bd_net -net lcd_bl_dout [get_bd_ports lcd_bl] [get_bd_pins lcd_bl/dout]
-  connect_bd_net -net pll_clk_33m [get_bd_ports lcd_clk] [get_bd_pins clk_wiz_0/lcd_clk] [get_bd_pins v_axi4s_vid_out_0/vid_io_out_clk] [get_bd_pins v_tc_0/clk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_1/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_1/aclk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins v_vid_in_axi4s_1/aclk]
-  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins axi_iic_0/s_axi_aclk] [get_bd_pins axi_iic_1/s_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins axi_vdma_1/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/M09_ACLK] [get_bd_pins ps7_0_axi_periph/M10_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins xil_camif_0/s00_axi_aclk] [get_bd_pins xil_camif_1/s00_axi_aclk] [get_bd_pins xil_isp_lite_0/s00_axi_aclk] [get_bd_pins xil_isp_lite_1/s00_axi_aclk] [get_bd_pins xil_vip_0/s00_axi_aclk] [get_bd_pins xil_vip_1/s00_axi_aclk]
+  connect_bd_net -net pll_clk_33m [get_bd_ports lcd_clk] [get_bd_pins clk_wiz_0/lcd_clk] [get_bd_pins v_axi4s_vid_out_1/vid_io_out_clk] [get_bd_pins v_tc_1/clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_smc/aclk] [get_bd_pins axi_vdma_0/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_0/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_0/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_0/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_1/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_1/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_1/s_axis_s2mm_aclk] [get_bd_pins axi_vdma_2/m_axi_mm2s_aclk] [get_bd_pins axi_vdma_2/m_axi_s2mm_aclk] [get_bd_pins axi_vdma_2/m_axis_mm2s_aclk] [get_bd_pins axi_vdma_2/s_axis_s2mm_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_1/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/S_AXI_HP0_ACLK] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk] [get_bd_pins v_axi4s_vid_out_0/aclk] [get_bd_pins v_axi4s_vid_out_1/aclk] [get_bd_pins v_axi4s_vid_out_2/aclk] [get_bd_pins v_vid_in_axi4s_0/aclk] [get_bd_pins v_vid_in_axi4s_1/aclk] [get_bd_pins v_vid_in_axi4s_2/aclk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK1 [get_bd_pins axi_iic/s_axi_aclk] [get_bd_pins axi_intc_0/s_axi_aclk] [get_bd_pins axi_vdma_0/s_axi_lite_aclk] [get_bd_pins axi_vdma_1/s_axi_lite_aclk] [get_bd_pins axi_vdma_2/s_axi_lite_aclk] [get_bd_pins processing_system7_0/FCLK_CLK1] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/M07_ACLK] [get_bd_pins ps7_0_axi_periph/M08_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins xil_camif_0/s00_axi_aclk] [get_bd_pins xil_isp_lite_0/s00_axi_aclk] [get_bd_pins xil_vip_0/s00_axi_aclk] [get_bd_pins xil_vip_1/s00_axi_aclk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net processing_system7_0_FCLK_RESET1_N [get_bd_pins processing_system7_0/FCLK_RESET1_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_1/aresetn] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_1/aresetn]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_iic_0/s_axi_aresetn] [get_bd_pins axi_iic_1/s_axi_aresetn] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins axi_vdma_1/axi_resetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/M09_ARESETN] [get_bd_pins ps7_0_axi_periph/M10_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins xil_camif_0/s00_axi_aresetn] [get_bd_pins xil_camif_1/s00_axi_aresetn] [get_bd_pins xil_isp_lite_0/s00_axi_aresetn] [get_bd_pins xil_isp_lite_1/s00_axi_aresetn] [get_bd_pins xil_vip_0/s00_axi_aresetn] [get_bd_pins xil_vip_1/s00_axi_aresetn]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_ports lcd_de] [get_bd_pins v_axi4s_vid_out_0/vid_active_video]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_ports lcd_rgb] [get_bd_pins v_axi4s_vid_out_0/vid_data]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_ports lcd_hs] [get_bd_pins v_axi4s_vid_out_0/vid_hsync]
-  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_ports lcd_vs] [get_bd_pins v_axi4s_vid_out_0/vid_vsync]
-  connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
-  connect_bd_net -net v_axi4s_vid_out_2_locked [get_bd_pins DVI_Transmitter_0/reset_n] [get_bd_pins v_axi4s_vid_out_1/locked]
-  connect_bd_net -net v_axi4s_vid_out_2_vtg_ce [get_bd_pins v_axi4s_vid_out_1/vtg_ce] [get_bd_pins v_tc_1/gen_clken]
+  connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_smc/aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn] [get_bd_pins v_axi4s_vid_out_0/aresetn] [get_bd_pins v_axi4s_vid_out_1/aresetn] [get_bd_pins v_axi4s_vid_out_2/aresetn] [get_bd_pins v_vid_in_axi4s_0/aresetn] [get_bd_pins v_vid_in_axi4s_1/aresetn] [get_bd_pins v_vid_in_axi4s_2/aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins axi_iic/s_axi_aresetn] [get_bd_pins axi_intc_0/s_axi_aresetn] [get_bd_pins axi_vdma_0/axi_resetn] [get_bd_pins axi_vdma_1/axi_resetn] [get_bd_pins axi_vdma_2/axi_resetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/M07_ARESETN] [get_bd_pins ps7_0_axi_periph/M08_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins xil_camif_0/s00_axi_aresetn] [get_bd_pins xil_isp_lite_0/s00_axi_aresetn] [get_bd_pins xil_vip_0/s00_axi_aresetn] [get_bd_pins xil_vip_1/s00_axi_aresetn]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_active_video [get_bd_ports lcd_de] [get_bd_pins v_axi4s_vid_out_1/vid_active_video]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_data [get_bd_ports lcd_rgb] [get_bd_pins v_axi4s_vid_out_1/vid_data]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_hsync [get_bd_ports lcd_hs] [get_bd_pins v_axi4s_vid_out_1/vid_hsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vid_vsync [get_bd_ports lcd_vs] [get_bd_pins v_axi4s_vid_out_1/vid_vsync]
+  connect_bd_net -net v_axi4s_vid_out_0_vtg_ce [get_bd_pins v_axi4s_vid_out_1/vtg_ce] [get_bd_pins v_tc_1/gen_clken]
+  connect_bd_net -net v_axi4s_vid_out_1_locked [get_bd_pins v_axi4s_vid_out_0/locked] [get_bd_pins xil_isp_lite_0/rst_n] [get_bd_pins xil_vip_0/rst_n] [get_bd_pins xil_vip_1/rst_n]
+  connect_bd_net -net v_axi4s_vid_out_1_vtg_ce [get_bd_pins v_axi4s_vid_out_0/vtg_ce] [get_bd_pins v_tc_0/gen_clken]
+  connect_bd_net -net v_axi4s_vid_out_2_locked [get_bd_pins DVI_Transmitter_0/reset_n] [get_bd_pins v_axi4s_vid_out_2/locked]
+  connect_bd_net -net v_axi4s_vid_out_2_vtg_ce [get_bd_pins v_axi4s_vid_out_2/vtg_ce] [get_bd_pins v_tc_2/gen_clken]
   connect_bd_net -net xil_camif_0_irq [get_bd_pins xil_camif_0/irq] [get_bd_pins xlconcat_0/In0]
-  connect_bd_net -net xil_camif_1_irq [get_bd_pins xil_camif_1/irq] [get_bd_pins xlconcat_0/In5]
-  connect_bd_net -net xil_camif_1_out_pclk [get_bd_pins xil_camif_1/out_pclk] [get_bd_pins xil_isp_lite_1/pclk] [get_bd_pins xil_vip_1/pclk]
+  connect_bd_net -net xil_camif_0_out_pclk [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk] [get_bd_pins xil_camif_0/out_pclk]
   connect_bd_net -net xil_isp_lite_0_irq [get_bd_pins xil_isp_lite_0/irq] [get_bd_pins xlconcat_0/In1]
-  connect_bd_net -net xil_isp_lite_1_irq [get_bd_pins xil_isp_lite_1/irq] [get_bd_pins xlconcat_0/In6]
   connect_bd_net -net xil_vip_0_irq [get_bd_pins xil_vip_0/irq] [get_bd_pins xlconcat_0/In2]
-  connect_bd_net -net xil_vip_0_out_pclk [get_bd_pins v_vid_in_axi4s_0/vid_io_in_clk] [get_bd_pins xil_vip_0/out_pclk]
+  connect_bd_net -net xil_vip_0_out_pclk [get_bd_pins v_vid_in_axi4s_1/vid_io_in_clk] [get_bd_pins xil_vip_0/out_pclk]
   connect_bd_net -net xil_vip_1_irq [get_bd_pins xil_vip_1/irq] [get_bd_pins xlconcat_0/In3]
-  connect_bd_net -net xil_vip_1_out_pclk [get_bd_pins v_vid_in_axi4s_1/vid_io_in_clk] [get_bd_pins xil_vip_1/out_pclk]
+  connect_bd_net -net xil_vip_1_out_pclk [get_bd_pins v_vid_in_axi4s_2/vid_io_in_clk] [get_bd_pins xil_vip_1/out_pclk]
   connect_bd_net -net xlconcat_0_dout [get_bd_pins axi_intc_0/intr] [get_bd_pins xlconcat_0/dout]
 
   # Create address segments
@@ -873,15 +892,15 @@ proc create_root_design { parentCell } {
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_0/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_1/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
   create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_1/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
-  create_bd_addr_seg -range 0x00010000 -offset 0x41610000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_iic_1/S_AXI/Reg] SEG_axi_iic_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x41600000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_iic_0/S_AXI/Reg] SEG_axi_iic_Reg
+  create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_2/Data_MM2S] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
+  create_bd_addr_seg -range 0x40000000 -offset 0x00000000 [get_bd_addr_spaces axi_vdma_2/Data_S2MM] [get_bd_addr_segs processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM] SEG_processing_system7_0_HP0_DDR_LOWOCM
+  create_bd_addr_seg -range 0x00010000 -offset 0x41600000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_iic/S_AXI/Reg] SEG_axi_iic_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x41800000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_intc_0/S_AXI/Reg] SEG_axi_intc_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x43000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_0/S_AXI_LITE/Reg] SEG_axi_vdma_0_Reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x43020000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_1/S_AXI_LITE/Reg] SEG_axi_vdma_2_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43000000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_1/S_AXI_LITE/Reg] SEG_axi_vdma_0_Reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43010000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_0/S_AXI_LITE/Reg] SEG_axi_vdma_0_Reg1
+  create_bd_addr_seg -range 0x00010000 -offset 0x43020000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_vdma_2/S_AXI_LITE/Reg] SEG_axi_vdma_2_Reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C30000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_camif_0/S00_AXI/S00_AXI_reg] SEG_xil_camif_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C40000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_camif_1/S00_AXI/S00_AXI_reg] SEG_xil_camif_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C20000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_isp_lite_0/S00_AXI/S00_AXI_reg] SEG_xil_isp_lite_0_S00_AXI_reg
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C50000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_isp_lite_1/S00_AXI/S00_AXI_reg] SEG_xil_isp_lite_1_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_vip_0/S00_AXI/S00_AXI_reg] SEG_xil_vip_0_S00_AXI_reg
   create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs xil_vip_1/S00_AXI/S00_AXI_reg] SEG_xil_vip_1_S00_AXI_reg
 

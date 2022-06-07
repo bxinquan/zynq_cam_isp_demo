@@ -1,58 +1,8 @@
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:7:0:
-../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-../src/main.c: In function '_set_exposure1':
-../src/main.c:430:2: warning: implicit declaration of function 'cmos_set_exposure2'; did you mean 'cmos_set_exposure'? [-Wimplicit-function-declaration]
-  cmos_set_exposure2(exposure);
-  ^~~~~~~~~~~~~~~~~~
-  cmos_set_exposure
-../src/main.c: In function '_set_gain1':
-../src/main.c:434:2: warning: implicit declaration of function 'cmos_set_gain2'; did you mean 'cmos_set_gain'? [-Wimplicit-function-declaration]
-  cmos_set_gain2(gain);
-  ^~~~~~~~~~~~~~
-  cmos_set_gain
-../src/main.c: In function 'main':
-../src/main.c:464:11: warning: implicit declaration of function 'ov5640_init2'; did you mean 'ov5640_init'? [-Wimplicit-function-declaration]
-  status = ov5640_init2(cmos_h_pixel, cmos_v_pixel, &total_v_std1); //初始化ov5640
-           ^~~~~~~~~~~~
-           ov5640_init
-../src/main.c: In function 'vip_init_osd':
-../src/main.c:654:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-                                         ~~~^
-                                         %08lX
-../src/main.c:654:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-                                              ~~~^
-                                              %08lX
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/main_h264.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_h264.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main_h264.d" -MT"src/main_h264.o" -o "src/main_h264.o" "../src/main_h264.c"
-'Finished building: ../src/main_h264.c'
-' '
-'Building file: ../src/ov5640_init.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
-../src/ov5640_init.c: In function 'iic_init':
-../src/ov5640_init.c:37:43: error: 'XPAR_AXI_IIC_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_IIC_1_DEVICE_ID'?
-  XIic_Config *cfg_ptr = XIic_LookupConfig(XPAR_AXI_IIC_DEVICE_ID);
-                                           ^~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_AXI_IIC_1_DEVICE_ID
-../src/ov5640_init.c:37:43: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/subdir.mk:38: src/ov5640_init.o] Error 1
-08:10:09 **** Clean-only build of configuration Debug for project zynq_camera_vdma_lcd ****
+21:28:41 **** Clean-only build of configuration Debug for project zynq_camera_vdma_lcd ****
 make clean 
-rm -rf  ./src/main.o ./src/main_h264.o ./src/ov5640_init.o ./src/ov5640_init2.o ./src/sys_intr.o ./src/vdma_api.o  ./src/main.d ./src/main_h264.d ./src/ov5640_init.d ./src/ov5640_init2.d ./src/sys_intr.d ./src/vdma_api.d  zynq_camera_vdma_lcd.elf.size  zynq_camera_vdma_lcd.elf
+rm -rf  ./src/main.o ./src/main_h264.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o  ./src/main.d ./src/main_h264.d ./src/ov5640_init.d ./src/sys_intr.d ./src/vdma_api.d  zynq_camera_vdma_lcd.elf.size  zynq_camera_vdma_lcd.elf
 ' '
-08:10:09 **** Clean-only build of project zynq_camera_vdma_lcd_bsp ****
+21:28:42 **** Clean-only build of project zynq_camera_vdma_lcd_bsp ****
 make -k clean 
 make -C ps7_cortexa9_0/libsrc/axivdma_v6_6/src -s clean 
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
@@ -83,7 +33,7 @@ rm: lstat‘*.o’失败: Invalid argument
 make[1]: *** [Makefile:26: clean] Error 1
 make: *** [Makefile:33: ps7_cortexa9_0/libsrc/xil_vip_v1_0/src/make.clean] Error 2
 make: Target 'clean' not remade because of errors.
-08:10:11 **** Build of project zynq_camera_vdma_lcd_bsp ****
+21:28:43 **** Build of project zynq_camera_vdma_lcd_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/axivdma_v6_6/src"
 make -C ps7_cortexa9_0/libsrc/axivdma_v6_6/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
@@ -229,7 +179,7 @@ xil_vip_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
   int Index;
       ^~~~~
 'Finished building libraries'
-08:10:35 **** Build of configuration Debug for project zynq_camera_vdma_lcd ****
+21:29:04 **** Build of configuration Debug for project zynq_camera_vdma_lcd ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -240,27 +190,12 @@ In file included from ../src/main.c:7:0:
 ../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
  #pragma message ("For the sleep routines, Global timer is being used")
          ^~~~~~~
-../src/main.c: In function '_set_exposure1':
-../src/main.c:430:2: warning: implicit declaration of function 'cmos_set_exposure2'; did you mean 'cmos_set_exposure'? [-Wimplicit-function-declaration]
-  cmos_set_exposure2(exposure);
-  ^~~~~~~~~~~~~~~~~~
-  cmos_set_exposure
-../src/main.c: In function '_set_gain1':
-../src/main.c:434:2: warning: implicit declaration of function 'cmos_set_gain2'; did you mean 'cmos_set_gain'? [-Wimplicit-function-declaration]
-  cmos_set_gain2(gain);
-  ^~~~~~~~~~~~~~
-  cmos_set_gain
-../src/main.c: In function 'main':
-../src/main.c:464:11: warning: implicit declaration of function 'ov5640_init2'; did you mean 'ov5640_init'? [-Wimplicit-function-declaration]
-  status = ov5640_init2(cmos_h_pixel, cmos_v_pixel, &total_v_std1); //初始化ov5640
-           ^~~~~~~~~~~~
-           ov5640_init
 ../src/main.c: In function 'vip_init_osd':
-../src/main.c:654:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/main.c:557:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
   printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
                                          ~~~^
                                          %08lX
-../src/main.c:654:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
+../src/main.c:557:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
   printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
                                               ~~~^
                                               %08lX
@@ -274,26 +209,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main_h264.o" -mcpu
 'Building file: ../src/ov5640_init.c'
 'Invoking: ARM v7 gcc compiler'
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
-../src/ov5640_init.c: In function 'iic_init':
-../src/ov5640_init.c:37:43: error: 'XPAR_AXI_IIC_DEVICE_ID' undeclared (first use in this function); did you mean 'XPAR_AXI_IIC_1_DEVICE_ID'?
-  XIic_Config *cfg_ptr = XIic_LookupConfig(XPAR_AXI_IIC_DEVICE_ID);
-                                           ^~~~~~~~~~~~~~~~~~~~~~
-                                           XPAR_AXI_IIC_1_DEVICE_ID
-../src/ov5640_init.c:37:43: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/subdir.mk:38: src/ov5640_init.o] Error 1
-08:11:21 **** Auto Build of configuration Debug for project zynq_camera_vdma_lcd ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/ov5640_init.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
 'Finished building: ../src/ov5640_init.c'
-' '
-'Building file: ../src/ov5640_init2.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init2.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/ov5640_init2.d" -MT"src/ov5640_init2.o" -o "src/ov5640_init2.o" "../src/ov5640_init2.c"
-'Finished building: ../src/ov5640_init2.c'
 ' '
 'Building file: ../src/sys_intr.c'
 'Invoking: ARM v7 gcc compiler'
@@ -307,69 +223,21 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma_api.o" -mcpu=
 ' '
 'Building target: zynq_camera_vdma_lcd.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/lib -o "zynq_camera_vdma_lcd.elf"  ./src/main.o ./src/main_h264.o ./src/ov5640_init.o ./src/ov5640_init2.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/lib -o "zynq_camera_vdma_lcd.elf"  ./src/main.o ./src/main_h264.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: zynq_camera_vdma_lcd.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size zynq_camera_vdma_lcd.elf  |tee "zynq_camera_vdma_lcd.elf.size"
    text	   data	    bss	    dec	    hex	filename
- 129728	   3840	  24544	 158112	  269a0	zynq_camera_vdma_lcd.elf
+ 120832	   3936	  24816	 149584	  24850	zynq_camera_vdma_lcd.elf
 'Finished building: zynq_camera_vdma_lcd.elf.size'
 ' '
-08:12:10 **** Incremental Build of configuration Debug for project zynq_camera_vdma_lcd ****
+21:29:15 **** Incremental Build of configuration Debug for project zynq_camera_vdma_lcd ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
-20:41:03 **** Auto Build of configuration Debug for project zynq_camera_vdma_lcd ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:7:0:
-../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-../src/main.c: In function '_set_exposure1':
-../src/main.c:430:2: warning: implicit declaration of function 'cmos_set_exposure2'; did you mean 'cmos_set_exposure'? [-Wimplicit-function-declaration]
-  cmos_set_exposure2(exposure);
-  ^~~~~~~~~~~~~~~~~~
-  cmos_set_exposure
-../src/main.c: In function '_set_gain1':
-../src/main.c:434:2: warning: implicit declaration of function 'cmos_set_gain2'; did you mean 'cmos_set_gain'? [-Wimplicit-function-declaration]
-  cmos_set_gain2(gain);
-  ^~~~~~~~~~~~~~
-  cmos_set_gain
-../src/main.c: In function 'main':
-../src/main.c:464:11: warning: implicit declaration of function 'ov5640_init2'; did you mean 'ov5640_init'? [-Wimplicit-function-declaration]
-  status = ov5640_init2(cmos_h_pixel, cmos_v_pixel, &total_v_std1); //初始化ov5640
-           ^~~~~~~~~~~~
-           ov5640_init
-../src/main.c: In function 'vip_init_osd':
-../src/main.c:654:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-                                         ~~~^
-                                         %08lX
-../src/main.c:654:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
-  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-                                              ~~~^
-                                              %08lX
-'Finished building: ../src/main.c'
-' '
-'Building target: zynq_camera_vdma_lcd.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../zynq_camera_vdma_lcd_bsp/ps7_cortexa9_0/lib -o "zynq_camera_vdma_lcd.elf"  ./src/main.o ./src/main_h264.o ./src/ov5640_init.o ./src/ov5640_init2.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: zynq_camera_vdma_lcd.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size zynq_camera_vdma_lcd.elf  |tee "zynq_camera_vdma_lcd.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 129728	   3840	  24544	 158112	  269a0	zynq_camera_vdma_lcd.elf
-'Finished building: zynq_camera_vdma_lcd.elf.size'
-' '
-20:41:08 **** Incremental Build of configuration Debug for project zynq_camera_vdma_lcd ****
+20:46:02 **** Incremental Build of configuration Debug for project zynq_camera_vdma_lcd ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

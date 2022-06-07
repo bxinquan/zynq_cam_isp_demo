@@ -79,41 +79,30 @@ con
 
 21:29:26 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_zynq_camera_vdma_lcd.elf_on_local.tcl'
 21:30:01 INFO  : Disconnected from the channel tcfchan#1.
-08:09:30 INFO  : Registering command handlers for SDK TCF services
-08:09:30 INFO  : Launching XSCT server: xsct.bat -interactive D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\temp_xsdb_launch_script.tcl
-08:09:32 INFO  : XSCT server has started successfully.
-08:09:33 INFO  : Successfully done setting XSCT server connection channel  
-08:09:33 INFO  : Successfully done setting SDK workspace  
-08:09:33 INFO  : Processing command line option -hwspec D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper.hdf.
-08:09:33 INFO  : Checking for hwspec changes in the project design_1_wrapper_hw_platform_0.
-08:09:35 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1654560530296,  Project:1654521419573
-08:09:35 INFO  : The hardware specification for project 'design_1_wrapper_hw_platform_0' is different from D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper.hdf.
-08:09:35 INFO  : Copied contents of D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper.hdf into \design_1_wrapper_hw_platform_0\system.hdf.
-08:09:38 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
-08:09:40 INFO  : 
-08:09:40 INFO  : Updating hardware inferred compiler options for zynq_camera_vdma_lcd.
-08:09:40 INFO  : Clearing existing target manager status.
-08:09:40 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
-08:09:42 WARN  : Linker script will not be updated automatically. Users need to update it manually.
-08:12:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-08:12:14 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
-08:12:14 INFO  : 'jtag frequency' command is executed.
-08:12:14 INFO  : Sourcing of 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
-08:12:14 INFO  : Context for 'APU' is selected.
-08:12:14 INFO  : System reset is completed.
-08:12:17 INFO  : 'after 3000' command is executed.
-08:12:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
-08:12:21 INFO  : FPGA configured successfully with bitstream "D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
-08:12:21 INFO  : Context for 'APU' is selected.
-08:12:21 INFO  : Hardware design information is loaded from 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
-08:12:21 INFO  : 'configparams force-mem-access 1' command is executed.
-08:12:21 INFO  : Context for 'APU' is selected.
-08:12:21 INFO  : 'ps7_init' command is executed.
-08:12:21 INFO  : 'ps7_post_config' command is executed.
-08:12:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
-08:12:22 INFO  : The application 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/zynq_camera_vdma_lcd/Debug/zynq_camera_vdma_lcd.elf' is downloaded to processor 'ps7_cortexa9_0'.
-08:12:22 INFO  : 'configparams force-mem-access 0' command is executed.
-08:12:22 INFO  : ----------------XSDB Script----------------
+20:45:34 INFO  : Registering command handlers for SDK TCF services
+20:45:35 INFO  : Launching XSCT server: xsct.bat -interactive D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\temp_xsdb_launch_script.tcl
+20:45:36 INFO  : XSCT server has started successfully.
+20:45:36 INFO  : Successfully done setting XSCT server connection channel  
+20:45:36 INFO  : Successfully done setting SDK workspace  
+20:46:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:46:05 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+20:46:05 INFO  : 'jtag frequency' command is executed.
+20:46:05 INFO  : Sourcing of 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
+20:46:05 INFO  : Context for 'APU' is selected.
+20:46:05 INFO  : System reset is completed.
+20:46:08 INFO  : 'after 3000' command is executed.
+20:46:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
+20:46:12 INFO  : FPGA configured successfully with bitstream "D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
+20:46:12 INFO  : Context for 'APU' is selected.
+20:46:12 INFO  : Hardware design information is loaded from 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
+20:46:12 INFO  : 'configparams force-mem-access 1' command is executed.
+20:46:12 INFO  : Context for 'APU' is selected.
+20:46:12 INFO  : 'ps7_init' command is executed.
+20:46:12 INFO  : 'ps7_post_config' command is executed.
+20:46:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:46:13 INFO  : The application 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/zynq_camera_vdma_lcd/Debug/zynq_camera_vdma_lcd.elf' is downloaded to processor 'ps7_cortexa9_0'.
+20:46:13 INFO  : 'configparams force-mem-access 0' command is executed.
+20:46:13 INFO  : ----------------XSDB Script----------------
 connect -url tcp:127.0.0.1:3121
 source D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
 targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
@@ -132,60 +121,13 @@ dow D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/zynq_camera_vdma_
 configparams force-mem-access 0
 ----------------End of Script----------------
 
-08:12:22 INFO  : Memory regions updated for context APU
-08:12:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
-08:12:22 INFO  : 'con' command is executed.
-08:12:22 INFO  : ----------------XSDB Script (After Launch)----------------
+20:46:13 INFO  : Memory regions updated for context APU
+20:46:13 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+20:46:13 INFO  : 'con' command is executed.
+20:46:13 INFO  : ----------------XSDB Script (After Launch)----------------
 targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
 con
 ----------------End of Script----------------
 
-08:12:22 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_zynq_camera_vdma_lcd.elf_on_local.tcl'
-20:41:11 INFO  : Disconnected from the channel tcfchan#1.
-20:41:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
-20:41:12 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
-20:41:12 INFO  : 'jtag frequency' command is executed.
-20:41:12 INFO  : Sourcing of 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl' is done.
-20:41:12 INFO  : Context for 'APU' is selected.
-20:41:12 INFO  : System reset is completed.
-20:41:15 INFO  : 'after 3000' command is executed.
-20:41:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1' command is executed.
-20:41:18 INFO  : FPGA configured successfully with bitstream "D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit"
-20:41:18 INFO  : Context for 'APU' is selected.
-20:41:20 INFO  : Hardware design information is loaded from 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/system.hdf'.
-20:41:20 INFO  : 'configparams force-mem-access 1' command is executed.
-20:41:20 INFO  : Context for 'APU' is selected.
-20:41:20 INFO  : 'ps7_init' command is executed.
-20:41:20 INFO  : 'ps7_post_config' command is executed.
-20:41:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
-20:41:20 INFO  : The application 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/zynq_camera_vdma_lcd/Debug/zynq_camera_vdma_lcd.elf' is downloaded to processor 'ps7_cortexa9_0'.
-20:41:20 INFO  : 'configparams force-mem-access 0' command is executed.
-20:41:20 INFO  : ----------------XSDB Script----------------
-connect -url tcp:127.0.0.1:3121
-source D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/ps7_init.tcl
-targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
-rst -system
-after 3000
-targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0} -index 1
-fpga -file D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/design_1_wrapper.bit
-targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
-loadhw -hw D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/design_1_wrapper_hw_platform_0/system.hdf -mem-ranges [list {0x40000000 0xbfffffff}]
-configparams force-mem-access 1
-targets -set -nocase -filter {name =~"APU*" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
-ps7_init
-ps7_post_config
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
-dow D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.sdk/zynq_camera_vdma_lcd/Debug/zynq_camera_vdma_lcd.elf
-configparams force-mem-access 0
-----------------End of Script----------------
-
-20:41:21 INFO  : Memory regions updated for context APU
-20:41:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
-20:41:21 INFO  : 'con' command is executed.
-20:41:21 INFO  : ----------------XSDB Script (After Launch)----------------
-targets -set -nocase -filter {name =~ "ARM*#0" && jtag_cable_name =~ "Digilent JTAG-HS1 210512180081"} -index 0
-con
-----------------End of Script----------------
-
-20:41:21 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_zynq_camera_vdma_lcd.elf_on_local.tcl'
-20:43:44 INFO  : Disconnected from the channel tcfchan#2.
+20:46:13 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_camera_vdma_lcd\zynq_camera_vdma_lcd.sdk\.sdk\launch_scripts\xilinx_c-c++_application_(system_debugger)\system_debugger_using_debug_zynq_camera_vdma_lcd.elf_on_local.tcl'
+23:01:13 INFO  : Disconnected from the channel tcfchan#1.

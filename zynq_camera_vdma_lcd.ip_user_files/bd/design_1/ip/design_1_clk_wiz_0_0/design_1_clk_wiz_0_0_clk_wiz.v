@@ -57,8 +57,9 @@
 //   Clock     Freq (MHz)  (degrees)    (%)     Jitter (ps)  Error (ps)
 //----------------------------------------------------------------------------
 // camif_xclk____96.000______0.000______50.0______114.420_____86.077
-// cam_xclk____24.000______0.000______50.0______152.237_____86.077
+// isp_pclk___120.000______0.000______50.0______109.763_____86.077
 // _lcd_clk____33.333______0.000______50.0______141.764_____86.077
+// cam_xclk____24.000______0.000______50.0______152.237_____86.077
 //
 //----------------------------------------------------------------------------
 // Input Clock   Freq (MHz)    Input Jitter (UI)
@@ -72,8 +73,9 @@ module design_1_clk_wiz_0_0_clk_wiz
  (// Clock in ports
   // Clock out ports
   output        camif_xclk,
-  output        cam_xclk,
+  output        isp_pclk,
   output        lcd_clk,
+  output        cam_xclk,
   // Status and control signals
   output        locked,
   input         clk_in1
@@ -97,9 +99,9 @@ wire clk_in2_design_1_clk_wiz_0_0;
   //    * Unused outputs are labeled unused
 
   wire        camif_xclk_design_1_clk_wiz_0_0;
-  wire        cam_xclk_design_1_clk_wiz_0_0;
+  wire        isp_pclk_design_1_clk_wiz_0_0;
   wire        lcd_clk_design_1_clk_wiz_0_0;
-  wire        clk_out4_design_1_clk_wiz_0_0;
+  wire        cam_xclk_design_1_clk_wiz_0_0;
   wire        clk_out5_design_1_clk_wiz_0_0;
   wire        clk_out6_design_1_clk_wiz_0_0;
   wire        clk_out7_design_1_clk_wiz_0_0;
@@ -114,7 +116,6 @@ wire clk_in2_design_1_clk_wiz_0_0;
     wire clkout0b_unused;
    wire clkout1b_unused;
    wire clkout2b_unused;
-   wire clkout3_unused;
    wire clkout3b_unused;
    wire clkout4_unused;
   wire        clkout5_unused;
@@ -135,7 +136,7 @@ wire clk_in2_design_1_clk_wiz_0_0;
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (50),
+    .CLKOUT1_DIVIDE       (10),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
@@ -143,6 +144,10 @@ wire clk_in2_design_1_clk_wiz_0_0;
     .CLKOUT2_PHASE        (0.000),
     .CLKOUT2_DUTY_CYCLE   (0.500),
     .CLKOUT2_USE_FINE_PS  ("FALSE"),
+    .CLKOUT3_DIVIDE       (50),
+    .CLKOUT3_PHASE        (0.000),
+    .CLKOUT3_DUTY_CYCLE   (0.500),
+    .CLKOUT3_USE_FINE_PS  ("FALSE"),
     .CLKIN1_PERIOD        (8.333))
   mmcm_adv_inst
     // Output clocks
@@ -151,11 +156,11 @@ wire clk_in2_design_1_clk_wiz_0_0;
     .CLKFBOUTB           (clkfboutb_unused),
     .CLKOUT0             (camif_xclk_design_1_clk_wiz_0_0),
     .CLKOUT0B            (clkout0b_unused),
-    .CLKOUT1             (cam_xclk_design_1_clk_wiz_0_0),
+    .CLKOUT1             (isp_pclk_design_1_clk_wiz_0_0),
     .CLKOUT1B            (clkout1b_unused),
     .CLKOUT2             (lcd_clk_design_1_clk_wiz_0_0),
     .CLKOUT2B            (clkout2b_unused),
-    .CLKOUT3             (clkout3_unused),
+    .CLKOUT3             (cam_xclk_design_1_clk_wiz_0_0),
     .CLKOUT3B            (clkout3b_unused),
     .CLKOUT4             (clkout4_unused),
     .CLKOUT5             (clkout5_unused),
@@ -207,12 +212,16 @@ wire clk_in2_design_1_clk_wiz_0_0;
 
 
   BUFG clkout2_buf
-   (.O   (cam_xclk),
-    .I   (cam_xclk_design_1_clk_wiz_0_0));
+   (.O   (isp_pclk),
+    .I   (isp_pclk_design_1_clk_wiz_0_0));
 
   BUFG clkout3_buf
    (.O   (lcd_clk),
     .I   (lcd_clk_design_1_clk_wiz_0_0));
+
+  BUFG clkout4_buf
+   (.O   (cam_xclk),
+    .I   (cam_xclk_design_1_clk_wiz_0_0));
 
 
 

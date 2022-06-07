@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Tue Jun  7 07:35:26 2022
+// Date        : Mon Jun  6 21:04:47 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.v
@@ -15,19 +15,22 @@
 (* NotValidForBitStream *)
 module design_1_clk_wiz_0_0
    (camif_xclk,
-    cam_xclk,
+    isp_pclk,
     lcd_clk,
+    cam_xclk,
     locked,
     clk_in1);
   output camif_xclk;
-  output cam_xclk;
+  output isp_pclk;
   output lcd_clk;
+  output cam_xclk;
   output locked;
   input clk_in1;
 
   wire cam_xclk;
   wire camif_xclk;
   (* IBUF_LOW_PWR *) wire clk_in1;
+  wire isp_pclk;
   wire lcd_clk;
   wire locked;
 
@@ -35,6 +38,7 @@ module design_1_clk_wiz_0_0
        (.cam_xclk(cam_xclk),
         .camif_xclk(camif_xclk),
         .clk_in1(clk_in1),
+        .isp_pclk(isp_pclk),
         .lcd_clk(lcd_clk),
         .locked(locked));
 endmodule
@@ -42,13 +46,15 @@ endmodule
 (* ORIG_REF_NAME = "design_1_clk_wiz_0_0_clk_wiz" *) 
 module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
    (camif_xclk,
-    cam_xclk,
+    isp_pclk,
     lcd_clk,
+    cam_xclk,
     locked,
     clk_in1);
   output camif_xclk;
-  output cam_xclk;
+  output isp_pclk;
   output lcd_clk;
+  output cam_xclk;
   output locked;
   input clk_in1;
 
@@ -60,6 +66,8 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
   wire clk_in1_design_1_clk_wiz_0_0;
   wire clkfbout_buf_design_1_clk_wiz_0_0;
   wire clkfbout_design_1_clk_wiz_0_0;
+  wire isp_pclk;
+  wire isp_pclk_design_1_clk_wiz_0_0;
   wire lcd_clk;
   wire lcd_clk_design_1_clk_wiz_0_0;
   wire locked;
@@ -69,7 +77,6 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
   wire NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED;
-  wire NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED;
@@ -97,12 +104,16 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
         .O(camif_xclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout2_buf
-       (.I(cam_xclk_design_1_clk_wiz_0_0),
-        .O(cam_xclk));
+       (.I(isp_pclk_design_1_clk_wiz_0_0),
+        .O(isp_pclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   BUFG clkout3_buf
        (.I(lcd_clk_design_1_clk_wiz_0_0),
         .O(lcd_clk));
+  (* BOX_TYPE = "PRIMITIVE" *) 
+  BUFG clkout4_buf
+       (.I(cam_xclk_design_1_clk_wiz_0_0),
+        .O(cam_xclk));
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
@@ -115,7 +126,7 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),
-    .CLKOUT1_DIVIDE(50),
+    .CLKOUT1_DIVIDE(10),
     .CLKOUT1_DUTY_CYCLE(0.500000),
     .CLKOUT1_PHASE(0.000000),
     .CLKOUT1_USE_FINE_PS("FALSE"),
@@ -123,7 +134,7 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
     .CLKOUT2_DUTY_CYCLE(0.500000),
     .CLKOUT2_PHASE(0.000000),
     .CLKOUT2_USE_FINE_PS("FALSE"),
-    .CLKOUT3_DIVIDE(1),
+    .CLKOUT3_DIVIDE(50),
     .CLKOUT3_DUTY_CYCLE(0.500000),
     .CLKOUT3_PHASE(0.000000),
     .CLKOUT3_USE_FINE_PS("FALSE"),
@@ -164,11 +175,11 @@ module design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz
         .CLKINSTOPPED(NLW_mmcm_adv_inst_CLKINSTOPPED_UNCONNECTED),
         .CLKOUT0(camif_xclk_design_1_clk_wiz_0_0),
         .CLKOUT0B(NLW_mmcm_adv_inst_CLKOUT0B_UNCONNECTED),
-        .CLKOUT1(cam_xclk_design_1_clk_wiz_0_0),
+        .CLKOUT1(isp_pclk_design_1_clk_wiz_0_0),
         .CLKOUT1B(NLW_mmcm_adv_inst_CLKOUT1B_UNCONNECTED),
         .CLKOUT2(lcd_clk_design_1_clk_wiz_0_0),
         .CLKOUT2B(NLW_mmcm_adv_inst_CLKOUT2B_UNCONNECTED),
-        .CLKOUT3(NLW_mmcm_adv_inst_CLKOUT3_UNCONNECTED),
+        .CLKOUT3(cam_xclk_design_1_clk_wiz_0_0),
         .CLKOUT3B(NLW_mmcm_adv_inst_CLKOUT3B_UNCONNECTED),
         .CLKOUT4(NLW_mmcm_adv_inst_CLKOUT4_UNCONNECTED),
         .CLKOUT5(NLW_mmcm_adv_inst_CLKOUT5_UNCONNECTED),

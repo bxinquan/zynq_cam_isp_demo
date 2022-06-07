@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jun  7 07:35:45 2022
-# Process ID: 49448
+# Start of session at: Mon Jun  6 21:05:48 2022
+# Process ID: 48520
 # Current directory: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_0_0_synth_1
 # Command line: vivado.exe -log design_1_xil_vip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xil_vip_0_0.tcl
 # Log file: D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_0_0_synth_1/design_1_xil_vip_0_0.vds
@@ -18,23 +18,23 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 66032 
+INFO: Helper process launched with PID 63700 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 406.949 ; gain = 99.871
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 406.848 ; gain = 101.227
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'design_1_xil_vip_0_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_xil_vip_0_0/synth/design_1_xil_vip_0_0.v:56]
 INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/xil_vip_v1_0.v:4]
 	Parameter BITS bound to: 8 - type: integer 
 	Parameter WIDTH bound to: 2560 - type: integer 
 	Parameter HEIGHT bound to: 1920 - type: integer 
-	Parameter FEATURE_FULL bound to: 1'b0 
+	Parameter FEATURE_FULL bound to: 1'b1 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 12 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0_S00_AXI' [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/xil_vip_v1_0_S00_AXI.v:4]
 	Parameter BITS bound to: 8 - type: integer 
 	Parameter WIDTH bound to: 2560 - type: integer 
 	Parameter HEIGHT bound to: 1920 - type: integer 
-	Parameter FEATURE_FULL bound to: 1'b0 
+	Parameter FEATURE_FULL bound to: 1'b1 
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 12 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
@@ -278,7 +278,7 @@ WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_A
 WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
 WARNING: [Synth 8-3331] design xil_vip_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 470.930 ; gain = 163.852
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 470.199 ; gain = 164.578
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -291,10 +291,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 470.930 ; gain = 163.852
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 470.199 ; gain = 164.578
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 470.930 ; gain = 163.852
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 470.199 ; gain = 164.578
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -303,29 +303,29 @@ Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 832.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 833.141 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 832.691 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 833.141 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.631 . Memory (MB): peak = 839.266 ; gain = 6.574
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.196 . Memory (MB): peak = 838.188 ; gain = 5.047
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 839.266 ; gain = 532.188
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 838.188 ; gain = 532.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 839.266 ; gain = 532.188
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 838.188 ; gain = 532.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 839.266 ; gain = 532.188
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 838.188 ; gain = 532.566
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5818] HDL ADVISOR - The operator resource <adder> is shared. To prevent sharing consider applying a KEEP on the output of the operator [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:470]
 INFO: [Synth 8-5546] ROM "cur_clr_done" won't be mapped to RAM because it is too sparse
@@ -354,7 +354,7 @@ INFO: [Synth 8-5546] ROM "int_frame_done" won't be mapped to RAM because it is t
 INFO: [Synth 8-5546] ROM "int_mask_frame_done" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-3971] The signal mem_reg was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:27 ; elapsed = 00:00:32 . Memory (MB): peak = 839.266 ; gain = 532.188
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 838.188 ; gain = 532.566
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -764,7 +764,6 @@ INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[18]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Y_r1_reg[19]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/img_Cr_r1_reg[19]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0 /\yuv2rgb_i0/img_Cr_r1_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/s_hist_equ_en_reg )
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[10]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[11]'
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[11]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[12]'
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[12]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/ZOUT_reg[13]'
@@ -805,9 +804,58 @@ INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/axi_rdata_reg[31] )
 INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][34]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][35]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][35]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][36]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][36]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][37]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][37]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][38]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][40]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][41]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][44]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][44]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][45]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][45]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][46]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][46]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][51]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][52]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][54]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][55]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][55]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][56]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][56]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][57]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][57]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][58]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][58]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][59]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][59]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[1][60]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][36]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][37]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][37]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][38]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][39]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][41]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][44]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][44]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][45]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][45]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][46]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][46]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][56]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][57]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][57]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][58]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][58]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][59]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][59]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[2][60]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][38]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][39]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][39]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][40]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][40]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][42]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][42]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][44]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][44]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][45]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][45]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][46]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][46]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][58]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][59]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][59]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[3][60]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][40]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][41]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][41]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][43]'
+INFO: [Synth 8-3886] merging instance 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][43]' (FDC) to 'inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp_reg[4][44]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0 /\hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[1][1] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0 /\yuv2rgb_i0/img_Cr_r2_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0 /\hist_equ_i0/div_hist_sum_3 /\num_tmp_reg[2][2] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 839.266 ; gain = 532.188
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:32 . Memory (MB): peak = 838.188 ; gain = 532.566
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -817,6 +865,9 @@ Block RAM: Preliminary Mapping  Report (see note below)
 +-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized0: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |full_dp_ram:                   | mem_reg    | 512 x 32(READ_FIRST)   | W | R | 512 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
@@ -838,10 +889,14 @@ Note: The table above is a preliminary report that shows the DSPs inferred at th
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_3/hist_equ_i0/hist_ram_data/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_4/hist_equ_i0/hist_ram_data/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_5/hist_equ_i0/hist_map_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_94/sobel_i0/line2buf/gen_ram_inst[0].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_95/sobel_i0/line2buf/gen_ram_inst[1].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_152/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/i_152/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_hist_equ.v:127]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:44]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:42]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:43]
@@ -855,13 +910,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 875.152 ; gain = 568.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 884.582 ; gain = 578.961
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:08 . Memory (MB): peak = 877.191 ; gain = 570.113
+Finished Timing Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 892.961 ; gain = 587.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -871,6 +926,9 @@ Block RAM: Final Mapping  Report
 +-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                    | RTL Object | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------------+------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram:                 | mem_reg    | 256 x 23(READ_FIRST)   | W |   | 256 x 23(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|simple_dp_ram__parameterized0: | mem_reg    | 256 x 8(READ_FIRST)    | W |   | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
 |simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |simple_dp_ram__parameterized1: | mem_reg    | 4 K x 8(READ_FIRST)    | W |   | 4 K x 8(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
 |full_dp_ram:                   | mem_reg    | 512 x 32(READ_FIRST)   | W | R | 512 x 32(READ_FIRST)   | W | R | Port A and B     | 0      | 1      | 
@@ -888,20 +946,24 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_hist_equ.v:126]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:74]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:72]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:73]
-INFO: [Synth 8-3886] merging instance 'i_2605' (FDC) to 'i_2586'
-INFO: [Synth 8-3886] merging instance 'i_2586' (FDC) to 'i_2567'
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_hist_equ.v:106]
+INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_hist_equ.v:127]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:44]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:42]
 INFO: [Synth 8-5844] Detected registers with asynchronous reset at DSP/BRAM block boundary. Consider using synchronous reset for optimal packing [d:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/e597/hdl/vip/vip_yuv2rgb.v:43]
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/ping_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_data/pong_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
+INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_map_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[0].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/line2buf/gen_ram_inst[1].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 INFO: [Synth 8-6837] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the block ram. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:09 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:00:47 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -925,7 +987,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished IO Insertion : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -938,7 +1000,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:47 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -950,40 +1012,42 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:48 ; elapsed = 00:00:49 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+---------------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name          | RTL Name                                                            | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+---------------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/href_dly_reg[6]  | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/vsync_dly_reg[6] | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/href_r_reg[3]  | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/vsync_r_reg[3] | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/data_t5_reg[23]    | 5      | 24    | YES          | NO                 | YES               | 24     | 0       | 
-+---------------------+---------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name          | RTL Name                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_wen_reg      | 34     | 1     | YES          | NO                 | YES               | 0      | 1       | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/hist_ram_waddr_reg[7] | 35     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/href_dly_reg[6]          | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/vsync_dly_reg[6]         | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/href_r_reg[3]          | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/vsync_r_reg[3]         | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|design_1_xil_vip_0_0 | inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/data_t5_reg[23]            | 5      | 24    | YES          | NO                 | YES               | 24     | 0       | 
++---------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP and Shift Register Reporting
@@ -1002,74 +1066,83 @@ Report Cell Usage:
 +------+-----------+------+
 |      |Cell       |Count |
 +------+-----------+------+
-|1     |CARRY4     |   105|
-|2     |DSP48E1    |     3|
-|3     |LUT1       |     5|
-|4     |LUT2       |   247|
-|5     |LUT3       |   143|
-|6     |LUT4       |   296|
-|7     |LUT5       |   174|
-|8     |LUT6       |   210|
-|9     |RAMB36E1   |     2|
-|10    |RAMB36E1_1 |     1|
-|11    |SRL16E     |    28|
-|12    |FDCE       |   714|
-|13    |FDPE       |    16|
-|14    |FDRE       |   528|
-|15    |FDSE       |    19|
+|1     |CARRY4     |   788|
+|2     |DSP48E1    |     4|
+|3     |LUT1       |    85|
+|4     |LUT2       |  3367|
+|5     |LUT3       |  2302|
+|6     |LUT4       |   380|
+|7     |LUT5       |   208|
+|8     |LUT6       |   228|
+|9     |RAMB18E1   |     2|
+|10    |RAMB18E1_1 |     1|
+|11    |RAMB36E1   |     2|
+|12    |RAMB36E1_1 |     1|
+|13    |SRL16E     |    28|
+|14    |SRLC32E    |    17|
+|15    |FDCE       |  2730|
+|16    |FDPE       |    16|
+|17    |FDRE       |   572|
+|18    |FDSE       |    19|
 +------+-----------+------+
 
 Report Instance Areas: 
 +------+------------------------------------+--------------------------------+------+
 |      |Instance                            |Module                          |Cells |
 +------+------------------------------------+--------------------------------+------+
-|1     |top                                 |                                |  2491|
-|2     |  inst                              |xil_vip_v1_0                    |  2424|
-|3     |    xil_vip_v1_0_S00_AXI_inst       |xil_vip_v1_0_S00_AXI            |  2424|
-|4     |      vip_top_i0                    |vip_top                         |  1842|
+|1     |top                                 |                                | 10750|
+|2     |  inst                              |xil_vip_v1_0                    | 10682|
+|3     |    xil_vip_v1_0_S00_AXI_inst       |xil_vip_v1_0_S00_AXI            | 10682|
+|4     |      vip_top_i0                    |vip_top                         | 10078|
 |5     |        crop_i0                     |vip_crop                        |   246|
-|6     |        dscale_i0                   |vip_dscale                      |    53|
-|7     |        mux_crop_i0                 |vid_mux                         |    81|
-|8     |        mux_hist_equ_i0             |vid_mux_0                       |    43|
-|9     |        mux_in                      |vid_mux_1                       |    26|
-|10    |        mux_sobel_i0                |vid_mux_2                       |    27|
-|11    |        mux_yuv2rgb_i0              |vid_mux_3                       |    28|
-|12    |        osd_i0                      |vip_osd                         |   606|
-|13    |          osd_ram                   |full_dp_ram                     |    51|
-|14    |        sobel_i0                    |vip_sobel                       |   376|
-|15    |          line2buf                  |shift_register                  |    40|
-|16    |            \gen_ram_inst[0].u_ram  |simple_dp_ram__parameterized1   |     1|
-|17    |            \gen_ram_inst[1].u_ram  |simple_dp_ram__parameterized1_4 |    14|
-|18    |        yuv2rgb_i0                  |vip_yuv2rgb                     |   356|
+|6     |        dscale_i0                   |vip_dscale                      |   103|
+|7     |        hist_equ_i0                 |vip_hist_equ                    |  8205|
+|8     |          div_hist_sum_3            |shift_div_uint                  |  7765|
+|9     |          hist_map_ram              |simple_dp_ram__parameterized0   |     9|
+|10    |          hist_ram_data             |hist_stat                       |   275|
+|11    |            ping_ram                |simple_dp_ram                   |    66|
+|12    |            pong_ram                |simple_dp_ram_5                 |    93|
+|13    |        mux_crop_i0                 |vid_mux                         |    28|
+|14    |        mux_hist_equ_i0             |vid_mux_0                       |    42|
+|15    |        mux_in                      |vid_mux_1                       |    43|
+|16    |        mux_sobel_i0                |vid_mux_2                       |    26|
+|17    |        mux_yuv2rgb_i0              |vid_mux_3                       |    28|
+|18    |        osd_i0                      |vip_osd                         |   606|
+|19    |          osd_ram                   |full_dp_ram                     |    51|
+|20    |        sobel_i0                    |vip_sobel                       |   378|
+|21    |          line2buf                  |shift_register                  |    41|
+|22    |            \gen_ram_inst[0].u_ram  |simple_dp_ram__parameterized1   |     1|
+|23    |            \gen_ram_inst[1].u_ram  |simple_dp_ram__parameterized1_4 |    15|
+|24    |        yuv2rgb_i0                  |vip_yuv2rgb                     |   357|
 +------+------------------------------------+--------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 933.945 ; gain = 628.324
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 29 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:42 ; elapsed = 00:00:55 . Memory (MB): peak = 905.051 ; gain = 229.637
-Synthesis Optimization Complete : Time (s): cpu = 00:01:02 ; elapsed = 00:01:10 . Memory (MB): peak = 905.051 ; gain = 597.973
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 933.945 ; gain = 260.336
+Synthesis Optimization Complete : Time (s): cpu = 00:00:48 ; elapsed = 00:00:50 . Memory (MB): peak = 933.945 ; gain = 628.324
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 111 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 798 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 905.051 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 933.945 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-252 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
+308 Infos, 163 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:04 ; elapsed = 00:01:14 . Memory (MB): peak = 905.051 ; gain = 608.141
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 905.051 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 933.945 ; gain = 637.547
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 933.945 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_0_0_synth_1/design_1_xil_vip_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_vip_0_0, cache-ID = b7dbe4f7860aea78
-INFO: [Coretcl 2-1174] Renamed 17 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 905.051 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xil_vip_0_0, cache-ID = 3aefd141ea0e1daf
+INFO: [Coretcl 2-1174] Renamed 23 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 933.945 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_camera_vdma_lcd/zynq_camera_vdma_lcd.runs/design_1_xil_vip_0_0_synth_1/design_1_xil_vip_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_xil_vip_0_0_utilization_synth.rpt -pb design_1_xil_vip_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun  7 07:37:10 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun  6 21:06:50 2022...

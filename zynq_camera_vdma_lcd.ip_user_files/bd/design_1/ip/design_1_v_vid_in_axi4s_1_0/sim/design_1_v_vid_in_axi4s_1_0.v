@@ -84,7 +84,7 @@ module design_1_v_vid_in_axi4s_1_0 (
   axis_enable
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_in_clk_intf, ASSOCIATED_BUSIF vid_io_in, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_xil_vip_1_0_out_pclk, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_in_clk_intf, ASSOCIATED_BUSIF vid_io_in, FREQ_HZ 100000000, PHASE 0.000, CLK_DOMAIN design_1_xil_vip_0_0_out_pclk, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_io_in_clk_intf CLK" *)
 input wire vid_io_in_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_io_in_ce_intf, POLARITY ACTIVE_LOW" *)
@@ -160,7 +160,7 @@ input wire axis_enable;
     .C_NATIVE_DATA_WIDTH(24),
     .C_M_AXIS_TDATA_WIDTH(24),
     .C_HAS_ASYNC_CLK(1),
-    .C_ADDR_WIDTH(11),
+    .C_ADDR_WIDTH(10),
     .C_INCLUDE_PIXEL_DROP(0),
     .C_INCLUDE_PIXEL_REMAP_420(0),
     .C_ADDR_WIDTH_PIXEL_REMAP_420(10)

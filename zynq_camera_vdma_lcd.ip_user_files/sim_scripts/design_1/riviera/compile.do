@@ -180,23 +180,36 @@ vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../zynq_camera_vdma_lcd.src
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_30/sim/bd_afc3_sawn_1.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_31/sim/bd_afc3_swn_1.sv" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_32/sim/bd_afc3_sbn_1.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/sim/bd_afc3_s04mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/sim/bd_afc3_s04tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/sim/bd_afc3_s04sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/sim/bd_afc3_s04a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/sim/bd_afc3_sarn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/sim/bd_afc3_srn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/sim/bd_afc3_s05mmu_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_40/sim/bd_afc3_s05tr_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_41/sim/bd_afc3_s05sic_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_42/sim/bd_afc3_s05a2s_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_43/sim/bd_afc3_sawn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_44/sim/bd_afc3_swn_2.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_45/sim/bd_afc3_sbn_2.sv" \
 
 vlog -work smartconnect_v1_0  -sv2k12 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/7005/hdl/sc_sc2axi_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_33/sim/bd_afc3_m00s2a_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_34/sim/bd_afc3_m00arn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_35/sim/bd_afc3_m00rn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_36/sim/bd_afc3_m00awn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_37/sim/bd_afc3_m00wn_0.sv" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_38/sim/bd_afc3_m00bn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_46/sim/bd_afc3_m00s2a_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_47/sim/bd_afc3_m00arn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_48/sim/bd_afc3_m00rn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_49/sim/bd_afc3_m00awn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_50/sim/bd_afc3_m00wn_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_51/sim/bd_afc3_m00bn_0.sv" \
 
 vlog -work smartconnect_v1_0  -sv2k12 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b387/hdl/sc_exit_v1_0_vl_rfs.sv" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_39/sim/bd_afc3_m00e_0.sv" \
+"../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_52/sim/bd_afc3_m00e_0.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_axi_smc_0/bd_0/sim/bd_afc3.v" \
@@ -252,10 +265,10 @@ vlog -work v_axi4s_vid_out_v4_0_10  -v2k5 "+incdir+../../../../zynq_camera_vdma_
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/a87e/hdl/v_axi4s_vid_out_v4_0_vl_rfs.v" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/sim/design_1_v_axi4s_vid_out_1_0.v" \
+"../../../bd/design_1/ip/design_1_v_axi4s_vid_out_2_0/sim/design_1_v_axi4s_vid_out_2_0.v" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/design_1/ip/design_1_v_tc_1_0/sim/design_1_v_tc_1_0.vhd" \
+"../../../bd/design_1/ip/design_1_v_tc_2_0/sim/design_1_v_tc_2_0.vhd" \
 
 vcom -work lib_pkg_v1_0_2 -93 \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/0513/hdl/lib_pkg_v1_0_rfs.vhd" \
@@ -282,17 +295,29 @@ vcom -work axi_vdma_v6_3_6 -93 \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl/axi_vdma_v6_3_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_axi_vdma_2_0/sim/design_1_axi_vdma_2_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/design_1/ip/design_1_v_vid_in_axi4s_2_0/sim/design_1_v_vid_in_axi4s_2_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_v_tc_1_0/sim/design_1_v_tc_1_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_vdma_1_0/sim/design_1_axi_vdma_1_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_v_vid_in_axi4s_1_0/sim/design_1_v_vid_in_axi4s_1_0.v" \
+"../../../bd/design_1/ip/design_1_v_axi4s_vid_out_1_0/sim/design_1_v_axi4s_vid_out_1_0.v" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/design_1/ip/design_1_v_tc_0_0/sim/design_1_v_tc_0_0.vhd" \
 "../../../bd/design_1/ip/design_1_axi_vdma_0_0/sim/design_1_axi_vdma_0_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_v_vid_in_axi4s_0_0/sim/design_1_v_vid_in_axi4s_0_0.v" \
+
+vcom -work xil_defaultlib -93 \
+"../../../bd/design_1/ip/design_1_v_tc_0_0/sim/design_1_v_tc_0_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../bd/design_1/ip/design_1_v_axi4s_vid_out_0_0/sim/design_1_v_axi4s_vid_out_0_0.v" \
 
 vcom -work interrupt_control_v3_1_4 -93 \
@@ -302,13 +327,21 @@ vcom -work axi_iic_v2_0_21 -93 \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
-"../../../bd/design_1/ip/design_1_axi_iic_0_0/sim/design_1_axi_iic_0_0.vhd" \
+"../../../bd/design_1/ip/design_1_axi_iic_0/sim/design_1_axi_iic_0.vhd" \
 
 vcom -work axi_intc_v4_1_12 -93 \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/31e4/hdl/axi_intc_v4_1_vh_rfs.vhd" \
 
 vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_axi_intc_0_0/sim/design_1_axi_intc_0_0.vhd" \
+
+vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
+"../../../bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v" \
+"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0_S00_AXI.v" \
+"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0.v" \
+"../../../bd/design_1/ip/design_1_xil_camif_0_0/sim/design_1_xil_camif_0_0.v" \
+
+vcom -work xil_defaultlib -93 \
 "../../../bd/design_1/ip/design_1_rst_ps7_0_50M_0/sim/design_1_rst_ps7_0_50M_0.vhd" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
@@ -341,17 +374,6 @@ vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/
 "../../../bd/design_1/ipshared/100b/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
 "../../../bd/design_1/ipshared/100b/hdl/xil_isp_lite_v1_0.v" \
 "../../../bd/design_1/ip/design_1_xil_isp_lite_0_0/sim/design_1_xil_isp_lite_0_0.v" \
-"../../../bd/design_1/ip/design_1_xil_isp_lite_1_0/sim/design_1_xil_isp_lite_1_0.v" \
-
-vcom -work xil_defaultlib -93 \
-"../../../bd/design_1/ip/design_1_axi_iic_1_0/sim/design_1_axi_iic_1_0.vhd" \
-
-vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../bd/design_1/ipshared/2bb1/hdl/dvp_raw_timing_colorbar.v" \
-"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0_S00_AXI.v" \
-"../../../bd/design_1/ipshared/2bb1/hdl/xil_camif_v1_0.v" \
-"../../../bd/design_1/ip/design_1_xil_camif_0_0/sim/design_1_xil_camif_0_0.v" \
-"../../../bd/design_1/ip/design_1_xil_camif_1_0/sim/design_1_xil_camif_1_0.v" \
 
 vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/70cf/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/979d/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/b2d0/hdl/verilog" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/85a3" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/58e2/hdl" "+incdir+../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ip/design_1_processing_system7_0_0" "+incdir+D:/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../zynq_camera_vdma_lcd.srcs/sources_1/bd/design_1/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
