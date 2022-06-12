@@ -1,0 +1,1295 @@
+
+*** Running vivado
+    with args -log base_axi_iic_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_iic_0.tcl
+
+
+****** Vivado v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source base_axi_iic_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+Command: synth_design -top base_axi_iic_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19632 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 405.734 ; gain = 102.512
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-2048] function gpo_bit_used does not always return a value [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1139]
+INFO: [Synth 8-638] synthesizing module 'base_axi_iic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/synth/base_axi_iic_0.vhd:91]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+INFO: [Synth 8-3491] module 'axi_iic' declared at 'd:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6799' bound to instance 'U0' of component 'axi_iic' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/synth/base_axi_iic_0.vhd:180]
+INFO: [Synth 8-638] synthesizing module 'axi_iic' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+INFO: [Synth 8-638] synthesizing module 'iic' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+	Parameter C_NUM_IIC_REGS bound to: 18 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 1 - type: integer 
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_TX_FIFO_EXIST bound to: 1 - type: bool 
+	Parameter C_RC_FIFO_EXIST bound to: 1 - type: bool 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+INFO: [Synth 8-638] synthesizing module 'axi_ipif_ssp1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+	Parameter C_NUM_IIC_REGS bound to: 18 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'axi_lite_ipif' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000000111111111 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100001100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000000100000000000000000000000000010010 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'slave_attachment' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100001100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000000100000000000000000000000000010010 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 9 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_USE_WSTRB bound to: 0 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 8 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-638] synthesizing module 'address_decoder' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+	Parameter C_BUS_AWIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 511 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000001111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000100001100000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000100000000000000000000000000000000000100000000000000000000000000010010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'pselect_f' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_BAR bound to: 9'b000000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized0' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized1' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized2' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized3' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized3' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized4' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized5' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized5' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized6' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized6' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized7' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized7' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized8' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized9' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized9' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized10' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized10' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized11' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized11' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized12' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized12' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized13' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized13' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized14' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized14' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized15' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized15' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized16' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 7 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_BAR bound to: 9'b001000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized16' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized17' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 1 - type: integer 
+	Parameter C_AW bound to: 9 - type: integer 
+	Parameter C_BAR bound to: 9'b100000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized17' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized18' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized18' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized19' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized19' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized20' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized20' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized21' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized21' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized22' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized22' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized23' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized23' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized24' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized24' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized25' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b00111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized25' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized26' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized26' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized27' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized27' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized28' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized28' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized29' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized29' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized30' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized30' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized31' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized31' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized32' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized32' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized33' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b01111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized33' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized34' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b10000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized34' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'pselect_f__parameterized35' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 5 - type: integer 
+	Parameter C_BAR bound to: 5'b10001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'pselect_f__parameterized35' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1534]
+INFO: [Synth 8-256] done synthesizing module 'address_decoder' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:1775]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2550]
+INFO: [Synth 8-256] done synthesizing module 'slave_attachment' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2341]
+INFO: [Synth 8-256] done synthesizing module 'axi_lite_ipif' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/66ea/hdl/axi_lite_ipif_v3_0_vh_rfs.vhd:2948]
+INFO: [Synth 8-638] synthesizing module 'interrupt_control' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+	Parameter C_NUM_CE bound to: 16 - type: integer 
+	Parameter C_NUM_IPIF_IRPT_SRC bound to: 1 - type: integer 
+	Parameter C_IP_INTR_MODE_ARRAY bound to: 256'b0000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011000000000000000000000000000000110000000000000000000000000000001100000000000000000000000000000011 
+	Parameter C_INCLUDE_DEV_PENCODER bound to: 0 - type: bool 
+	Parameter C_INCLUDE_DEV_ISC bound to: 0 - type: bool 
+	Parameter C_IPIF_DWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'interrupt_control' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/a040/hdl/interrupt_control_v3_1_vh_rfs.vhd:259]
+INFO: [Synth 8-638] synthesizing module 'soft_reset' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
+	Parameter C_RESET_WIDTH bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:272]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:272]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:272]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:272]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:295]
+INFO: [Synth 8-256] done synthesizing module 'soft_reset' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:141]
+INFO: [Synth 8-256] done synthesizing module 'axi_ipif_ssp1' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:5661]
+INFO: [Synth 8-638] synthesizing module 'reg_interface' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+	Parameter C_TX_FIFO_EXIST bound to: 1 - type: bool 
+	Parameter C_TX_FIFO_BITS bound to: 4 - type: integer 
+	Parameter C_RC_FIFO_EXIST bound to: 1 - type: bool 
+	Parameter C_RC_FIFO_BITS bound to: 4 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_GPO_WIDTH bound to: 1 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_SIZE bound to: 9 - type: integer 
+	Parameter C_NUM_IIC_REGS bound to: 18 - type: integer 
+	Parameter C_DEFAULT_VALUE bound to: 8'b00000000 
+WARNING: [Synth 8-6014] Unused sequential element ro_a_reg was removed.  [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:2273]
+INFO: [Synth 8-256] done synthesizing module 'reg_interface' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1677]
+INFO: [Synth 8-638] synthesizing module 'filter' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+	Parameter SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter SDA_INERTIAL_DELAY bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'debounce' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+	Parameter C_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_DEFAULT bound to: 1'b1 
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter C_CDC_TYPE bound to: 1 - type: integer 
+	Parameter C_RESET_STATE bound to: 0 - type: integer 
+	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
+	Parameter C_FLOP_INPUT bound to: 0 - type: integer 
+	Parameter C_VECTOR_WIDTH bound to: 32 - type: integer 
+	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'debounce' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:1307]
+INFO: [Synth 8-256] done synthesizing module 'filter' (11#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:4985]
+INFO: [Synth 8-638] synthesizing module 'iic_control' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+	Parameter C_SCL_INERTIAL_DELAY bound to: 0 - type: integer 
+	Parameter C_S_AXI_ACLK_FREQ_HZ bound to: 50000000 - type: integer 
+	Parameter C_IIC_FREQ bound to: 100000 - type: integer 
+	Parameter C_SIZE bound to: 9 - type: integer 
+	Parameter C_TEN_BIT_ADR bound to: 0 - type: integer 
+	Parameter C_SDA_LEVEL bound to: 1 - type: integer 
+	Parameter C_SMBUS_PMBUS_HOST bound to: 0 - type: integer 
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+	Parameter C_SIZE bound to: 9 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+INFO: [Synth 8-638] synthesizing module 'shift8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-256] done synthesizing module 'shift8' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:897]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+	Parameter C_SIZE bound to: 4 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n__parameterized0' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:740]
+WARNING: [Synth 8-6014] Unused sequential element sda_cout_reg_d1_reg was removed.  [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:3658]
+WARNING: [Synth 8-6014] Unused sequential element gen_stop_and_scl_hi_reg was removed.  [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:3874]
+INFO: [Synth 8-256] done synthesizing module 'iic_control' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:2908]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+	Parameter C_DATA_BITS bound to: 8 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_XON bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'FDR' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958' bound to instance 'Data_Exists_DFF' of component 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:543]
+INFO: [Synth 8-6157] synthesizing module 'FDR' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDR' (15#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-6157] synthesizing module 'MUXCY_L' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596]
+INFO: [Synth 8-6155] done synthesizing module 'MUXCY_L' (16#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-6157] synthesizing module 'XORCY' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711]
+INFO: [Synth 8-6155] done synthesizing module 'XORCY' (17#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-6157] synthesizing module 'FDRE' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'FDRE' (18#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-6157] synthesizing module 'SRL16E' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
+	Parameter INIT bound to: 16'b0000000000000000 
+	Parameter IS_CLK_INVERTED bound to: 1'b0 
+INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (19#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO' (20#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-638] synthesizing module 'dynamic_master' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+WARNING: [Synth 8-6014] Unused sequential element dynamic_MSMS_d_reg was removed.  [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:5265]
+INFO: [Synth 8-256] done synthesizing module 'dynamic_master' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:5204]
+INFO: [Synth 8-638] synthesizing module 'SRL_FIFO__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+	Parameter C_DATA_BITS bound to: 2 - type: integer 
+	Parameter C_DEPTH bound to: 4 - type: integer 
+	Parameter C_XON bound to: 0 - type: bool 
+INFO: [Synth 8-3491] module 'FDR' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958' bound to instance 'Data_Exists_DFF' of component 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:543]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'MUXCY_L' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27596' bound to instance 'MUXCY_L_I' of component 'MUXCY_L' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:560]
+INFO: [Synth 8-3491] module 'XORCY' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711' bound to instance 'XORCY_I' of component 'XORCY' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:567]
+INFO: [Synth 8-3491] module 'FDRE' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971' bound to instance 'FDRE_I' of component 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:573]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-3491] module 'SRL16E' declared at 'D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699' bound to instance 'SRL16E_I' of component 'SRL16E' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'SRL_FIFO__parameterized0' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:449]
+INFO: [Synth 8-256] done synthesizing module 'iic' (22#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6187]
+INFO: [Synth 8-256] done synthesizing module 'axi_iic' (23#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/304c/hdl/axi_iic_v2_0_vh_rfs.vhd:6870]
+INFO: [Synth 8-256] done synthesizing module 'base_axi_iic_0' (24#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/synth/base_axi_iic_0.vhd:91]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[0]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[1]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[2]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[4]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[6]
+WARNING: [Synth 8-3331] design dynamic_master has unconnected port Cr[7]
+WARNING: [Synth 8-3331] design iic_control has unconnected port Adr[0]
+WARNING: [Synth 8-3331] design iic_control has unconnected port Ten_adr[7]
+WARNING: [Synth 8-3331] design iic_control has unconnected port Ten_adr[6]
+WARNING: [Synth 8-3331] design iic_control has unconnected port Ten_adr[5]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_aclk
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_resetn
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[31]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[30]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[29]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[28]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[27]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[26]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[25]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[24]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[23]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[22]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[21]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[20]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[19]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[18]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[17]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[16]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[15]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[14]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[13]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[12]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[11]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[10]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[9]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[8]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[7]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[6]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[5]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[4]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[3]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[2]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[1]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port prmry_vect_in[0]
+WARNING: [Synth 8-3331] design cdc_sync has unconnected port scndry_resetn
+WARNING: [Synth 8-3331] design debounce has unconnected port Rst
+WARNING: [Synth 8-3331] design debounce has unconnected port Stable
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Addr[0]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[0]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[1]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[2]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[3]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[4]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[5]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[6]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[7]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[8]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[9]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[10]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[11]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[12]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[13]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[14]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[15]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[16]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[17]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[18]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[19]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[20]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[21]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_Data[22]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_WrCE[1]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_WrCE[3]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_WrCE[5]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_WrCE[6]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Bus2IIC_WrCE[7]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[0]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[1]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[2]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[3]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[4]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[5]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[6]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port Data_i2c[7]
+WARNING: [Synth 8-3331] design reg_interface has unconnected port reg_empty
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[0]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[1]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[2]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[3]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[4]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[5]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[6]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[7]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[8]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[9]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[10]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[11]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[12]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[13]
+WARNING: [Synth 8-3331] design soft_reset has unconnected port Bus2IP_Data[14]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 470.773 ; gain = 167.551
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 470.773 ; gain = 167.551
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 470.773 ; gain = 167.551
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 44 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_board.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_board.xdc] for cell 'U0'
+Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_iic_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_iic_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 831.637 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 32 instances were transformed.
+  FDR => FDRE: 15 instances
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 5 instances
+  MUXCY_L => MUXCY: 12 instances
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 831.918 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 833.297 ; gain = 1.660
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_iic_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:17 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'slave_attachment'
+INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_rresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "s_axi_bresp_i" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'scl_state_reg' in module 'iic_control'
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'iic_control'
+INFO: [Synth 8-5544] ROM "dtc_i" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "scl_cout" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "detect_stop_b" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "next_scl_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "AckDataState" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "aas_i" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_Empty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_Empty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "buffer_Full" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 iSTATE2 |                             0001 |                               00
+                  iSTATE |                             0010 |                               01
+                 iSTATE0 |                             0100 |                               10
+                 iSTATE1 |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                scl_idle |                             0000 |                             0000
+              start_wait |                             0001 |                             0001
+                   start |                             0010 |                             0010
+              start_edge |                             0011 |                             0011
+            scl_low_edge |                             0100 |                             0100
+                 scl_low |                             0101 |                             0101
+           scl_high_edge |                             0110 |                             0110
+                scl_high |                             0111 |                             0111
+               stop_edge |                             1000 |                             1000
+               stop_wait |                             1001 |                             1001
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'scl_state_reg' using encoding 'sequential' in module 'iic_control'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+                  header |                              101 |                              001
+              ack_header |                              110 |                              010
+                rcv_data |                              100 |                              011
+                ack_data |                              011 |                              100
+               xmit_data |                              010 |                              101
+                wait_ack |                              001 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'iic_control'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 2     
+	   2 Input      8 Bit       Adders := 1     
+	   2 Input      4 Bit       Adders := 2     
++---XORs : 
+	   2 Input      1 Bit         XORs := 20    
++---Registers : 
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 12    
+	                8 Bit    Registers := 8     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 143   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 5     
+	   2 Input      9 Bit        Muxes := 3     
+	   3 Input      9 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 4     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 19    
+	  10 Input      4 Bit        Muxes := 1     
+	  21 Input      3 Bit        Muxes := 1     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 108   
+	   4 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 10    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module pselect_f 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized25 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized26 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized27 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized28 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized29 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized30 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized31 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized33 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized34 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module pselect_f__parameterized35 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module address_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 39    
+Module slave_attachment 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 7     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 5     
+	   7 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
+Module interrupt_control 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 8     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 13    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 10    
+Module soft_reset 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module axi_ipif_ssp1 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
+Module reg_interface 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 8     
+	                8 Bit    Registers := 3     
+	                7 Bit    Registers := 1     
+	                4 Bit    Registers := 1     
+	                1 Bit    Registers := 12    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module upcnt_n 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      9 Bit       Adders := 1     
++---Registers : 
+	                9 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      9 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module shift8 
+Detailed RTL Component Info : 
++---Registers : 
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module upcnt_n__parameterized0 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 1     
+Module iic_control 
+Detailed RTL Component Info : 
++---Registers : 
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 54    
++---Muxes : 
+	   3 Input      9 Bit        Muxes := 1     
+	  10 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 13    
+	  21 Input      3 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 42    
+	   3 Input      1 Bit        Muxes := 1     
+	   7 Input      1 Bit        Muxes := 3     
+	  10 Input      1 Bit        Muxes := 10    
+Module SRL_FIFO 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module dynamic_master 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      8 Bit       Adders := 1     
++---Registers : 
+	                8 Bit    Registers := 1     
+	                1 Bit    Registers := 8     
++---Muxes : 
+	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+Module SRL_FIFO__parameterized0 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 2     
+Module iic 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input      2 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5544] ROM "X_IIC/READ_FIFO_I/buffer_Full" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "X_IIC/READ_FIFO_I/buffer_Empty" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/REG_INTERFACE_I/FIFO_GEN_DTR.dtre_i_reg' (FDR) to 'U0/X_IIC/REG_INTERFACE_I/sr_i_reg[0]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/REG_INTERFACE_I/sr_i_reg[6]' (FDR) to 'U0/X_IIC/REG_INTERFACE_I/IIC2Bus_IntrEvent_reg[5]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[9]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[10]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[11]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[12]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[13]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[13]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[14]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[14]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[15]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[15]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[16]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[16]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[17]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[17]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[18]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[18]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[19]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[20]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[21]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[23]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[24]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[25]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[26]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[27]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[28]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
+INFO: [Synth 8-3332] Sequential element (X_IIC/FILTER_I/SCL_DEBOUNCE/INPUT_DOUBLE_REGS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_iic.
+INFO: [Synth 8-3332] Sequential element (X_IIC/FILTER_I/SCL_DEBOUNCE/INPUT_DOUBLE_REGS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_iic.
+INFO: [Synth 8-3332] Sequential element (X_IIC/FILTER_I/SDA_DEBOUNCE/INPUT_DOUBLE_REGS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_iic.
+INFO: [Synth 8-3332] Sequential element (X_IIC/FILTER_I/SDA_DEBOUNCE/INPUT_DOUBLE_REGS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_iic.
+INFO: [Synth 8-3886] merging instance 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/GEN_BKEND_CE_REGISTERS[16].ce_out_i_reg[16]' (FDRE) to 'U0/X_IIC/X_AXI_IPIF_SSP1/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/I_DECODER/MEM_DECODE_GEN[1].cs_out_i_reg[1]'
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:33 . Memory (MB): peak = 833.297 ; gain = 530.074
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:31 ; elapsed = 00:00:36 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+--------+------+
+|      |Cell    |Count |
++------+--------+------+
+|1     |CARRY4  |     8|
+|2     |LUT1    |     8|
+|3     |LUT2    |    47|
+|4     |LUT3    |    50|
+|5     |LUT4    |    74|
+|6     |LUT5    |    70|
+|7     |LUT6    |   187|
+|8     |MUXCY_L |     9|
+|9     |MUXF7   |     9|
+|10    |MUXF8   |     4|
+|11    |SRL16E  |    18|
+|12    |XORCY   |    12|
+|13    |FDR     |    11|
+|14    |FDRE    |   300|
+|15    |FDSE    |    46|
++------+--------+------+
+
+Report Instance Areas: 
++------+-----------------------------+-------------------------+------+
+|      |Instance                     |Module                   |Cells |
++------+-----------------------------+-------------------------+------+
+|1     |top                          |                         |   853|
+|2     |  U0                         |axi_iic                  |   853|
+|3     |    X_IIC                    |iic                      |   853|
+|4     |      DYN_MASTER_I           |dynamic_master           |    34|
+|5     |      FILTER_I               |filter                   |    10|
+|6     |        SCL_DEBOUNCE         |debounce                 |     5|
+|7     |          INPUT_DOUBLE_REGS  |cdc_sync_4               |     5|
+|8     |        SDA_DEBOUNCE         |debounce_3               |     5|
+|9     |          INPUT_DOUBLE_REGS  |cdc_sync                 |     5|
+|10    |      IIC_CONTROL_I          |iic_control              |   275|
+|11    |        BITCNT               |upcnt_n__parameterized0  |    17|
+|12    |        CLKCNT               |upcnt_n                  |    32|
+|13    |        I2CDATA_REG          |shift8                   |    18|
+|14    |        I2CHEADER_REG        |shift8_1                 |    20|
+|15    |        SETUP_CNT            |upcnt_n_2                |    23|
+|16    |      READ_FIFO_I            |SRL_FIFO                 |    31|
+|17    |      REG_INTERFACE_I        |reg_interface            |   173|
+|18    |      WRITE_FIFO_CTRL_I      |SRL_FIFO__parameterized0 |    22|
+|19    |      WRITE_FIFO_I           |SRL_FIFO_0               |    33|
+|20    |      X_AXI_IPIF_SSP1        |axi_ipif_ssp1            |   271|
+|21    |        AXI_LITE_IPIF_I      |axi_lite_ipif            |   223|
+|22    |          I_SLAVE_ATTACHMENT |slave_attachment         |   223|
+|23    |            I_DECODER        |address_decoder          |   101|
+|24    |        X_INTERRUPT_CONTROL  |interrupt_control        |    31|
+|25    |        X_SOFT_RESET         |soft_reset               |    13|
++------+-----------------------------+-------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 25 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 881.301 ; gain = 215.555
+Synthesis Optimization Complete : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 881.301 ; gain = 578.078
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 53 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 881.301 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 14 instances were transformed.
+  (MUXCY,XORCY) => CARRY4: 3 instances
+  FDR => FDRE: 11 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+263 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:40 . Memory (MB): peak = 881.301 ; gain = 585.395
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 881.301 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_iic_0_synth_1/base_axi_iic_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_axi_iic_0, cache-ID = 810aa9b66514c657
+INFO: [Coretcl 2-1174] Renamed 24 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 881.301 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_iic_0_synth_1/base_axi_iic_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file base_axi_iic_0_utilization_synth.rpt -pb base_axi_iic_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Jun 12 13:11:31 2022...

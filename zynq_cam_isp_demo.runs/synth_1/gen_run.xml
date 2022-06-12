@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1655010710">
+  <File Type="PA-TCL" Name="base_wrapper.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="base_wrapper_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="base_wrapper_reports.tcl"/>
+  <File Type="RDS-RDS" Name="base_wrapper.vds"/>
+  <File Type="RDS-UTIL" Name="base_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="base_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="base_wrapper.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="base_wrapper_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="base_wrapper_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/base/base.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/base/hdl/base_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/dualcam/hdl/dualcam_wrapper.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/dualcam/dualcam.bd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/h264/h264.bd">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/h264/hdl/h264_wrapper.v">
+      <FileInfo>
+        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="base_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_base">
+    <File Path="$PSRCDIR/constrs_base/new/base.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="base_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_DVI_Transmitter_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_iic_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_intc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_camif_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_isp_lite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_auto_pc_0"/>
+</GenRun>

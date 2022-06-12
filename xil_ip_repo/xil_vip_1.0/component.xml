@@ -412,7 +412,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>774cbff0</spirit:value>
+            <spirit:value>79415f55</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -428,7 +428,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>774cbff0</spirit:value>
+            <spirit:value>79415f55</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -442,7 +442,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>f0536e22</spirit:value>
+            <spirit:value>40560815</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -953,7 +953,7 @@
       <spirit:modelParameter spirit:dataType="integer">
         <spirit:name>FEATURE_FULL</spirit:name>
         <spirit:displayName>Feature Full</spirit:displayName>
-        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FEATURE_FULL">false</spirit:value>
+        <spirit:value spirit:format="bool" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.FEATURE_FULL">true</spirit:value>
       </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
@@ -1016,13 +1016,17 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
+        <spirit:name>hdl/vip/vip_yuv444to422.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>hdl/xil_vip_v1_0_S00_AXI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/xil_vip_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_446378a7</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_887aee0d</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
     <spirit:fileSet>
@@ -1057,6 +1061,10 @@
       </spirit:file>
       <spirit:file>
         <spirit:name>hdl/vip/vip_yuv2rgb.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>hdl/vip/vip_yuv444to422.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
@@ -1189,7 +1197,7 @@
     <spirit:parameter>
       <spirit:name>FEATURE_FULL</spirit:name>
       <spirit:displayName>Feature Full</spirit:displayName>
-      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.FEATURE_FULL">false</spirit:value>
+      <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.FEATURE_FULL">true</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
@@ -1216,521 +1224,23 @@
       </xilinx:taxonomies>
       <xilinx:displayName>xil_vip_v1.0</xilinx:displayName>
       <xilinx:vendorDisplayName>bxq</xilinx:vendorDisplayName>
-      <xilinx:coreRevision>23</xilinx:coreRevision>
+      <xilinx:coreRevision>27</xilinx:coreRevision>
       <xilinx:upgrades>
         <xilinx:canUpgradeFrom>xilinx.com:user:xil_vip:1.0</xilinx:canUpgradeFrom>
         <xilinx:canUpgradeFrom>example.com:user:xil_vip:1.0</xilinx:canUpgradeFrom>
       </xilinx:upgrades>
-      <xilinx:coreCreationDateTime>2022-05-30T15:13:16Z</xilinx:coreCreationDateTime>
+      <xilinx:coreCreationDateTime>2022-06-11T12:51:39Z</xilinx:coreCreationDateTime>
       <xilinx:tags>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a7982f1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@558f908d_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e04a614_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dd0a84a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@60e87cb1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b968181_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@18be478a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@23d777d5_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5cc40939_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7abf35e4_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b3f07_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75d26568_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d88418a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b21bd96_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@23df9ae2_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@570be1b4_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d100eac_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59c9e67f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c9d67d1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3d831c94_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5146e2fa_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@675e12bf_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d6dda6b_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@55bed35c_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@476deb49_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d82725e_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@29aed8af_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f0b64c5_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d54e864_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@33d221c8_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@13d6c192_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e52165a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@109f1ab0_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@bad2fd1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e742ce_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@11cbb5b1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e6ed515_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@61b62d9e_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@752d69b5_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1288fd59_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@325873a1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c6b6e18_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@25d8ca33_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2dfdd2e8_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd783ab_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e231399_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6acaf2ce_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@182e020_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@26c083d8_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@563f4a79_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d26087f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4554f21c_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@433bcc8b_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3801f755_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b2f4dc3_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3da67032_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2989c326_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@481cd774_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d12835_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@152aa23e_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e0c9c6b_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@490736a0_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66120ce6_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d0e0dcd_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b940a7f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@358d266f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf5a5fb_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@40af53fa_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b2894ae_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58e0ed7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@24e71e2a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4901d6de_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d389b29_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1dcf0576_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f9d4f32_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45fca5e2_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5643acf7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1768c195_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ef2f085_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76e6cb0e_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@77835079_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@120d17b9_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c1a1f1a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4dc85e31_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c7dcade_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64835dd4_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70012672_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1727c782_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c5bebd0_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7db84304_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6426f55f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28f00ceb_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a687205_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f318b7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@a14be20_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@43603f35_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2417f540_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@208c8730_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de28b9_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d98896f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22a98d47_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff3ae1f_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@456c5988_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a0b3360_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@fce83a2_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b39839_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bd432f4_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@77dae8d7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@616805e6_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f01b116_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f7dee92_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f8d7a24_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36db1a9c_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@612fd4ea_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c80085a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@79d23a4d_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cfdc635_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ad1e830_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46218ba0_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70f20864_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@223aaa78_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@39c60646_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@38356d8a_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@737e1136_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64a276c7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cc013b7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36997058_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75712026_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a0d44b1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@360ba4cc_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ae4f2a9_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe5ea42_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a769102_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@a63948c_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b365937_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cfcd030_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@48b859d1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a9197dd_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@449253d1_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27a10ed7_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@273b90aa_ARCHIVE_LOCATION">d:/Work/fpga/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69e08c37_ARCHIVE_LOCATION">d:/Work/fpga/ov5640_isp_lcd_v1/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@59d828ec_ARCHIVE_LOCATION">d:/Work/fpga/ov5640_isp_lcd_v1/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67768c40_ARCHIVE_LOCATION">d:/Work/fpga/ov5640_isp_lcd_v1/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@86e1be7_ARCHIVE_LOCATION">d:/Work/fpga/ov5640_isp_lcd_v1/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c37de00_ARCHIVE_LOCATION">d:/Work/fpga/ov5640_isp_lcd_v1/ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4256717a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fc7c377_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53882cbb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d82d3b8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f8fdb2a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58399f40_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@18f1dde_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@66979871_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@de1949f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d9acc22_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ea0110f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6df46455_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cab4f89_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1672c847_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5373dde1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@25bde5ac_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b02ac64_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@73b2de5d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ba64107_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@c4de99_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7185e91a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@723b155_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b6864a9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c81732a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5a1c3d51_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@760958ff_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e028123_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ada7aa9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3288c285_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ca18624_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@515bb5d2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6256d033_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ebbdf3d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c19a5a9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@185f0b09_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@489b3068_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a5c4078_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c489184_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70efff5a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ffafa85_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aa83bfd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2346a52d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a97d274_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21b54070_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21ff64a5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4f1ff30b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@c686df2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@33faa50b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2585a016_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5240655e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a47590d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@14b8c881_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51a125b7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f5fd835_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@17ecfe3f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d27f75a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@ce9b768_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@395a5624_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b612bb7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d8952c5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@217e98c0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1d5fb2c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7bc8002d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6df8e526_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b8439bb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa748e6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b0bd81_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1464e638_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c63717_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4a17937f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ea3d0a6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6182476a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a9b33e9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ac5f9d5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b181ea5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@608224a0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@36f83878_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@210e727c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3de44d33_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f7de47c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4619e457_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fba79db_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76791bfd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@15567d82_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@218f15fb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3611c228_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@c77393c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b6813bb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@55ee8a20_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5149afb2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5395c738_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@63a9aa56_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2f67b4b1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41f85c30_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@633af842_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@a613cf6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@19c6c8ec_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@541d321e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d592ba7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@31336ae3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@a0186f0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d7687f9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6a1436e8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f5b5c80_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3304c6a8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7cec309e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c1039d1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46f7b5f0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@10500f90_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@38da3732_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37ad4b11_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12050845_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@464145a1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3a286509_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@87c34f4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e07c608_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a8f8476_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@67eab45a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@103ffb6c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78298ebd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@25230542_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@11997ef9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@58c9343e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4462e8c1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@455ed7c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@8582467_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@57ae83df_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c24984e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b6d62f8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@75fce04c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2714675b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12b77979_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2a94bcd9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@43917b71_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@15966605_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cd02282_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e7e6261_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@227e245c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f0d9e63_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e132b3b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c553df3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@260d8fb9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5d39250_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ebea184_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@16cdd3a7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@794c0e37_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@785b6c7f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d2ab652_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@140dc37d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@412c5b40_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32a11d38_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d2cbf84_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@9e8d2d4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ee7047a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@56c5e68_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cf3c80f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32214d07_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@211acbf_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@262e540b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d5d2fa0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6694bfa1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bb24dfd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@35040460_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@313c6090_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@692b0c2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@65dadc08_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41da196e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fb44c67_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e75b084_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5647a25d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21c16e5c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@48080ed1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@370f2f39_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3bca328a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@676f3c06_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ebd3fc3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28ee2b5d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f3359ca_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41fa44b0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b21d388_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@309c54b4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4575556e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7dcf73bc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@8847a50_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51b2105f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@50c67217_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cb17d6a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@56d33fc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aa3deb7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c7a8e0f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@711a8403_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@eae6068_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5135e7b1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd48516_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@14cb9595_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bc1933a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@277f2a64_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5b1d18a3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@f3f9ec1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27201bc2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a815e8c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@587e76d9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@299009a3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cdc0668_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b24a661_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@32c2964c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@c0ec7d4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a46f825_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@580ba8c4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@794f1278_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@27f23c09_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6416fe0b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@628eef9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3e719987_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b02e581_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e8fdbe5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@fa47780_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@77e40cdc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4df974a3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@116578b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f5d3ee1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@16c12935_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2de2e22b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@50d3bfba_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70643df2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@21e4d3a8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fdd2c02_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@155da58d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22c586ff_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6af87ed_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@173dab49_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@23ddd4fb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4aaa9229_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b22ad47_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3def7e4f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a7944d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@20c12684_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c6487dc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b1bdba_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b29b733_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@73703a31_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a589b01_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@43e557bb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7a0f40_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@49812142_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@87dec0e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@41e4ac3a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd_offline/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6739023_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd_offline/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@143675b1_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd_offline/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ed55361_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd_offline/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b3f771_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd_offline/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6bc95c8f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc5e523_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@69f95ab5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@34fbfee0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7886db98_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c5a2cd7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2fce5945_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@cf93083_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d63e980_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@73283b72_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@acecea5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70cb81e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ec820bc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@51020354_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@311c753a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@983695d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@cdd9ccd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@14129e38_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@42e056bc_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e0d358c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e9d4a6f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@50454546_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28a7165a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1263d273_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76279f3f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@45881305_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@72b970e0_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@706d9e29_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ddbea32_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c2b62fa_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b0f7786_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@256cc577_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22d6cf65_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@466a6f7c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7105a5a9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@22f24a29_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@12177e42_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@71bc5b41_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2134fb86_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@53856ade_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e24f67c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@26051838_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@c17293a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@559ab905_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fcc48a6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@acdc5e6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@70c5af4f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@60a079bb_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@b0bc010_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@413c7c54_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4bec3d89_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b24a103_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c5b6b56_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@28d07801_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ccf567c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ede178b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@d608d6e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@284c7e1f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7d5674b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@158bb9a9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf9383_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6422f4a8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f94353c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1de51079_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@358f40d9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@dc17488_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@111f972d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@37aae75e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64094dd7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ad5fefa_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4d3b256a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e6afb17_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1707bc15_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2af06b89_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1f87d47e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@87a78d5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1754dbe6_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@64f3c6d9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fc64b39_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e513f4a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78142d75_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c2748e3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@349daa47_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3c24e594_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6e3836e4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@354fd9d7_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@78ea6a4c_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@709cff56_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2076ad7f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@65bafaf3_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fe62571_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b652d1a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd60011_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@147ef2ec_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ac0f85f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@2cd2eeb9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@4842e2c5_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@76ab760_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@5229edd9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@e09a8a4_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
-        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e31600d_ARCHIVE_LOCATION">d:/Work/fpga/zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0</xilinx:tag>
       </xilinx:tags>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="db275b9c"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="8f799bc7"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="aeccc822"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="34255d99"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bcd8a6c0"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="efc5dc16"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="b0e9c369"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="264571a5"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

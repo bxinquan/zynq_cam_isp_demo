@@ -29,3 +29,4 @@
     vip_crop - 图像裁剪 (可配置裁剪区域)
     vip_dscale - 图像缩小 (宽高分别支持1/N倍缩小)
     vip_osd - 单色位图叠加 (用于叠加文字或logo图标例128x128)
+	vip_yuv444to422 - YUV444转422（做为v_frmbuf_wr源写到内存NV12,axis_422与axis_420时序相同）
