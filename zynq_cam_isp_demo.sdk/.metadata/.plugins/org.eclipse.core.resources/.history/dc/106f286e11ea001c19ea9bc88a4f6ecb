@@ -271,7 +271,7 @@ static void init_camif_isp_vip()
 	XIL_VIP_mWriteReg(VIP_ENC_BASE, VIP_REG_TOP_EN, vip_top_en);
 	XIL_VIP_mWriteReg(VIP_ENC_BASE, VIP_REG_HIST_EQU_MIN, 20);
 	XIL_VIP_mWriteReg(VIP_ENC_BASE, VIP_REG_HIST_EQU_MAX, 200);
-	vip_init_osd(VIP_ENC_BASE, 16, 16, 0x8080ff, 0x808088);
+	vip_init_osd(VIP_ENC_BASE, 16, 16, 0xffffff, 0x888888);
 	//XIL_VIP_mWriteReg(VIP_ENC_BASE, VIP_REG_YUV444TO422_SWITCH_UV, 1);
 
 	if (vip_top_en & VIP_REG_TOP_EN_BIT_DSCALE_EN) {

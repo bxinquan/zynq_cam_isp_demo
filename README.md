@@ -2,7 +2,7 @@
 #### 本Demo基于zynq-7020(正点原子启明星+OV5640+4.3'800x480)实现了ISP图像处理(将ov5640的isp关闭，在7020上实现ISP功能)，输出到LCD和HDMI，软件基于SDK裸机开发
 
 ## ISP Lite IP
-### 位置: zynq_camera_vdma_lcd/xil_ip_repo/xil_isp_lite_1.0
+### 位置: xil_ip_repo/xil_isp_lite_1.0
 ### 处理模块:
     isp_dpc - 坏点校正 (5x5领域内的8个临近像素同时大于或同时小于中心像素，且差值大于门限，则认为坏点，使用中值替换)
     isp_blc - 黑电平校正 (RGGB四通道分别减去配置好的黑电平值)
@@ -21,7 +21,7 @@
 ### 注：接口时序为DVP(参考tb_dvp_helper)
 
 ## VIP IP
-### 位置: zynq_camera_vdma_lcd/xil_ip_repo/xil_vip_1.0
+### 位置: xil_ip_repo/xil_vip_1.0
 ### 处理模块:
     vip_hist_equ - 直方图均衡 (可配置上下限的均衡器)
     vip_sobel - sobel边缘检测 (固定的sobel 3x3卷积核)

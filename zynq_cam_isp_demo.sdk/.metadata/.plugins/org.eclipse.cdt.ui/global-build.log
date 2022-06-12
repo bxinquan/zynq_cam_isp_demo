@@ -123,3 +123,234 @@ make pre-build main-build
 a9-linaro-pre-build-step
 ' '
 make: Nothing to be done for 'main-build'.
+13:35:12 **** Auto Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../h264_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:9:0:
+../../h264_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'init_camif_isp_vip':
+../src/main.c:194:2: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+  usleep(100000);
+  ^~~~~~
+  fseek
+../src/main.c: In function 'yuv_convert':
+../src/main.c:505:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned src_ptr = src;
+                     ^~~
+../src/main.c:506:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned dst_ptr = dst;
+                     ^~~
+../src/main.c: In function 'main':
+../src/main.c:616:19: warning: passing argument 2 of 'f_write' makes pointer from integer without a cast [-Wint-conversion]
+     f_write(&fil, avc_buff, nbs, &bw);
+                   ^~~~~~~~
+In file included from ../src/main.c:314:0:
+../../h264_bsp/ps7_cortexa9_0/include/ff.h:305:9: note: expected 'const void *' but argument is of type 'int'
+ FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw); /* Write data to the file */
+         ^~~~~~~
+../src/main.c:593:67: warning: variable 'prev_vip_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                                   ^~~~~~~~~~~~
+../src/main.c:593:49: warning: variable 'prev_isp_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                 ^~~~~~~~~~~~
+../src/main.c:593:31: warning: variable 'prev_cam_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                               ^~~~~~~~~~~~
+../src/main.c:593:11: warning: variable 'prev_frame_cnt' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+           ^~~~~~~~~~~~~~
+../src/main.c:533:11: warning: unused variable 'enc_vdma_inst' [-Wunused-variable]
+  XAxiVdma enc_vdma_inst;
+           ^~~~~~~~~~~~~
+../src/main.c: In function 'vip_init_osd':
+../src/main.c:747:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                         ~~~^
+                                         %08lX
+../src/main.c:747:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                              ~~~^
+                                              %08lX
+At top level:
+../src/main.c:501:13: warning: 'yuv_convert' defined but not used [-Wunused-function]
+ static void yuv_convert(const unsigned char* src, unsigned char* dst, int width, int height)
+             ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: h264.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../h264_bsp/ps7_cortexa9_0/lib -o "h264.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: h264.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size h264.elf  |tee "h264.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 233736	   3776	  26992	 264504	  40938	h264.elf
+'Finished building: h264.elf.size'
+' '
+13:35:17 **** Incremental Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:38:37 **** Auto Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../h264_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:9:0:
+../../h264_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'init_camif_isp_vip':
+../src/main.c:194:2: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+  usleep(100000);
+  ^~~~~~
+  fseek
+../src/main.c: In function 'yuv_convert':
+../src/main.c:505:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned src_ptr = src;
+                     ^~~
+../src/main.c:506:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned dst_ptr = dst;
+                     ^~~
+../src/main.c: In function 'main':
+../src/main.c:616:19: warning: passing argument 2 of 'f_write' makes pointer from integer without a cast [-Wint-conversion]
+     f_write(&fil, avc_buff, nbs, &bw);
+                   ^~~~~~~~
+In file included from ../src/main.c:314:0:
+../../h264_bsp/ps7_cortexa9_0/include/ff.h:305:9: note: expected 'const void *' but argument is of type 'int'
+ FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw); /* Write data to the file */
+         ^~~~~~~
+../src/main.c:593:67: warning: variable 'prev_vip_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                                   ^~~~~~~~~~~~
+../src/main.c:593:49: warning: variable 'prev_isp_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                 ^~~~~~~~~~~~
+../src/main.c:593:31: warning: variable 'prev_cam_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                               ^~~~~~~~~~~~
+../src/main.c:593:11: warning: variable 'prev_frame_cnt' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+           ^~~~~~~~~~~~~~
+../src/main.c:533:11: warning: unused variable 'enc_vdma_inst' [-Wunused-variable]
+  XAxiVdma enc_vdma_inst;
+           ^~~~~~~~~~~~~
+../src/main.c: In function 'vip_init_osd':
+../src/main.c:747:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                         ~~~^
+                                         %08lX
+../src/main.c:747:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                              ~~~^
+                                              %08lX
+At top level:
+../src/main.c:501:13: warning: 'yuv_convert' defined but not used [-Wunused-function]
+ static void yuv_convert(const unsigned char* src, unsigned char* dst, int width, int height)
+             ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: h264.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../h264_bsp/ps7_cortexa9_0/lib -o "h264.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: h264.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size h264.elf  |tee "h264.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 233736	   3776	  26992	 264504	  40938	h264.elf
+'Finished building: h264.elf.size'
+' '
+13:39:01 **** Incremental Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
+13:43:54 **** Auto Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../h264_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:9:0:
+../../h264_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'init_camif_isp_vip':
+../src/main.c:194:2: warning: implicit declaration of function 'usleep'; did you mean 'fseek'? [-Wimplicit-function-declaration]
+  usleep(100000);
+  ^~~~~~
+  fseek
+../src/main.c: In function 'yuv_convert':
+../src/main.c:505:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned src_ptr = src;
+                     ^~~
+../src/main.c:506:21: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+  unsigned dst_ptr = dst;
+                     ^~~
+../src/main.c: In function 'main':
+../src/main.c:616:19: warning: passing argument 2 of 'f_write' makes pointer from integer without a cast [-Wint-conversion]
+     f_write(&fil, avc_buff, nbs, &bw);
+                   ^~~~~~~~
+In file included from ../src/main.c:314:0:
+../../h264_bsp/ps7_cortexa9_0/include/ff.h:305:9: note: expected 'const void *' but argument is of type 'int'
+ FRESULT f_write (FIL* fp, const void* buff, UINT btw, UINT* bw); /* Write data to the file */
+         ^~~~~~~
+../src/main.c:593:67: warning: variable 'prev_vip_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                                   ^~~~~~~~~~~~
+../src/main.c:593:49: warning: variable 'prev_isp_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                                                 ^~~~~~~~~~~~
+../src/main.c:593:31: warning: variable 'prev_cam_int' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+                               ^~~~~~~~~~~~
+../src/main.c:593:11: warning: variable 'prev_frame_cnt' set but not used [-Wunused-but-set-variable]
+  unsigned prev_frame_cnt = 0, prev_cam_int = 0, prev_isp_int = 0, prev_vip_int = 0;
+           ^~~~~~~~~~~~~~
+../src/main.c:533:11: warning: unused variable 'enc_vdma_inst' [-Wunused-variable]
+  XAxiVdma enc_vdma_inst;
+           ^~~~~~~~~~~~~
+../src/main.c: In function 'vip_init_osd':
+../src/main.c:747:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                         ~~~^
+                                         %08lX
+../src/main.c:747:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32 {aka long unsigned int}' [-Wformat=]
+  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+                                              ~~~^
+                                              %08lX
+At top level:
+../src/main.c:501:13: warning: 'yuv_convert' defined but not used [-Wunused-function]
+ static void yuv_convert(const unsigned char* src, unsigned char* dst, int width, int height)
+             ^~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: h264.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../h264_bsp/ps7_cortexa9_0/lib -o "h264.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: h264.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size h264.elf  |tee "h264.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 233736	   3776	  26992	 264504	  40938	h264.elf
+'Finished building: h264.elf.size'
+' '
+13:44:10 **** Incremental Build of configuration Debug for project h264 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for 'main-build'.
