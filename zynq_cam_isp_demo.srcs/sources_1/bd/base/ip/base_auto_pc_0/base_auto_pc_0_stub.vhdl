@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
 -- Date        : Sun Jun 12 13:12:27 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_auto_pc_0/base_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top base_auto_pc_0 -prefix
+--               base_auto_pc_0_ base_auto_pc_0_stub.vhdl
 -- Design      : base_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-2

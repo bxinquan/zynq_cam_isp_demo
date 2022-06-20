@@ -41,6 +41,7 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/base/ip/base_xlconcat_0_0/sim/base_xlconcat_0_0.v" \
+  "../../../bd/base/ip/base_axi_smc_0/bd_0/sim/bd_60ff.v" \
   "../../../bd/base/ip/base_axi_smc_0/bd_0/ip/ip_0/sim/bd_60ff_one_0.v" \
 -endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
@@ -145,7 +146,6 @@
   "../../../bd/base/ip/base_axi_smc_0/bd_0/ip/ip_52/sim/bd_60ff_m00e_0.sv" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/base/ip/base_axi_smc_0/bd_0/sim/bd_60ff.v" \
   "../../../bd/base/ip/base_axi_smc_0/sim/base_axi_smc_0.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
@@ -278,23 +278,23 @@
   "../../../bd/base/ip/base_rst_ps7_0_50M_0/sim/base_rst_ps7_0_50M_0.vhd" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_2dnr.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_blc.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_bnr.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_ccm.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_csc.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_demosaic.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_dgain.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_dpc.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_ee.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_gamma.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_stat_ae.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_stat_awb.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_top.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_utils.v" \
-  "../../../bd/base/ipshared/963a/hdl/isp_lite/isp_wb.v" \
-  "../../../bd/base/ipshared/963a/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
-  "../../../bd/base/ipshared/963a/hdl/xil_isp_lite_v1_0.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_2dnr.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_blc.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_bnr.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_ccm.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_csc.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_demosaic.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_dgain.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_dpc.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_ee.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_gamma.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_stat_ae.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_stat_awb.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_top.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_utils.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/isp_lite/isp_wb.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/xil_isp_lite_v1_0_S00_AXI.v" \
+  "../../../bd/base/ipshared/eb7a/hdl/xil_isp_lite_v1_0.v" \
   "../../../bd/base/ip/base_xil_isp_lite_0_0/sim/base_xil_isp_lite_0_0.v" \
   "../../../bd/base/ipshared/e7ba/hdl/vip/vip_crop.v" \
   "../../../bd/base/ipshared/e7ba/hdl/vip/vip_dscale.v" \
@@ -308,13 +308,13 @@
   "../../../bd/base/ipshared/e7ba/hdl/xil_vip_v1_0.v" \
   "../../../bd/base/ip/base_xil_vip_0_0/sim/base_xil_vip_0_0.v" \
   "../../../bd/base/ip/base_xil_vip_1_0/sim/base_xil_vip_1_0.v" \
+  "../../../bd/base/sim/base.v" \
 -endlib
 -makelib ies_lib/axi_protocol_converter_v2_1_18 \
   "../../../../zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/base/ip/base_auto_pc_0/sim/base_auto_pc_0.v" \
-  "../../../bd/base/sim/base.v" \
 -endlib
 -makelib ies_lib/xil_defaultlib \
   glbl.v

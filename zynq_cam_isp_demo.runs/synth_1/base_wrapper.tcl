@@ -35,6 +35,7 @@ set_property ip_cache_permissions {read write} [current_project]
 read_verilog -library xil_defaultlib D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/hdl/base_wrapper.v
 add_files D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/base.bd
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_2/bd_60ff_arsw_0_ooc.xdc]
@@ -69,7 +70,6 @@ set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_49/bd_60ff_m00awn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_50/bd_60ff_m00wn_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_51/bd_60ff_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_ooc.xdc]
