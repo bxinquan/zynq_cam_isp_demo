@@ -4,13 +4,13 @@
 
 import numpy as np
 
-def _interpolate_G_on_R(G_left, G_right, G_up, G_down, B, B_left, B_right, B_up, B_down) :
-    if abs(2*B-B_left-B_right) + abs(G_left-G_right) < abs(2*B-B_up-B_down) + abs(G_up-G_down) : 
-        G = (G_left+G_right)//2 + (2*B-B_left-B_right)//4
-    elif abs(2*B-B_left-B_right) + abs(G_left-G_right) > abs(2*B-B_up-B_down) + abs(G_up-G_down) : 
-        G = (G_up+G_down)//2 + (2*B-B_up-B_down)//4
+def _interpolate_G_on_R(R, R_left, R_right, R_up, R_down, G_left, G_right, G_up, G_down) :
+    if abs(2*R-R_left-R_right) + abs(G_left-G_right) < abs(2*R-R_up-R_down) + abs(G_up-G_down) : 
+        G = (G_left+G_right)//2 + (2*R-R_left-R_right)//4
+    elif abs(2*R-R_left-R_right) + abs(G_left-G_right) > abs(2*R-R_up-R_down) + abs(G_up-G_down) : 
+        G = (G_up+G_down)//2 + (2*R-R_up-R_down)//4
     else :
-        G = (G_left+G_right+G_up+G_down)//4 + (4*B-B_left-B_right-B_up-B_down)//8
+        G = (G_left+G_right+G_up+G_down)//4 + (4*R-R_left-R_right-R_up-R_down)//8
     return (G if G > 0 else 0)
 
 def _interpolate_R_on_G(G, Gr1, Gr2, R1, R2) :
@@ -18,10 +18,10 @@ def _interpolate_R_on_G(G, Gr1, Gr2, R1, R2) :
     return (R if R > 0 else 0)
 
 def _interpolate_R_on_B(G, Gr1, Gr2, Gr3, Gr4, R1, R2, R3, R4) :
-    if abs(2*G-Gr1-Gr3) + abs(R1-R3) < abs(2*G-Gr2-Gr4) + abs(R2-R4) :
-        R = G + (R1 + R3) // 2 - (Gr1 + Gr3) // 2
-    elif abs(2*G-Gr1-Gr3) + abs(R1-R3) > abs(2*G-Gr2-Gr4) + abs(R2-R4) :
-        R = G + (R2 + R4) // 2 - (Gr2 + Gr4) // 2
+    if abs(2*G-Gr1-Gr4) + abs(R1-R4) < abs(2*G-Gr2-Gr3) + abs(R2-R3) :
+        R = G + (R1 + R4) // 2 - (Gr1 + Gr4) // 2
+    elif abs(2*G-Gr1-Gr4) + abs(R1-R4) > abs(2*G-Gr2-Gr3) + abs(R2-R3) :
+        R = G + (R2 + R3) // 2 - (Gr2 + Gr3) // 2
     else :
         R = G + (R1 + R2 + R3 + R4) // 4 - (Gr1 + Gr2 + Gr3 + Gr4) // 4
     return (R if R > 0 else 0)
@@ -37,15 +37,15 @@ def demosaic_self_adaption(raw, bayer) :
             fmt = (((x&1)<<1)|(y&1)) ^ bayer
             G = 0
             if (0 == fmt) :   #R
-                G = _interpolate_G_on_R(rawpad[x,y-1],rawpad[x,y+1],rawpad[x-1,y],rawpad[x+1,y],
-                        rawpad[x,y],rawpad[x,y-2],rawpad[x,y+2],rawpad[x-2,y],rawpad[x+2,y])
+                G = _interpolate_G_on_R(rawpad[x,y],rawpad[x,y-2],rawpad[x,y+2],rawpad[x-2,y],rawpad[x+2,y],
+                        rawpad[x,y-1],rawpad[x,y+1],rawpad[x-1,y],rawpad[x+1,y])
             elif (1 == fmt) : #Gr
                 G = rawpad[x,y]
             elif (2 == fmt) : #Gb
                 G = rawpad[x,y]
             else :            #B
-                G = _interpolate_G_on_R(rawpad[x,y-1],rawpad[x,y+1],rawpad[x-1,y],rawpad[x+1,y],
-                        rawpad[x,y],rawpad[x,y-2],rawpad[x,y+2],rawpad[x-2,y],rawpad[x+2,y])
+                G = _interpolate_G_on_R(rawpad[x,y],rawpad[x,y-2],rawpad[x,y+2],rawpad[x-2,y],rawpad[x+2,y],
+                        rawpad[x,y-1],rawpad[x,y+1],rawpad[x-1,y],rawpad[x+1,y])
             rgbpad[x,y,1] = G
     #calc all R/B
     for x in range(2, rgbpad.shape[0]-2) :

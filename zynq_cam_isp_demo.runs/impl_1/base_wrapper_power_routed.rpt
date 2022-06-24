@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-| Date             : Tue Jun 21 01:01:17 2022
+| Date             : Fri Jun 24 20:53:25 2022
 | Host             : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command          : report_power -file base_wrapper_power_routed.rpt -pb base_wrapper_power_summary_routed.pb -rpx base_wrapper_power_routed.rpx
 | Design           : base_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.426        |
+| Total On-Chip Power (W)  | 2.434        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.247        |
+| Dynamic (W)              | 2.255        |
 | Device Static (W)        | 0.179        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 57.0         |
-| Junction Temperature (C) | 53.0         |
+| Max Ambient (C)          | 56.9         |
+| Junction Temperature (C) | 53.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.167 |       15 |       --- |             --- |
-| Slice Logic              |     0.040 |    97021 |       --- |             --- |
-|   LUT as Logic           |     0.032 |    36497 |     53200 |           68.60 |
-|   CARRY4                 |     0.005 |     5106 |     13300 |           38.39 |
-|   Register               |     0.002 |    36881 |    106400 |           34.66 |
+| Clocks                   |     0.173 |       15 |       --- |             --- |
+| Slice Logic              |     0.041 |    99611 |       --- |             --- |
+|   LUT as Logic           |     0.032 |    37576 |     53200 |           70.63 |
+|   CARRY4                 |     0.005 |     5379 |     13300 |           40.44 |
+|   Register               |     0.002 |    37675 |    106400 |           35.41 |
 |   LUT as Distributed RAM |     0.002 |      890 |     17400 |            5.11 |
-|   LUT as Shift Register  |    <0.001 |      718 |     17400 |            4.13 |
+|   LUT as Shift Register  |    <0.001 |      727 |     17400 |            4.18 |
 |   F7/F8 Muxes            |    <0.001 |      136 |     53200 |            0.26 |
-|   Others                 |     0.000 |     2036 |       --- |             --- |
-| Signals                  |     0.041 |    62959 |       --- |             --- |
-| Block RAM                |     0.043 |       89 |       140 |           63.57 |
+|   Others                 |     0.000 |     2042 |       --- |             --- |
+| Signals                  |     0.042 |    64665 |       --- |             --- |
+| Block RAM                |     0.043 |       91 |       140 |           65.00 |
 | MMCM                     |     0.268 |        2 |         4 |           50.00 |
 | DSPs                     |    <0.001 |       57 |       220 |           25.91 |
 | I/O                      |     0.152 |       59 |       125 |           47.20 |
 | PS7                      |     1.536 |        1 |       --- |             --- |
 | Static Power             |     0.179 |          |           |                 |
-| Total                    |     2.426 |          |           |                 |
+| Total                    |     2.434 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.317 |       0.291 |      0.025 |
+| Vccint    |       1.000 |     0.325 |       0.299 |      0.026 |
 | Vccaux    |       1.800 |     0.167 |       0.148 |      0.018 |
 | Vcco33    |       3.300 |     0.046 |       0.045 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -165,15 +165,15 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| base_wrapper             |     2.247 |
+| base_wrapper             |     2.255 |
 |   GPIO_EMIO_tri_iobuf_0  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_1  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_2  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_3  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_4  |     0.003 |
-|   base_i                 |     2.226 |
-|     DVI_Transmitter_0    |     0.135 |
-|       inst               |     0.135 |
+|   base_i                 |     2.234 |
+|     DVI_Transmitter_0    |     0.136 |
+|       inst               |     0.136 |
 |     axi_iic              |     0.001 |
 |       U0                 |     0.001 |
 |     axi_smc              |     0.046 |
@@ -196,21 +196,21 @@ Table of Contents
 |       inst               |     0.008 |
 |     v_axi4s_vid_out_1    |     0.002 |
 |       inst               |     0.002 |
-|     v_axi4s_vid_out_2    |     0.004 |
-|       inst               |     0.004 |
-|     v_vid_in_axi4s_0     |     0.006 |
-|       inst               |     0.006 |
+|     v_axi4s_vid_out_2    |     0.005 |
+|       inst               |     0.005 |
+|     v_vid_in_axi4s_0     |     0.005 |
+|       inst               |     0.005 |
 |     v_vid_in_axi4s_1     |     0.004 |
 |       inst               |     0.004 |
-|     v_vid_in_axi4s_2     |     0.005 |
-|       inst               |     0.005 |
+|     v_vid_in_axi4s_2     |     0.004 |
+|       inst               |     0.004 |
 |     xil_camif_0          |     0.003 |
 |       inst               |     0.003 |
-|     xil_isp_lite_0       |     0.064 |
-|       inst               |     0.063 |
+|     xil_isp_lite_0       |     0.070 |
+|       inst               |     0.069 |
 |     xil_vip_0            |     0.033 |
 |       inst               |     0.033 |
-|     xil_vip_1            |     0.034 |
+|     xil_vip_1            |     0.033 |
 |       inst               |     0.033 |
 +--------------------------+-----------+
 

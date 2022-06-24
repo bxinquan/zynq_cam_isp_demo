@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-// Date        : Sun Jun 12 13:12:28 2022
+// Date        : Sun Jun 12 13:12:26 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xil_vip_0_0/base_xil_vip_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top base_xil_vip_0_0 -prefix
+//               base_xil_vip_0_0_ base_xil_vip_0_0_sim_netlist.v
 // Design      : base_xil_vip_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -763,7 +763,6 @@ module base_xil_vip_0_0
         .R(1'b0));
 endmodule
 
-(* ORIG_REF_NAME = "full_dp_ram" *) 
 module base_xil_vip_0_0_full_dp_ram
    (DOADO,
     DOBDO,
@@ -1474,7 +1473,6 @@ module base_xil_vip_0_0_full_dp_ram
         .O(s00_axi_rdata[7]));
 endmodule
 
-(* ORIG_REF_NAME = "hist_stat" *) 
 module base_xil_vip_0_0_hist_stat
    (prev_vsync_reg_0,
     rst_n_0,
@@ -2574,7 +2572,6 @@ module base_xil_vip_0_0_hist_stat
         .Q(prev_vsync_reg_0));
 endmodule
 
-(* ORIG_REF_NAME = "shift_div_uint" *) 
 module base_xil_vip_0_0_shift_div_uint
    (\num_tmp_reg[30][6]_0 ,
     rst_n_0,
@@ -63327,7 +63324,6 @@ module base_xil_vip_0_0_shift_div_uint
         .S({\num_tmp[9][9]_i_3_n_0 ,\num_tmp[9][9]_i_4_n_0 ,\num_tmp[9][9]_i_5_n_0 ,\num_tmp[9][9]_i_6_n_0 }));
 endmodule
 
-(* ORIG_REF_NAME = "shift_register" *) 
 module base_xil_vip_0_0_shift_register
    (D,
     mem_reg,
@@ -63549,7 +63545,6 @@ module base_xil_vip_0_0_shift_register
         .R(pos_r));
 endmodule
 
-(* ORIG_REF_NAME = "simple_dp_ram" *) 
 module base_xil_vip_0_0_simple_dp_ram
    (ping_rdata,
     D,
@@ -65730,7 +65725,6 @@ module base_xil_vip_0_0_simple_dp_ram__parameterized1_5
         .O(ADDRARDADDR[2]));
 endmodule
 
-(* ORIG_REF_NAME = "vid_mux" *) 
 module base_xil_vip_0_0_vid_mux
    (crop_href_o,
     crop_vsync_o,
@@ -67198,7 +67192,6 @@ module base_xil_vip_0_0_vid_mux_4
         .Q(out_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_crop" *) 
 module base_xil_vip_0_0_vip_crop
    (prev_href,
     prev_vsync,
@@ -69274,7 +69267,6 @@ module base_xil_vip_0_0_vip_crop
         .Q(prev_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_dscale" *) 
 module base_xil_vip_0_0_vip_dscale
    (prev_vsync,
     prev_href,
@@ -70361,7 +70353,6 @@ module base_xil_vip_0_0_vip_dscale
         .Q(prev_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_hist_equ" *) 
 module base_xil_vip_0_0_vip_hist_equ
    (prev_vsync,
     in_href,
@@ -71773,7 +71764,6 @@ module base_xil_vip_0_0_vip_hist_equ
         .O(in_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_osd" *) 
 module base_xil_vip_0_0_vip_osd
    (DOADO,
     DOBDO,
@@ -76683,7 +76673,6 @@ module base_xil_vip_0_0_vip_osd
         .O(D[7]));
 endmodule
 
-(* ORIG_REF_NAME = "vip_sobel" *) 
 module base_xil_vip_0_0_vip_sobel
    (in_href,
     in_vsync,
@@ -79333,7 +79322,6 @@ module base_xil_vip_0_0_vip_sobel
         .O(in_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_top" *) 
 module base_xil_vip_0_0_vip_top
    (DOADO,
     DOBDO,
@@ -80159,7 +80147,6 @@ module base_xil_vip_0_0_vip_top
         .\y_reg_reg[7]_0 (p_0_in));
 endmodule
 
-(* ORIG_REF_NAME = "vip_yuv2rgb" *) 
 module base_xil_vip_0_0_vip_yuv2rgb
    (s_yuv2rgb_en_reg,
     in_href,
@@ -83439,7 +83426,6 @@ module base_xil_vip_0_0_vip_yuv2rgb
         .O(in_vsync));
 endmodule
 
-(* ORIG_REF_NAME = "vip_yuv444to422" *) 
 module base_xil_vip_0_0_vip_yuv444to422
    (pix_odd_reg_0,
     D,
@@ -83811,7 +83797,6 @@ module base_xil_vip_0_0_vip_yuv444to422
         .Q(yuv444to422_y[7]));
 endmodule
 
-(* ORIG_REF_NAME = "xil_vip_v1_0" *) 
 module base_xil_vip_0_0_xil_vip_v1_0
    (DOADO,
     DOBDO,
@@ -84250,7 +84235,6 @@ module base_xil_vip_0_0_xil_vip_v1_0
         .s_yuv2rgb_en_reg_0(s_yuv2rgb_en_reg));
 endmodule
 
-(* ORIG_REF_NAME = "xil_vip_v1_0_S00_AXI" *) 
 module base_xil_vip_0_0_xil_vip_v1_0_S00_AXI
    (DOADO,
     DOBDO,

@@ -32,20 +32,20 @@
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSAVendor" Val="xilinx"/>
     <Option Name="DSANumComputeUnits" Val="60"/>
-    <Option Name="WTXSimLaunchSim" Val="1"/>
+    <Option Name="WTXSimLaunchSim" Val="57"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="8"/>
-    <Option Name="WTModelSimExportSim" Val="8"/>
-    <Option Name="WTQuestaExportSim" Val="8"/>
-    <Option Name="WTIesExportSim" Val="8"/>
-    <Option Name="WTVcsExportSim" Val="8"/>
-    <Option Name="WTRivieraExportSim" Val="8"/>
-    <Option Name="WTActivehdlExportSim" Val="8"/>
+    <Option Name="WTXSimExportSim" Val="13"/>
+    <Option Name="WTModelSimExportSim" Val="13"/>
+    <Option Name="WTQuestaExportSim" Val="13"/>
+    <Option Name="WTIesExportSim" Val="13"/>
+    <Option Name="WTVcsExportSim" Val="13"/>
+    <Option Name="WTRivieraExportSim" Val="13"/>
+    <Option Name="WTActivehdlExportSim" Val="13"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -65,71 +65,17 @@
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci">
-          <Proxy FileSetName="base_axi_vdma_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_vip_0_0/base_xil_vip_0_0.xci">
-          <Proxy FileSetName="base_xil_vip_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci">
-          <Proxy FileSetName="base_DVI_Transmitter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xbar_0/base_xbar_0.xci">
-          <Proxy FileSetName="base_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci">
+          <Proxy FileSetName="base_axi_vdma_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_processing_system7_0_0/base_processing_system7_0_0.xci">
           <Proxy FileSetName="base_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci">
-          <Proxy FileSetName="base_axi_vdma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci">
-          <Proxy FileSetName="base_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="base_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0.xci">
-          <Proxy FileSetName="base_v_axi4s_vid_out_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_tc_1_0/base_v_tc_1_0.xci">
-          <Proxy FileSetName="base_v_tc_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_iic_0/base_axi_iic_0.xci">
-          <Proxy FileSetName="base_axi_iic_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0.xci">
-          <Proxy FileSetName="base_v_axi4s_vid_out_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_smc_0/base_axi_smc_0.xci">
           <Proxy FileSetName="base_axi_smc_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_tc_0_0/base_v_tc_0_0.xci">
-          <Proxy FileSetName="base_v_tc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci">
-          <Proxy FileSetName="base_xil_isp_lite_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0.xci">
-          <Proxy FileSetName="base_v_vid_in_axi4s_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_camif_0_0/base_xil_camif_0_0.xci">
-          <Proxy FileSetName="base_xil_camif_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci">
-          <Proxy FileSetName="base_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="base_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci">
-          <Proxy FileSetName="base_axi_vdma_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0.xci">
-          <Proxy FileSetName="base_v_vid_in_axi4s_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_intc_0_0/base_axi_intc_0_0.xci">
-          <Proxy FileSetName="base_axi_intc_0_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0.xci">
+          <Proxy FileSetName="base_v_axi4s_vid_out_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0.xci">
           <Proxy FileSetName="base_v_axi4s_vid_out_0_0"/>
@@ -137,11 +83,59 @@
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0.xci">
           <Proxy FileSetName="base_v_vid_in_axi4s_2_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_iic_0/base_axi_iic_0.xci">
+          <Proxy FileSetName="base_axi_iic_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_camif_0_0/base_xil_camif_0_0.xci">
+          <Proxy FileSetName="base_xil_camif_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="base_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci">
+          <Proxy FileSetName="base_axi_vdma_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_intc_0_0/base_axi_intc_0_0.xci">
+          <Proxy FileSetName="base_axi_intc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0.xci">
+          <Proxy FileSetName="base_v_vid_in_axi4s_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci">
+          <Proxy FileSetName="base_clk_wiz_1_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_tc_2_0/base_v_tc_2_0.xci">
           <Proxy FileSetName="base_v_tc_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_vip_1_0/base_xil_vip_1_0.xci">
-          <Proxy FileSetName="base_xil_vip_1_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_tc_0_0/base_v_tc_0_0.xci">
+          <Proxy FileSetName="base_v_tc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci">
+          <Proxy FileSetName="base_xil_isp_lite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="base_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xbar_0/base_xbar_0.xci">
+          <Proxy FileSetName="base_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci">
+          <Proxy FileSetName="base_DVI_Transmitter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0.xci">
+          <Proxy FileSetName="base_v_axi4s_vid_out_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_tc_1_0/base_v_tc_1_0.xci">
+          <Proxy FileSetName="base_v_tc_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci">
+          <Proxy FileSetName="base_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci">
+          <Proxy FileSetName="base_axi_vdma_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0.xci">
+          <Proxy FileSetName="base_v_vid_in_axi4s_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/base/hdl/base_wrapper.v">
@@ -385,6 +379,14 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/tb/tb_demosaic.v">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/xil_ip_repo/xil_vip_1.0/hdl/vip/tb/tb_osd.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
@@ -394,14 +396,6 @@
         </FileInfo>
       </File>
       <File Path="$PPRDIR/xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/tb/tb_2dnr.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PPRDIR/xil_ip_repo/xil_isp_lite_1.0/hdl/isp_lite/tb/tb_demosaic.v">
         <FileInfo>
           <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -608,18 +602,6 @@
     <FileSet Name="base_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/base_rst_ps7_0_50M_0">
       <Config>
         <Option Name="TopModule" Val="base_rst_ps7_0_50M_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="base_xil_vip_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/base_xil_vip_0_0">
-      <Config>
-        <Option Name="TopModule" Val="base_xil_vip_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="base_xil_vip_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/base_xil_vip_1_0">
-      <Config>
-        <Option Name="TopModule" Val="base_xil_vip_1_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -857,24 +839,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="base_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="base_rst_ps7_0_50M_0" Part="xc7z020clg400-2" ConstrsSet="base_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/base_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="base_xil_vip_0_0_synth_1" Type="Ft3:Synth" SrcSet="base_xil_vip_0_0" Part="xc7z020clg400-2" ConstrsSet="base_xil_vip_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/base_xil_vip_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="base_xil_vip_1_0_synth_1" Type="Ft3:Synth" SrcSet="base_xil_vip_1_0" Part="xc7z020clg400-2" ConstrsSet="base_xil_vip_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/base_xil_vip_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018"/>
         <Step Id="synth_design"/>
@@ -1264,38 +1228,6 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
     <Run Id="base_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="base_rst_ps7_0_50M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="base_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="base_xil_vip_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="base_xil_vip_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="base_xil_vip_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="base_xil_vip_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-2" ConstrsSet="base_xil_vip_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="base_xil_vip_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>

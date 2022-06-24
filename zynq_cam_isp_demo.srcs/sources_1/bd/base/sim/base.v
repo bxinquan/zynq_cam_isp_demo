@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
-//Date        : Tue Jun 21 00:48:55 2022
+//Date        : Fri Jun 24 20:44:39 2022
 //Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 //Command     : generate_target base.bd
 //Design      : base
@@ -555,9 +555,9 @@ module base
   wire [7:0]xil_camif_0_raw_DATA;
   wire xil_camif_0_raw_VSYNC;
   wire xil_isp_lite_0_irq;
-  wire xil_isp_lite_0_yuv_ACTIVE_VIDEO;
-  wire [23:0]xil_isp_lite_0_yuv_DATA;
-  wire xil_isp_lite_0_yuv_VSYNC;
+  wire xil_isp_lite_0_yuv_aux1_ACTIVE_VIDEO;
+  wire [23:0]xil_isp_lite_0_yuv_aux1_DATA;
+  wire xil_isp_lite_0_yuv_aux1_VSYNC;
   wire xil_vip_0_irq;
   wire xil_vip_0_out_pclk;
   wire xil_vip_0_rgb_ACTIVE_VIDEO;
@@ -1548,9 +1548,9 @@ module base
         .in_raw(v_axi4s_vid_out_1_vid_io_out_DATA),
         .in_vsync(v_axi4s_vid_out_1_vid_io_out_VSYNC),
         .irq(xil_isp_lite_0_irq),
-        .out_href(xil_isp_lite_0_yuv_ACTIVE_VIDEO),
-        .out_vsync(xil_isp_lite_0_yuv_VSYNC),
-        .out_yuv(xil_isp_lite_0_yuv_DATA),
+        .out_href(xil_isp_lite_0_yuv_aux1_ACTIVE_VIDEO),
+        .out_vsync(xil_isp_lite_0_yuv_aux1_VSYNC),
+        .out_yuv(xil_isp_lite_0_yuv_aux1_DATA),
         .pclk(clk_wiz_0_clk_160),
         .rst_n(v_axi4s_vid_out_1_locked),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK1),
@@ -1575,9 +1575,9 @@ module base
         .s00_axi_wstrb(ps7_0_axi_periph_M05_AXI_WSTRB),
         .s00_axi_wvalid(ps7_0_axi_periph_M05_AXI_WVALID));
   base_xil_vip_0_0 xil_vip_0
-       (.in_href(xil_isp_lite_0_yuv_ACTIVE_VIDEO),
-        .in_vsync(xil_isp_lite_0_yuv_VSYNC),
-        .in_yuv(xil_isp_lite_0_yuv_DATA),
+       (.in_href(xil_isp_lite_0_yuv_aux1_ACTIVE_VIDEO),
+        .in_vsync(xil_isp_lite_0_yuv_aux1_VSYNC),
+        .in_yuv(xil_isp_lite_0_yuv_aux1_DATA),
         .irq(xil_vip_0_irq),
         .out_href(xil_vip_0_rgb_ACTIVE_VIDEO),
         .out_pclk(xil_vip_0_out_pclk),
@@ -1607,9 +1607,9 @@ module base
         .s00_axi_wstrb(ps7_0_axi_periph_M02_AXI_WSTRB),
         .s00_axi_wvalid(ps7_0_axi_periph_M02_AXI_WVALID));
   base_xil_vip_1_0 xil_vip_1
-       (.in_href(xil_isp_lite_0_yuv_ACTIVE_VIDEO),
-        .in_vsync(xil_isp_lite_0_yuv_VSYNC),
-        .in_yuv(xil_isp_lite_0_yuv_DATA),
+       (.in_href(xil_isp_lite_0_yuv_aux1_ACTIVE_VIDEO),
+        .in_vsync(xil_isp_lite_0_yuv_aux1_VSYNC),
+        .in_yuv(xil_isp_lite_0_yuv_aux1_DATA),
         .irq(xil_vip_1_irq),
         .out_href(xil_vip_1_rgb_ACTIVE_VIDEO),
         .out_pclk(xil_vip_1_out_pclk),

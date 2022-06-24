@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Jun 21 00:51:56 2022
-# Process ID: 27816
+# Start of session at: Fri Jun 24 20:46:22 2022
+# Process ID: 21316
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1
 # Command line: vivado.exe -log base_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_wrapper.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/base_wrapper.vds
@@ -13,15 +13,14 @@ source base_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 343.188 ; gain = 56.785
 Command: synth_design -top base_wrapper -part xc7z020clg400-2
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 25372 
+INFO: Helper process launched with PID 20776 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 464.348 ; gain = 108.730
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 464.402 ; gain = 108.680
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'base_wrapper' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/hdl/base_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
@@ -31,28 +30,28 @@ INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Xilinx/Vivado/2018.3/script
 	Parameter SLEW bound to: SLOW - type: string 
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:23615]
 INFO: [Synth 8-6157] synthesizing module 'base' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:13]
-INFO: [Synth 8-6157] synthesizing module 'base_DVI_Transmitter_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_DVI_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_DVI_Transmitter_0_0' (2#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_DVI_Transmitter_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_iic_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_iic_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_iic_0' (3#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_iic_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_DVI_Transmitter_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_DVI_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_DVI_Transmitter_0_0' (2#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_DVI_Transmitter_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_iic_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_iic_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_iic_0' (3#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_iic_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_iic' of module 'base_axi_iic_0' requires 27 connections, but only 26 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:613]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_intc_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_intc_0_0' (4#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_intc_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_smc_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_smc_0' (5#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_0_0' (6#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_intc_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_intc_0_0' (4#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_intc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_smc_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_smc_0' (5#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_0_0' (6#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_vdma_0' of module 'base_axi_vdma_0_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:797]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_1_0' (7#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_1_0' (7#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_1_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_vdma_1' of module 'base_axi_vdma_1_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:862]
-INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_2_0' (8#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_axi_vdma_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_axi_vdma_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_vdma_2_0' (8#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_axi_vdma_2_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'axi_vdma_2' of module 'base_axi_vdma_2_0' requires 67 connections, but only 64 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:927]
-INFO: [Synth 8-6157] synthesizing module 'base_clk_wiz_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'base_clk_wiz_0_0' (9#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_clk_wiz_0_0_stub.v:5]
-INFO: [Synth 8-6157] synthesizing module 'base_clk_wiz_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_clk_wiz_1_0_stub.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'base_clk_wiz_1_0' (10#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'base_clk_wiz_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'base_clk_wiz_0_0' (9#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'base_clk_wiz_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_clk_wiz_1_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'base_clk_wiz_1_0' (10#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_clk_wiz_1_0_stub.v:5]
 INFO: [Synth 8-6157] synthesizing module 'base_cmos_pwdn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_cmos_pwdn_0/synth/base_cmos_pwdn_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_5_xlconstant' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/4649/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
@@ -67,8 +66,8 @@ INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_5_xlconstant__par
 INFO: [Synth 8-6155] done synthesizing module 'base_cmos_rst_n_0' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_cmos_rst_n_0/synth/base_cmos_rst_n_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'base_lcd_bl_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_lcd_bl_0/synth/base_lcd_bl_0.v:57]
 INFO: [Synth 8-6155] done synthesizing module 'base_lcd_bl_0' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_lcd_bl_0/synth/base_lcd_bl_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'base_processing_system7_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_processing_system7_0_0' (15#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_processing_system7_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_processing_system7_0_0' (15#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'processing_system7_0' of module 'base_processing_system7_0_0' requires 113 connections, but only 107 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1010]
 INFO: [Synth 8-6157] synthesizing module 'base_ps7_0_axi_periph_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1656]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_DE2YVW' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:3137]
@@ -90,55 +89,55 @@ INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_NQLRRW' (23#1) [
 INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_UZHGQ' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:4228]
 INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_UZHGQ' (24#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:4228]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1WI8JL5' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:4360]
-INFO: [Synth 8-6157] synthesizing module 'base_auto_pc_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_auto_pc_0' (25#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_auto_pc_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_auto_pc_0' (25#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1WI8JL5' (26#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:4360]
-INFO: [Synth 8-6157] synthesizing module 'base_xbar_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xbar_0' (27#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_xbar_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_xbar_0' (27#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xbar_0_stub.v:6]
 WARNING: [Synth 8-689] width (21) of port connection 'm_axi_arprot' does not match port width (27) of module 'base_xbar_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:3098]
 WARNING: [Synth 8-689] width (21) of port connection 'm_axi_awprot' does not match port width (27) of module 'base_xbar_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:3102]
 INFO: [Synth 8-6155] done synthesizing module 'base_ps7_0_axi_periph_0' (28#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1656]
-INFO: [Synth 8-6157] synthesizing module 'base_rst_ps7_0_100M_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_100M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_rst_ps7_0_100M_0' (29#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_rst_ps7_0_100M_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_100M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_rst_ps7_0_100M_0' (29#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_100M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_100M' of module 'base_rst_ps7_0_100M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1337]
-INFO: [Synth 8-6157] synthesizing module 'base_rst_ps7_0_50M_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_rst_ps7_0_50M_0' (30#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_rst_ps7_0_50M_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_rst_ps7_0_50M_0' (30#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_rst_ps7_0_50M_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'rst_ps7_0_50M' of module 'base_rst_ps7_0_50M_0' requires 10 connections, but only 6 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1344]
-INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_0_0' (31#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_0_0' (31#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_0' of module 'base_v_axi4s_vid_out_0_0' requires 31 connections, but only 23 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1351]
-INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_1_0' (32#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_1_0' (32#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_1_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_1' of module 'base_v_axi4s_vid_out_1_0' requires 31 connections, but only 23 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1375]
-INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_2_0' (33#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_axi4s_vid_out_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_axi4s_vid_out_2_0' (33#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_axi4s_vid_out_2_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_axi4s_vid_out_2' of module 'base_v_axi4s_vid_out_2_0' requires 31 connections, but only 24 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1399]
-INFO: [Synth 8-6157] synthesizing module 'base_v_tc_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_0_0' (34#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_tc_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_0_0' (34#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_tc_0' of module 'base_v_tc_0_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1424]
-INFO: [Synth 8-6157] synthesizing module 'base_v_tc_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_1_0' (35#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_tc_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_1_0' (35#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_1_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_tc_1' of module 'base_v_tc_1_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1434]
-INFO: [Synth 8-6157] synthesizing module 'base_v_tc_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_2_0' (36#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_tc_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_tc_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_tc_2_0' (36#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_tc_2_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_tc_2' of module 'base_v_tc_2_0' requires 10 connections, but only 9 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1444]
-INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_0_0' (37#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_0_0' (37#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_0_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_0' of module 'base_v_vid_in_axi4s_0_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1454]
-INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_1_0' (38#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_1_0' (38#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_1_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_1' of module 'base_v_vid_in_axi4s_1_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1474]
-INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_2_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_2_0' (39#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_2_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_v_vid_in_axi4s_2_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_v_vid_in_axi4s_2_0' (39#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_v_vid_in_axi4s_2_0_stub.v:6]
 WARNING: [Synth 8-350] instance 'v_vid_in_axi4s_2' of module 'base_v_vid_in_axi4s_2_0' requires 28 connections, but only 19 given [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/synth/base.v:1494]
-INFO: [Synth 8-6157] synthesizing module 'base_xil_camif_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_camif_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xil_camif_0_0' (40#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_camif_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_xil_isp_lite_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_isp_lite_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xil_isp_lite_0_0' (41#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_isp_lite_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_xil_vip_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_vip_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xil_vip_0_0' (42#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_vip_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'base_xil_vip_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_vip_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xil_vip_1_0' (43#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-27816-LEGION-BIANXINQUAN/realtime/base_xil_vip_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_xil_camif_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_camif_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_xil_camif_0_0' (40#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_camif_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_xil_isp_lite_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_isp_lite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_xil_isp_lite_0_0' (41#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_isp_lite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_xil_vip_0_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_vip_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_xil_vip_0_0' (42#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_vip_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'base_xil_vip_1_0' [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_vip_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'base_xil_vip_1_0' (43#1) [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/.Xil/Vivado-21316-LEGION-BIANXINQUAN/realtime/base_xil_vip_1_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'base_xlconcat_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xlconcat_0_0/synth/base_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_1_xlconcat' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -259,7 +258,7 @@ WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port M08_
 WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 521.430 ; gain = 165.812
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 522.262 ; gain = 166.539
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -272,10 +271,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 521.430 ; gain = 165.812
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 522.262 ; gain = 166.539
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 521.430 ; gain = 165.812
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 522.262 ; gain = 166.539
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -362,16 +361,16 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/base_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/dont_touch.xdc]
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 857.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.910 ; gain = 0.000
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 857.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.910 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 7 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 7 instances
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.621 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 857.621 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 857.910 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 857.910 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_i/axi_vdma_0' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_i/axi_vdma_1' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_i/axi_vdma_2' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '8.333', this can lead to different synthesis results.
@@ -379,14 +378,14 @@ WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context s
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_i/v_vid_in_axi4s_1' at clock pin 'vid_io_in_clk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'base_i/v_vid_in_axi4s_2' at clock pin 'vid_io_in_clk' is different from the actual clock period '8.333', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 857.621 ; gain = 502.004
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 857.910 ; gain = 502.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 857.621 ; gain = 502.004
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 857.910 ; gain = 502.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -701,10 +700,10 @@ Applied set_property DONT_TOUCH = true for base_i/xil_vip_0. (constraint file  a
 Applied set_property DONT_TOUCH = true for base_i/xil_vip_1. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for base_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 857.621 ; gain = 502.004
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 857.910 ; gain = 502.188
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 857.621 ; gain = 502.004
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 857.910 ; gain = 502.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -760,7 +759,7 @@ WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port M08_
 WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port S00_ACLK
 WARNING: [Synth 8-3331] design base_ps7_0_axi_periph_0 has unconnected port S00_ARESETN
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 857.621 ; gain = 502.004
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 857.910 ; gain = 502.188
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -789,13 +788,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'base_i/clk_wiz_1/dvi_clk_
 INFO: [Synth 8-5783] Moving clock source from hierarchical pin 'base_i/clk_wiz_1/clk_in1' to 'base_i/processing_system7_0/bbstub_FCLK_CLK0/O'
 INFO: [Synth 8-5819] Moved 10 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 863.539 ; gain = 507.922
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 860.391 ; gain = 504.668
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 863.836 ; gain = 508.219
+Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 860.836 ; gain = 505.113
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -807,7 +806,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -831,7 +830,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -844,7 +843,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -856,25 +855,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -963,17 +962,17 @@ Report Instance Areas:
 |8     |    xlconcat_0       |base_xlconcat_0_0        |     0|
 +------+---------------------+-------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 20 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:16 . Memory (MB): peak = 875.355 ; gain = 183.547
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 875.355 ; gain = 519.738
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 872.609 ; gain = 181.238
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 872.609 ; gain = 516.887
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.082 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 885.352 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 7 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 7 instances
@@ -981,10 +980,10 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 INFO: [Common 17-83] Releasing license: Synthesis
 134 Infos, 129 Warnings, 4 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 894.082 ; gain = 550.895
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 894.082 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 885.375 ; gain = 542.293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 885.375 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/base_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_wrapper_utilization_synth.rpt -pb base_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Jun 21 00:52:33 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jun 24 20:46:49 2022...

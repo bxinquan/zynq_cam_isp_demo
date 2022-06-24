@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (win64) Build 2405991 Thu Dec  6 23:38:27 MST 2018
--- Date        : Sun Jun 12 13:12:29 2022
+-- Date        : Sun Jun 12 13:12:26 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xil_vip_0_0/base_xil_vip_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top base_xil_vip_0_0 -prefix
+--               base_xil_vip_0_0_ base_xil_vip_0_0_sim_netlist.vhdl
 -- Design      : base_xil_vip_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -75,8 +75,6 @@ entity base_xil_vip_0_0_full_dp_ram is
     \osd_pix_buf_t5_reg[30]\ : in STD_LOGIC;
     \osd_pix_buf_t5_reg[31]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_full_dp_ram : entity is "full_dp_ram";
 end base_xil_vip_0_0_full_dp_ram;
 
 architecture STRUCTURE of base_xil_vip_0_0_full_dp_ram is
@@ -809,8 +807,6 @@ entity base_xil_vip_0_0_shift_div_uint is
     s_module_reset : in STD_LOGIC;
     s_hist_equ_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_shift_div_uint : entity is "shift_div_uint";
 end base_xil_vip_0_0_shift_div_uint;
 
 architecture STRUCTURE of base_xil_vip_0_0_shift_div_uint is
@@ -88428,8 +88424,6 @@ entity base_xil_vip_0_0_simple_dp_ram is
     mem_reg_12 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     mem_reg_13 : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_simple_dp_ram : entity is "simple_dp_ram";
 end base_xil_vip_0_0_simple_dp_ram;
 
 architecture STRUCTURE of base_xil_vip_0_0_simple_dp_ram is
@@ -91199,8 +91193,6 @@ entity base_xil_vip_0_0_vid_mux is
     prev_vsync : in STD_LOGIC;
     D : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vid_mux : entity is "vid_mux";
 end base_xil_vip_0_0_vid_mux;
 
 architecture STRUCTURE of base_xil_vip_0_0_vid_mux is
@@ -93022,8 +93014,6 @@ entity base_xil_vip_0_0_vip_crop is
     s_crop_en : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_crop : entity is "vip_crop";
 end base_xil_vip_0_0_vip_crop;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_crop is
@@ -95987,8 +95977,6 @@ entity base_xil_vip_0_0_vip_dscale is
     \line_cnt[3]_i_4_0\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     E : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_dscale : entity is "vip_dscale";
 end base_xil_vip_0_0_vip_dscale;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_dscale is
@@ -97312,8 +97300,6 @@ entity base_xil_vip_0_0_vip_yuv2rgb is
     rst_n : in STD_LOGIC;
     Q : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_yuv2rgb : entity is "vip_yuv2rgb";
 end base_xil_vip_0_0_vip_yuv2rgb;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_yuv2rgb is
@@ -101801,8 +101787,6 @@ entity base_xil_vip_0_0_vip_yuv444to422 is
     \y_reg_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 );
     \c_reg_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_yuv444to422 : entity is "vip_yuv444to422";
 end base_xil_vip_0_0_vip_yuv444to422;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_yuv444to422 is
@@ -102206,8 +102190,6 @@ entity base_xil_vip_0_0_hist_stat is
     s_module_reset : in STD_LOGIC;
     s_hist_equ_en : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_hist_stat : entity is "hist_stat";
 end base_xil_vip_0_0_hist_stat;
 
 architecture STRUCTURE of base_xil_vip_0_0_hist_stat is
@@ -103676,8 +103658,6 @@ entity base_xil_vip_0_0_shift_register is
     hist_equ_href_o : in STD_LOGIC;
     \in_r_reg[7]_0\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_shift_register : entity is "shift_register";
 end base_xil_vip_0_0_shift_register;
 
 architecture STRUCTURE of base_xil_vip_0_0_shift_register is
@@ -104054,8 +104034,6 @@ entity base_xil_vip_0_0_vip_osd is
     \osd_pix_buf_t5_reg[30]_0\ : in STD_LOGIC;
     \osd_pix_buf_t5_reg[31]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_osd : entity is "vip_osd";
 end base_xil_vip_0_0_vip_osd;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_osd is
@@ -110357,8 +110335,6 @@ entity base_xil_vip_0_0_vip_hist_equ is
     rst_n : in STD_LOGIC;
     s_module_reset : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_hist_equ : entity is "vip_hist_equ";
 end base_xil_vip_0_0_vip_hist_equ;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_hist_equ is
@@ -112210,8 +112186,6 @@ entity base_xil_vip_0_0_vip_sobel is
     rst_n : in STD_LOGIC;
     \in_r_reg[7]\ : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_sobel : entity is "vip_sobel";
 end base_xil_vip_0_0_vip_sobel;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_sobel is
@@ -115972,8 +115946,6 @@ entity base_xil_vip_0_0_vip_top is
     s_yuv444to422_switch_uv : in STD_LOGIC;
     \line_cnt[3]_i_4\ : in STD_LOGIC_VECTOR ( 3 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_vip_top : entity is "vip_top";
 end base_xil_vip_0_0_vip_top;
 
 architecture STRUCTURE of base_xil_vip_0_0_vip_top is
@@ -116773,8 +116745,6 @@ entity base_xil_vip_0_0_xil_vip_v1_0_S00_AXI is
     s00_axi_rdata_22_sp_1 : in STD_LOGIC;
     s00_axi_rdata_23_sp_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_xil_vip_v1_0_S00_AXI : entity is "xil_vip_v1_0_S00_AXI";
 end base_xil_vip_0_0_xil_vip_v1_0_S00_AXI;
 
 architecture STRUCTURE of base_xil_vip_0_0_xil_vip_v1_0_S00_AXI is
@@ -122762,8 +122732,6 @@ entity base_xil_vip_0_0_xil_vip_v1_0 is
     s00_axi_rdata_22_sp_1 : in STD_LOGIC;
     s00_axi_rdata_23_sp_1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_vip_0_0_xil_vip_v1_0 : entity is "xil_vip_v1_0";
 end base_xil_vip_0_0_xil_vip_v1_0;
 
 architecture STRUCTURE of base_xil_vip_0_0_xil_vip_v1_0 is
