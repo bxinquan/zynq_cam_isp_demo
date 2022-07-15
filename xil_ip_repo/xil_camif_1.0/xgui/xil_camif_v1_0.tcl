@@ -1,10 +1,8 @@
 # Definitional proc to organize widgets for parameters.
 proc init_gui { IPINST } {
   ipgui::add_param $IPINST -name "Component_Name"
-  set C_S00_AXI_ADDR_WIDTH [ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH"]
-  set_property tooltip {Width of S_AXI address bus} ${C_S00_AXI_ADDR_WIDTH}
-  set C_S00_AXI_DATA_WIDTH [ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -widget comboBox]
-  set_property tooltip {Width of S_AXI data bus} ${C_S00_AXI_DATA_WIDTH}
+  ipgui::add_param $IPINST -name "C_S00_AXI_ADDR_WIDTH"
+  ipgui::add_param $IPINST -name "C_S00_AXI_DATA_WIDTH" -widget comboBox
   ipgui::add_param $IPINST -name "RAW_AUX_NUM"
   #Adding Page
   set Page_0 [ipgui::add_page $IPINST -name "Page 0"]

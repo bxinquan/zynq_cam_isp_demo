@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1656074738">
-  <File Type="BITSTR-BMM" Name="base_wrapper_bd.bmm"/>
-  <File Type="OPT-METHODOLOGY-DRC" Name="base_wrapper_methodology_drc_opted.rpt"/>
-  <File Type="INIT-TIMING" Name="base_wrapper_timing_summary_init.rpt"/>
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1657895542">
   <File Type="ROUTE-PWR" Name="base_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="base_wrapper.tcl"/>
-  <File Type="OPT-TIMING" Name="base_wrapper_timing_summary_opted.rpt"/>
-  <File Type="OPT-DCP" Name="base_wrapper_opt.dcp"/>
+  <File Type="BITSTR-MMI" Name="base_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="base_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="base_wrapper_timing_summary_init.rpt"/>
   <File Type="ROUTE-PWR-SUM" Name="base_wrapper_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="base_wrapper_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="base_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="base_wrapper_opt.dcp"/>
   <File Type="OPT-DRC" Name="base_wrapper_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="base_wrapper.hwdef"/>
   <File Type="PWROPT-DCP" Name="base_wrapper_pwropt.dcp"/>
@@ -22,27 +22,23 @@
   <File Type="PLACE-CTRL" Name="base_wrapper_control_sets_placed.rpt"/>
   <File Type="PLACE-SIMILARITY" Name="base_wrapper_incremental_reuse_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="base_wrapper_incremental_reuse_pre_placed.rpt"/>
-  <File Type="BG-BGN" Name="base_wrapper.bgn"/>
+  <File Type="BG-BIN" Name="base_wrapper.bin"/>
   <File Type="PLACE-TIMING" Name="base_wrapper_timing_summary_placed.rpt"/>
   <File Type="POSTPLACE-PWROPT-DCP" Name="base_wrapper_postplace_pwropt.dcp"/>
-  <File Type="BG-BIN" Name="base_wrapper.bin"/>
+  <File Type="BITSTR-MSK" Name="base_wrapper.msk"/>
   <File Type="POSTPLACE-PWROPT-TIMING" Name="base_wrapper_timing_summary_postplace_pwropted.rpt"/>
   <File Type="PHYSOPT-DCP" Name="base_wrapper_physopt.dcp"/>
   <File Type="PHYSOPT-DRC" Name="base_wrapper_drc_physopted.rpt"/>
-  <File Type="BITSTR-MSK" Name="base_wrapper.msk"/>
+  <File Type="BITSTR-RBT" Name="base_wrapper.rbt"/>
   <File Type="PHYSOPT-TIMING" Name="base_wrapper_timing_summary_physopted.rpt"/>
   <File Type="ROUTE-ERROR-DCP" Name="base_wrapper_routed_error.dcp"/>
   <File Type="ROUTE-DCP" Name="base_wrapper_routed.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="base_wrapper_routed_bb.dcp"/>
   <File Type="ROUTE-DRC" Name="base_wrapper_drc_routed.rpt"/>
   <File Type="ROUTE-DRC-PB" Name="base_wrapper_drc_routed.pb"/>
-  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
-  <File Type="BITSTR-LTX" Name="base_wrapper.ltx"/>
   <File Type="ROUTE-DRC-RPX" Name="base_wrapper_drc_routed.rpx"/>
-  <File Type="BITSTR-MMI" Name="base_wrapper.mmi"/>
   <File Type="ROUTE-METHODOLOGY-DRC" Name="base_wrapper_methodology_drc_routed.rpt"/>
   <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="base_wrapper_methodology_drc_routed.rpx"/>
-  <File Type="BITSTR-SYSDEF" Name="base_wrapper.sysdef"/>
   <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="base_wrapper_methodology_drc_routed.pb"/>
   <File Type="ROUTE-PWR-RPX" Name="base_wrapper_power_routed.rpx"/>
   <File Type="ROUTE-STATUS" Name="base_wrapper_route_status.rpt"/>
@@ -61,32 +57,51 @@
   <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="base_wrapper_timing_summary_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="base_wrapper_timing_summary_postroute_physopted.rpx"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="base_wrapper_bus_skew_postroute_physopted.rpt"/>
-  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="base_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="BG-BIT" Name="base_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="base_wrapper_bus_skew_postroute_physopted.pb"/>
   <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="base_wrapper_bus_skew_postroute_physopted.rpx"/>
-  <File Type="BITSTR-RBT" Name="base_wrapper.rbt"/>
   <File Type="BITSTR-NKY" Name="base_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="base_wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="base_wrapper.pdi"/>
+  <File Type="RCFI_FILE" Name="base_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="base_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="base_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="base_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="base_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="base_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="base_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="base_wrapper.bgn"/>
   <File Type="BG-DRC" Name="base_wrapper.drc"/>
   <File Type="RDI-RDI" Name="base_wrapper.vdi"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/base/base.bd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/base/hdl/base_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/dualcam/hdl/dualcam_wrapper.v">
+    <File Path="$PGENDIR/sources_1/bd/base/hdl/base_wrapper.v">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/h264/h264.bd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/h264/hdl/h264_wrapper.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -94,21 +109,15 @@
     </File>
     <File Path="$PSRCDIR/sources_1/bd/dualcam/dualcam.bd">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/h264/h264.bd">
+    <File Path="$PGENDIR/sources_1/bd/dualcam/hdl/dualcam_wrapper.v">
       <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/bd/h264/hdl/h264_wrapper.v">
-      <FileInfo>
-        <Attr Name="UserDisabled" Val="1"/>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -117,7 +126,6 @@
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="base_wrapper"/>
-      <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>
   <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_base">
@@ -138,7 +146,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -149,28 +157,31 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="base_processing_system7_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_100M_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_DVI_Transmitter_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_DVI_Transmitter_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_1_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_axi_iic_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_axi_intc_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_xil_camif_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_2_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xbar_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_auto_pc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_xil_isp_lite_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_camif_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_tc_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_1_0"/>
 </GenRun>

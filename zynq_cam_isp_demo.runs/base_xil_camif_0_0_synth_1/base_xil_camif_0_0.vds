@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Jun 12 13:10:58 2022
-# Process ID: 22932
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 15 22:34:14 2022
+# Process ID: 50280
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_camif_0_0_synth_1
 # Command line: vivado.exe -log base_xil_camif_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_xil_camif_0_0.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_camif_0_0_synth_1/base_xil_camif_0_0.vds
@@ -12,187 +12,84 @@
 source base_xil_camif_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
 Command: synth_design -top base_xil_camif_0_0 -part xc7z020clg400-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23208 
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 49212
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 405.871 ; gain = 103.336
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1196.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'base_xil_camif_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xil_camif_0_0/synth/base_xil_camif_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/xil_camif_v1_0.v:6]
-	Parameter BITS bound to: 8 - type: integer 
-	Parameter COLORBAR_H_FRONT bound to: 50 - type: integer 
-	Parameter COLORBAR_H_PULSE bound to: 100 - type: integer 
-	Parameter COLORBAR_H_BACK bound to: 50 - type: integer 
-	Parameter COLORBAR_H_DISP bound to: 2560 - type: integer 
-	Parameter COLORBAR_V_FRONT bound to: 5 - type: integer 
-	Parameter COLORBAR_V_PULSE bound to: 10 - type: integer 
-	Parameter COLORBAR_V_BACK bound to: 5 - type: integer 
-	Parameter COLORBAR_V_DISP bound to: 1920 - type: integer 
-	Parameter COLORBAR_BAYER bound to: 3 - type: integer 
-	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/xil_camif_v1_0_S00_AXI.v:4]
-	Parameter BITS bound to: 8 - type: integer 
-	Parameter COLORBAR_H_FRONT bound to: 50 - type: integer 
-	Parameter COLORBAR_H_PULSE bound to: 100 - type: integer 
-	Parameter COLORBAR_H_BACK bound to: 50 - type: integer 
-	Parameter COLORBAR_H_DISP bound to: 2560 - type: integer 
-	Parameter COLORBAR_V_FRONT bound to: 5 - type: integer 
-	Parameter COLORBAR_V_PULSE bound to: 10 - type: integer 
-	Parameter COLORBAR_V_BACK bound to: 5 - type: integer 
-	Parameter COLORBAR_V_DISP bound to: 1920 - type: integer 
-	Parameter COLORBAR_BAYER bound to: 3 - type: integer 
-	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
-	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
-	Parameter ADDR_LSB bound to: 2 - type: integer 
-	Parameter OPT_MEM_ADDR_BITS bound to: 2 - type: integer 
-	Parameter REG_RESET bound to: 0 - type: integer 
-	Parameter REG_WIDTH bound to: 1 - type: integer 
-	Parameter REG_HEIGHT bound to: 2 - type: integer 
-	Parameter REG_FRAME_CNT bound to: 3 - type: integer 
-	Parameter REG_COLORBAR_EN bound to: 4 - type: integer 
-	Parameter REG_INT_STATUS bound to: 5 - type: integer 
-	Parameter REG_INT_MASK bound to: 6 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'dvp_raw_timing_colorbar' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:5]
-	Parameter BITS bound to: 8 - type: integer 
-	Parameter BAYER bound to: 3 - type: integer 
-	Parameter H_FRONT bound to: 50 - type: integer 
-	Parameter H_PULSE bound to: 100 - type: integer 
-	Parameter H_BACK bound to: 50 - type: integer 
-	Parameter H_DISP bound to: 2560 - type: integer 
-	Parameter V_FRONT bound to: 5 - type: integer 
-	Parameter V_PULSE bound to: 10 - type: integer 
-	Parameter V_BACK bound to: 5 - type: integer 
-	Parameter V_DISP bound to: 1920 - type: integer 
-	Parameter H_POL bound to: 1'b0 
-	Parameter V_POL bound to: 1'b1 
-	Parameter H_TOTAL bound to: 2760 - type: integer 
-	Parameter V_TOTAL bound to: 1940 - type: integer 
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:127]
-INFO: [Synth 8-6155] done synthesizing module 'dvp_raw_timing_colorbar' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/dvp_raw_timing_colorbar.v:5]
-INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0_S00_AXI' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/xil_camif_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/b495/hdl/xil_camif_v1_0.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'base_xil_camif_0_0' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xil_camif_0_0/synth/base_xil_camif_0_0.v:56]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[31]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[30]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[29]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[28]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[27]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[26]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[25]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[24]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[23]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[22]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[21]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[20]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[19]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[18]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[17]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[16]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[15]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[14]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[13]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[12]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[11]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[10]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[9]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[8]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[7]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[6]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[5]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[4]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[3]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[2]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WDATA[1]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[3]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[2]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[1]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_WSTRB[0]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
-WARNING: [Synth 8-3331] design xil_camif_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
+INFO: [Synth 8-6157] synthesizing module 'base_xil_camif_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/synth/base_xil_camif_0_0.v:56]
+INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/xil_camif_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_camif_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/xil_camif_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6157] synthesizing module 'dvp_raw_timing_colorbar' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:3]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:103]
+INFO: [Synth 8-6155] done synthesizing module 'dvp_raw_timing_colorbar' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/dvp_raw_timing_colorbar.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0_S00_AXI' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/xil_camif_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_camif_v1_0' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/5b55/hdl/xil_camif_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'base_xil_camif_0_0' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/synth/base_xil_camif_0_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.672 ; gain = 159.137
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1196.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.672 ; gain = 159.137
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1196.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 461.672 ; gain = 159.137
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1196.566 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1196.566 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.609 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1233.137 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 805.609 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.070 . Memory (MB): peak = 808.957 ; gain = 3.348
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.055 . Memory (MB): peak = 1233.137 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 808.957 ; gain = 506.422
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 808.957 ; gain = 506.422
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 808.957 ; gain = 506.422
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5546] ROM "line_cnt" won't be mapped to RAM because it is too sparse
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 808.957 ; gain = 506.422
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 1     
+	   2 Input   11 Bit       Adders := 1     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               16 Bit    Registers := 4     
@@ -201,49 +98,14 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 18    
 +---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 10    
-	  16 Input      8 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 11    
-	   8 Input      1 Bit        Muxes := 4     
+	   2 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 10    
+	  16 Input    8 Bit        Muxes := 6     
+	   2 Input    1 Bit        Muxes := 10    
+	   8 Input    1 Bit        Muxes := 4     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module dvp_raw_timing_colorbar 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     12 Bit       Adders := 1     
-	   2 Input     11 Bit       Adders := 1     
-+---Registers : 
-	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 3     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 1     
-	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 9     
-	  16 Input      8 Bit        Muxes := 6     
-	   2 Input      1 Bit        Muxes := 1     
-Module xil_camif_v1_0_S00_AXI 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                5 Bit    Registers := 2     
-	                2 Bit    Registers := 2     
-	                1 Bit    Registers := 15    
-+---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 10    
-	   8 Input      1 Bit        Muxes := 4     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -257,114 +119,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data1" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data2" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data3" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data4" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data5" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data6" won't be mapped to Block RAM because address size (4) smaller than threshold (5)
-INFO: [Synth 8-5546] ROM "inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_awprot[2]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_awprot[1]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_awprot[0]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[31]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[30]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[29]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[28]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[27]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[26]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[25]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[24]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[23]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[22]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[21]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[20]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[19]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[18]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[17]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[16]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[15]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[14]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[13]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[12]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[11]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[10]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[9]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[8]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[7]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[6]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[5]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[4]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[3]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[2]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wdata[1]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wstrb[3]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wstrb[2]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wstrb[1]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_wstrb[0]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_arprot[2]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_arprot[1]
-WARNING: [Synth 8-3331] design base_xil_camif_0_0 has unconnected port s00_axi_arprot[0]
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[12]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[13]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[14]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/pix_cnt_reg[15] )
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[11]' (FDCE) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[12]' (FDCE) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[13]' (FDCE) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[14]' (FDCE) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/line_cnt_reg[15] )
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[0]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[1]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[1]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[2]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[3]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[3]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[4]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[5]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[6]' (FDC) to 'inst/xil_camif_v1_0_S00_AXI_inst/dvp_colorbar_timing_generator/raw_data_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'inst/xil_camif_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_camif_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
-INFO: [Synth 8-3886] merging instance 'inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\inst/xil_camif_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 808.957 ; gain = 506.422
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 810.609 ; gain = 508.074
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 810.832 ; gain = 508.297
+Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:38 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -381,50 +156,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished IO Insertion : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -442,54 +204,40 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    19|
 |2     |LUT1   |     2|
-|3     |LUT2   |    22|
-|4     |LUT3   |    42|
+|3     |LUT2   |    23|
+|4     |LUT3   |    46|
 |5     |LUT4   |    38|
-|6     |LUT5   |    14|
-|7     |LUT6   |    42|
+|6     |LUT5   |     9|
+|7     |LUT6   |    55|
 |8     |MUXF7  |     1|
 |9     |FDCE   |   132|
 |10    |FDRE   |    48|
 |11    |FDSE   |     3|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+------------------------------------+------------------------+------+
-|      |Instance                            |Module                  |Cells |
-+------+------------------------------------+------------------------+------+
-|1     |top                                 |                        |   363|
-|2     |  inst                              |xil_camif_v1_0          |   363|
-|3     |    xil_camif_v1_0_S00_AXI_inst     |xil_camif_v1_0_S00_AXI  |   363|
-|4     |      dvp_colorbar_timing_generator |dvp_raw_timing_colorbar |    97|
-+------+------------------------------------+------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 41 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 822.789 ; gain = 172.969
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:28 . Memory (MB): peak = 822.789 ; gain = 520.254
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:41 . Memory (MB): peak = 1233.137 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:37 ; elapsed = 00:00:44 . Memory (MB): peak = 1233.137 ; gain = 36.570
 INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1236.641 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 832.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1245.285 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete, checksum: b47d67e2
 INFO: [Common 17-83] Releasing license: Synthesis
-58 Infos, 83 Warnings, 0 Critical Warnings and 0 Errors encountered.
+33 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 832.953 ; gain = 537.012
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 832.953 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:57 . Memory (MB): peak = 1245.285 ; gain = 48.719
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_camif_0_0_synth_1/base_xil_camif_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_camif_0_0, cache-ID = 800e7553667d1f05
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_camif_0_0, cache-ID = 96bc278812c9534f
 INFO: [Coretcl 2-1174] Renamed 3 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 832.953 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_camif_0_0_synth_1/base_xil_camif_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_xil_camif_0_0_utilization_synth.rpt -pb base_xil_camif_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 12 13:11:33 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 15 22:35:24 2022...

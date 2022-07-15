@@ -1,5 +1,6 @@
 # fpga-isp
-#### 本Demo基于zynq-7020(正点原子启明星+OV5640+4.3'800x480)实现了ISP图像处理(将ov5640的isp关闭，在7020上实现ISP功能)，输出到LCD和HDMI，软件基于SDK裸机开发
+#### 本Demo基于zynq-7020(正点原子启明星+OV5640+4.3'800x480)实现了ISP图像处理(将ov5640的isp关闭，在7020上实现ISP功能)，输出到LCD和HDMI，软件基于SDK裸机开发，2592x1944@15fps
+#### Vitis/Vivado 2021.1
 
 ## ISP Lite IP
 ### 位置: xil_ip_repo/xil_isp_lite_1.0

@@ -4,29 +4,29 @@
 # IP: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci
 # IP: The module: 'base_axi_vdma_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
 # IP: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci
 # IP: The module: 'base_axi_vdma_0_0' is the root of the design. Do not add the DONT_TOUCH constraint.
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet
 
-# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc
 # XDC: The top module name and the constraint reference have the same name: 'base_axi_vdma_0_0'. Do not add the DONT_TOUCH constraint.
-#dup# set_property DONT_TOUCH TRUE [get_cells U0 -quiet] -quiet
+#dup# set_property KEEP_HIERARCHY SOFT [get_cells U0 -quiet] -quiet

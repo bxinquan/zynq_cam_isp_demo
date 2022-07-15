@@ -3,6 +3,58 @@
 # 
 
 set TIME_start [clock seconds] 
+namespace eval ::optrace {
+  variable script "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/synth_1/base_wrapper.tcl"
+  variable category "vivado_synth"
+}
+
+# Try to connect to running dispatch if we haven't done so already.
+# This code assumes that the Tcl interpreter is not using threads,
+# since the ::dispatch::connected variable isn't mutex protected.
+if {![info exists ::dispatch::connected]} {
+  namespace eval ::dispatch {
+    variable connected false
+    if {[llength [array get env XILINX_CD_CONNECT_ID]] > 0} {
+      set result "true"
+      if {[catch {
+        if {[lsearch -exact [package names] DispatchTcl] < 0} {
+          set result [load librdi_cd_clienttcl[info sharedlibextension]] 
+        }
+        if {$result eq "false"} {
+          puts "WARNING: Could not load dispatch client library"
+        }
+        set connect_id [ ::dispatch::init_client -mode EXISTING_SERVER ]
+        if { $connect_id eq "" } {
+          puts "WARNING: Could not initialize dispatch client"
+        } else {
+          puts "INFO: Dispatch client connection id - $connect_id"
+          set connected true
+        }
+      } catch_res]} {
+        puts "WARNING: failed to connect to dispatch server - $catch_res"
+      }
+    }
+  }
+}
+if {$::dispatch::connected} {
+  # Remove the dummy proc if it exists.
+  if { [expr {[llength [info procs ::OPTRACE]] > 0}] } {
+    rename ::OPTRACE ""
+  }
+  proc ::OPTRACE { task action {tags {} } } {
+    ::vitis_log::op_trace "$task" $action -tags $tags -script $::optrace::script -category $::optrace::category
+  }
+  # dispatch is generic. We specifically want to attach logging.
+  ::vitis_log::connect_client
+} else {
+  # Add dummy proc if it doesn't exist.
+  if { [expr {[llength [info procs ::OPTRACE]] == 0}] } {
+    proc ::OPTRACE {{arg1 \"\" } {arg2 \"\"} {arg3 \"\" } {arg4 \"\"} {arg5 \"\" } {arg6 \"\"}} {
+        # Do nothing
+    }
+  }
+}
+
 proc create_report { reportName command } {
   set status "."
   append status $reportName ".fail"
@@ -17,6 +69,9 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
+OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-2
 
 set_param project.singleFileAddWarning.threshold 0
@@ -32,92 +87,95 @@ set_property ip_repo_paths d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo [current_p
 update_ip_catalog
 set_property ip_output_repo d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/hdl/base_wrapper.v
+OPTRACE "Creating in-memory project" END { }
+OPTRACE "Adding files" START { }
+read_verilog -library xil_defaultlib D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/hdl/base_wrapper.v
 add_files D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/base.bd
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_2/bd_60ff_arsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_3/bd_60ff_rsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_4/bd_60ff_awsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_5/bd_60ff_wsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_6/bd_60ff_bsw_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_10/bd_60ff_s00a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_11/bd_60ff_sarn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_12/bd_60ff_srn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_16/bd_60ff_s01a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_17/bd_60ff_sawn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_18/bd_60ff_swn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_19/bd_60ff_sbn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_23/bd_60ff_s02a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_24/bd_60ff_sarn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_25/bd_60ff_srn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_29/bd_60ff_s03a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_30/bd_60ff_sawn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_31/bd_60ff_swn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_32/bd_60ff_sbn_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_36/bd_60ff_s04a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_37/bd_60ff_sarn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_38/bd_60ff_srn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_42/bd_60ff_s05a2s_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_43/bd_60ff_sawn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_44/bd_60ff_swn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_45/bd_60ff_sbn_2_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_46/bd_60ff_m00s2a_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_47/bd_60ff_m00arn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_48/bd_60ff_m00rn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_49/bd_60ff_m00awn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_50/bd_60ff_m00wn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_51/bd_60ff_m00bn_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_xbar_0/base_xbar_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_2_0/base_v_tc_2_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_2_0/base_v_tc_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_1_0/base_v_tc_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_1_0/base_v_tc_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_auto_pc_0/base_auto_pc_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/base_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_iic_0/base_axi_iic_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_2/bd_60ff_arsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_3/bd_60ff_rsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_4/bd_60ff_awsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_5/bd_60ff_wsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_6/bd_60ff_bsw_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_10/bd_60ff_s00a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_11/bd_60ff_sarn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_12/bd_60ff_srn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_16/bd_60ff_s01a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_17/bd_60ff_sawn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_18/bd_60ff_swn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_19/bd_60ff_sbn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_23/bd_60ff_s02a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_24/bd_60ff_sarn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_25/bd_60ff_srn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_29/bd_60ff_s03a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_30/bd_60ff_sawn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_31/bd_60ff_swn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_32/bd_60ff_sbn_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_36/bd_60ff_s04a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_37/bd_60ff_sarn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_38/bd_60ff_srn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_42/bd_60ff_s05a2s_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_43/bd_60ff_sawn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_44/bd_60ff_swn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_45/bd_60ff_sbn_2_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_46/bd_60ff_m00s2a_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_47/bd_60ff_m00arn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_48/bd_60ff_m00rn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_49/bd_60ff_m00awn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_50/bd_60ff_m00wn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_51/bd_60ff_m00bn_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xbar_0/base_xbar_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_auto_pc_0/base_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_1_0/base_v_tc_1_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_1_0/base_v_tc_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_2_0/base_v_tc_2_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_2_0/base_v_tc_2_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/base_ooc.xdc]
 
+OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
@@ -134,12 +192,22 @@ set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
 
+OPTRACE "synth_design" START { }
 synth_design -top base_wrapper -part xc7z020clg400-2
+OPTRACE "synth_design" END { }
+if { [get_msg_config -count -severity {CRITICAL WARNING}] > 0 } {
+ send_msg_id runtcl-6 info "Synthesis results are not added to the cache due to CRITICAL_WARNING"
+}
 
 
+OPTRACE "write_checkpoint" START { CHECKPOINT }
 # disable binary constraint mode for synth run checkpoints
 set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef base_wrapper.dcp
+OPTRACE "write_checkpoint" END { }
+OPTRACE "synth reports" START { REPORT }
 create_report "synth_1_synth_report_utilization_0" "report_utilization -file base_wrapper_utilization_synth.rpt -pb base_wrapper_utilization_synth.pb"
+OPTRACE "synth reports" END { }
 file delete __synthesis_is_running__
 close [open __synthesis_is_complete__ w]
+OPTRACE "synth_1" END { }

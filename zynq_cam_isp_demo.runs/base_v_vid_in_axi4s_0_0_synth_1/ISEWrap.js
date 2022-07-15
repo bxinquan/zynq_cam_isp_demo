@@ -116,6 +116,29 @@ function ISEExec( ISEProg, ISEArgs ) {
     var ISEProcess = ISEShell.Exec( ISECmdLine );
     
     // BEGIN file creation
+    var wbemFlagReturnImmediately = 0x10;
+    var wbemFlagForwardOnly = 0x20;
+    var objWMIService = GetObject ("winmgmts:{impersonationLevel=impersonate, (Systemtime)}!//./root/cimv2");
+    var processor = objWMIService.ExecQuery("SELECT * FROM Win32_Processor", "WQL",wbemFlagReturnImmediately | wbemFlagForwardOnly);
+    var computerSystem = objWMIService.ExecQuery("SELECT * FROM Win32_ComputerSystem", "WQL", wbemFlagReturnImmediately | wbemFlagForwardOnly);
+    var NOC = 0;
+    var NOLP = 0;
+    var TPM = 0;
+    var cpuInfos = new Enumerator(processor);
+    for(;!cpuInfos.atEnd(); cpuInfos.moveNext()) {
+        var cpuInfo = cpuInfos.item();
+        NOC += cpuInfo.NumberOfCores;
+        NOLP += cpuInfo.NumberOfLogicalProcessors;
+    }
+    var csInfos = new Enumerator(computerSystem);
+    for(;!csInfos.atEnd(); csInfos.moveNext()) {
+        var csInfo = csInfos.item();
+        TPM += csInfo.TotalPhysicalMemory;
+    }
+
+    var ISEHOSTCORE = NOLP
+    var ISEMEMTOTAL = TPM
+
     var ISENetwork = WScript.CreateObject( "WScript.Network" );
     var ISEHost = ISENetwork.ComputerName;
     var ISEUser = ISENetwork.UserName;
@@ -127,6 +150,8 @@ function ISEExec( ISEProg, ISEArgs ) {
 			    "\" Owner=\"" + ISEUser + 
 			    "\" Host=\"" + ISEHost + 
 			    "\" Pid=\"" + ISEPid +
+			    "\" HostCore=\"" + ISEHOSTCORE +
+			    "\" HostMemory=\"" + ISEMEMTOTAL +
 			    "\">" );
     ISEBeginFile.WriteLine( "    </Process>" );
     ISEBeginFile.WriteLine( "</ProcessHandle>" );

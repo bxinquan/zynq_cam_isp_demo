@@ -1,9 +1,9 @@
 #-----------------------------------------------------------
-# Vivado v2018.3 (64-bit)
-# SW Build 2405991 on Thu Dec  6 23:38:27 MST 2018
-# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Jun 12 13:10:48 2022
-# Process ID: 16548
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Fri Jul 15 22:34:06 2022
+# Process ID: 7536
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1
 # Command line: vivado.exe -log base_v_tc_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_v_tc_0_0.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/base_v_tc_0_0.vds
@@ -12,22 +12,24 @@
 source base_v_tc_0_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Xilinx/Vivado/2018.3/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
 Command: synth_design -top base_v_tc_0_0 -part xc7z020clg400-2 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
-INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 22364 
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 56344
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 406.770 ; gain = 102.184
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1223.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'base_v_tc_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:74]
+INFO: [Synth 8-638] synthesizing module 'base_v_tc_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:75]
 	Parameter C_HAS_AXI4_LITE bound to: 0 - type: integer 
 	Parameter C_HAS_INTC_IF bound to: 0 - type: integer 
 	Parameter C_GEN_INTERLACED bound to: 0 - type: integer 
-	Parameter C_GEN_HACTIVE_SIZE bound to: 2560 - type: integer 
-	Parameter C_GEN_VACTIVE_SIZE bound to: 1920 - type: integer 
+	Parameter C_GEN_HACTIVE_SIZE bound to: 2592 - type: integer 
+	Parameter C_GEN_VACTIVE_SIZE bound to: 1944 - type: integer 
 	Parameter C_GEN_CPARITY bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_VBLANK_POLARITY bound to: 1 - type: integer 
@@ -37,23 +39,23 @@ INFO: [Synth 8-638] synthesizing module 'base_v_tc_0_0' [d:/Work/fpga/zynq_cam_i
 	Parameter C_GEN_AVIDEO_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_ACHROMA_POLARITY bound to: 1 - type: integer 
 	Parameter C_GEN_VIDEO_FORMAT bound to: 2 - type: integer 
-	Parameter C_GEN_HFRAME_SIZE bound to: 2760 - type: integer 
-	Parameter C_GEN_F0_VFRAME_SIZE bound to: 1940 - type: integer 
+	Parameter C_GEN_HFRAME_SIZE bound to: 2792 - type: integer 
+	Parameter C_GEN_F0_VFRAME_SIZE bound to: 1964 - type: integer 
 	Parameter C_GEN_F1_VFRAME_SIZE bound to: 750 - type: integer 
-	Parameter C_GEN_HSYNC_START bound to: 2610 - type: integer 
-	Parameter C_GEN_HSYNC_END bound to: 2710 - type: integer 
-	Parameter C_GEN_F0_VBLANK_HSTART bound to: 2560 - type: integer 
-	Parameter C_GEN_F0_VBLANK_HEND bound to: 2560 - type: integer 
-	Parameter C_GEN_F0_VSYNC_VSTART bound to: 1925 - type: integer 
-	Parameter C_GEN_F0_VSYNC_VEND bound to: 1935 - type: integer 
-	Parameter C_GEN_F0_VSYNC_HSTART bound to: 2560 - type: integer 
-	Parameter C_GEN_F0_VSYNC_HEND bound to: 2560 - type: integer 
-	Parameter C_GEN_F1_VBLANK_HSTART bound to: 1280 - type: integer 
-	Parameter C_GEN_F1_VBLANK_HEND bound to: 1280 - type: integer 
+	Parameter C_GEN_HSYNC_START bound to: 2642 - type: integer 
+	Parameter C_GEN_HSYNC_END bound to: 2742 - type: integer 
+	Parameter C_GEN_F0_VBLANK_HSTART bound to: 2592 - type: integer 
+	Parameter C_GEN_F0_VBLANK_HEND bound to: 2592 - type: integer 
+	Parameter C_GEN_F0_VSYNC_VSTART bound to: 1949 - type: integer 
+	Parameter C_GEN_F0_VSYNC_VEND bound to: 1959 - type: integer 
+	Parameter C_GEN_F0_VSYNC_HSTART bound to: 2592 - type: integer 
+	Parameter C_GEN_F0_VSYNC_HEND bound to: 2592 - type: integer 
+	Parameter C_GEN_F1_VBLANK_HSTART bound to: 640 - type: integer 
+	Parameter C_GEN_F1_VBLANK_HEND bound to: 640 - type: integer 
 	Parameter C_GEN_F1_VSYNC_VSTART bound to: 724 - type: integer 
 	Parameter C_GEN_F1_VSYNC_VEND bound to: 729 - type: integer 
-	Parameter C_GEN_F1_VSYNC_HSTART bound to: 1280 - type: integer 
-	Parameter C_GEN_F1_VSYNC_HEND bound to: 1280 - type: integer 
+	Parameter C_GEN_F1_VSYNC_HSTART bound to: 695 - type: integer 
+	Parameter C_GEN_F1_VSYNC_HEND bound to: 695 - type: integer 
 	Parameter C_FSYNC_HSTART0 bound to: 0 - type: integer 
 	Parameter C_FSYNC_VSTART0 bound to: 0 - type: integer 
 	Parameter C_FSYNC_HSTART1 bound to: 0 - type: integer 
@@ -108,244 +110,93 @@ INFO: [Synth 8-638] synthesizing module 'base_v_tc_0_0' [d:/Work/fpga/zynq_cam_i
 	Parameter C_GEN_ACHROMA_EN bound to: 0 - type: integer 
 	Parameter C_GEN_FIELDID_EN bound to: 0 - type: integer 
 	Parameter C_DET_FIELDID_EN bound to: 0 - type: integer 
-INFO: [Synth 8-3491] module 'v_tc' declared at 'd:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ipshared/a92c/hdl/v_tc_v6_1_vh_rfs.vhd:7218' bound to instance 'U0' of component 'v_tc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:234]
-INFO: [Synth 8-256] done synthesizing module 'base_v_tc_0_0' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:74]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v0chroma_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1total[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1bp_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1active_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1chroma_start[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[8]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[7]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[6]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[5]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[4]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[3]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[2]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[1]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1fp_start_hori[0]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[11]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[10]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[9]
-WARNING: [Synth 8-3331] design tc_generator has unconnected port gen_v1sync_start_hori[8]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3491] module 'v_tc' declared at 'd:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/7f10/hdl/v_tc_v6_2_vh_rfs.vhd:7357' bound to instance 'U0' of component 'v_tc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:236]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_single' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_single' (1#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:153]
+INFO: [Synth 8-256] done synthesizing module 'base_v_tc_0_0' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/synth/base_v_tc_0_0.vhd:75]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 466.426 ; gain = 161.840
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:14 . Memory (MB): peak = 1223.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 466.426 ; gain = 161.840
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1223.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 466.426 ; gain = 161.840
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1223.293 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.085 . Memory (MB): peak = 1223.293 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_ooc.xdc] for cell 'U0'
 Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/dont_touch.xdc]
-Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc] for cell 'U0'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_v_tc_0_0/base_v_tc_0_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_single.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_v_tc_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/base_v_tc_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 1 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.895 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1245.848 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 826.895 ; gain = 0.000
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 828.227 ; gain = 1.332
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1249.789 ; gain = 3.941
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished Constraint Validation : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/xpm_cdc_single_inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:28 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:19 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:29 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     12 Bit       Adders := 3     
-	   2 Input      1 Bit       Adders := 1     
+	   2 Input   12 Bit       Adders := 3     
+	   3 Input   12 Bit       Adders := 1     
+	   2 Input    1 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 6     
+	   2 Input      1 Bit         XORs := 7     
 +---Registers : 
 	               32 Bit    Registers := 1     
 	               17 Bit    Registers := 1     
-	               12 Bit    Registers := 17    
+	               12 Bit    Registers := 18    
 	                7 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                3 Bit    Registers := 1     
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 31    
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 36    
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
-	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 16    
-	   3 Input     12 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 51    
-	   5 Input      1 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 7     
+	   2 Input   17 Bit        Muxes := 1     
+	   2 Input   12 Bit        Muxes := 15    
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 57    
+	   5 Input    1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start RTL Hierarchical Component Statistics 
----------------------------------------------------------------------------------
-Hierarchical RTL Component report 
-Module tc_generator 
-Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input     12 Bit       Adders := 3     
-	   2 Input      1 Bit       Adders := 1     
-+---XORs : 
-	   2 Input      1 Bit         XORs := 6     
-+---Registers : 
-	               17 Bit    Registers := 1     
-	               12 Bit    Registers := 15    
-	                2 Bit    Registers := 1     
-	                1 Bit    Registers := 23    
-+---Muxes : 
-	   2 Input     17 Bit        Muxes := 1     
-	   2 Input     12 Bit        Muxes := 14    
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 44    
-Module tc_top 
-Detailed RTL Component Info : 
-+---Registers : 
-	               32 Bit    Registers := 1     
-	                7 Bit    Registers := 1     
-	                4 Bit    Registers := 2     
-	                1 Bit    Registers := 8     
-+---Muxes : 
-	   2 Input     32 Bit        Muxes := 7     
-	   2 Input      1 Bit        Muxes := 7     
-	   5 Input      1 Bit        Muxes := 1     
-Module v_tc 
-Detailed RTL Component Info : 
-+---Registers : 
-	               12 Bit    Registers := 2     
-	                3 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     12 Bit        Muxes := 2     
-	   3 Input     12 Bit        Muxes := 1     
----------------------------------------------------------------------------------
-Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Part Resource Summary
@@ -359,112 +210,27 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[0]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[1]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[2]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[2]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[0]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[2]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/all_lock_reg )
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[3]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[4]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[5]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[5]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[6]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[6]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[7]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[7]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[8]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[8]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[9]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[9]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[10]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[10]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[11]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/v0active_start_reg[11]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[3]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/field_id_int_reg )
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[3]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[4]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[5]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[5]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[6]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[6]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[7]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[7]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[8]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[8]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[9]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[9]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[10]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[10]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[11]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/hactive_start_reg[11] )
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[8]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[6]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[7]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[10]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[9]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[2]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[0]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[1]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[1]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[5]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[3]' (FDRE) to 'U0/U_TC_TOP/GEN_GENERATOR.U_TC_GEN/param_cfg_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[0]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[1]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[1]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[2]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[2]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[3]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[3]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[4]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[4]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[5]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[5]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[6]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[6]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[7]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/active_chroma_int_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/GEN_GENERATOR.U_TC_GEN/field_id_reg )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[0] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[7] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[8] )
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[14]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[15]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[15] )
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[17]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[18]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[18]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[19]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[19]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[20]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[20]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[21]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[21]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[22]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[22]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[23]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[23]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[24]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[24]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[25]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[25]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[26]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[26]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[27]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[27]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[28]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[28]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[29]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[29]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[30]'
-INFO: [Synth 8-3886] merging instance 'U0/U_TC_TOP/intr_status_int_reg[30]' (FDE) to 'U0/U_TC_TOP/intr_status_int_reg[31]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_status_int_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\U_TC_TOP/intr_error_int_reg[4] )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:33 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 828.227 ; gain = 523.641
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:46 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 837.012 ; gain = 532.426
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:47 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Technology Mapping : Time (s): cpu = 00:00:37 ; elapsed = 00:00:48 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start IO Insertion
 ---------------------------------------------------------------------------------
@@ -481,53 +247,40 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-
-Report RTL Partitions: 
-+-+--------------+------------+----------+
-| |RTL Partition |Replication |Instances |
-+-+--------------+------------+----------+
-+-+--------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Start ROM, RAM, DSP and Shift Register Reporting
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
@@ -539,7 +292,7 @@ Static Shift Register Report:
 +------------+-------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
-Finished ROM, RAM, DSP and Shift Register Reporting
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -555,56 +308,41 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    31|
-|2     |LUT1   |    39|
-|3     |LUT2   |    10|
-|4     |LUT3   |    12|
-|5     |LUT4   |     5|
-|6     |LUT5   |     3|
-|7     |LUT6   |    70|
+|1     |CARRY4 |    45|
+|2     |LUT1   |    37|
+|3     |LUT2   |    46|
+|4     |LUT3   |    15|
+|5     |LUT4   |    19|
+|6     |LUT5   |     9|
+|7     |LUT6   |    88|
 |8     |SRL16E |     2|
-|9     |FDRE   |   199|
-|10    |FDSE   |    15|
+|9     |FDRE   |   227|
+|10    |FDSE   |    16|
 +------+-------+------+
-
-Report Instance Areas: 
-+------+-------------------------------+-------------+------+
-|      |Instance                       |Module       |Cells |
-+------+-------------------------------+-------------+------+
-|1     |top                            |             |   386|
-|2     |  U0                           |v_tc         |   386|
-|3     |    U_VIDEO_CTRL               |video_ctrl   |     0|
-|4     |    U_TC_TOP                   |tc_top       |   384|
-|5     |      \GEN_GENERATOR.U_TC_GEN  |tc_generator |   357|
-+------+-------------------------------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 840.457 ; gain = 535.871
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:42 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 1773 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:27 . Memory (MB): peak = 840.457 ; gain = 174.070
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 840.457 ; gain = 535.871
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:29 ; elapsed = 00:00:48 . Memory (MB): peak = 1249.789 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:54 . Memory (MB): peak = 1249.789 ; gain = 26.496
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 31 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.045 . Memory (MB): peak = 1256.531 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 45 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 843.035 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1267.469 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
+Synth Design complete, checksum: 20ac33ae
 INFO: [Common 17-83] Releasing license: Synthesis
-84 Infos, 100 Warnings, 0 Critical Warnings and 0 Errors encountered.
+24 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:37 . Memory (MB): peak = 843.035 ; gain = 546.906
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 843.035 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+synth_design: Time (s): cpu = 00:00:49 ; elapsed = 00:01:04 . Memory (MB): peak = 1267.469 ; gain = 44.176
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/base_v_tc_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_v_tc_0_0, cache-ID = 789e74df3e55f026
-INFO: [Coretcl 2-1174] Renamed 4 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 843.035 ; gain = 0.000
-WARNING: [Constraints 18-5210] No constraints selected for write.
-Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_v_tc_0_0, cache-ID = ac1d68cb097c9ce4
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_v_tc_0_0_synth_1/base_v_tc_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_v_tc_0_0_utilization_synth.rpt -pb base_v_tc_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Jun 12 13:11:31 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Jul 15 22:35:24 2022...

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="base_xil_isp_lite_0_0_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1656074737">
+<GenRun Id="base_xil_isp_lite_0_0_synth_1" LaunchPart="xc7z020clg400-2" LaunchTime="1657895538">
   <File Type="PA-TCL" Name="base_xil_isp_lite_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="base_xil_isp_lite_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="base_xil_isp_lite_0_0_reports.tcl"/>
@@ -16,7 +16,6 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
-        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -31,7 +30,6 @@
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
-        <Attr Name="ProcessingOrder" Val="EARLY"/>
       </FileInfo>
     </File>
     <Config>
@@ -46,7 +44,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2018">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
       <Desc>Vivado Synthesis Defaults</Desc>
     </StratHandle>
     <Step Id="synth_design"/>

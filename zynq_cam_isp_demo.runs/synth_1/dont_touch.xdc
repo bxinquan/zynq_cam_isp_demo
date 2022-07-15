@@ -4,102 +4,102 @@
 # XDC: new/base.xdc
 
 # Block Designs: bd/base/base.bd
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base || ORIG_REF_NAME==base} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base || ORIG_REF_NAME==base} -quiet] -quiet
 
 # IP: bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_processing_system7_0_0 || ORIG_REF_NAME==base_processing_system7_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_cmos_pwdn_0/base_cmos_pwdn_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_cmos_pwdn_0 || ORIG_REF_NAME==base_cmos_pwdn_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_cmos_rst_n_0/base_cmos_rst_n_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_cmos_rst_n_0 || ORIG_REF_NAME==base_cmos_rst_n_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xlconcat_0_0 || ORIG_REF_NAME==base_xlconcat_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_smc_0/base_axi_smc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_smc_0 || ORIG_REF_NAME==base_axi_smc_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_processing_system7_0_0 || ORIG_REF_NAME==base_processing_system7_0_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_100M_0 || ORIG_REF_NAME==base_rst_ps7_0_100M_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_ps7_0_axi_periph_0/base_ps7_0_axi_periph_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_ps7_0_axi_periph_0 || ORIG_REF_NAME==base_ps7_0_axi_periph_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_xbar_0/base_xbar_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xbar_0 || ORIG_REF_NAME==base_xbar_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_lcd_bl_0/base_lcd_bl_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_lcd_bl_0 || ORIG_REF_NAME==base_lcd_bl_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_clk_wiz_0_0 || ORIG_REF_NAME==base_clk_wiz_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_clk_wiz_1_0 || ORIG_REF_NAME==base_clk_wiz_1_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_100M_0 || ORIG_REF_NAME==base_rst_ps7_0_100M_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_DVI_Transmitter_0_0 || ORIG_REF_NAME==base_DVI_Transmitter_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_2_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_2_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_2_0/base_v_tc_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_tc_2_0 || ORIG_REF_NAME==base_v_tc_2_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_vdma_2_0 || ORIG_REF_NAME==base_axi_vdma_2_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_DVI_Transmitter_0_0 || ORIG_REF_NAME==base_DVI_Transmitter_0_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_2_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_2_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_1_0/base_v_tc_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_tc_1_0 || ORIG_REF_NAME==base_v_tc_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_vdma_1_0 || ORIG_REF_NAME==base_axi_vdma_1_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_2_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_2_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_1_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_1_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_vdma_0_0 || ORIG_REF_NAME==base_axi_vdma_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_1_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_1_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_0_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_0_0/base_v_tc_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_tc_0_0 || ORIG_REF_NAME==base_v_tc_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_0_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_iic_0/base_axi_iic_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_iic_0 || ORIG_REF_NAME==base_axi_iic_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_axi_intc_0_0 || ORIG_REF_NAME==base_axi_intc_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xil_camif_0_0 || ORIG_REF_NAME==base_xil_camif_0_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_0_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_0_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_50M_0 || ORIG_REF_NAME==base_rst_ps7_0_50M_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_50M_0 || ORIG_REF_NAME==base_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xil_isp_lite_0_0 || ORIG_REF_NAME==base_xil_isp_lite_0_0} -quiet] -quiet
+# IP: bd/base/ip/base_axi_iic_0/base_axi_iic_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_iic_0 || ORIG_REF_NAME==base_axi_iic_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_xil_vip_0_0/base_xil_vip_0_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xil_vip_0_0 || ORIG_REF_NAME==base_xil_vip_0_0} -quiet] -quiet
+# IP: bd/base/ip/base_axi_intc_0_0/base_axi_intc_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_intc_0_0 || ORIG_REF_NAME==base_axi_intc_0_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_xil_vip_1_0/base_xil_vip_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_xil_vip_1_0 || ORIG_REF_NAME==base_xil_vip_1_0} -quiet] -quiet
+# IP: bd/base/ip/base_axi_smc_0/base_axi_smc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_smc_0 || ORIG_REF_NAME==base_axi_smc_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_vdma_0_0 || ORIG_REF_NAME==base_axi_vdma_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_vdma_1_0 || ORIG_REF_NAME==base_axi_vdma_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axi_vdma_2_0 || ORIG_REF_NAME==base_axi_vdma_2_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_clk_wiz_0_0 || ORIG_REF_NAME==base_clk_wiz_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_clk_wiz_1_0 || ORIG_REF_NAME==base_clk_wiz_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_cmos_pwdn_0/base_cmos_pwdn_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_cmos_pwdn_0 || ORIG_REF_NAME==base_cmos_pwdn_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_cmos_rst_n_0/base_cmos_rst_n_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_cmos_rst_n_0 || ORIG_REF_NAME==base_cmos_rst_n_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_lcd_bl_0/base_lcd_bl_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_lcd_bl_0 || ORIG_REF_NAME==base_lcd_bl_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xbar_0/base_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xbar_0 || ORIG_REF_NAME==base_xbar_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet
 
-# XDC: bd/base/base_ooc.xdc
+# IP: bd/base/ip/base_ps7_0_axi_periph_0/base_ps7_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_ps7_0_axi_periph_0 || ORIG_REF_NAME==base_ps7_0_axi_periph_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_0_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_1_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_2_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_2_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_tc_0_0/base_v_tc_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_0_0 || ORIG_REF_NAME==base_v_tc_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_tc_1_0/base_v_tc_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_1_0 || ORIG_REF_NAME==base_v_tc_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_v_tc_2_0/base_v_tc_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_2_0 || ORIG_REF_NAME==base_v_tc_2_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xlconcat_0_0 || ORIG_REF_NAME==base_xlconcat_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_isp_lite_0_0 || ORIG_REF_NAME==base_xil_isp_lite_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xil_vip_0_0/base_xil_vip_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vip_0_0 || ORIG_REF_NAME==base_xil_vip_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xil_vip_1_0/base_xil_vip_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vip_1_0 || ORIG_REF_NAME==base_xil_vip_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_camif_0_0 || ORIG_REF_NAME==base_xil_camif_0_0} -quiet] -quiet
+
+# XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/base_ooc.xdc
