@@ -1,11 +1,50 @@
-creating BOOT.BIN using D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
-Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 Nothing to build in platform 'base_wrapper'
 
-22:49:09 **** Incremental Build of configuration Debug for project base ****
+22:50:33 **** Incremental Build of configuration Debug for project base ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'vip_init_osd':
+../src/main.c:564:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  564 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+      |                                         ~~~^
+      |                                            |
+      |                                            unsigned int
+      |                                         %08lX
+../src/main.c:564:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
+  564 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
+      |                                              ~~~^
+      |                                                 |
+      |                                                 unsigned int
+      |                                              %08lX
+At top level:
+../src/main.c:624:28: warning: 'colorCurveTbl_8' defined but not used [-Wunused-const-variable=]
+  624 | static const unsigned char colorCurveTbl_8[9][2] = {
+      |                            ^~~~~~~~~~~~~~~
+../src/main.c:612:28: warning: 'colorCurveTbl_6' defined but not used [-Wunused-const-variable=]
+  612 | static const unsigned char colorCurveTbl_6[9][2] = {
+      |                            ^~~~~~~~~~~~~~~
+../src/main.c:592:28: warning: 'spaceWeightTbl_8' defined but not used [-Wunused-const-variable=]
+  592 | static const unsigned char spaceWeightTbl_8[7*7] = {
+      |                            ^~~~~~~~~~~~~~~~
+../src/main.c:582:28: warning: 'spaceWeightTbl_6' defined but not used [-Wunused-const-variable=]
+  582 | static const unsigned char spaceWeightTbl_6[7*7] = {
+      |                            ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: base.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "base.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
+'Finished building target: base.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size base.elf  |tee "base.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 100771	   3908	  24128	 128807	  1f727	base.elf
+'Finished building: base.elf.size'
+' '

@@ -83,3 +83,8 @@ platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.viti
 platform clean
 platform clean
 platform generate
+platform active {base_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+platform clean
+platform clean
+platform generate

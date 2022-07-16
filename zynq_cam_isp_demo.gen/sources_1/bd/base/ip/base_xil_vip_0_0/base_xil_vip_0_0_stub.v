@@ -1,11 +1,11 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Fri Jul 15 22:36:07 2022
+// Date        : Sat Jul 16 22:27:05 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub -rename_top base_xil_vip_0_0 -prefix
-//               base_xil_vip_0_0_ base_xil_vip_1_0_stub.v
-// Design      : base_xil_vip_1_0
+//               base_xil_vip_0_0_ base_xil_vip_0_0_stub.v
+// Design      : base_xil_vip_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-2
 // --------------------------------------------------------------------------------

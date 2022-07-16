@@ -51,10 +51,10 @@
       "v_tc_1": "",
       "v_tc_2": "",
       "xlconcat_0": "",
+      "xil_camif_0": "",
       "xil_isp_lite_0": "",
       "xil_vip_0": "",
-      "xil_vip_1": "",
-      "xil_camif_0": ""
+      "xil_vip_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -3858,6 +3858,41 @@
           }
         }
       },
+      "xil_camif_0": {
+        "vlnv": "bxq.com:user:xil_camif:1.0",
+        "xci_name": "base_xil_camif_0_0",
+        "xci_path": "ip\\base_xil_camif_0_0\\base_xil_camif_0_0.xci",
+        "inst_hier_path": "xil_camif_0",
+        "parameters": {
+          "COLORBAR_BAYER": {
+            "value": "3"
+          },
+          "COLORBAR_H_BACK": {
+            "value": "50"
+          },
+          "COLORBAR_H_DISP": {
+            "value": "2592"
+          },
+          "COLORBAR_H_FRONT": {
+            "value": "50"
+          },
+          "COLORBAR_H_PULSE": {
+            "value": "100"
+          },
+          "COLORBAR_V_BACK": {
+            "value": "5"
+          },
+          "COLORBAR_V_DISP": {
+            "value": "1944"
+          },
+          "COLORBAR_V_FRONT": {
+            "value": "5"
+          },
+          "COLORBAR_V_PULSE": {
+            "value": "10"
+          }
+        }
+      },
       "xil_isp_lite_0": {
         "vlnv": "bxq.com:user:xil_isp_lite:1.0",
         "xci_name": "base_xil_isp_lite_0_0",
@@ -3921,41 +3956,6 @@
           },
           "WIDTH": {
             "value": "2592"
-          }
-        }
-      },
-      "xil_camif_0": {
-        "vlnv": "bxq.com:user:xil_camif:1.0",
-        "xci_name": "base_xil_camif_0_0",
-        "xci_path": "ip\\base_xil_camif_0_0\\base_xil_camif_0_0.xci",
-        "inst_hier_path": "xil_camif_0",
-        "parameters": {
-          "COLORBAR_BAYER": {
-            "value": "3"
-          },
-          "COLORBAR_H_BACK": {
-            "value": "50"
-          },
-          "COLORBAR_H_DISP": {
-            "value": "2592"
-          },
-          "COLORBAR_H_FRONT": {
-            "value": "50"
-          },
-          "COLORBAR_H_PULSE": {
-            "value": "100"
-          },
-          "COLORBAR_V_BACK": {
-            "value": "5"
-          },
-          "COLORBAR_V_DISP": {
-            "value": "1944"
-          },
-          "COLORBAR_V_FRONT": {
-            "value": "5"
-          },
-          "COLORBAR_V_PULSE": {
-            "value": "10"
           }
         }
       }
@@ -4381,10 +4381,10 @@
           "ps7_0_axi_periph/M06_ACLK",
           "ps7_0_axi_periph/M07_ACLK",
           "ps7_0_axi_periph/M08_ACLK",
+          "xil_camif_0/s00_axi_aclk",
           "xil_isp_lite_0/s00_axi_aclk",
           "xil_vip_0/s00_axi_aclk",
-          "xil_vip_1/s00_axi_aclk",
-          "xil_camif_0/s00_axi_aclk"
+          "xil_vip_1/s00_axi_aclk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -4430,10 +4430,10 @@
           "ps7_0_axi_periph/M06_ARESETN",
           "ps7_0_axi_periph/M07_ARESETN",
           "ps7_0_axi_periph/M08_ARESETN",
+          "xil_camif_0/s00_axi_aresetn",
           "xil_isp_lite_0/s00_axi_aresetn",
           "xil_vip_0/s00_axi_aresetn",
-          "xil_vip_1/s00_axi_aresetn",
-          "xil_camif_0/s00_axi_aresetn"
+          "xil_vip_1/s00_axi_aresetn"
         ]
       },
       "v_axi4s_vid_out_0_vid_active_video": {

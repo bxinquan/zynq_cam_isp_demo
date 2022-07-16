@@ -63,9 +63,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_lcd_bl
 # IP: bd/base/ip/base_xbar_0/base_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xbar_0 || ORIG_REF_NAME==base_xbar_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet
-
 # IP: bd/base/ip/base_ps7_0_axi_periph_0/base_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_ps7_0_axi_periph_0 || ORIG_REF_NAME==base_ps7_0_axi_periph_0} -quiet] -quiet
 
@@ -101,5 +98,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vi
 
 # IP: bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_camif_0_0 || ORIG_REF_NAME==base_xil_camif_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet
 
 # XDC: d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/base_ooc.xdc

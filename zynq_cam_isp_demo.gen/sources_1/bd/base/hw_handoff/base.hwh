@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Fri Jul 15 22:32:08 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Jul 16 22:25:45 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="base" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -13225,10 +13225,10 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M08_ACLK"/>
+            <CONNECTION INSTANCE="xil_camif_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="xil_isp_lite_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="xil_vip_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="xil_vip_1" PORT="s00_axi_aclk"/>
-            <CONNECTION INSTANCE="xil_camif_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="FCLK_RESET0_N" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="processing_system7_0_FCLK_RESET0_N">
@@ -15364,10 +15364,10 @@
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M08_ARESETN"/>
+            <CONNECTION INSTANCE="xil_camif_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="xil_isp_lite_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="xil_vip_0" PORT="s00_axi_aresetn"/>
             <CONNECTION INSTANCE="xil_vip_1" PORT="s00_axi_aresetn"/>
-            <CONNECTION INSTANCE="xil_camif_0" PORT="s00_axi_aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -17301,7 +17301,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="77" FULLNAME="/xil_isp_lite_0" HWVERSION="1.0" INSTANCE="xil_isp_lite_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
+    <MODULE COREREVISION="78" FULLNAME="/xil_isp_lite_0" HWVERSION="1.0" INSTANCE="xil_isp_lite_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="16384" USAGE="register"/>
@@ -17562,7 +17562,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="30" FULLNAME="/xil_vip_0" HWVERSION="1.0" INSTANCE="xil_vip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
+    <MODULE COREREVISION="31" FULLNAME="/xil_vip_0" HWVERSION="1.0" INSTANCE="xil_vip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -17809,7 +17809,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="30" FULLNAME="/xil_vip_1" HWVERSION="1.0" INSTANCE="xil_vip_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
+    <MODULE COREREVISION="31" FULLNAME="/xil_vip_1" HWVERSION="1.0" INSTANCE="xil_vip_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>

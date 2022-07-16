@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:xil_isp_lite:1.0
-// IP Revision: 77
+// IP Revision: 78
 
 (* X_CORE_INFO = "xil_isp_lite_v1_0,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_xil_isp_lite_0_0,xil_isp_lite_v1_0,{}" *)

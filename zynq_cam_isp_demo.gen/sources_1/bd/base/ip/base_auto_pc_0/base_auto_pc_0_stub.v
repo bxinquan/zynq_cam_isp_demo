@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Fri Jul 15 22:35:30 2022
+// Date        : Fri Jul 15 22:35:29 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_auto_pc_0/base_auto_pc_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top base_auto_pc_0 -prefix
+//               base_auto_pc_0_ base_auto_pc_0_stub.v
 // Design      : base_auto_pc_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-2

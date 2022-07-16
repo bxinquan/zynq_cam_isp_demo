@@ -304,7 +304,7 @@ module shift_div_uint
 		end
 		else begin
 			if ({num_tmp_in[BITS*2-2:0],1'b0} >= den_tmp_in) begin
-				num_tmp[0] <= {num_tmp_in[BITS*2-2:0],1'b0} - den_tmp_in + 1'b1;
+				num_tmp[0] <= {num_tmp_in[BITS*2-2:0],1'b1} - den_tmp_in;
 				den_tmp[0] <= den_tmp_in;
 			end
 			else begin
@@ -314,7 +314,7 @@ module shift_div_uint
 				
 			for (i = 0; i < BITS - 1; i = i + 1) begin
 				if ({num_tmp[i][BITS*2-2:0],1'b0} >= den_tmp[i]) begin
-					num_tmp[i+1] <= {num_tmp[i][BITS*2-2:0],1'b0} - den_tmp[i] + 1'b1;
+					num_tmp[i+1] <= {num_tmp[i][BITS*2-2:0],1'b1} - den_tmp[i];
 					den_tmp[i+1] <= den_tmp[i];
 				end
 				else begin
