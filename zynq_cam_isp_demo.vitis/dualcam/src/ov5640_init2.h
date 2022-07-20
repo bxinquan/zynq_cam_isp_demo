@@ -1,6 +1,6 @@
 
-#ifndef OV5640_INIT_H_
-#define OV5640_INIT_H_
+#ifndef OV5640_INIT2_H_
+#define OV5640_INIT2_H_
 
 
 int ov5640_init2(u16 cmos_h_pixel, u16 cmos_v_pixel, u16 *ptr_total_v_std);

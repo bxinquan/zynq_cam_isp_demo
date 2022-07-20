@@ -213,9 +213,9 @@ proc create_root_design { parentCell } {
   set axi_vdma_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_1 ]
   set_property -dict [ list \
    CONFIG.c_m_axis_mm2s_tdata_width {24} \
-   CONFIG.c_mm2s_linebuffer_depth {4096} \
+   CONFIG.c_mm2s_linebuffer_depth {1024} \
    CONFIG.c_mm2s_max_burst_length {32} \
-   CONFIG.c_s2mm_linebuffer_depth {4096} \
+   CONFIG.c_s2mm_linebuffer_depth {1024} \
    CONFIG.c_s2mm_max_burst_length {32} \
  ] $axi_vdma_1
 
@@ -223,9 +223,9 @@ proc create_root_design { parentCell } {
   set axi_vdma_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_vdma:6.3 axi_vdma_2 ]
   set_property -dict [ list \
    CONFIG.c_m_axis_mm2s_tdata_width {24} \
-   CONFIG.c_mm2s_linebuffer_depth {4096} \
+   CONFIG.c_mm2s_linebuffer_depth {2048} \
    CONFIG.c_mm2s_max_burst_length {32} \
-   CONFIG.c_s2mm_linebuffer_depth {4096} \
+   CONFIG.c_s2mm_linebuffer_depth {2048} \
    CONFIG.c_s2mm_max_burst_length {32} \
  ] $axi_vdma_2
 
@@ -1202,7 +1202,7 @@ proc create_root_design { parentCell } {
   # Create instance: v_vid_in_axi4s_2, and set properties
   set v_vid_in_axi4s_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:v_vid_in_axi4s:4.0 v_vid_in_axi4s_2 ]
   set_property -dict [ list \
-   CONFIG.C_ADDR_WIDTH {12} \
+   CONFIG.C_ADDR_WIDTH {11} \
    CONFIG.C_HAS_ASYNC_CLK {1} \
  ] $v_vid_in_axi4s_2
 

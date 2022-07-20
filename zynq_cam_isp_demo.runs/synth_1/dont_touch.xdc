@@ -87,6 +87,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_2
 # IP: bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xlconcat_0_0 || ORIG_REF_NAME==base_xlconcat_0_0} -quiet] -quiet
 
+# IP: bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_camif_0_0 || ORIG_REF_NAME==base_xil_camif_0_0} -quiet] -quiet
+
 # IP: bd/base/ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_isp_lite_0_0 || ORIG_REF_NAME==base_xil_isp_lite_0_0} -quiet] -quiet
 
@@ -95,9 +98,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vi
 
 # IP: bd/base/ip/base_xil_vip_1_0/base_xil_vip_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vip_1_0 || ORIG_REF_NAME==base_xil_vip_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_camif_0_0 || ORIG_REF_NAME==base_xil_camif_0_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet

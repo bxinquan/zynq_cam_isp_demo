@@ -32,3 +32,16 @@ platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.viti
 platform clean
 platform clean
 platform generate
+platform clean
+platform active {dualcam_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper.xsa}
+platform generate
+platform clean
+platform active {dualcam_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper.xsa}
+bsp reload
+catch {bsp regenerate}
+domain active {zynq_fsbl}
+bsp reload
+catch {bsp regenerate}
+platform generate

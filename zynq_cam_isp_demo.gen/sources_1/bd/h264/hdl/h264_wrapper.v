@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Fri Jul 15 22:02:59 2022
+//Date        : Wed Jul 20 00:44:20 2022
 //Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 //Command     : generate_target h264_wrapper.bd
 //Design      : h264_wrapper

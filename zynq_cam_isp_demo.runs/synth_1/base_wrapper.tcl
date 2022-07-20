@@ -88,7 +88,7 @@ set_property ip_output_repo d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.cac
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/hdl/base_wrapper.v
+read_verilog -library xil_defaultlib d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/hdl/base_wrapper.v
 add_files D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.srcs/sources_1/bd/base/base.bd
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_processing_system7_0_0/base_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0_board.xdc]

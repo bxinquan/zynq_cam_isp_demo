@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1657981623">
+<GenRun Id="impl_1" LaunchPart="xc7z020clg400-2" LaunchTime="1658249349">
   <File Type="ROUTE-PWR" Name="base_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="base_wrapper.tcl"/>
   <File Type="BITSTR-MMI" Name="base_wrapper.mmi"/>
@@ -99,7 +99,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PGENDIR/sources_1/bd/h264/hdl/h264_wrapper.v">
+    <File Path="$PSRCDIR/sources_1/bd/dualcam/dualcam.bd">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -107,7 +107,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/bd/dualcam/dualcam.bd">
+    <File Path="$PGENDIR/sources_1/bd/h264/hdl/h264_wrapper.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -166,6 +166,7 @@
   <BlockFileSet Type="BlockSrcs" Name="base_axi_intc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_axi_smc_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_2_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_axi_vdma_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_clk_wiz_0_0"/>
@@ -175,11 +176,12 @@
   <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_tc_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_tc_2_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="base_xil_camif_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_axi4s_vid_out_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_tc_1_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_v_vid_in_axi4s_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_xil_camif_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_xil_isp_lite_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="base_xil_vip_1_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="base_auto_pc_0"/>
 </GenRun>

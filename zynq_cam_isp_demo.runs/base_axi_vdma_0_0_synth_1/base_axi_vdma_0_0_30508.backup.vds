@@ -1,0 +1,1126 @@
+#-----------------------------------------------------------
+# Vivado v2021.1 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Jul 20 00:47:08 2022
+# Process ID: 30508
+# Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1
+# Command line: vivado.exe -log base_axi_vdma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_vdma_0_0.tcl
+# Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/base_axi_vdma_0_0.vds
+# Journal file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source base_axi_vdma_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top base_axi_vdma_0_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 28548
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1341.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'base_axi_vdma_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/synth/base_axi_vdma_0_0.vhd:131]
+	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 9 - type: integer 
+	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_DLYTMR_RESOLUTION bound to: 125 - type: integer 
+	Parameter C_PRMRY_IS_ACLK_ASYNC bound to: 0 - type: integer 
+	Parameter C_ENABLE_VIDPRMTR_READS bound to: 1 - type: integer 
+	Parameter C_DYNAMIC_RESOLUTION bound to: 1 - type: integer 
+	Parameter C_NUM_FSTORES bound to: 3 - type: integer 
+	Parameter C_USE_FSYNC bound to: 1 - type: integer 
+	Parameter C_USE_MM2S_FSYNC bound to: 0 - type: integer 
+	Parameter C_USE_S2MM_FSYNC bound to: 2 - type: integer 
+	Parameter C_FLUSH_ON_FSYNC bound to: 1 - type: integer 
+	Parameter C_INCLUDE_INTERNAL_GENLOCK bound to: 1 - type: integer 
+	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
+	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
+	Parameter C_MM2S_GENLOCK_MODE bound to: 3 - type: integer 
+	Parameter C_MM2S_GENLOCK_NUM_MASTERS bound to: 1 - type: integer 
+	Parameter C_MM2S_GENLOCK_REPEAT_EN bound to: 0 - type: integer 
+	Parameter C_MM2S_SOF_ENABLE bound to: 1 - type: integer 
+	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S_SF bound to: 0 - type: integer 
+	Parameter C_MM2S_LINEBUFFER_DEPTH bound to: 4096 - type: integer 
+	Parameter C_MM2S_LINEBUFFER_THRESH bound to: 4 - type: integer 
+	Parameter C_MM2S_MAX_BURST_LENGTH bound to: 256 - type: integer 
+	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_M_AXIS_MM2S_TUSER_BITS bound to: 1 - type: integer 
+	Parameter C_INCLUDE_S2MM bound to: 1 - type: integer 
+	Parameter C_S2MM_GENLOCK_MODE bound to: 2 - type: integer 
+	Parameter C_S2MM_GENLOCK_NUM_MASTERS bound to: 1 - type: integer 
+	Parameter C_S2MM_GENLOCK_REPEAT_EN bound to: 1 - type: integer 
+	Parameter C_S2MM_SOF_ENABLE bound to: 1 - type: integer 
+	Parameter C_INCLUDE_S2MM_DRE bound to: 0 - type: integer 
+	Parameter C_INCLUDE_S2MM_SF bound to: 1 - type: integer 
+	Parameter C_S2MM_LINEBUFFER_DEPTH bound to: 4096 - type: integer 
+	Parameter C_S2MM_LINEBUFFER_THRESH bound to: 4 - type: integer 
+	Parameter C_S2MM_MAX_BURST_LENGTH bound to: 256 - type: integer 
+	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
+	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 64 - type: integer 
+	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 8 - type: integer 
+	Parameter C_S_AXIS_S2MM_TUSER_BITS bound to: 1 - type: integer 
+	Parameter C_ENABLE_DEBUG_ALL bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_0 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_1 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_2 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_3 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_4 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_5 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_6 bound to: 1 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_7 bound to: 1 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_8 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_9 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_10 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_11 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_12 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_13 bound to: 0 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_14 bound to: 1 - type: integer 
+	Parameter C_ENABLE_DEBUG_INFO_15 bound to: 1 - type: integer 
+	Parameter C_INSTANCE bound to: axi_vdma - type: string 
+	Parameter C_SELECT_XPM bound to: 0 - type: integer 
+	Parameter C_ENABLE_VERT_FLIP bound to: 0 - type: integer 
+	Parameter C_FAMILY bound to: zynq - type: string 
+INFO: [Synth 8-3491] module 'axi_vdma' declared at 'd:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:69488' bound to instance 'U0' of component 'axi_vdma' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/synth/base_axi_vdma_0_0.vhd:400]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:69927]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_rst_module' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:16461]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reset' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:14866]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_P_IN_cdc_from' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:219]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_P_IN2_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:232]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:269]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:279]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:289]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:299]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:309]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d7' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:320]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_scndry_out' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:330]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d1' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:339]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:347]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:355]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:364]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:374]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:383]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d7' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:392]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_PLEVEL_IN_cdc_from' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:491]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized0' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reset' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:14866]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_rst_module' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:16461]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_if' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39917]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_lite_if' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:16956]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_P_IN_cdc_from' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:219]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_P_IN2_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:232]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:269]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:279]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:289]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:299]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:309]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_s_out_d7' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:320]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'P_IN_CROSS2SCNDRY_scndry_out' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:330]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d1' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:339]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:347]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:355]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:364]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:374]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:383]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 's_rst_d7' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:392]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized1' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_lite_if' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:16956]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'REG_PLEVEL_IN_cdc_from' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:491]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized2' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_if' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39917]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_intrpt' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:40643]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_intrpt' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:40643]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39071]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_register' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:18717]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_register' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:18717]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_regdirect' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:20533]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_regdirect' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:20533]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:29596]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_mux' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:29596]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_module' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39071]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mngr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:64248]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sm' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:61909]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sm' (11#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:61909]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_cmdsts_if' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63125]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_cmdsts_if' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63125]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sts_mngr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63632]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sts_mngr' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63632]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vidreg_module' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:56087]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vregister' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53973]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vregister' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53973]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vaddrreg_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:55564]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vaddrreg_mux' (15#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:55564]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vidreg_module' (16#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:56087]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mngr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58630]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:57368]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_genlock_mux' (17#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:57368]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_greycoder' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58343]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_greycoder' (18#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58343]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_greycoder__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58343]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_greycoder__parameterized0' (18#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58343]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_genlock_mngr' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58630]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mngr' (20#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:64248]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_fsync_gen' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53102]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_fsync_gen' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53102]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_vid_cdc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:13253]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_vid_cdc' (22#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:13253]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sof_gen' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:41253]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sof_gen' (23#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:41253]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mm2s_linebuf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:46414]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sfifo' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42057]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 4096 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 10 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1717 - type: string 
+	Parameter READ_DATA_WIDTH bound to: 10 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42264]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (24#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_reg_bit' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_reg_bit' (25#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1906]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (26#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_rst' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_rst' (27#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1618]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (27#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized1' (27#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized2' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized2' (27#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (28#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (29#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sfifo' (30#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42057]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_skid_buf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:41500]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_skid_buf' (31#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:41500]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mm2s_linebuf' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:46414]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_module__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39071]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_register__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:18717]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_register__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:18717]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_regdirect__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:20533]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_regdirect__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:20533]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_reg_mux__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:29596]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_mux__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:29596]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_reg_module__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:39071]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_mngr__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:64248]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sm__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:61909]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sm__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:61909]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_cmdsts_if__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63125]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_cmdsts_if__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:63125]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_genlock_mngr__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58630]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_genlock_mngr__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:58630]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_mngr__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:64248]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_fsync_gen__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53102]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_fsync_gen__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:53102]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_s2mm_linebuf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:49284]
+INFO: [Synth 8-638] synthesizing module 'axi_vdma_sfifo__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42057]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 4096 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 0 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1717 - type: string 
+	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 13 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42264]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized0' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (32#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (32#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (32#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_sfifo__parameterized0' (32#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:42057]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma_s2mm_linebuf' (33#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:49284]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (34#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (35#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (36#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (37#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (38#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (40#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (41#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (42#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (42#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (44#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (46#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (46#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (46#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (46#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (46#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 67 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 67 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized3' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized4' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized6' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized6' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized3' (46#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (47#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (48#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (49#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized4' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized4' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized4' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status__parameterized0' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (50#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (51#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (52#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized7' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized7' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized7' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized7' (52#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized7' (52#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized7' (52#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (52#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (53#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (54#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized1' (54#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized8' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized8' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized8' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized8' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized8' (55#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (56#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (57#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 14 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 14 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized5' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized2' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized7' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized7' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized8' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized8' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:490]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized9' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized9' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized10' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized10' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1858]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized2' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized5' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized0' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 66 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 66 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at 'C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized7' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized3' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1206]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1273]
+INFO: [Synth 8-226] default block is never used [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1295]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized3' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized7' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1951]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized1' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/a5cb/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized1' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set__parameterized0' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (59#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized9' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized9' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized9' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized9' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized9' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized9' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized9' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized9' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (61#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_demux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_demux' (62#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:14117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (63#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (64#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (65#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/1e21/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
+INFO: [Synth 8-256] done synthesizing module 'axi_vdma' (66#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/66f2/hdl/axi_vdma_v6_3_rfs.vhd:69927]
+INFO: [Synth 8-256] done synthesizing module 'base_axi_vdma_0_0' (67#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/synth/base_axi_vdma_0_0.vhd:131]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:22 ; elapsed = 00:00:27 . Memory (MB): peak = 1341.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1341.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:28 . Memory (MB): peak = 1341.695 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.485 . Memory (MB): peak = 1341.695 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 258 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_axi_vdma_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/base_axi_vdma_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_vdma_0_0/base_axi_vdma_0_0_clocks.xdc] for cell 'U0'
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_axi_vdma_0_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/base_axi_vdma_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 5 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1404.277 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 258 instances were transformed.
+  FDR => FDRE: 258 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.214 . Memory (MB): peak = 1405.453 ; gain = 1.176
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I /\GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO /xpm_fifo_sync_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/\GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I /\GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO /xpm_fifo_sync_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /\GEN_INCLUDE_MM2S_SF.I_RD_SF /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:37 ; elapsed = 00:00:43 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'dmacntrl_cs_reg' in module 'axi_vdma_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
+INFO: [Synth 8-802] inferred FSM for state register 'dmacntrl_cs_reg' in module 'axi_vdma_sm__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized1'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_psm_state_reg' in module 'axi_datamover_ibttcc'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_csm_state_reg' in module 'axi_datamover_ibttcc'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_cmdcntl_sm_state_reg' in module 'axi_datamover_s2mm_realign'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized2'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized3'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+              wait_pipe1 |                              001 |                              001
+              wait_pipe2 |                              010 |                              010
+            execute_xfer |                              011 |                              100
+              check_done |                              100 |                              101
+           calc_cmd_addr |                              101 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dmacntrl_cs_reg' using encoding 'sequential' in module 'axi_vdma_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                              000 |                              000
+              wait_pipe1 |                              001 |                              001
+              wait_pipe2 |                              010 |                              010
+            execute_xfer |                              011 |                              100
+              check_done |                              100 |                              101
+           calc_cmd_addr |                              101 |                              011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'dmacntrl_cs_reg' using encoding 'sequential' in module 'axi_vdma_sm__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized1'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 ch_init |                          0000001 |                              000
+           wait_for_pcmd |                          0000010 |                              001
+          ch_error_trap1 |                          0000100 |                              101
+          ch_error_trap2 |                          0001000 |                              110
+      ch_wait_for_sf_cmd |                          0010000 |                              010
+         ch_ld_child_cmd |                          0100000 |                              011
+          ch_chk_if_done |                          1000000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_csm_state_reg' using encoding 'one-hot' in module 'axi_datamover_ibttcc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  p_init |                              000 |                              000
+          p_wait_for_cmd |                              001 |                              001
+          p_ld_first_cmd |                              010 |                              010
+          p_ld_child_cmd |                              011 |                              011
+            p_error_trap |                              100 |                              111
+           p_ld_last_cmd |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_psm_state_reg' using encoding 'sequential' in module 'axi_datamover_ibttcc'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                              000 |                              000
+    ld_dre_scatter_first |                              001 |                              001
+           chk_pop_first |                              010 |                              010
+   ld_dre_scatter_second |                              011 |                              011
+              error_trap |                              100 |                              101
+          chk_pop_second |                              101 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_cmdcntl_sm_state_reg' using encoding 'sequential' in module 'axi_datamover_s2mm_realign'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized2'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized3'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:45 ; elapsed = 00:00:52 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   16 Bit       Adders := 3     
+	   3 Input   16 Bit       Adders := 1     
+	   4 Input   13 Bit       Adders := 8     
+	   2 Input   13 Bit       Adders := 5     
+	   4 Input   12 Bit       Adders := 14    
+	   3 Input   12 Bit       Adders := 2     
+	   2 Input   12 Bit       Adders := 8     
+	   2 Input   11 Bit       Adders := 1     
+	   4 Input   11 Bit       Adders := 10    
+	   3 Input   11 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 9     
+	   2 Input    7 Bit       Adders := 2     
+	   3 Input    5 Bit       Adders := 5     
+	   2 Input    5 Bit       Adders := 9     
+	   4 Input    5 Bit       Adders := 4     
+	   2 Input    4 Bit       Adders := 12    
+	   3 Input    4 Bit       Adders := 5     
+	   4 Input    4 Bit       Adders := 5     
+	   3 Input    3 Bit       Adders := 10    
+	   2 Input    3 Bit       Adders := 7     
+	   4 Input    2 Bit       Adders := 5     
++---XORs : 
+	   2 Input      1 Bit         XORs := 40    
++---Registers : 
+	               72 Bit    Registers := 6     
+	               67 Bit    Registers := 2     
+	               66 Bit    Registers := 2     
+	               64 Bit    Registers := 2     
+	               32 Bit    Registers := 29    
+	               16 Bit    Registers := 24    
+	               14 Bit    Registers := 2     
+	               13 Bit    Registers := 18    
+	               12 Bit    Registers := 19    
+	               11 Bit    Registers := 12    
+	               10 Bit    Registers := 2     
+	                9 Bit    Registers := 7     
+	                8 Bit    Registers := 32    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 12    
+	                5 Bit    Registers := 43    
+	                4 Bit    Registers := 47    
+	                3 Bit    Registers := 27    
+	                2 Bit    Registers := 21    
+	                1 Bit    Registers := 653   
++---RAMs : 
+	             134K Bit	(2048 X 67 bit)          RAMs := 1     
+	             132K Bit	(2048 X 66 bit)          RAMs := 1     
+	              40K Bit	(4096 X 10 bit)          RAMs := 1     
+	              36K Bit	(4096 X 9 bit)          RAMs := 1     
+	              224 Bit	(16 X 14 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   72 Bit        Muxes := 5     
+	   2 Input   64 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 8     
+	  11 Input   32 Bit        Muxes := 1     
+	   3 Input   32 Bit        Muxes := 2     
+	  13 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 11    
+	   4 Input   16 Bit        Muxes := 2     
+	   3 Input   16 Bit        Muxes := 1     
+	   2 Input   13 Bit        Muxes := 6     
+	   2 Input   12 Bit        Muxes := 7     
+	   3 Input   12 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 39    
+	   8 Input    8 Bit        Muxes := 7     
+	   7 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 6     
+	   3 Input    6 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 2     
+	   5 Input    5 Bit        Muxes := 2     
+	   2 Input    5 Bit        Muxes := 15    
+	   2 Input    4 Bit        Muxes := 5     
+	  13 Input    4 Bit        Muxes := 1     
+	   3 Input    4 Bit        Muxes := 1     
+	   9 Input    4 Bit        Muxes := 1     
+	   6 Input    3 Bit        Muxes := 4     
+	   2 Input    3 Bit        Muxes := 30    
+	   2 Input    2 Bit        Muxes := 172   
+	   5 Input    2 Bit        Muxes := 2     
+	   4 Input    2 Bit        Muxes := 35    
+	   2 Input    1 Bit        Muxes := 383   
+	  11 Input    1 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 19    
+	   4 Input    1 Bit        Muxes := 10    
+	  13 Input    1 Bit        Muxes := 1     
+	   8 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 3     
+	   7 Input    1 Bit        Muxes := 3     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 67 bits, new ram width 66 bits.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:06 ; elapsed = 00:01:16 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I /\GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                                            | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 10(READ_FIRST)   | W |   | 4 K x 10(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|U0/\GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I /\GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(READ_FIRST)    | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst          | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 67(NO_CHANGE)    | W |   | 2 K x 67(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 66(NO_CHANGE)    | W |   | 2 K x 66(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 14              | RAM32M x 3  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:15 ; elapsed = 00:01:28 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:20 ; elapsed = 00:01:33 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Block RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/\GEN_SPRT_FOR_MM2S.MM2S_LINEBUFFER_I /\GEN_LINEBUF_NO_SOF.GEN_LINEBUFFER.GEN_SYNC_FIFO.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                                            | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 10(READ_FIRST)   | W |   | 4 K x 10(WRITE_FIRST)  |   | R | Port A and B     | 1      | 1      | 
+|U0/\GEN_SPRT_FOR_S2MM.S2MM_LINEBUFFER_I /\GEN_S2MM_FLUSH_SOF_LOGIC.GEN_LINEBUFFER_FLUSH_SOF.GEN_SYNC_FIFO_FLUSH_SOF.I_LINEBUFFER_FIFO/xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst                  | gen_wr_a.gen_word_narrow.mem_reg | 4 K x 9(READ_FIRST)    | W |   | 4 K x 9(WRITE_FIRST)   |   | R | Port A and B     | 0      | 1      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst          | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 67(NO_CHANGE)    | W |   | 2 K x 67(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 66(NO_CHANGE)    | W |   | 2 K x 66(NO_CHANGE)    |   | R | Port A and B     | 0      | 4      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+
+
+Distributed RAM: Final Mapping Report
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 14              | RAM32M x 3  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:24 ; elapsed = 00:01:37 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:29 ; elapsed = 00:01:43 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:29 ; elapsed = 00:01:43 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:30 ; elapsed = 00:01:44 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:30 ; elapsed = 00:01:44 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:30 ; elapsed = 00:01:44 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:30 ; elapsed = 00:01:44 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name                                                                                                                      | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|axi_vdma    | AXI_LITE_REG_INTERFACE_I/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_LITE_IS_ASYNC.GEN_ASYNC_LITE_ACCESS.prepare_wrce_pulse_lite_d6_reg | 6      | 1     | NO           | NO                 | NO                | 1      | 0       | 
+|axi_vdma    | AXI_LITE_REG_INTERFACE_I/GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_LITE_IS_ASYNC.GEN_ASYNC_LITE_ACCESS.sig_arvalid_arrived_d4_reg     | 3      | 1     | NO           | NO                 | NO                | 1      | 0       | 
++------------+-------------------------------------------------------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+
+Dynamic Shift Register Report:
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name                  | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | INFERRED_GEN.data_reg[3]  | 68     | 68         | 68     | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[3]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[3]  | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__3     | INFERRED_GEN.data_reg[3]  | 38     | 38         | 38     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[3]  | 10     | 10         | 10     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | INFERRED_GEN.data_reg[3]  | 32     | 32         | 32     | 0       | 0      | 0      | 0      | 
+|dsrl__6     | INFERRED_GEN.data_reg[5]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | INFERRED_GEN.data_reg[5]  | 23     | 23         | 23     | 0       | 0      | 0      | 0      | 
+|dsrl__8     | INFERRED_GEN.data_reg[3]  | 29     | 29         | 29     | 0       | 0      | 0      | 0      | 
+|dsrl__9     | INFERRED_GEN.data_reg[15] | 4      | 4          | 4      | 0       | 0      | 0      | 0      | 
+|dsrl__10    | INFERRED_GEN.data_reg[3]  | 36     | 36         | 36     | 0       | 0      | 0      | 0      | 
++------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |   157|
+|2     |LUT1     |   277|
+|3     |LUT2     |   347|
+|4     |LUT3     |   477|
+|5     |LUT4     |   466|
+|6     |LUT5     |   411|
+|7     |LUT6     |   646|
+|8     |MUXF7    |     8|
+|9     |RAM32M   |     2|
+|10    |RAM32X1D |     2|
+|11    |RAMB18E1 |     1|
+|12    |RAMB36E1 |    10|
+|14    |SRL16E   |   278|
+|15    |FDR      |   188|
+|16    |FDRE     |  3080|
+|17    |FDSE     |   128|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:31 ; elapsed = 00:01:44 . Memory (MB): peak = 1405.453 ; gain = 63.758
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:00 ; elapsed = 00:01:37 . Memory (MB): peak = 1405.453 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:01:31 ; elapsed = 00:01:45 . Memory (MB): peak = 1405.453 ; gain = 63.758
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.308 . Memory (MB): peak = 1405.453 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 368 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1405.453 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 192 instances were transformed.
+  FDR => FDRE: 188 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 2 instances
+
+Synth Design complete, checksum: 72c9f355
+INFO: [Common 17-83] Releasing license: Synthesis
+444 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:39 ; elapsed = 00:01:56 . Memory (MB): peak = 1405.453 ; gain = 63.758
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/base_axi_vdma_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_axi_vdma_0_0, cache-ID = 2ab8a040e9624ed2
+INFO: [Coretcl 2-1174] Renamed 210 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_vdma_0_0_synth_1/base_axi_vdma_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file base_axi_vdma_0_0_utilization_synth.rpt -pb base_axi_vdma_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 20 00:49:23 2022...

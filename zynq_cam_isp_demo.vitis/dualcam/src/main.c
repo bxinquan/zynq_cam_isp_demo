@@ -281,18 +281,18 @@ static void init_camif_isp_vip()
 	printf("vip1_reset = %08lX\n", XIL_VIP_mReadReg(VIP1_BASE, VIP_REG_RESET));
 
 	camera_intr_init();
-	XIL_CAMIF_mWriteReg(CAMIF0_BASE, CAMIF_REG_INT_MASK, ~0x1);
-	XIL_CAMIF_mWriteReg(CAMIF1_BASE, CAMIF_REG_INT_MASK, ~0x1);
-	XIL_ISP_LITE_mWriteReg(ISP0_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_DONE);
-	XIL_ISP_LITE_mWriteReg(ISP1_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_DONE);
+	XIL_CAMIF_mWriteReg(CAMIF0_BASE, CAMIF_REG_INT_MASK, ~CAMIF_REG_INT_MASK_BIT_FRAME_DONE);
+	XIL_CAMIF_mWriteReg(CAMIF1_BASE, CAMIF_REG_INT_MASK, ~CAMIF_REG_INT_MASK_BIT_FRAME_DONE);
+	XIL_ISP_LITE_mWriteReg(ISP0_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_START);
+	XIL_ISP_LITE_mWriteReg(ISP1_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_START);
 	XIL_VIP_mWriteReg(VIP0_BASE, VIP_REG_INT_MASK, ~VIP_REG_INT_MASK_BIT_FRAME_DONE);
 	XIL_VIP_mWriteReg(VIP1_BASE, VIP_REG_INT_MASK, ~VIP_REG_INT_MASK_BIT_FRAME_DONE);
 }
 
 
-static int cam_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x1000000; //RAW8
-static int lcd_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x2000000; //RGB888
-static int dvi_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x3000000; //RGB888
+static int cam_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x4000000; //RAW8
+static int lcd_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x5000000; //RGB888
+static int dvi_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x6000000; //RGB888
 
 #if 0
 #include "ff.h"
@@ -423,7 +423,7 @@ static void _set_exposure0(unsigned exposure, void* priv_data)
 }
 static void _set_gain0(unsigned gain, void* priv_data)
 {
-	cmos_set_gain(gain);
+	cmos_set_gain(gain+0x200); //ov5640关闭BLC后,导致其数字增益异常,测试只0x200~0x3ff具有较好的线性度
 }
 static void _set_exposure1(unsigned exposure, void* priv_data)
 {
@@ -431,7 +431,7 @@ static void _set_exposure1(unsigned exposure, void* priv_data)
 }
 static void _set_gain1(unsigned gain, void* priv_data)
 {
-	cmos_set_gain2(gain);
+	cmos_set_gain2(gain+0x200); //ov5640关闭BLC后,导致其数字增益异常,测试只0x200~0x3ff具有较好的线性度
 }
 
 int main()
@@ -459,7 +459,7 @@ int main()
 		xil_printf("OV5640 detected failed!\r\n");
 	xil_printf("cmos size %u x %u\r\n", cmos_h_pixel, cmos_v_pixel);
 	cmos_set_exposure(total_v_std0);
-	cmos_set_gain(0x010);
+	cmos_set_gain(0x200);
 
 	status = ov5640_init2(cmos_h_pixel, cmos_v_pixel, &total_v_std1); //初始化ov5640
 	if(status == 0)
@@ -468,7 +468,7 @@ int main()
 		xil_printf("OV5640 detected failed!\r\n");
 	xil_printf("cmos size %u x %u\r\n", cmos_h_pixel, cmos_v_pixel);
 	cmos_set_exposure2(total_v_std0);
-	cmos_set_gain2(0x010);
+	cmos_set_gain2(0x200);
 
 	isp_context0.base = ISP0_BASE;
 	isp_context0.pfn_set_exposure = _set_exposure0;
@@ -476,7 +476,7 @@ int main()
 	isp_context0.priv_data = NULL;
 	isp_context0.ae_target_luminance = 75<<(ISP_BITS-8);
 	isp_context0.ae_max_exposure = total_v_std0;
-	isp_context0.ae_max_gain = 0x3ff;
+	isp_context0.ae_max_gain = 0x1ff;
 	isp_context0.ae_cur_exposure = total_v_std0;
 	isp_context0.ae_cur_gain = 0x010;
 	isp_context0.ae_cur_isp_dgain = 0x010;
@@ -489,7 +489,7 @@ int main()
 	isp_context1.priv_data = NULL;
 	isp_context1.ae_target_luminance = 75<<(ISP_BITS-8);
 	isp_context1.ae_max_exposure = total_v_std1;
-	isp_context1.ae_max_gain = 0x3ff;
+	isp_context1.ae_max_gain = 0x1ff;
 	isp_context1.ae_cur_exposure = total_v_std1;
 	isp_context1.ae_cur_gain = 0x010;
 	isp_context1.ae_cur_isp_dgain = 0x010;
@@ -519,11 +519,11 @@ int main()
 			{
 				XTime_GetTime(&now_time);
 			}
-			if (curr_isp0_int != isp0_frame_int && isp0_frame_int % 2 == 0) {
+			if (curr_isp0_int != isp0_frame_int /*&& isp0_frame_int % 2 == 0*/) {
 				isp_ae_handler(&isp_context0);
 				isp_awb_handler(&isp_context0);
 			}
-			if (curr_isp1_int != isp1_frame_int && isp1_frame_int % 2 == 0) {
+			if (curr_isp1_int != isp1_frame_int /*&& isp1_frame_int % 2 == 0*/) {
 				isp_ae_handler(&isp_context1);
 				isp_awb_handler(&isp_context1);
 			}

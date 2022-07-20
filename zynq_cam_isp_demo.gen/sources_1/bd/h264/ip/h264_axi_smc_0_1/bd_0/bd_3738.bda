@@ -21,22 +21,22 @@
   <key attr.name="vert_type" attr.type="string" for="node" id="VT"/>
   <graph edgedefault="undirected" id="G" parse.edgeids="canonical" parse.nodeids="canonical" parse.order="nodesfirst">
     <node id="n0">
-      <data key="TU">active</data>
-      <data key="VH">2</data>
-      <data key="VT">PM</data>
-    </node>
-    <node id="n1">
       <data key="VM">bd_3738</data>
       <data key="VT">BC</data>
     </node>
-    <node id="n2">
+    <node id="n1">
       <data key="VH">2</data>
       <data key="VM">bd_3738</data>
       <data key="VT">VR</data>
     </node>
-    <edge id="e0" source="n1" target="n2">
+    <node id="n2">
+      <data key="TU">active</data>
+      <data key="VH">2</data>
+      <data key="VT">PM</data>
+    </node>
+    <edge id="e0" source="n0" target="n1">
     </edge>
-    <edge id="e1" source="n2" target="n0">
+    <edge id="e1" source="n1" target="n2">
     </edge>
   </graph>
 </graphml>

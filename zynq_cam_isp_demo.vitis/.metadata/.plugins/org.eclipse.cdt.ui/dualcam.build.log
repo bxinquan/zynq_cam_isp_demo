@@ -1,63 +1,10 @@
-22:01:22 **** Incremental Build of configuration Debug for project dualcam ****
+01:52:38 **** Incremental Build of configuration Debug for project dualcam ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/sw/dualcam_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function '_set_exposure1':
-../src/main.c:430:2: warning: implicit declaration of function 'cmos_set_exposure2'; did you mean 'cmos_set_exposure'? [-Wimplicit-function-declaration]
-  430 |  cmos_set_exposure2(exposure);
-      |  ^~~~~~~~~~~~~~~~~~
-      |  cmos_set_exposure
-../src/main.c: In function '_set_gain1':
-../src/main.c:434:2: warning: implicit declaration of function 'cmos_set_gain2'; did you mean 'cmos_set_gain'? [-Wimplicit-function-declaration]
-  434 |  cmos_set_gain2(gain);
-      |  ^~~~~~~~~~~~~~
-      |  cmos_set_gain
-../src/main.c: In function 'main':
-../src/main.c:464:11: warning: implicit declaration of function 'ov5640_init2'; did you mean 'ov5640_init'? [-Wimplicit-function-declaration]
-  464 |  status = ov5640_init2(cmos_h_pixel, cmos_v_pixel, &total_v_std1); //初始化ov5640
-      |           ^~~~~~~~~~~~
-      |           ov5640_init
-../src/main.c: In function 'vip_init_osd':
-../src/main.c:654:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-  654 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-      |                                         ~~~^
-      |                                            |
-      |                                            unsigned int
-      |                                         %08lX
-../src/main.c:654:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-  654 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-      |                                              ~~~^
-      |                                                 |
-      |                                                 unsigned int
-      |                                              %08lX
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/ov5640_init.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/sw/dualcam_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
-'Finished building: ../src/ov5640_init.c'
-' '
-'Building file: ../src/ov5640_init2.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init2.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/sw/dualcam_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ov5640_init2.d" -MT"src/ov5640_init2.o" -o "src/ov5640_init2.o" "../src/ov5640_init2.c"
-'Finished building: ../src/ov5640_init2.c'
-' '
-'Building target: dualcam.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/sw/dualcam_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "dualcam.elf"  ./src/main.o ./src/ov5640_init.o ./src/ov5640_init2.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: dualcam.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size dualcam.elf  |tee "dualcam.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 107731	   3812	  23872	 135415	  210f7	dualcam.elf
-'Finished building: dualcam.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.
 
-22:01:23 Build Finished (took 1s.120ms)
+01:52:38 Build Finished (took 307ms)
 

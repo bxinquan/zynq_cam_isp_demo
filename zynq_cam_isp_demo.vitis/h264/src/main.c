@@ -301,16 +301,16 @@ static void init_camif_isp_vip()
 	printf("vip_reset = %08lX\n", XIL_VIP_mReadReg(VIP_ENC_BASE, VIP_REG_RESET));
 
 	camera_intr_init();
-	XIL_CAMIF_mWriteReg(CAMIF_BASE, CAMIF_REG_INT_MASK, ~0x1);
-	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_DONE);
+	XIL_CAMIF_mWriteReg(CAMIF_BASE, CAMIF_REG_INT_MASK, ~CAMIF_REG_INT_MASK_BIT_FRAME_DONE);
+	XIL_ISP_LITE_mWriteReg(ISP_BASE, ISP_REG_INT_MASK, ~ISP_REG_INT_MASK_BIT_FRAME_START);
 	XIL_VIP_mWriteReg(VIP_DVI_BASE, VIP_REG_INT_MASK, ~VIP_REG_INT_MASK_BIT_FRAME_DONE);
 	XIL_VIP_mWriteReg(VIP_ENC_BASE, VIP_REG_INT_MASK, ~VIP_REG_INT_MASK_BIT_FRAME_DONE);
 }
 
 
-static int dvi_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x2000000; //RGB888
-static int enc_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x3000000; //NV12
-static int avc_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x4000000; //264
+static int dvi_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x4000000; //RGB888
+static int enc_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x5000000; //NV12
+static int avc_buff = XPAR_PS7_DDR_0_S_AXI_BASEADDR+0x6000000; //264
 
 #include "ff.h"
 
@@ -525,13 +525,13 @@ static void _set_exposure(unsigned exposure, void* priv_data)
 }
 static void _set_gain(unsigned gain, void* priv_data)
 {
-	cmos_set_gain(gain);
+	cmos_set_gain(gain+0x200); //ov5640关闭BLC后,导致其数字增益异常,测试只0x200~0x3ff具有较好的线性度
 }
 
 int main()
 {
 	XAxiVdma dvi_vdma_inst;
-	XAxiVdma enc_vdma_inst;
+	//XAxiVdma enc_vdma_inst;
 	IspContext isp_context = {0};
 
 	sys_intr_init();
@@ -552,7 +552,7 @@ int main()
 
 	xil_printf("cmos size %u x %u\r\n", cmos_h_pixel, cmos_v_pixel);
 	cmos_set_exposure(total_v_std);
-	cmos_set_gain(0x010);
+	cmos_set_gain(0x200);
 
 	isp_context.base = ISP_BASE;
 	isp_context.pfn_set_exposure = _set_exposure;
@@ -560,7 +560,7 @@ int main()
 	isp_context.priv_data = NULL;
 	isp_context.ae_target_luminance = 75;
 	isp_context.ae_max_exposure = total_v_std;
-	isp_context.ae_max_gain = 0x3ff;
+	isp_context.ae_max_gain = 0x1ff;
 	isp_context.ae_cur_exposure = total_v_std;
 	isp_context.ae_cur_gain = 0x010;
 	isp_context.ae_cur_isp_dgain = 0x010;
@@ -596,10 +596,10 @@ int main()
 	unsigned curr_isp_int = isp_frame_int;
 	while(1) {
 		if (curr_isp_int != isp_frame_int) {
-			if (isp_frame_int % 2 == 0) {
+			//if (isp_frame_int % 2 == 0) {
 				isp_ae_handler(&isp_context);
 				isp_awb_handler(&isp_context);
-			}
+			//}
 			curr_isp_int = isp_frame_int;
 		}
 

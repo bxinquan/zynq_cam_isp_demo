@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:xil_vip:1.0
-// IP Revision: 31
+// IP Revision: 39
 
 `timescale 1ns/1ps
 

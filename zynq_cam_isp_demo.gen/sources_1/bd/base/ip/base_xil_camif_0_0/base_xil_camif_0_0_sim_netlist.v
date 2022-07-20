@@ -1,10 +1,10 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Fri Jul 15 22:35:24 2022
+// Date        : Wed Jul 20 00:49:34 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top base_xil_camif_0_0 -prefix
+//               base_xil_camif_0_0_ base_xil_camif_0_0_sim_netlist.v
 // Design      : base_xil_camif_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -137,11 +137,10 @@ module base_xil_camif_0_0
         .s00_axi_rdata(s00_axi_rdata),
         .s00_axi_rready(s00_axi_rready),
         .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata[0]),
+        .s00_axi_wdata(s00_axi_wdata[1:0]),
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "dvp_raw_timing_colorbar" *) 
 module base_xil_camif_0_0_dvp_raw_timing_colorbar
    (dvp_vsync_reg_0,
     dvp_href_reg_0,
@@ -1151,7 +1150,6 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .Q(raw_data));
 endmodule
 
-(* ORIG_REF_NAME = "xil_camif_v1_0" *) 
 module base_xil_camif_0_0_xil_camif_v1_0
    (cam_pclk_0,
     out_href,
@@ -1202,7 +1200,7 @@ module base_xil_camif_0_0_xil_camif_v1_0
   input cam_href;
   input [7:0]cam_data;
   input s00_axi_aresetn;
-  input [0:0]s00_axi_wdata;
+  input [1:0]s00_axi_wdata;
   input s00_axi_bready;
   input s00_axi_rready;
 
@@ -1230,7 +1228,7 @@ module base_xil_camif_0_0_xil_camif_v1_0
   wire [31:0]s00_axi_rdata;
   wire s00_axi_rready;
   wire s00_axi_rvalid;
-  wire [0:0]s00_axi_wdata;
+  wire [1:0]s00_axi_wdata;
   wire s00_axi_wvalid;
 
   base_xil_camif_0_0_xil_camif_v1_0_S00_AXI xil_camif_v1_0_S00_AXI_inst
@@ -1262,7 +1260,6 @@ module base_xil_camif_0_0_xil_camif_v1_0
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
-(* ORIG_REF_NAME = "xil_camif_v1_0_S00_AXI" *) 
 module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
    (CLK,
     out_href,
@@ -1313,7 +1310,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   input cam_href;
   input [7:0]cam_data;
   input s00_axi_aresetn;
-  input [0:0]s00_axi_wdata;
+  input [1:0]s00_axi_wdata;
   input s00_axi_bready;
   input s00_axi_rready;
 
@@ -1345,7 +1342,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire \axi_rdata[17]_i_1_n_0 ;
   wire \axi_rdata[18]_i_1_n_0 ;
   wire \axi_rdata[19]_i_1_n_0 ;
-  wire \axi_rdata[1]_i_1_n_0 ;
+  wire \axi_rdata[1]_i_2_n_0 ;
   wire \axi_rdata[20]_i_1_n_0 ;
   wire \axi_rdata[21]_i_1_n_0 ;
   wire \axi_rdata[22]_i_1_n_0 ;
@@ -1453,11 +1450,11 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire [15:0]dvp_height;
   wire [15:0]dvp_width;
   wire dvp_width0;
-  wire int_frame_done0;
   wire int_frame_done_i_1_n_0;
-  wire int_frame_done_reg_n_0;
+  wire int_frame_start;
+  wire int_frame_start_i_1_n_0;
   wire int_mask_frame_done_i_1_n_0;
-  wire int_mask_frame_done_reg_n_0;
+  wire int_mask_frame_start_i_1_n_0;
   wire irq;
   wire \line_cnt[0]_i_1__0_n_0 ;
   wire \line_cnt[0]_i_3__0_n_0 ;
@@ -1514,7 +1511,10 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire out_href;
   wire [7:0]out_raw;
   wire out_vsync;
+  wire out_vsync_prev;
   wire [2:0]p_0_in_0;
+  wire [1:0]p_1_in;
+  wire [1:0]p_2_in;
   wire \pix_cnt[0]_i_2__0_n_0 ;
   wire \pix_cnt[0]_i_3__0_n_0 ;
   wire \pix_cnt[0]_i_4__0_n_0 ;
@@ -1566,8 +1566,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire \pix_cnt_reg[8]_i_1_n_7 ;
   wire prev_href;
   wire prev_vsync;
-  wire prev_vsync_onclk;
-  wire [0:0]reg_data_out;
+  wire [1:0]reg_data_out;
   wire s00_axi_aclk;
   wire [2:0]s00_axi_araddr;
   wire s00_axi_aresetn;
@@ -1579,7 +1578,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire [31:0]s00_axi_rdata;
   wire s00_axi_rready;
   wire s00_axi_rvalid;
-  wire [0:0]s00_axi_wdata;
+  wire [1:0]s00_axi_wdata;
   wire s00_axi_wvalid;
   wire [2:0]sel0;
   wire slv_reg_rden__0;
@@ -1620,7 +1619,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I2(S_AXI_ARREADY),
         .I3(sel0[1]),
         .O(\axi_araddr[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[4]_i_1 
@@ -1647,7 +1646,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .D(\axi_araddr[4]_i_1_n_0 ),
         .Q(sel0[2]),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -1713,7 +1712,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
     axi_awready_i_1
        (.I0(s00_axi_aresetn),
         .O(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_awready_i_2
@@ -1757,9 +1756,9 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   LUT5 #(
     .INIT(32'h30BB3088)) 
     \axi_rdata[0]_i_3 
-       (.I0(int_mask_frame_done_reg_n_0),
+       (.I0(p_1_in[0]),
         .I1(sel0[1]),
-        .I2(int_frame_done_reg_n_0),
+        .I2(p_2_in[0]),
         .I3(sel0[0]),
         .I4(colorbar_en_reg_n_0),
         .O(\axi_rdata[0]_i_3_n_0 ));
@@ -1860,15 +1859,24 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I3(sel0[2]),
         .O(\axi_rdata[19]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000F8C83808)) 
+    .INIT(64'h3808FFFF38080000)) 
     \axi_rdata[1]_i_1 
-       (.I0(dvp_width[1]),
-        .I1(sel0[0]),
+       (.I0(p_1_in[1]),
+        .I1(sel0[1]),
+        .I2(sel0[0]),
+        .I3(p_2_in[1]),
+        .I4(sel0[2]),
+        .I5(\axi_rdata[1]_i_2_n_0 ),
+        .O(reg_data_out[1]));
+  LUT5 #(
+    .INIT(32'hAFC0A0C0)) 
+    \axi_rdata[1]_i_2 
+       (.I0(dvp_frame_cnt_reg[1]),
+        .I1(dvp_height[1]),
         .I2(sel0[1]),
-        .I3(dvp_height[1]),
-        .I4(dvp_frame_cnt_reg[1]),
-        .I5(sel0[2]),
-        .O(\axi_rdata[1]_i_1_n_0 ));
+        .I3(sel0[0]),
+        .I4(dvp_width[1]),
+        .O(\axi_rdata[1]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'h0080)) 
@@ -2060,13 +2068,13 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   FDRE \axi_rdata_reg[0] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden__0),
-        .D(reg_data_out),
+        .D(reg_data_out[0]),
         .Q(s00_axi_rdata[0]),
         .R(axi_awready_i_1_n_0));
   MUXF7 \axi_rdata_reg[0]_i_1 
        (.I0(\axi_rdata[0]_i_2_n_0 ),
         .I1(\axi_rdata[0]_i_3_n_0 ),
-        .O(reg_data_out),
+        .O(reg_data_out[0]),
         .S(sel0[2]));
   FDRE \axi_rdata_reg[10] 
        (.C(s00_axi_aclk),
@@ -2131,7 +2139,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   FDRE \axi_rdata_reg[1] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden__0),
-        .D(\axi_rdata[1]_i_1_n_0 ),
+        .D(reg_data_out[1]),
         .Q(s00_axi_rdata[1]),
         .R(axi_awready_i_1_n_0));
   FDRE \axi_rdata_reg[20] 
@@ -2268,7 +2276,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
         .R(axi_awready_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_wready_i_1
@@ -2286,7 +2294,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hFEFFFFFF02000000)) 
     colorbar_en_i_1
-       (.I0(s00_axi_wdata),
+       (.I0(s00_axi_wdata[0]),
         .I1(p_0_in_0[1]),
         .I2(p_0_in_0[0]),
         .I3(p_0_in_0[2]),
@@ -2768,57 +2776,83 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .CLR(module_reset),
         .D(pix_cnt_reg[9]),
         .Q(dvp_width[9]));
-  LUT6 #(
-    .INIT(64'hFFFFDFFFFFFF0000)) 
-    int_frame_done_i_1
-       (.I0(slv_reg_wren__2),
-        .I1(p_0_in_0[1]),
-        .I2(p_0_in_0[0]),
-        .I3(p_0_in_0[2]),
-        .I4(int_frame_done0),
-        .I5(int_frame_done_reg_n_0),
-        .O(int_frame_done_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
-    .INIT(16'h8000)) 
-    int_frame_done_i_2
-       (.I0(s00_axi_awvalid),
-        .I1(S_AXI_WREADY),
-        .I2(S_AXI_AWREADY),
-        .I3(s00_axi_wvalid),
-        .O(slv_reg_wren__2));
-  LUT2 #(
-    .INIT(4'h2)) 
-    int_frame_done_i_3
-       (.I0(out_vsync),
-        .I1(prev_vsync_onclk),
-        .O(int_frame_done0));
+    .INIT(16'h7530)) 
+    int_frame_done_i_1
+       (.I0(int_frame_start),
+        .I1(out_vsync_prev),
+        .I2(out_vsync),
+        .I3(p_2_in[1]),
+        .O(int_frame_done_i_1_n_0));
   FDRE int_frame_done_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(int_frame_done_i_1_n_0),
-        .Q(int_frame_done_reg_n_0),
+        .Q(p_2_in[1]),
+        .R(axi_awready_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  LUT4 #(
+    .INIT(16'h7530)) 
+    int_frame_start_i_1
+       (.I0(int_frame_start),
+        .I1(out_vsync),
+        .I2(out_vsync_prev),
+        .I3(p_2_in[0]),
+        .O(int_frame_start_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h0800)) 
+    int_frame_start_i_2
+       (.I0(p_0_in_0[2]),
+        .I1(p_0_in_0[0]),
+        .I2(p_0_in_0[1]),
+        .I3(slv_reg_wren__2),
+        .O(int_frame_start));
+  FDRE int_frame_start_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(int_frame_start_i_1_n_0),
+        .Q(p_2_in[0]),
         .R(axi_awready_i_1_n_0));
   LUT6 #(
     .INIT(64'hFFBFFFFF00800000)) 
     int_mask_frame_done_i_1
-       (.I0(s00_axi_wdata),
+       (.I0(s00_axi_wdata[1]),
         .I1(p_0_in_0[1]),
         .I2(p_0_in_0[2]),
         .I3(p_0_in_0[0]),
         .I4(slv_reg_wren__2),
-        .I5(int_mask_frame_done_reg_n_0),
+        .I5(p_1_in[1]),
         .O(int_mask_frame_done_i_1_n_0));
   FDSE int_mask_frame_done_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(int_mask_frame_done_i_1_n_0),
-        .Q(int_mask_frame_done_reg_n_0),
+        .Q(p_1_in[1]),
         .S(axi_awready_i_1_n_0));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT6 #(
+    .INIT(64'hFFBFFFFF00800000)) 
+    int_mask_frame_start_i_1
+       (.I0(s00_axi_wdata[0]),
+        .I1(p_0_in_0[1]),
+        .I2(p_0_in_0[2]),
+        .I3(p_0_in_0[0]),
+        .I4(slv_reg_wren__2),
+        .I5(p_1_in[0]),
+        .O(int_mask_frame_start_i_1_n_0));
+  FDSE int_mask_frame_start_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(int_mask_frame_start_i_1_n_0),
+        .Q(p_1_in[0]),
+        .S(axi_awready_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h4F44)) 
     irq_INST_0
-       (.I0(int_frame_done_reg_n_0),
-        .I1(int_mask_frame_done_reg_n_0),
+       (.I0(p_1_in[0]),
+        .I1(p_2_in[0]),
+        .I2(p_1_in[1]),
+        .I3(p_2_in[1]),
         .O(irq));
   LUT4 #(
     .INIT(16'h4F44)) 
@@ -3078,13 +3112,21 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   LUT6 #(
     .INIT(64'hFFFEFFFF00020000)) 
     module_reset_i_1
-       (.I0(s00_axi_wdata),
+       (.I0(s00_axi_wdata[0]),
         .I1(p_0_in_0[2]),
         .I2(p_0_in_0[0]),
         .I3(p_0_in_0[1]),
         .I4(slv_reg_wren__2),
         .I5(module_reset),
         .O(module_reset_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h8000)) 
+    module_reset_i_2
+       (.I0(s00_axi_awvalid),
+        .I1(S_AXI_WREADY),
+        .I2(S_AXI_AWREADY),
+        .I3(s00_axi_wvalid),
+        .O(slv_reg_wren__2));
   FDSE module_reset_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
@@ -3153,6 +3195,12 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_2),
         .Q(out_raw[7]));
+  FDRE out_vsync_prev_reg
+       (.C(s00_axi_aclk),
+        .CE(1'b1),
+        .D(out_vsync),
+        .Q(out_vsync_prev),
+        .R(1'b0));
   FDCE out_vsync_reg
        (.C(CLK),
         .CE(1'b1),
@@ -3411,12 +3459,6 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .CE(1'b1),
         .D(out_href),
         .Q(prev_href),
-        .R(1'b0));
-  FDRE prev_vsync_onclk_reg
-       (.C(s00_axi_aclk),
-        .CE(1'b1),
-        .D(out_vsync),
-        .Q(prev_vsync_onclk),
         .R(1'b0));
   FDRE prev_vsync_reg
        (.C(CLK),

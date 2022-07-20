@@ -15,6 +15,12 @@
 #define CAMIF_REG_INT_STATUS           (5 * 4)    
 #define CAMIF_REG_INT_MASK             (6 * 4)    
 
+#define CAMIF_REG_INT_STATUS_BIT_FRAME_START   (1<<0)
+#define CAMIF_REG_INT_STATUS_BIT_FRAME_DONE    (1<<1)
+
+#define CAMIF_REG_INT_MASK_BIT_FRAME_START     (1<<0)
+#define CAMIF_REG_INT_MASK_BIT_FRAME_DONE      (1<<1)
+
 
 
 /**************************** Type Definitions *****************************/

@@ -1,10 +1,10 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Fri Jul 15 22:35:24 2022
+-- Date        : Wed Jul 20 00:49:34 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top base_xil_camif_0_0 -prefix
+--               base_xil_camif_0_0_ base_xil_camif_0_0_sim_netlist.vhdl
 -- Design      : base_xil_camif_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -26,8 +26,6 @@ entity base_xil_camif_0_0_dvp_raw_timing_colorbar is
     cam_href : in STD_LOGIC;
     cam_data : in STD_LOGIC_VECTOR ( 7 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_camif_0_0_dvp_raw_timing_colorbar : entity is "dvp_raw_timing_colorbar";
 end base_xil_camif_0_0_dvp_raw_timing_colorbar;
 
 architecture STRUCTURE of base_xil_camif_0_0_dvp_raw_timing_colorbar is
@@ -1352,12 +1350,10 @@ entity base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
     cam_href : in STD_LOGIC;
     cam_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI : entity is "xil_camif_v1_0_S00_AXI";
 end base_xil_camif_0_0_xil_camif_v1_0_S00_AXI;
 
 architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
@@ -1389,7 +1385,7 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal \axi_rdata[17]_i_1_n_0\ : STD_LOGIC;
   signal \axi_rdata[18]_i_1_n_0\ : STD_LOGIC;
   signal \axi_rdata[19]_i_1_n_0\ : STD_LOGIC;
-  signal \axi_rdata[1]_i_1_n_0\ : STD_LOGIC;
+  signal \axi_rdata[1]_i_2_n_0\ : STD_LOGIC;
   signal \axi_rdata[20]_i_1_n_0\ : STD_LOGIC;
   signal \axi_rdata[21]_i_1_n_0\ : STD_LOGIC;
   signal \axi_rdata[22]_i_1_n_0\ : STD_LOGIC;
@@ -1492,11 +1488,11 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal dvp_height : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal dvp_width : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal dvp_width0 : STD_LOGIC;
-  signal int_frame_done0 : STD_LOGIC;
   signal int_frame_done_i_1_n_0 : STD_LOGIC;
-  signal int_frame_done_reg_n_0 : STD_LOGIC;
+  signal int_frame_start : STD_LOGIC;
+  signal int_frame_start_i_1_n_0 : STD_LOGIC;
   signal int_mask_frame_done_i_1_n_0 : STD_LOGIC;
-  signal int_mask_frame_done_reg_n_0 : STD_LOGIC;
+  signal int_mask_frame_start_i_1_n_0 : STD_LOGIC;
   signal \line_cnt[0]_i_1__0_n_0\ : STD_LOGIC;
   signal \line_cnt[0]_i_3__0_n_0\ : STD_LOGIC;
   signal \line_cnt[0]_i_4_n_0\ : STD_LOGIC;
@@ -1551,7 +1547,10 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal module_reset_i_1_n_0 : STD_LOGIC;
   signal \^out_href\ : STD_LOGIC;
   signal \^out_vsync\ : STD_LOGIC;
+  signal out_vsync_prev : STD_LOGIC;
   signal p_0_in_0 : STD_LOGIC_VECTOR ( 2 downto 0 );
+  signal p_1_in : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal p_2_in : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \pix_cnt[0]_i_2__0_n_0\ : STD_LOGIC;
   signal \pix_cnt[0]_i_3__0_n_0\ : STD_LOGIC;
   signal \pix_cnt[0]_i_4__0_n_0\ : STD_LOGIC;
@@ -1603,8 +1602,7 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal \pix_cnt_reg[8]_i_1_n_7\ : STD_LOGIC;
   signal prev_href : STD_LOGIC;
   signal prev_vsync : STD_LOGIC;
-  signal prev_vsync_onclk : STD_LOGIC;
-  signal reg_data_out : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal reg_data_out : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \^s00_axi_bvalid\ : STD_LOGIC;
   signal \^s00_axi_rvalid\ : STD_LOGIC;
   signal sel0 : STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -1614,9 +1612,9 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal \NLW_line_cnt_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_pix_cnt_reg[12]_i_1_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \axi_araddr[4]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \axi_araddr[4]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of axi_arready_i_1 : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of axi_awready_i_2 : label is "soft_lutpair31";
   attribute SOFT_HLUTNM of \axi_rdata[16]_i_1\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \axi_rdata[17]_i_1\ : label is "soft_lutpair28";
   attribute SOFT_HLUTNM of \axi_rdata[18]_i_1\ : label is "soft_lutpair27";
@@ -1633,7 +1631,7 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   attribute SOFT_HLUTNM of \axi_rdata[29]_i_1\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \axi_rdata[30]_i_1\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \axi_rdata[31]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of axi_wready_i_1 : label is "soft_lutpair31";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \dvp_frame_cnt_reg[0]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \dvp_frame_cnt_reg[12]_i_1\ : label is 11;
@@ -1643,6 +1641,8 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   attribute ADDER_THRESHOLD of \dvp_frame_cnt_reg[28]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \dvp_frame_cnt_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \dvp_frame_cnt_reg[8]_i_1\ : label is 11;
+  attribute SOFT_HLUTNM of int_frame_done_i_1 : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of int_frame_start_i_1 : label is "soft_lutpair29";
   attribute ADDER_THRESHOLD of \line_cnt_reg[0]_i_2\ : label is 11;
   attribute ADDER_THRESHOLD of \line_cnt_reg[12]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \line_cnt_reg[4]_i_1\ : label is 11;
@@ -1884,9 +1884,9 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
       INIT => X"30BB3088"
     )
         port map (
-      I0 => int_mask_frame_done_reg_n_0,
+      I0 => p_1_in(0),
       I1 => sel0(1),
-      I2 => int_frame_done_reg_n_0,
+      I2 => p_2_in(0),
       I3 => sel0(0),
       I4 => colorbar_en_reg_n_0,
       O => \axi_rdata[0]_i_3_n_0\
@@ -2015,16 +2015,28 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
     );
 \axi_rdata[1]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"00000000F8C83808"
+      INIT => X"3808FFFF38080000"
     )
         port map (
-      I0 => dvp_width(1),
-      I1 => sel0(0),
+      I0 => p_1_in(1),
+      I1 => sel0(1),
+      I2 => sel0(0),
+      I3 => p_2_in(1),
+      I4 => sel0(2),
+      I5 => \axi_rdata[1]_i_2_n_0\,
+      O => reg_data_out(1)
+    );
+\axi_rdata[1]_i_2\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"AFC0A0C0"
+    )
+        port map (
+      I0 => dvp_frame_cnt_reg(1),
+      I1 => dvp_height(1),
       I2 => sel0(1),
-      I3 => dvp_height(1),
-      I4 => dvp_frame_cnt_reg(1),
-      I5 => sel0(2),
-      O => \axi_rdata[1]_i_1_n_0\
+      I3 => sel0(0),
+      I4 => dvp_width(1),
+      O => \axi_rdata[1]_i_2_n_0\
     );
 \axi_rdata[20]_i_1\: unisim.vcomponents.LUT4
     generic map(
@@ -2361,7 +2373,7 @@ axi_bvalid_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => \slv_reg_rden__0\,
-      D => \axi_rdata[1]_i_1_n_0\,
+      D => reg_data_out(1),
       Q => s00_axi_rdata(1),
       R => axi_awready_i_1_n_0
     );
@@ -3253,48 +3265,77 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
       D => pix_cnt_reg(9),
       Q => dvp_width(9)
     );
-int_frame_done_i_1: unisim.vcomponents.LUT6
+int_frame_done_i_1: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFFDFFFFFFF0000"
+      INIT => X"7530"
     )
         port map (
-      I0 => \slv_reg_wren__2\,
-      I1 => p_0_in_0(1),
-      I2 => p_0_in_0(0),
-      I3 => p_0_in_0(2),
-      I4 => int_frame_done0,
-      I5 => int_frame_done_reg_n_0,
+      I0 => int_frame_start,
+      I1 => out_vsync_prev,
+      I2 => \^out_vsync\,
+      I3 => p_2_in(1),
       O => int_frame_done_i_1_n_0
-    );
-int_frame_done_i_2: unisim.vcomponents.LUT4
-    generic map(
-      INIT => X"8000"
-    )
-        port map (
-      I0 => s00_axi_awvalid,
-      I1 => \^s_axi_wready\,
-      I2 => \^s_axi_awready\,
-      I3 => s00_axi_wvalid,
-      O => \slv_reg_wren__2\
-    );
-int_frame_done_i_3: unisim.vcomponents.LUT2
-    generic map(
-      INIT => X"2"
-    )
-        port map (
-      I0 => \^out_vsync\,
-      I1 => prev_vsync_onclk,
-      O => int_frame_done0
     );
 int_frame_done_reg: unisim.vcomponents.FDRE
      port map (
       C => s00_axi_aclk,
       CE => '1',
       D => int_frame_done_i_1_n_0,
-      Q => int_frame_done_reg_n_0,
+      Q => p_2_in(1),
+      R => axi_awready_i_1_n_0
+    );
+int_frame_start_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7530"
+    )
+        port map (
+      I0 => int_frame_start,
+      I1 => \^out_vsync\,
+      I2 => out_vsync_prev,
+      I3 => p_2_in(0),
+      O => int_frame_start_i_1_n_0
+    );
+int_frame_start_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"0800"
+    )
+        port map (
+      I0 => p_0_in_0(2),
+      I1 => p_0_in_0(0),
+      I2 => p_0_in_0(1),
+      I3 => \slv_reg_wren__2\,
+      O => int_frame_start
+    );
+int_frame_start_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => int_frame_start_i_1_n_0,
+      Q => p_2_in(0),
       R => axi_awready_i_1_n_0
     );
 int_mask_frame_done_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"FFBFFFFF00800000"
+    )
+        port map (
+      I0 => s00_axi_wdata(1),
+      I1 => p_0_in_0(1),
+      I2 => p_0_in_0(2),
+      I3 => p_0_in_0(0),
+      I4 => \slv_reg_wren__2\,
+      I5 => p_1_in(1),
+      O => int_mask_frame_done_i_1_n_0
+    );
+int_mask_frame_done_reg: unisim.vcomponents.FDSE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => int_mask_frame_done_i_1_n_0,
+      Q => p_1_in(1),
+      S => axi_awready_i_1_n_0
+    );
+int_mask_frame_start_i_1: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFBFFFFF00800000"
     )
@@ -3304,24 +3345,26 @@ int_mask_frame_done_i_1: unisim.vcomponents.LUT6
       I2 => p_0_in_0(2),
       I3 => p_0_in_0(0),
       I4 => \slv_reg_wren__2\,
-      I5 => int_mask_frame_done_reg_n_0,
-      O => int_mask_frame_done_i_1_n_0
+      I5 => p_1_in(0),
+      O => int_mask_frame_start_i_1_n_0
     );
-int_mask_frame_done_reg: unisim.vcomponents.FDSE
+int_mask_frame_start_reg: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
       CE => '1',
-      D => int_mask_frame_done_i_1_n_0,
-      Q => int_mask_frame_done_reg_n_0,
+      D => int_mask_frame_start_i_1_n_0,
+      Q => p_1_in(0),
       S => axi_awready_i_1_n_0
     );
-irq_INST_0: unisim.vcomponents.LUT2
+irq_INST_0: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"2"
+      INIT => X"4F44"
     )
         port map (
-      I0 => int_frame_done_reg_n_0,
-      I1 => int_mask_frame_done_reg_n_0,
+      I0 => p_1_in(0),
+      I1 => p_2_in(0),
+      I2 => p_1_in(1),
+      I3 => p_2_in(1),
       O => irq
     );
 \line_cnt[0]_i_1__0\: unisim.vcomponents.LUT4
@@ -3719,6 +3762,17 @@ module_reset_i_1: unisim.vcomponents.LUT6
       I5 => module_reset,
       O => module_reset_i_1_n_0
     );
+module_reset_i_2: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"8000"
+    )
+        port map (
+      I0 => s00_axi_awvalid,
+      I1 => \^s_axi_wready\,
+      I2 => \^s_axi_awready\,
+      I3 => s00_axi_wvalid,
+      O => \slv_reg_wren__2\
+    );
 module_reset_reg: unisim.vcomponents.FDSE
      port map (
       C => s00_axi_aclk,
@@ -3809,6 +3863,14 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_2,
       Q => out_raw(7)
+    );
+out_vsync_prev_reg: unisim.vcomponents.FDRE
+     port map (
+      C => s00_axi_aclk,
+      CE => '1',
+      D => \^out_vsync\,
+      Q => out_vsync_prev,
+      R => '0'
     );
 out_vsync_reg: unisim.vcomponents.FDCE
      port map (
@@ -4197,14 +4259,6 @@ prev_href_reg: unisim.vcomponents.FDRE
       Q => prev_href,
       R => '0'
     );
-prev_vsync_onclk_reg: unisim.vcomponents.FDRE
-     port map (
-      C => s00_axi_aclk,
-      CE => '1',
-      D => \^out_vsync\,
-      Q => prev_vsync_onclk,
-      R => '0'
-    );
 prev_vsync_reg: unisim.vcomponents.FDRE
      port map (
       C => \^clk\,
@@ -4253,12 +4307,10 @@ entity base_xil_camif_0_0_xil_camif_v1_0 is
     cam_href : in STD_LOGIC;
     cam_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 0 to 0 );
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 1 downto 0 );
     s00_axi_bready : in STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of base_xil_camif_0_0_xil_camif_v1_0 : entity is "xil_camif_v1_0";
 end base_xil_camif_0_0_xil_camif_v1_0;
 
 architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0 is
@@ -4289,7 +4341,7 @@ xil_camif_v1_0_S00_AXI_inst: entity work.base_xil_camif_0_0_xil_camif_v1_0_S00_A
       s00_axi_rdata(31 downto 0) => s00_axi_rdata(31 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
-      s00_axi_wdata(0) => s00_axi_wdata(0),
+      s00_axi_wdata(1 downto 0) => s00_axi_wdata(1 downto 0),
       s00_axi_wvalid => s00_axi_wvalid
     );
 end STRUCTURE;
@@ -4418,7 +4470,7 @@ inst: entity work.base_xil_camif_0_0_xil_camif_v1_0
       s00_axi_rdata(31 downto 0) => s00_axi_rdata(31 downto 0),
       s00_axi_rready => s00_axi_rready,
       s00_axi_rvalid => s00_axi_rvalid,
-      s00_axi_wdata(0) => s00_axi_wdata(0),
+      s00_axi_wdata(1 downto 0) => s00_axi_wdata(1 downto 0),
       s00_axi_wvalid => s00_axi_wvalid
     );
 end STRUCTURE;

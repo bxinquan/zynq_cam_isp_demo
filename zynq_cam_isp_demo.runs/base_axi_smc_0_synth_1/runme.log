@@ -1,0 +1,855 @@
+
+*** Running vivado
+    with args -log base_axi_smc_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axi_smc_0.tcl
+
+
+
+****** Vivado v2021.1 (64-bit)
+  **** SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
+  **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source base_axi_smc_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
+Command: synth_design -top base_axi_smc_0 -part xc7z020clg400-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22540
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1197.023 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'base_axi_smc_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/synth/base_axi_smc_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_LMFKKB' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1891]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_one_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_0/synth/bd_60ff_one_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_one_0' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_0/synth/bd_60ff_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_60ff_psr_aclk_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/synth/bd_60ff_psr_aclk_0.vhd:74]
+	Parameter C_FAMILY bound to: zynq - type: string 
+	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
+	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
+	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
+	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
+	Parameter C_NUM_BUS_RST bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
+	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
+	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'd:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/synth/bd_60ff_psr_aclk_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+	Parameter INIT bound to: 1'b1 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'C:/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100945' bound to instance 'POR_SRL_I' of component 'SRL16' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-6157] synthesizing module 'SRL16' [C:/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100945]
+INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [C:/Xilinx/Vivado/2021.1/scripts/rt/data/unisim_comp.v:100945]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+	Parameter INIT bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_60ff_psr_aclk_0' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/synth/bd_60ff_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'bd_60ff_psr_aclk_0' is unconnected for instance 'psr_aclk' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1956]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'bd_60ff_psr_aclk_0' is unconnected for instance 'psr_aclk' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1956]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'bd_60ff_psr_aclk_0' is unconnected for instance 'psr_aclk' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1956]
+WARNING: [Synth 8-7071] port 'peripheral_aresetn' of module 'bd_60ff_psr_aclk_0' is unconnected for instance 'psr_aclk' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1956]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_60ff_psr_aclk_0' has 10 connections declared, but only 6 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1956]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_LMFKKB' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1891]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1EAIG3K' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1965]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00e_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_52/synth/bd_60ff_m00e_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_cdc_async_rst' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_cdc_async_rst' (11#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_cdc/hdl/xpm_cdc.sv:1175]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00e_0' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_52/synth/bd_60ff_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1EAIG3K' (22#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1965]
+INFO: [Synth 8-6157] synthesizing module 'm00_nodes_imp_1RNY1WS' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2336]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00arn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_47/synth/bd_60ff_m00arn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (28#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram' (29#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (32#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized0' (32#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00arn_0' (38#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_47/synth/bd_60ff_m00arn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00awn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_49/synth/bd_60ff_m00awn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00awn_0' (39#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_49/synth/bd_60ff_m00awn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00bn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_51/synth/bd_60ff_m00bn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (39#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized1' (39#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized2' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized2' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized2' (39#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized2' (39#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00bn_0' (40#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_51/synth/bd_60ff_m00bn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00rn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_48/synth/bd_60ff_m00rn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized3' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized3' (40#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized3' (40#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00rn_0' (41#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_48/synth/bd_60ff_m00rn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00wn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_50/synth/bd_60ff_m00wn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized4' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized4' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized4' (41#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized4' (41#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized5' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized5' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized5' (41#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized5' (41#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00wn_0' (42#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_50/synth/bd_60ff_m00wn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_nodes_imp_1RNY1WS' (43#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2336]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_m00s2a_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_46/synth/bd_60ff_m00s2a_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_m00s2a_0' (45#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_46/synth/bd_60ff_m00s2a_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s00a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_10/synth/bd_60ff_s00a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s00a2s_0' (47#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_10/synth/bd_60ff_s00a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_F3GYYR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2641]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s00mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_7/synth/bd_60ff_s00mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s00mmu_0' (51#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_7/synth/bd_60ff_s00mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s00sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_9/synth/bd_60ff_s00sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s00sic_0' (54#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_9/synth/bd_60ff_s00sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s00tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_8/synth/bd_60ff_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s00tr_0' (57#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_8/synth/bd_60ff_s00tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_60ff_s00tr_0' is unconnected for instance 's00_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2888]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_60ff_s00tr_0' has 38 connections declared, but only 37 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2888]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_F3GYYR' (58#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2641]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_9XSJYX' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2928]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sarn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_11/synth/bd_60ff_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized6' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized6' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized6' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized6' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized7' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized7' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized7' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized7' (58#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sarn_0' (59#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_11/synth/bd_60ff_sarn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_srn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_12/synth/bd_60ff_srn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_srn_0' (60#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_12/synth/bd_60ff_srn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_9XSJYX' (61#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:2928]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s01a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_16/synth/bd_60ff_s01a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s01a2s_0' (62#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_16/synth/bd_60ff_s01a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's01_entry_pipeline_imp_1C14DLJ' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3059]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s01mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_13/synth/bd_60ff_s01mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s01mmu_0' (63#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_13/synth/bd_60ff_s01mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s01sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_15/synth/bd_60ff_s01sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s01sic_0' (64#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_15/synth/bd_60ff_s01sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s01tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_14/synth/bd_60ff_s01tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s01tr_0' (65#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_14/synth/bd_60ff_s01tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_60ff_s01tr_0' is unconnected for instance 's01_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3357]
+WARNING: [Synth 8-7023] instance 's01_transaction_regulator' of module 'bd_60ff_s01tr_0' has 46 connections declared, but only 45 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3357]
+INFO: [Synth 8-6155] done synthesizing module 's01_entry_pipeline_imp_1C14DLJ' (66#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3059]
+INFO: [Synth 8-6157] synthesizing module 's01_nodes_imp_1GYIZXR' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3405]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sawn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_17/synth/bd_60ff_sawn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sawn_0' (67#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_17/synth/bd_60ff_sawn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sbn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_19/synth/bd_60ff_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized8' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized8' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized8' (67#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized8' (67#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sbn_0' (68#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_19/synth/bd_60ff_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_swn_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_18/synth/bd_60ff_swn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized9' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized9' [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized9' (68#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_sdpram__parameterized9' (68#1) [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8435]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_swn_0' (69#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_18/synth/bd_60ff_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's01_nodes_imp_1GYIZXR' (70#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3405]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s02a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_23/synth/bd_60ff_s02a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s02a2s_0' (71#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_23/synth/bd_60ff_s02a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's02_entry_pipeline_imp_1P1G99M' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3591]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s02mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_20/synth/bd_60ff_s02mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s02mmu_0' (72#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_20/synth/bd_60ff_s02mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s02sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_22/synth/bd_60ff_s02sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s02sic_0' (73#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_22/synth/bd_60ff_s02sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s02tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_21/synth/bd_60ff_s02tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s02tr_0' (74#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_21/synth/bd_60ff_s02tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_60ff_s02tr_0' is unconnected for instance 's02_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3838]
+WARNING: [Synth 8-7023] instance 's02_transaction_regulator' of module 'bd_60ff_s02tr_0' has 38 connections declared, but only 37 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3838]
+INFO: [Synth 8-6155] done synthesizing module 's02_entry_pipeline_imp_1P1G99M' (75#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3591]
+INFO: [Synth 8-6157] synthesizing module 's02_nodes_imp_1I19OL0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3878]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sarn_1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_24/synth/bd_60ff_sarn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sarn_1' (76#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_24/synth/bd_60ff_sarn_1.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_srn_1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_25/synth/bd_60ff_srn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_srn_1' (77#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_25/synth/bd_60ff_srn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's02_nodes_imp_1I19OL0' (78#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:3878]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s03a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_29/synth/bd_60ff_s03a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s03a2s_0' (79#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_29/synth/bd_60ff_s03a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's03_entry_pipeline_imp_HWT0SE' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4009]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s03mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_26/synth/bd_60ff_s03mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s03mmu_0' (80#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_26/synth/bd_60ff_s03mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s03sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_28/synth/bd_60ff_s03sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s03sic_0' (81#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_28/synth/bd_60ff_s03sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s03tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_27/synth/bd_60ff_s03tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s03tr_0' (82#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_27/synth/bd_60ff_s03tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_60ff_s03tr_0' is unconnected for instance 's03_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4307]
+WARNING: [Synth 8-7023] instance 's03_transaction_regulator' of module 'bd_60ff_s03tr_0' has 46 connections declared, but only 45 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4307]
+INFO: [Synth 8-6155] done synthesizing module 's03_entry_pipeline_imp_HWT0SE' (83#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4009]
+INFO: [Synth 8-6157] synthesizing module 's03_nodes_imp_QJU18I' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4355]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sawn_1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_30/synth/bd_60ff_sawn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sawn_1' (84#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_30/synth/bd_60ff_sawn_1.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sbn_1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_32/synth/bd_60ff_sbn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sbn_1' (85#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_32/synth/bd_60ff_sbn_1.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_swn_1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_31/synth/bd_60ff_swn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_swn_1' (86#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_31/synth/bd_60ff_swn_1.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's03_nodes_imp_QJU18I' (87#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4355]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s04a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_36/synth/bd_60ff_s04a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s04a2s_0' (88#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_36/synth/bd_60ff_s04a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's04_entry_pipeline_imp_F1FES0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4541]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s04mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_33/synth/bd_60ff_s04mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s04mmu_0' (89#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_33/synth/bd_60ff_s04mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s04sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_35/synth/bd_60ff_s04sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s04sic_0' (90#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_35/synth/bd_60ff_s04sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s04tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_34/synth/bd_60ff_s04tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s04tr_0' (91#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_34/synth/bd_60ff_s04tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_arburst' of module 'bd_60ff_s04tr_0' is unconnected for instance 's04_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4788]
+WARNING: [Synth 8-7023] instance 's04_transaction_regulator' of module 'bd_60ff_s04tr_0' has 38 connections declared, but only 37 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4788]
+INFO: [Synth 8-6155] done synthesizing module 's04_entry_pipeline_imp_F1FES0' (92#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4541]
+INFO: [Synth 8-6157] synthesizing module 's04_nodes_imp_G88I6A' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4828]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sarn_2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_37/synth/bd_60ff_sarn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sarn_2' (93#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_37/synth/bd_60ff_sarn_2.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_srn_2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_38/synth/bd_60ff_srn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_srn_2' (94#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_38/synth/bd_60ff_srn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's04_nodes_imp_G88I6A' (95#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4828]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s05a2s_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_42/synth/bd_60ff_s05a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s05a2s_0' (96#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_42/synth/bd_60ff_s05a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's05_entry_pipeline_imp_1C2UPMS' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4959]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s05mmu_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_39/synth/bd_60ff_s05mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s05mmu_0' (97#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_39/synth/bd_60ff_s05mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s05sic_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_41/synth/bd_60ff_s05sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s05sic_0' (98#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_41/synth/bd_60ff_s05sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_s05tr_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_40/synth/bd_60ff_s05tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_s05tr_0' (99#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_40/synth/bd_60ff_s05tr_0.sv:58]
+WARNING: [Synth 8-7071] port 'm_axi_awburst' of module 'bd_60ff_s05tr_0' is unconnected for instance 's05_transaction_regulator' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5257]
+WARNING: [Synth 8-7023] instance 's05_transaction_regulator' of module 'bd_60ff_s05tr_0' has 46 connections declared, but only 45 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5257]
+INFO: [Synth 8-6155] done synthesizing module 's05_entry_pipeline_imp_1C2UPMS' (100#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:4959]
+INFO: [Synth 8-6157] synthesizing module 's05_nodes_imp_1AGLBW4' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5305]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sawn_2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_43/synth/bd_60ff_sawn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sawn_2' (101#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_43/synth/bd_60ff_sawn_2.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_sbn_2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_45/synth/bd_60ff_sbn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_sbn_2' (102#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_45/synth/bd_60ff_sbn_2.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_swn_2' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_44/synth/bd_60ff_swn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_swn_2' (103#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_44/synth/bd_60ff_swn_2.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 's05_nodes_imp_1AGLBW4' (104#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5305]
+INFO: [Synth 8-6157] synthesizing module 'switchboards_imp_K0OLQL' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5491]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_arsw_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_2/synth/bd_60ff_arsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_arsw_0' (107#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_2/synth/bd_60ff_arsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_awsw_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_4/synth/bd_60ff_awsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_awsw_0' (108#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_4/synth/bd_60ff_awsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_bsw_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_6/synth/bd_60ff_bsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_bsw_0' (109#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_6/synth/bd_60ff_bsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_rsw_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_3/synth/bd_60ff_rsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_rsw_0' (110#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_3/synth/bd_60ff_rsw_0.sv:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_60ff_wsw_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_5/synth/bd_60ff_wsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff_wsw_0' (111#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_5/synth/bd_60ff_wsw_0.sv:57]
+INFO: [Synth 8-6155] done synthesizing module 'switchboards_imp_K0OLQL' (112#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:5491]
+WARNING: [Synth 8-7071] port 'M00_SC_B_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M00_SC_B_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M00_SC_B_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M00_SC_B_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M01_SC_R_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M01_SC_R_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M01_SC_R_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M01_SC_R_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M02_SC_B_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M02_SC_B_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M02_SC_B_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M02_SC_B_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M03_SC_R_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M03_SC_R_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M03_SC_R_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M03_SC_R_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M04_SC_B_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M04_SC_B_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M04_SC_B_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M04_SC_B_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M05_SC_R_info' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M05_SC_R_payld' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M05_SC_R_req' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'M05_SC_R_send' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S00_SC_AW_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S00_SC_W_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S01_SC_AR_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S02_SC_AW_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S02_SC_W_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S03_SC_AR_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S04_SC_AW_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S04_SC_W_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7071] port 'S05_SC_AR_recv' of module 'switchboards_imp_K0OLQL' is unconnected for instance 'switchboards' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+WARNING: [Synth 8-7023] instance 'switchboards' of module 'switchboards_imp_K0OLQL' has 177 connections declared, but only 144 given [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:1744]
+INFO: [Synth 8-6155] done synthesizing module 'bd_60ff' (113#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/synth/bd_60ff.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'base_axi_smc_0' (114#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/synth/base_axi_smc_0.v:57]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1324.605 ; gain = 127.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1324.605 ; gain = 127.582
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1324.605 ; gain = 127.582
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2010.410 ; gain = 38.977
+INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axi_smc_0/bd_0/ip/ip_1/bd_60ff_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_smc_0_synth_1/dont_touch.xdc]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Xilinx/Vivado/2021.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/base_axi_smc_0_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/base_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-1714] 105 XPM XDC files have been applied to the design.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.050 . Memory (MB): peak = 2723.090 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 13 instances were transformed.
+  FDR => FDRE: 12 instances
+  SRL16 => SRL16E: 1 instance 
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2743.383 ; gain = 20.293
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_smc_0_synth_1/dont_touch.xdc, line 241).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_ar_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_r_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_aw_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_b_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_w_node/inst/m_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_ar_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_r_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_aw_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_b_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_w_node/inst/s_sc_xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_exit_pipeline/m00_exit/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_entry_pipeline/s00_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_entry_pipeline/s01_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_entry_pipeline/s01_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_entry_pipeline/s01_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_entry_pipeline/s02_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_entry_pipeline/s02_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_entry_pipeline/s02_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_entry_pipeline/s03_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_entry_pipeline/s03_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_entry_pipeline/s03_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_entry_pipeline/s04_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_entry_pipeline/s04_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_entry_pipeline/s04_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_entry_pipeline/s05_mmu/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_entry_pipeline/s05_si_converter/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_entry_pipeline/s05_transaction_regulator/inst/xpm_cdc_async_rst_inst. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_node_prog_full.inst_node_prog_full /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_r_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[0].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[2].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[3].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[4].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/m00_nodes/m00_w_node/inst/\gen_normal.inst_si_handler /\gen_si_handler.gen_request_fifos.gen_req_fifo[5].inst_req_fifo /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.gen_fifo_req.inst_fifo_req /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s00_nodes/s00_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s02_nodes/s02_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s04_nodes/s04_ar_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_aw_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_b_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s01_nodes/s01_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s03_nodes/s03_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for inst/s05_nodes/s05_w_node/inst/\gen_normal.inst_mi_handler /\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:11 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_10_decerr_slave'
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_AB_reg_slice.state_reg' through user attribute
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+            P_WRITE_IDLE |                              001 |                               00
+            P_WRITE_DATA |                              010 |                               01
+            P_WRITE_RESP |                              100 |                               10
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_10_decerr_slave'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:19 ; elapsed = 00:01:19 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    8 Bit       Adders := 9     
+	   3 Input    8 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 12    
+	   2 Input    6 Bit       Adders := 241   
+	   2 Input    5 Bit       Adders := 20    
+	   2 Input    4 Bit       Adders := 34    
+	   2 Input    3 Bit       Adders := 36    
+	   2 Input    2 Bit       Adders := 12    
+	   3 Input    1 Bit       Adders := 8     
++---XORs : 
+	   2 Input      1 Bit         XORs := 367   
++---Registers : 
+	             2178 Bit    Registers := 98    
+	              512 Bit    Registers := 2     
+	              162 Bit    Registers := 2     
+	              142 Bit    Registers := 8     
+	              108 Bit    Registers := 4     
+	               90 Bit    Registers := 7     
+	               88 Bit    Registers := 4     
+	               64 Bit    Registers := 4     
+	               47 Bit    Registers := 1     
+	               33 Bit    Registers := 1     
+	               30 Bit    Registers := 3     
+	               23 Bit    Registers := 2     
+	               18 Bit    Registers := 9     
+	               16 Bit    Registers := 3     
+	               14 Bit    Registers := 6     
+	               12 Bit    Registers := 7     
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 14    
+	                7 Bit    Registers := 4     
+	                6 Bit    Registers := 134   
+	                5 Bit    Registers := 20    
+	                4 Bit    Registers := 38    
+	                3 Bit    Registers := 98    
+	                2 Bit    Registers := 25    
+	                1 Bit    Registers := 1029  
++---Muxes : 
+	   2 Input 2178 Bit        Muxes := 49    
+	   2 Input  512 Bit        Muxes := 2     
+	   2 Input   90 Bit        Muxes := 6     
+	   2 Input   64 Bit        Muxes := 10    
+	   2 Input   47 Bit        Muxes := 1     
+	   2 Input   33 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 6     
+	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 6     
+	   2 Input   12 Bit        Muxes := 6     
+	   2 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 17    
+	   2 Input    7 Bit        Muxes := 24    
+	   4 Input    7 Bit        Muxes := 24    
+	   2 Input    6 Bit        Muxes := 45    
+	   2 Input    4 Bit        Muxes := 4     
+	   4 Input    3 Bit        Muxes := 26    
+	  11 Input    3 Bit        Muxes := 14    
+	   2 Input    3 Bit        Muxes := 30    
+	   2 Input    2 Bit        Muxes := 214   
+	   3 Input    2 Bit        Muxes := 1     
+	   7 Input    2 Bit        Muxes := 11    
+	   6 Input    1 Bit        Muxes := 266   
+	   4 Input    1 Bit        Muxes := 122   
+	  10 Input    1 Bit        Muxes := 147   
+	   7 Input    1 Bit        Muxes := 98    
+	  12 Input    1 Bit        Muxes := 14    
+	   2 Input    1 Bit        Muxes := 430   
+	   3 Input    1 Bit        Muxes := 56    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:02:08 ; elapsed = 00:02:10 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping Report (see note below)
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                                                                                        | RTL Object                       | Inference      | Size (Depth x Width) | Primitives    | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|inst/i_0/\m00_nodes/m00_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 162             | RAM32M x 27   | 
+|inst/i_0/\m00_nodes/m00_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 162             | RAM32M x 27   | 
+|inst/i_0/\m00_nodes/m00_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4    | 
+|inst/i_0/\m00_nodes/m00_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 12              | RAM32M x 2    | 
+|inst/i_0/\m00_nodes/m00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4    | 
+|inst/i_0/\m00_nodes/m00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 90              | RAM32M x 15   | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[3].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[5].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s00_nodes/s00_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s00_nodes/s00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s01_nodes/s01_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s01_nodes/s01_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s01_nodes/s01_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s01_nodes/s01_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
+|inst/i_0/\s02_nodes/s02_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s02_nodes/s02_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s03_nodes/s03_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s03_nodes/s03_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s03_nodes/s03_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s03_nodes/s03_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
+|inst/i_0/\s04_nodes/s04_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s04_nodes/s04_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s05_nodes/s05_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s05_nodes/s05_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s05_nodes/s05_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s05_nodes/s05_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:02:13 ; elapsed = 00:02:16 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:02:21 ; elapsed = 00:02:24 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping Report
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|Module Name                                                                                                                                                                                                        | RTL Object                       | Inference      | Size (Depth x Width) | Primitives    | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+|inst/i_0/\s03_nodes/s03_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s03_nodes/s03_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s03_nodes/s03_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s03_nodes/s03_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
+|inst/i_0/\s05_nodes/s05_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s05_nodes/s05_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s05_nodes/s05_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s05_nodes/s05_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
+|inst/i_0/\s01_nodes/s01_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s01_nodes/s01_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 30              | RAM32M x 5    | 
+|inst/i_0/\s01_nodes/s01_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 18              | RAM32M x 3    | 
+|inst/i_0/\s01_nodes/s01_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 88              | RAM32M x 15   | 
+|inst/i_0/\m00_nodes/m00_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 162             | RAM32M x 27   | 
+|inst/i_0/\m00_nodes/m00_aw_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 162             | RAM32M x 27   | 
+|inst/i_0/\m00_nodes/m00_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4    | 
+|inst/i_0/\m00_nodes/m00_b_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 12              | RAM32M x 2    | 
+|inst/i_0/\m00_nodes/m00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.gen_fifo_req.inst_fifo_req/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                     | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 23              | RAM32M x 4    | 
+|inst/i_0/\m00_nodes/m00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 90              | RAM32M x 15   | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[1].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[3].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_si_handler/gen_si_handler.gen_request_fifos.gen_req_fifo[5].inst_req_fifo/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 4 x 1                | RAM16X1D x 1  | 
+|inst/i_0/\m00_nodes/m00_w_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s00_nodes/s00_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s00_nodes/s00_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s02_nodes/s02_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s02_nodes/s02_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
+|inst/i_0/\s04_nodes/s04_ar_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                          | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 142             | RAM32M x 24   | 
+|inst/i_0/\s04_nodes/s04_r_node/inst /\gen_normal.inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory /xpm_memory_base_inst                           | gen_wr_a.gen_word_narrow.mem_reg | User Attribute | 32 x 108             | RAM32M x 18   | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+----------------+----------------------+---------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:02:27 ; elapsed = 00:02:30 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:30 ; elapsed = 00:02:33 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:31 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:31 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:32 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:32 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Dynamic Shift Register Report:
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|Module Name | RTL Name      | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+|dsrl        | shift_reg_reg | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
++------------+---------------+--------+------------+--------+---------+--------+--------+--------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+---------+------+
+|      |Cell     |Count |
++------+---------+------+
+|1     |CARRY4   |    40|
+|2     |LUT1     |   332|
+|3     |LUT2     |   307|
+|4     |LUT3     |  1565|
+|5     |LUT4     |   569|
+|6     |LUT5     |   972|
+|7     |LUT6     |  1110|
+|8     |RAM16X1D |     3|
+|9     |RAM32M   |   214|
+|10    |SRL16    |     1|
+|11    |SRL16E   |    33|
+|12    |FDCE     |   177|
+|13    |FDR      |     4|
+|14    |FDRE     |  5640|
+|15    |FDSE     |   346|
++------+---------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:32 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:25 ; elapsed = 00:01:45 . Memory (MB): peak = 2743.383 ; gain = 127.582
+Synthesis Optimization Complete : Time (s): cpu = 00:02:32 ; elapsed = 00:02:34 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.818 . Memory (MB): peak = 2743.383 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 262 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2743.383 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 222 instances were transformed.
+  FDR => FDRE: 4 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 3 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 214 instances
+  SRL16 => SRL16E: 1 instance 
+
+Synth Design complete, checksum: 5911c1ed
+INFO: [Common 17-83] Releasing license: Synthesis
+247 Infos, 97 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:02:42 ; elapsed = 00:02:50 . Memory (MB): peak = 2743.383 ; gain = 1546.359
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_smc_0_synth_1/base_axi_smc_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_axi_smc_0, cache-ID = eac529f106ba2c71
+INFO: [Coretcl 2-1174] Renamed 626 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axi_smc_0_synth_1/base_axi_smc_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file base_axi_smc_0_utilization_synth.rpt -pb base_axi_smc_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 20 00:52:48 2022...

@@ -56,3 +56,14 @@ platform clean
 platform generate
 platform clean
 platform generate
+platform clean
+platform active {h264_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/h264_wrapper.xsa}
+bsp reload
+catch {bsp regenerate}
+domain active {zynq_fsbl}
+bsp reload
+catch {bsp regenerate}
+platform generate
+platform clean
+platform generate
