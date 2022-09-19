@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Wed Jul 20 00:59:59 2022
+| Date         : Mon Sep 19 20:30:02 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file base_wrapper_methodology_drc_routed.rpt -pb base_wrapper_methodology_drc_routed.pb -rpx base_wrapper_methodology_drc_routed.rpx
 | Design       : base_wrapper
@@ -23,7 +23,7 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 1123
+             Violations found: 1115
 +-----------+------------------+------------------------------------------------------+------------+
 | Rule      | Severity         | Description                                          | Violations |
 +-----------+------------------+------------------------------------------------------+------------+
@@ -31,14 +31,12 @@ Table of Contents
 | TIMING-14 | Critical Warning | LUT on the clock tree                                | 11         |
 | TIMING-27 | Critical Warning | Invalid primary clock on hierarchical pin            | 2          |
 | DPIR-1    | Warning          | Asynchronous driver check                            | 1041       |
-| LUTAR-1   | Warning          | LUT drives async reset alert                         | 31         |
+| LUTAR-1   | Warning          | LUT drives async reset alert                         | 34         |
 | PDRC-190  | Warning          | Suboptimally placed synchronized register chain      | 6          |
 | TIMING-9  | Warning          | Unknown CDC Logic                                    | 1          |
 | TIMING-10 | Warning          | Missing property on synchronizer                     | 1          |
 | TIMING-18 | Warning          | Missing input or output delay                        | 12         |
-| TIMING-24 | Warning          | Overridden Max delay datapath only                   | 11         |
-| TIMING-28 | Warning          | Auto-derived clock referenced by a timing constraint | 2          |
-| TIMING-38 | Warning          | Bus skew constraint applied on multiple clocks       | 2          |
+| TIMING-28 | Warning          | Auto-derived clock referenced by a timing constraint | 4          |
 | ULMTCS-1  | Warning          | Control Sets use limits recommend reduction          | 1          |
 +-----------+------------------+------------------------------------------------------+------------+
 
@@ -5326,6 +5324,66 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
+LUT cell base_i/axis_to_video_0/inst/axis_to_video_inst/timing/pix_cnt[11]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[0]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[10]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[1]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[2]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[3]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[4]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[5]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[6]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[7]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[8]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/line_cnt_reg[9]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/pix_cnt_reg[0]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/pix_cnt_reg[10]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/pix_cnt_reg[11]/CLR,
+base_i/axis_to_video_0/inst/axis_to_video_inst/timing/pix_cnt_reg[1]/CLR
+ (the first 15 of 25 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#2 Warning
+LUT drives async reset alert  
+LUT cell base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt[10]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[0]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[1]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[2]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[3]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[4]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[5]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[6]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[7]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[8]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/line_cnt_reg[9]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt_reg[0]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt_reg[10]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt_reg[1]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt_reg[2]/CLR,
+base_i/axis_to_video_1/inst/axis_to_video_inst/timing/pix_cnt_reg[3]/CLR
+ (the first 15 of 24 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#3 Warning
+LUT drives async reset alert  
+LUT cell base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt[10]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[0]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[1]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[2]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[3]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[4]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[5]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[6]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[7]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[8]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/line_cnt_reg[9]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt_reg[0]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt_reg[10]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt_reg[1]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt_reg[2]/CLR,
+base_i/axis_to_video_2/inst/axis_to_video_inst/timing/pix_cnt_reg[3]/CLR
+ (the first 15 of 24 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+Related violations: <none>
+
+LUTAR-1#4 Warning
+LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_pix_i_2__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_line_reg/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/odd_pix_reg/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/prev_href_reg/CLR,
@@ -5340,7 +5398,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/blc_i0/raw_now_reg[8]/CLR. The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#2 Warning
+LUTAR-1#5 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/p35[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/href_dly_reg[6]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/in_raw_r_reg[0]/CLR,
@@ -5360,7 +5418,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/nr0_
  (the first 15 of 467 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#3 Warning
+LUTAR-1#6 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/in_g_1[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data_b_1_reg[1]/CLR,
@@ -5380,7 +5438,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/data
  (the first 15 of 263 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#4 Warning
+LUTAR-1#7 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/href_dly[2]_i_1__1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data_b_reg[1]/CLR,
@@ -5400,7 +5458,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/csc_i0/data
  (the first 15 of 179 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#5 Warning
+LUTAR-1#8 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/odd_pix_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/b_now_reg[1]/CLR,
@@ -5420,7 +5478,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0
  (the first 15 of 1454 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#6 Warning
+LUTAR-1#9 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/href_dly[2]_i_1__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[10]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/data_0_reg[11]/CLR,
@@ -5440,7 +5498,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dgain_i0/da
  (the first 15 of 43 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#7 Warning
+LUTAR-1#10 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/odd_pix_i_2__0, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/href_dly_reg[9]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/in_raw_r_reg[1]/CLR,
@@ -5460,7 +5518,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/p12_
  (the first 15 of 612 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#8 Warning
+LUTAR-1#11 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_1[8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg[5]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg_c/CLR,
@@ -5480,7 +5538,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/in_y_
  (the first 15 of 157 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#9 Warning
+LUTAR-1#12 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_u/href_dly[1]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_u/data_buff_reg[0][0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay_u/data_buff_reg[0][1]/CLR,
@@ -5500,7 +5558,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/gamma_delay
  (the first 15 of 48 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#10 Warning
+LUTAR-1#13 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/prev_vsync_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/cur_clr_addr_reg[0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae_i0/hist_ram_raw/cur_clr_addr_reg[1]/CLR,
@@ -5520,7 +5578,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_ae
  (the first 15 of 219 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#11 Warning
+LUTAR-1#14 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_r/in_vsync_reg_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/cur_clr_addr_reg[0]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_awb_i0/hist_ram_b/cur_clr_addr_reg[1]/CLR,
@@ -5540,7 +5598,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/isp_stat_aw
  (the first 15 of 468 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#12 Warning
+LUTAR-1#15 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_gamma_i0/href_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_2dnr_i0/data_reg_reg[10]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_2dnr_i0/data_reg_reg[11]/CLR,
@@ -5560,7 +5618,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/mux_2dnr_i0
  (the first 15 of 252 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#13 Warning
+LUTAR-1#16 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_v/data_buff_c_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_u/data_buff_reg[35][1]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_u/data_buff_reg[35][2]/CLR,
@@ -5580,7 +5638,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_
  (the first 15 of 51 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#14 Warning
+LUTAR-1#17 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/target_div/p_t1[9][8]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/target_div/den_tmp_reg[0][25]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/target_div/den_tmp_reg[0][26]/CLR,
@@ -5600,7 +5658,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/tar
  (the first 15 of 3796 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#15 Warning
+LUTAR-1#18 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/href_dly[2]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[10]/CLR,
 base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_b_1_reg[11]/CLR,
@@ -5620,7 +5678,7 @@ base_i/xil_isp_lite_0/inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/wb_i0/data_
  (the first 15 of 99 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#16 Warning
+LUTAR-1#19 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/prev_href_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[10]/CLR,
@@ -5640,7 +5698,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[22
  (the first 15 of 58 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#17 Warning
+LUTAR-1#20 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_r_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[10]/CLR,
@@ -5660,7 +5718,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[
  (the first 15 of 36 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#18 Warning
+LUTAR-1#21 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp[0][31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/den_tmp_reg[0][39]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/den_tmp_reg[0][40]/CLR,
@@ -5680,7 +5738,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_
  (the first 15 of 2143 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#19 Warning
+LUTAR-1#22 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_in/href_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[10]/CLR,
@@ -5700,7 +5758,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_
  (the first 15 of 208 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#20 Warning
+LUTAR-1#23 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/href_t1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg[10]/CLR,
@@ -5720,7 +5778,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg
  (the first 15 of 236 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#21 Warning
+LUTAR-1#24 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/p31[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[10]/CLR,
@@ -5740,7 +5798,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[3]/C
  (the first 15 of 159 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#22 Warning
+LUTAR-1#25 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/in_v_reg[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[1]/CLR,
@@ -5760,7 +5818,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[6]/C
  (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#23 Warning
+LUTAR-1#26 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/href_reg_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/c_reg_reg[0]/CLR,
 base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/c_reg_reg[1]/CLR,
@@ -5780,7 +5838,7 @@ base_i/xil_vip_0/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/y_reg_
  (the first 15 of 19 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#24 Warning
+LUTAR-1#27 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/prev_href_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[10]/CLR,
@@ -5800,7 +5858,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/crop_i0/data_r_reg[22
  (the first 15 of 58 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#25 Warning
+LUTAR-1#28 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/out_pclk_r_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[10]/CLR,
@@ -5820,7 +5878,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/dscale_i0/data_r_reg[
  (the first 15 of 36 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#26 Warning
+LUTAR-1#29 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/num_tmp[0][31]_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/den_tmp_reg[0][39]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_sum_3/den_tmp_reg[0][40]/CLR,
@@ -5840,7 +5898,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/hist_equ_i0/div_hist_
  (the first 15 of 2143 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#27 Warning
+LUTAR-1#30 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_in/href_reg_i_2, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_reg[10]/CLR,
@@ -5860,7 +5918,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/mux_crop_i0/data_reg_
  (the first 15 of 208 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#28 Warning
+LUTAR-1#31 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/href_t1_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg[10]/CLR,
@@ -5880,7 +5938,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/color_bg_r_reg
  (the first 15 of 236 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#29 Warning
+LUTAR-1#32 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/p31[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/g_reg[10]/CLR,
@@ -5900,7 +5958,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/sobel_i0/gx1_reg[3]/C
  (the first 15 of 159 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#30 Warning
+LUTAR-1#33 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/in_v_reg[7]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/B_reg[1]/CLR,
@@ -5920,7 +5978,7 @@ base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv2rgb_i0/G_reg[6]/C
  (the first 15 of 112 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
-LUTAR-1#31 Warning
+LUTAR-1#34 Warning
 LUT drives async reset alert  
 LUT cell base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/href_reg_i_1__6, with 2 or more inputs, drives asynchronous preset/clear pin(s) base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/c_reg_reg[0]/CLR,
 base_i/xil_vip_1/inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/yuv444to422_i0/c_reg_reg[1]/CLR,
@@ -5942,32 +6000,32 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X50Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X63Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X50Y38 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X62Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X51Y45 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X79Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X56Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X71Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X67Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X76Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X65Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X69Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning
@@ -6040,61 +6098,6 @@ Missing input or output delay
 An input delay is missing on iic_sda_io relative to clock(s) clk_fpga_1
 Related violations: <none>
 
-TIMING-24#1 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks cam_pclk and clk_fpga_0 overrides a set_max_delay -datapath_only (position 106). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#2 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks camif_xclk_base_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 106). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#3 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and cam_pclk overrides a set_max_delay -datapath_only (position 104). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#4 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and camif_xclk_base_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 104). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#5 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_base_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 112). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#6 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_base_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 120). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#7 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_base_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 82). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#8 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks clk_fpga_0 and isp_pclk_base_clk_wiz_0_0 overrides a set_max_delay -datapath_only (position 84). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#9 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_base_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 114). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#10 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_base_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 122). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
-TIMING-24#11 Warning
-Overridden Max delay datapath only  
-An asynchronous set_clock_groups or a set_false path (see constraint position 20 in the Timing Constraints window in Vivado IDE) between clocks isp_pclk_base_clk_wiz_0_0 and clk_fpga_0 overrides a set_max_delay -datapath_only (position 80). It is not recommended to override a set_max_delay -datapath_only constraint. Replace the set_clock_groups or set_false_path between clocks with point-to-point set_false_path constraints
-Related violations: <none>
-
 TIMING-28#1 Warning
 Auto-derived clock referenced by a timing constraint  
 The auto-derived clock camif_xclk_base_clk_wiz_0_0 is referenced by name inside timing constraint (see constraint position 20 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins base_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0]
@@ -6102,22 +6105,22 @@ Related violations: <none>
 
 TIMING-28#2 Warning
 Auto-derived clock referenced by a timing constraint  
+The auto-derived clock dvi_clk_base_clk_wiz_1_0_1 is referenced by name inside timing constraint (see constraint position 20 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins base_i/clk_wiz_1/inst/mmcm_adv_inst/CLKOUT0]
+Related violations: <none>
+
+TIMING-28#3 Warning
+Auto-derived clock referenced by a timing constraint  
 The auto-derived clock isp_pclk_base_clk_wiz_0_0 is referenced by name inside timing constraint (see constraint position 20 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins base_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1]
 Related violations: <none>
 
-TIMING-38#1 Warning
-Bus skew constraint applied on multiple clocks  
-Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 105 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: base_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-Related violations: <none>
-
-TIMING-38#2 Warning
-Bus skew constraint applied on multiple clocks  
-Multiple clocks involved on source or destination of a bus skew constraint (see constraint position 107 in the Timing Constraint Window in Vivado IDE). It is recommended to have only one source clock and one destination clock per bus skew constraint. First endpoint covered by the constraint: base_i/v_vid_in_axi4s_0/inst/COUPLER_INST/generate_async_fifo.FIFO_INST/XPM_FIFO_ASYNC_INST/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+TIMING-28#4 Warning
+Auto-derived clock referenced by a timing constraint  
+The auto-derived clock lcd_clk_base_clk_wiz_0_0 is referenced by name inside timing constraint (see constraint position 20 in the Timing Constraint window in Vivado IDE). It is recommended to reference an auto-derived clock by the pin name attached to the clock: get_clocks -of_objects [get_pins base_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT2]
 Related violations: <none>
 
 ULMTCS-1#1 Warning
 Control Sets use limits recommend reduction  
-This design uses 1147 control sets (vs. available limit of 13300, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
+This design uses 1105 control sets (vs. available limit of 13300, determined by 1 control set per CLB). This exceeds the control set use guideline of 7.5 percent. This is at a level where reduction is RECOMMENDED (see UG949). Use report_control_sets to get more details.
 Related violations: <none>
 
 

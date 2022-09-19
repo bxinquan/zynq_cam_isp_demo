@@ -489,6 +489,42 @@
 						"WVALID": { "actual": "s_axi_lite_wvalid"}
 					}
 				},
+				"/axis_to_video_0/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TLAST": { "actual": "s_axis_tlast"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TUSER": { "actual": "s_axis_tuser"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
+				"/axis_to_video_1/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TLAST": { "actual": "s_axis_tlast"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TUSER": { "actual": "s_axis_tuser"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
+				"/axis_to_video_2/s_axis": {
+					"interface": "xilinx.com:interface:axis:1.0",
+					"ports": {
+						"ACLK": { "actual": "aclk"},
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "s_axis_tdata"},
+						"TLAST": { "actual": "s_axis_tlast"},
+						"TREADY": { "actual": "s_axis_tready"},
+						"TUSER": { "actual": "s_axis_tuser"},
+						"TVALID": { "actual": "s_axis_tvalid"}
+					}
+				},
 				"/processing_system7_0/M_AXI_GP0": {
 					"interface": "xilinx.com:interface:aximm:1.0",
 					"ports": {
@@ -1687,70 +1723,40 @@
 						"WVALID": { "actual": "s_axi_wvalid[0:0]"}
 					}
 				},
-				"/v_axi4s_vid_out_0/video_in": {
+				"/video_to_axis_0/m_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "s_axis_video_tdata"},
-						"TLAST": { "actual": "s_axis_video_tlast"},
-						"TREADY": { "actual": "s_axis_video_tready"},
-						"TUSER": { "actual": "s_axis_video_tuser"},
-						"TVALID": { "actual": "s_axis_video_tvalid"}
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TLAST": { "actual": "m_axis_tlast"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TUSER": { "actual": "m_axis_tuser"},
+						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
-				"/v_axi4s_vid_out_1/video_in": {
+				"/video_to_axis_1/m_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "s_axis_video_tdata"},
-						"TLAST": { "actual": "s_axis_video_tlast"},
-						"TREADY": { "actual": "s_axis_video_tready"},
-						"TUSER": { "actual": "s_axis_video_tuser"},
-						"TVALID": { "actual": "s_axis_video_tvalid"}
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TLAST": { "actual": "m_axis_tlast"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TUSER": { "actual": "m_axis_tuser"},
+						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
-				"/v_axi4s_vid_out_2/video_in": {
+				"/video_to_axis_2/m_axis": {
 					"interface": "xilinx.com:interface:axis:1.0",
 					"ports": {
 						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "s_axis_video_tdata"},
-						"TLAST": { "actual": "s_axis_video_tlast"},
-						"TREADY": { "actual": "s_axis_video_tready"},
-						"TUSER": { "actual": "s_axis_video_tuser"},
-						"TVALID": { "actual": "s_axis_video_tvalid"}
-					}
-				},
-				"/v_vid_in_axi4s_0/video_out": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "m_axis_video_tdata"},
-						"TLAST": { "actual": "m_axis_video_tlast"},
-						"TREADY": { "actual": "m_axis_video_tready"},
-						"TUSER": { "actual": "m_axis_video_tuser"},
-						"TVALID": { "actual": "m_axis_video_tvalid"}
-					}
-				},
-				"/v_vid_in_axi4s_1/video_out": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "m_axis_video_tdata"},
-						"TLAST": { "actual": "m_axis_video_tlast"},
-						"TREADY": { "actual": "m_axis_video_tready"},
-						"TUSER": { "actual": "m_axis_video_tuser"},
-						"TVALID": { "actual": "m_axis_video_tvalid"}
-					}
-				},
-				"/v_vid_in_axi4s_2/video_out": {
-					"interface": "xilinx.com:interface:axis:1.0",
-					"ports": {
-						"ACLK": { "actual": "aclk"},
-						"TDATA": { "actual": "m_axis_video_tdata"},
-						"TLAST": { "actual": "m_axis_video_tlast"},
-						"TREADY": { "actual": "m_axis_video_tready"},
-						"TUSER": { "actual": "m_axis_video_tuser"},
-						"TVALID": { "actual": "m_axis_video_tvalid"}
+						"ARESETN": { "actual": "aresetn"},
+						"TDATA": { "actual": "m_axis_tdata"},
+						"TLAST": { "actual": "m_axis_tlast"},
+						"TREADY": { "actual": "m_axis_tready"},
+						"TUSER": { "actual": "m_axis_tuser"},
+						"TVALID": { "actual": "m_axis_tvalid"}
 					}
 				},
 				"/xil_camif_0/S00_AXI": {

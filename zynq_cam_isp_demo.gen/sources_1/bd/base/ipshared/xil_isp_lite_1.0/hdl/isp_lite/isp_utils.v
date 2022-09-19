@@ -148,6 +148,162 @@ module shift_register
 endmodule
 
 
+/* Common clock FIFO */
+module sync_fifo
+#(
+	parameter DW = 8,
+	parameter AW = 4
+)
+(
+	input           clk,
+	input           rst_n,
+	input           wen,
+	input  [DW-1:0] wdata,
+	output          wfull,
+	input           ren,
+	output [DW-1:0] rdata,
+	output          rempty
+);
+
+	reg [AW:0] waddr;
+	reg [AW:0] raddr;
+
+	assign rempty = (waddr == raddr);
+	assign wfull  = (waddr[AW] != raddr[AW]) && (waddr[AW-1:0] == raddr[AW-1:0]);
+
+	wire wr_flag = !wfull & wen;
+	wire rd_flag = !rempty & ren;
+
+	always @ (posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			waddr <= 0;
+		else if (wr_flag)
+			waddr <= waddr + 1'b1;
+		else
+			waddr <= waddr;
+	end
+
+	always @ (posedge clk or negedge rst_n) begin
+		if (!rst_n)
+			raddr <= 0;
+		else if (rd_flag)
+			raddr <= raddr + 1'b1;
+		else
+			raddr <= raddr;
+	end
+
+	simple_dp_ram #(
+			.DW       (DW),
+			.AW       (AW)
+		) ram (
+			.clk      (clk),
+			.wen      (wr_flag),
+			.waddr    (waddr[AW-1:0]),
+			.wdata    (wdata),
+			.ren      (rd_flag),
+			.raddr    (raddr[AW-1:0]),
+			.rdata    (rdata)
+		);
+
+endmodule
+
+
+/* Independent clock FIFO */
+module async_fifo
+#(
+	parameter DW = 8,
+	parameter AW = 4
+)
+(
+	input           wclk,
+	input           rclk,
+	input           wrstn,
+	input           rrstn,
+	input           wen,
+	input [DW-1:0]  wdata,
+	output          wfull,
+	input           ren,
+	output [DW-1:0] rdata,
+	output          rempty
+);
+
+	reg [AW:0] waddr;
+	reg [AW:0] raddr;
+
+	//sync_w2r
+	wire [AW:0] wptr = waddr ^ {1'b0, waddr[AW:1]}; //Gray Code
+	reg  [AW:0] w2r_wptr1, w2r_wptr2;
+	always @ (posedge rclk or negedge rrstn) begin
+		if (!rrstn) begin
+			w2r_wptr1 <= 0;
+			w2r_wptr2 <= 0;
+		end
+		else begin
+			w2r_wptr1 <= wptr;
+			w2r_wptr2 <= w2r_wptr1;
+		end
+	end
+
+	//sync_r2w
+	wire [AW:0] rptr = raddr ^ {1'b0, raddr[AW:1]}; //Gray Code
+	reg  [AW:0] r2w_rptr1, r2w_rptr2;
+	always @ (posedge wclk or negedge wrstn) begin
+		if (!wrstn) begin
+			r2w_rptr1 <= 0;
+			r2w_rptr2 <= 0;
+		end
+		else begin
+			r2w_rptr1 <= rptr;
+			r2w_rptr2 <= r2w_rptr1;
+		end
+	end
+
+	//status
+	assign rempty = (w2r_wptr2 == rptr);
+	assign wfull  = (wptr == {~r2w_rptr2[AW:AW-1], r2w_rptr2[AW-2:0]});
+
+	wire wr_flag = !wfull & wen;
+	wire rd_flag = !rempty & ren;
+
+	always @ (posedge wclk or negedge wrstn) begin
+		if (!wrstn)
+			waddr <= 0;
+		else if (wr_flag)
+			waddr <= waddr + 1'b1;
+		else
+			waddr <= waddr;
+	end
+
+	always @ (posedge rclk or negedge rrstn) begin
+		if (!rrstn)
+			raddr <= 0;
+		else if (rd_flag)
+			raddr <= raddr + 1'b1;
+		else
+			raddr <= raddr;
+	end
+
+	full_dp_ram #(
+			.DW          (DW),
+			.AW          (AW)
+		) ram (
+			.clk_a       (wclk),
+			.wen_a       (wr_flag),
+			.ren_a       (1'b0),
+			.addr_a      (waddr[AW-1:0]),
+			.wdata_a     (wdata),
+			.rdata_a     (),
+			.clk_b       (rclk),
+			.wen_b       (1'b0),
+			.ren_b       (rd_flag),
+			.addr_b      (raddr[AW-1:0]),
+			.wdata_b     (0),
+			.rdata_b     (rdata)
+		);
+
+endmodule
+
+
 // c = a / b
 // d = a % b
 module shift_div

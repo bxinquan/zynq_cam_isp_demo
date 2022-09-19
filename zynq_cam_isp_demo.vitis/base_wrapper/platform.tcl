@@ -157,3 +157,39 @@ catch {bsp regenerate}
 platform generate
 platform clean
 platform generate
+platform clean
+platform active {base_wrapper}
+platform clean
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+platform generate
+platform clean
+platform clean
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+platform generate
+platform clean
+platform generate
+platform clean
+platform clean
+platform active {base_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+platform generate
+platform clean
+platform active {base_wrapper}
+platform clean
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+platform generate
+domain active {standalone_ps7_cortexa9_0}
+bsp reload
+catch {bsp regenerate}
+platform generate -domains standalone_ps7_cortexa9_0 
+platform clean
+platform generate
+platform clean
+platform clean
+platform active {base_wrapper}
+platform config -updatehw {D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper.xsa}
+bsp reload
+catch {bsp regenerate}
+domain active {zynq_fsbl}
+bsp reload
+platform generate

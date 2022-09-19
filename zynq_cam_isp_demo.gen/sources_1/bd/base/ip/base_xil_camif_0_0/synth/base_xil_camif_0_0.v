@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:xil_camif:1.0
-// IP Revision: 16
+// IP Revision: 18
 
 (* X_CORE_INFO = "xil_camif_v1_0,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_xil_camif_0_0,xil_camif_v1_0,{}" *)

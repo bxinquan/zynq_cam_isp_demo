@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Wed Jul 20 00:50:34 2022
+-- Date        : Sun Sep 18 22:50:33 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top base_xil_vip_1_0 -prefix
 --               base_xil_vip_1_0_ base_xil_vip_0_0_stub.vhdl

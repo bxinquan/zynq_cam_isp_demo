@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Wed Jul 20 00:46:31 2022
+//Date        : Mon Sep 19 20:22:10 2022
 //Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 //Command     : generate_target base.bd
 //Design      : base
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "base,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=base,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=42,numReposBlks=31,numNonXlnxBlks=5,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "base.hwdef" *) 
+(* CORE_GENERATION_INFO = "base,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=base,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=39,numReposBlks=28,numNonXlnxBlks=11,numHierBlks=11,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "base.hwdef" *) 
 module base
    (DDR_addr,
     DDR_ba,
@@ -161,11 +161,6 @@ module base
   wire axi_vdma_0_M_AXIS_MM2S1_TREADY;
   wire [0:0]axi_vdma_0_M_AXIS_MM2S1_TUSER;
   wire axi_vdma_0_M_AXIS_MM2S1_TVALID;
-  wire [23:0]axi_vdma_0_M_AXIS_MM2S_TDATA;
-  wire axi_vdma_0_M_AXIS_MM2S_TLAST;
-  wire axi_vdma_0_M_AXIS_MM2S_TREADY;
-  wire [0:0]axi_vdma_0_M_AXIS_MM2S_TUSER;
-  wire axi_vdma_0_M_AXIS_MM2S_TVALID;
   wire [31:0]axi_vdma_0_M_AXI_MM2S_ARADDR;
   wire [1:0]axi_vdma_0_M_AXI_MM2S_ARBURST;
   wire [3:0]axi_vdma_0_M_AXI_MM2S_ARCACHE;
@@ -197,6 +192,11 @@ module base
   wire axi_vdma_0_M_AXI_S2MM_WVALID;
   wire axi_vdma_0_mm2s_introut;
   wire axi_vdma_0_s2mm_introut;
+  wire [23:0]axi_vdma_1_M_AXIS_MM2S_TDATA;
+  wire axi_vdma_1_M_AXIS_MM2S_TLAST;
+  wire axi_vdma_1_M_AXIS_MM2S_TREADY;
+  wire [0:0]axi_vdma_1_M_AXIS_MM2S_TUSER;
+  wire axi_vdma_1_M_AXIS_MM2S_TVALID;
   wire [31:0]axi_vdma_1_M_AXI_MM2S_ARADDR;
   wire [1:0]axi_vdma_1_M_AXI_MM2S_ARBURST;
   wire [3:0]axi_vdma_1_M_AXI_MM2S_ARCACHE;
@@ -264,6 +264,19 @@ module base
   wire axi_vdma_2_M_AXI_S2MM_WVALID;
   wire axi_vdma_2_mm2s_introut;
   wire axi_vdma_2_s2mm_introut;
+  wire axis_to_video_0_locked;
+  wire axis_to_video_0_vid_out_ACTIVE_VIDEO;
+  wire [7:0]axis_to_video_0_vid_out_DATA;
+  wire axis_to_video_0_vid_out_VSYNC;
+  wire axis_to_video_1_vid_active_video;
+  wire [23:0]axis_to_video_1_vid_data;
+  wire axis_to_video_1_vid_hsync;
+  wire axis_to_video_1_vid_vsync;
+  wire axis_to_video_2_locked;
+  wire axis_to_video_2_vid_out_ACTIVE_VIDEO;
+  wire [23:0]axis_to_video_2_vid_out_DATA;
+  wire axis_to_video_2_vid_out_HSYNC;
+  wire axis_to_video_2_vid_out_VSYNC;
   wire cam_pclk_0_1;
   wire camera_0_1_ACTIVE_VIDEO;
   wire [7:0]camera_0_1_DATA;
@@ -503,52 +516,21 @@ module base
   wire [0:0]ps7_0_axi_periph_M08_AXI_WVALID;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [0:0]rst_ps7_0_50M_peripheral_aresetn;
-  wire v_axi4s_vid_out_0_vid_active_video;
-  wire [23:0]v_axi4s_vid_out_0_vid_data;
-  wire v_axi4s_vid_out_0_vid_hsync;
-  wire v_axi4s_vid_out_0_vid_vsync;
-  wire v_axi4s_vid_out_0_vtg_ce;
-  wire v_axi4s_vid_out_1_locked;
-  wire v_axi4s_vid_out_1_vid_io_out_ACTIVE_VIDEO;
-  wire [7:0]v_axi4s_vid_out_1_vid_io_out_DATA;
-  wire v_axi4s_vid_out_1_vid_io_out_VSYNC;
-  wire v_axi4s_vid_out_1_vtg_ce;
-  wire v_axi4s_vid_out_2_locked;
-  wire v_axi4s_vid_out_2_vid_io_out_ACTIVE_VIDEO;
-  wire [23:0]v_axi4s_vid_out_2_vid_io_out_DATA;
-  wire v_axi4s_vid_out_2_vid_io_out_HSYNC;
-  wire v_axi4s_vid_out_2_vid_io_out_VSYNC;
-  wire v_axi4s_vid_out_2_vtg_ce;
-  wire v_tc_0_vtiming_out_ACTIVE_VIDEO;
-  wire v_tc_0_vtiming_out_HBLANK;
-  wire v_tc_0_vtiming_out_HSYNC;
-  wire v_tc_0_vtiming_out_VBLANK;
-  wire v_tc_0_vtiming_out_VSYNC;
-  wire v_tc_1_vtiming_out_ACTIVE_VIDEO;
-  wire v_tc_1_vtiming_out_HBLANK;
-  wire v_tc_1_vtiming_out_HSYNC;
-  wire v_tc_1_vtiming_out_VBLANK;
-  wire v_tc_1_vtiming_out_VSYNC;
-  wire v_tc_2_vtiming_out_ACTIVE_VIDEO;
-  wire v_tc_2_vtiming_out_HBLANK;
-  wire v_tc_2_vtiming_out_HSYNC;
-  wire v_tc_2_vtiming_out_VBLANK;
-  wire v_tc_2_vtiming_out_VSYNC;
-  wire [23:0]v_vid_in_axi4s_0_video_out_TDATA;
-  wire v_vid_in_axi4s_0_video_out_TLAST;
-  wire v_vid_in_axi4s_0_video_out_TREADY;
-  wire v_vid_in_axi4s_0_video_out_TUSER;
-  wire v_vid_in_axi4s_0_video_out_TVALID;
-  wire [7:0]v_vid_in_axi4s_1_video_out_TDATA;
-  wire v_vid_in_axi4s_1_video_out_TLAST;
-  wire v_vid_in_axi4s_1_video_out_TREADY;
-  wire v_vid_in_axi4s_1_video_out_TUSER;
-  wire v_vid_in_axi4s_1_video_out_TVALID;
-  wire [23:0]v_vid_in_axi4s_2_video_out_TDATA;
-  wire v_vid_in_axi4s_2_video_out_TLAST;
-  wire v_vid_in_axi4s_2_video_out_TREADY;
-  wire v_vid_in_axi4s_2_video_out_TUSER;
-  wire v_vid_in_axi4s_2_video_out_TVALID;
+  wire [7:0]video_to_axis_0_m_axis_TDATA;
+  wire video_to_axis_0_m_axis_TLAST;
+  wire video_to_axis_0_m_axis_TREADY;
+  wire video_to_axis_0_m_axis_TUSER;
+  wire video_to_axis_0_m_axis_TVALID;
+  wire [23:0]video_to_axis_1_m_axis_TDATA;
+  wire video_to_axis_1_m_axis_TLAST;
+  wire video_to_axis_1_m_axis_TREADY;
+  wire video_to_axis_1_m_axis_TUSER;
+  wire video_to_axis_1_m_axis_TVALID;
+  wire [23:0]video_to_axis_2_m_axis_TDATA;
+  wire video_to_axis_2_m_axis_TLAST;
+  wire video_to_axis_2_m_axis_TREADY;
+  wire video_to_axis_2_m_axis_TUSER;
+  wire video_to_axis_2_m_axis_TVALID;
   wire xil_camif_0_irq;
   wire xil_camif_0_out_pclk;
   wire xil_camif_0_raw_ACTIVE_VIDEO;
@@ -591,25 +573,25 @@ module base
   assign iic_sda_t = axi_iic_IIC_SDA_T;
   assign lcd_bl[0] = lcd_bl_dout;
   assign lcd_clk = pll_clk_33m;
-  assign lcd_de = v_axi4s_vid_out_0_vid_active_video;
-  assign lcd_hs = v_axi4s_vid_out_0_vid_hsync;
-  assign lcd_rgb[23:0] = v_axi4s_vid_out_0_vid_data;
-  assign lcd_vs = v_axi4s_vid_out_0_vid_vsync;
+  assign lcd_de = axis_to_video_1_vid_active_video;
+  assign lcd_hs = axis_to_video_1_vid_hsync;
+  assign lcd_rgb[23:0] = axis_to_video_1_vid_data;
+  assign lcd_vs = axis_to_video_1_vid_vsync;
   assign processing_system7_0_GPIO_0_TRI_I = GPIO_EMIO_tri_i[4:0];
   assign tmds_oen = DVI_Transmitter_0_tmds_oen;
   base_DVI_Transmitter_0_0 DVI_Transmitter_0
        (.pclk(clk_wiz_1_dvi_clk),
         .pclk_x5(clk_wiz_1_dvi_clk_x5),
-        .reset_n(v_axi4s_vid_out_2_locked),
+        .reset_n(axis_to_video_2_locked),
         .tmds_clk_n(DVI_Transmitter_0_TMDS_TMDS_CLK_N),
         .tmds_clk_p(DVI_Transmitter_0_TMDS_TMDS_CLK_P),
         .tmds_data_n(DVI_Transmitter_0_TMDS_TMDS_DATA_N),
         .tmds_data_p(DVI_Transmitter_0_TMDS_TMDS_DATA_P),
         .tmds_oen(DVI_Transmitter_0_tmds_oen),
-        .video_de(v_axi4s_vid_out_2_vid_io_out_ACTIVE_VIDEO),
-        .video_din(v_axi4s_vid_out_2_vid_io_out_DATA),
-        .video_hsync(v_axi4s_vid_out_2_vid_io_out_HSYNC),
-        .video_vsync(v_axi4s_vid_out_2_vid_io_out_VSYNC));
+        .video_de(axis_to_video_2_vid_out_ACTIVE_VIDEO),
+        .video_din(axis_to_video_2_vid_out_DATA),
+        .video_hsync(axis_to_video_2_vid_out_HSYNC),
+        .video_vsync(axis_to_video_2_vid_out_VSYNC));
   base_axi_iic_0 axi_iic
        (.iic2intc_irpt(axi_iic_iic2intc_irpt),
         .s_axi_aclk(processing_system7_0_FCLK_CLK1),
@@ -853,12 +835,12 @@ module base
         .s_axi_lite_wready(ps7_0_axi_periph_M01_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M01_AXI_WVALID),
         .s_axis_s2mm_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axis_s2mm_tdata(v_vid_in_axi4s_1_video_out_TDATA),
+        .s_axis_s2mm_tdata(video_to_axis_0_m_axis_TDATA),
         .s_axis_s2mm_tkeep(1'b1),
-        .s_axis_s2mm_tlast(v_vid_in_axi4s_1_video_out_TLAST),
-        .s_axis_s2mm_tready(v_vid_in_axi4s_1_video_out_TREADY),
-        .s_axis_s2mm_tuser(v_vid_in_axi4s_1_video_out_TUSER),
-        .s_axis_s2mm_tvalid(v_vid_in_axi4s_1_video_out_TVALID));
+        .s_axis_s2mm_tlast(video_to_axis_0_m_axis_TLAST),
+        .s_axis_s2mm_tready(video_to_axis_0_m_axis_TREADY),
+        .s_axis_s2mm_tuser(video_to_axis_0_m_axis_TUSER),
+        .s_axis_s2mm_tvalid(video_to_axis_0_m_axis_TVALID));
   base_axi_vdma_1_0 axi_vdma_1
        (.axi_resetn(rst_ps7_0_50M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -893,11 +875,11 @@ module base
         .m_axi_s2mm_wstrb(axi_vdma_1_M_AXI_S2MM_WSTRB),
         .m_axi_s2mm_wvalid(axi_vdma_1_M_AXI_S2MM_WVALID),
         .m_axis_mm2s_aclk(processing_system7_0_FCLK_CLK0),
-        .m_axis_mm2s_tdata(axi_vdma_0_M_AXIS_MM2S_TDATA),
-        .m_axis_mm2s_tlast(axi_vdma_0_M_AXIS_MM2S_TLAST),
-        .m_axis_mm2s_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
-        .m_axis_mm2s_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
-        .m_axis_mm2s_tvalid(axi_vdma_0_M_AXIS_MM2S_TVALID),
+        .m_axis_mm2s_tdata(axi_vdma_1_M_AXIS_MM2S_TDATA),
+        .m_axis_mm2s_tlast(axi_vdma_1_M_AXIS_MM2S_TLAST),
+        .m_axis_mm2s_tready(axi_vdma_1_M_AXIS_MM2S_TREADY),
+        .m_axis_mm2s_tuser(axi_vdma_1_M_AXIS_MM2S_TUSER),
+        .m_axis_mm2s_tvalid(axi_vdma_1_M_AXIS_MM2S_TVALID),
         .mm2s_introut(axi_vdma_1_mm2s_introut),
         .s2mm_introut(axi_vdma_1_s2mm_introut),
         .s_axi_lite_aclk(processing_system7_0_FCLK_CLK1),
@@ -918,12 +900,12 @@ module base
         .s_axi_lite_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
         .s_axis_s2mm_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axis_s2mm_tdata(v_vid_in_axi4s_0_video_out_TDATA),
+        .s_axis_s2mm_tdata(video_to_axis_1_m_axis_TDATA),
         .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(v_vid_in_axi4s_0_video_out_TLAST),
-        .s_axis_s2mm_tready(v_vid_in_axi4s_0_video_out_TREADY),
-        .s_axis_s2mm_tuser(v_vid_in_axi4s_0_video_out_TUSER),
-        .s_axis_s2mm_tvalid(v_vid_in_axi4s_0_video_out_TVALID));
+        .s_axis_s2mm_tlast(video_to_axis_1_m_axis_TLAST),
+        .s_axis_s2mm_tready(video_to_axis_1_m_axis_TREADY),
+        .s_axis_s2mm_tuser(video_to_axis_1_m_axis_TUSER),
+        .s_axis_s2mm_tvalid(video_to_axis_1_m_axis_TVALID));
   base_axi_vdma_2_0 axi_vdma_2
        (.axi_resetn(rst_ps7_0_50M_peripheral_aresetn),
         .m_axi_mm2s_aclk(processing_system7_0_FCLK_CLK0),
@@ -983,12 +965,55 @@ module base
         .s_axi_lite_wready(ps7_0_axi_periph_M04_AXI_WREADY),
         .s_axi_lite_wvalid(ps7_0_axi_periph_M04_AXI_WVALID),
         .s_axis_s2mm_aclk(processing_system7_0_FCLK_CLK0),
-        .s_axis_s2mm_tdata(v_vid_in_axi4s_2_video_out_TDATA),
+        .s_axis_s2mm_tdata(video_to_axis_2_m_axis_TDATA),
         .s_axis_s2mm_tkeep({1'b1,1'b1,1'b1}),
-        .s_axis_s2mm_tlast(v_vid_in_axi4s_2_video_out_TLAST),
-        .s_axis_s2mm_tready(v_vid_in_axi4s_2_video_out_TREADY),
-        .s_axis_s2mm_tuser(v_vid_in_axi4s_2_video_out_TUSER),
-        .s_axis_s2mm_tvalid(v_vid_in_axi4s_2_video_out_TVALID));
+        .s_axis_s2mm_tlast(video_to_axis_2_m_axis_TLAST),
+        .s_axis_s2mm_tready(video_to_axis_2_m_axis_TREADY),
+        .s_axis_s2mm_tuser(video_to_axis_2_m_axis_TUSER),
+        .s_axis_s2mm_tvalid(video_to_axis_2_m_axis_TVALID));
+  base_axis_to_video_0_0 axis_to_video_0
+       (.aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .locked(axis_to_video_0_locked),
+        .s_axis_tdata(axi_vdma_0_M_AXIS_MM2S1_TDATA),
+        .s_axis_tlast(axi_vdma_0_M_AXIS_MM2S1_TLAST),
+        .s_axis_tready(axi_vdma_0_M_AXIS_MM2S1_TREADY),
+        .s_axis_tuser(axi_vdma_0_M_AXIS_MM2S1_TUSER),
+        .s_axis_tvalid(axi_vdma_0_M_AXIS_MM2S1_TVALID),
+        .vid_active_video(axis_to_video_0_vid_out_ACTIVE_VIDEO),
+        .vid_clk(clk_wiz_0_clk_160),
+        .vid_data(axis_to_video_0_vid_out_DATA),
+        .vid_rstn(clk_wiz_0_locked),
+        .vid_vsync(axis_to_video_0_vid_out_VSYNC));
+  base_axis_to_video_1_0 axis_to_video_1
+       (.aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .s_axis_tdata(axi_vdma_1_M_AXIS_MM2S_TDATA),
+        .s_axis_tlast(axi_vdma_1_M_AXIS_MM2S_TLAST),
+        .s_axis_tready(axi_vdma_1_M_AXIS_MM2S_TREADY),
+        .s_axis_tuser(axi_vdma_1_M_AXIS_MM2S_TUSER),
+        .s_axis_tvalid(axi_vdma_1_M_AXIS_MM2S_TVALID),
+        .vid_active_video(axis_to_video_1_vid_active_video),
+        .vid_clk(pll_clk_33m),
+        .vid_data(axis_to_video_1_vid_data),
+        .vid_hsync(axis_to_video_1_vid_hsync),
+        .vid_rstn(clk_wiz_0_locked),
+        .vid_vsync(axis_to_video_1_vid_vsync));
+  base_axis_to_video_2_0 axis_to_video_2
+       (.aclk(processing_system7_0_FCLK_CLK0),
+        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
+        .locked(axis_to_video_2_locked),
+        .s_axis_tdata(axi_vdma_2_M_AXIS_MM2S_TDATA),
+        .s_axis_tlast(axi_vdma_2_M_AXIS_MM2S_TLAST),
+        .s_axis_tready(axi_vdma_2_M_AXIS_MM2S_TREADY),
+        .s_axis_tuser(axi_vdma_2_M_AXIS_MM2S_TUSER),
+        .s_axis_tvalid(axi_vdma_2_M_AXIS_MM2S_TVALID),
+        .vid_active_video(axis_to_video_2_vid_out_ACTIVE_VIDEO),
+        .vid_clk(clk_wiz_1_dvi_clk),
+        .vid_data(axis_to_video_2_vid_out_DATA),
+        .vid_hsync(axis_to_video_2_vid_out_HSYNC),
+        .vid_rstn(clk_wiz_1_locked),
+        .vid_vsync(axis_to_video_2_vid_out_VSYNC));
   base_clk_wiz_0_0 clk_wiz_0
        (.cam_xclk(clk_wiz_0_cam_xclk),
         .camif_xclk(clk_wiz_0_camif_xclk),
@@ -1348,171 +1373,44 @@ module base
         .mb_debug_sys_rst(1'b0),
         .peripheral_aresetn(rst_ps7_0_50M_peripheral_aresetn),
         .slowest_sync_clk(processing_system7_0_FCLK_CLK1));
-  base_v_axi4s_vid_out_0_0 v_axi4s_vid_out_0
+  base_video_to_axis_0_0 video_to_axis_0
        (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .fid(1'b0),
-        .locked(v_axi4s_vid_out_1_locked),
-        .s_axis_video_tdata(axi_vdma_0_M_AXIS_MM2S1_TDATA),
-        .s_axis_video_tlast(axi_vdma_0_M_AXIS_MM2S1_TLAST),
-        .s_axis_video_tready(axi_vdma_0_M_AXIS_MM2S1_TREADY),
-        .s_axis_video_tuser(axi_vdma_0_M_AXIS_MM2S1_TUSER),
-        .s_axis_video_tvalid(axi_vdma_0_M_AXIS_MM2S1_TVALID),
-        .vid_active_video(v_axi4s_vid_out_1_vid_io_out_ACTIVE_VIDEO),
-        .vid_data(v_axi4s_vid_out_1_vid_io_out_DATA),
-        .vid_io_out_ce(1'b1),
-        .vid_io_out_clk(clk_wiz_0_clk_160),
-        .vid_io_out_reset(1'b0),
-        .vid_vsync(v_axi4s_vid_out_1_vid_io_out_VSYNC),
-        .vtg_active_video(v_tc_1_vtiming_out_ACTIVE_VIDEO),
-        .vtg_ce(v_axi4s_vid_out_1_vtg_ce),
-        .vtg_field_id(1'b0),
-        .vtg_hblank(v_tc_1_vtiming_out_HBLANK),
-        .vtg_hsync(v_tc_1_vtiming_out_HSYNC),
-        .vtg_vblank(v_tc_1_vtiming_out_VBLANK),
-        .vtg_vsync(v_tc_1_vtiming_out_VSYNC));
-  base_v_axi4s_vid_out_1_0 v_axi4s_vid_out_1
-       (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
-        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .fid(1'b0),
-        .s_axis_video_tdata(axi_vdma_0_M_AXIS_MM2S_TDATA),
-        .s_axis_video_tlast(axi_vdma_0_M_AXIS_MM2S_TLAST),
-        .s_axis_video_tready(axi_vdma_0_M_AXIS_MM2S_TREADY),
-        .s_axis_video_tuser(axi_vdma_0_M_AXIS_MM2S_TUSER),
-        .s_axis_video_tvalid(axi_vdma_0_M_AXIS_MM2S_TVALID),
-        .vid_active_video(v_axi4s_vid_out_0_vid_active_video),
-        .vid_data(v_axi4s_vid_out_0_vid_data),
-        .vid_hsync(v_axi4s_vid_out_0_vid_hsync),
-        .vid_io_out_ce(1'b1),
-        .vid_io_out_clk(pll_clk_33m),
-        .vid_io_out_reset(1'b0),
-        .vid_vsync(v_axi4s_vid_out_0_vid_vsync),
-        .vtg_active_video(v_tc_0_vtiming_out_ACTIVE_VIDEO),
-        .vtg_ce(v_axi4s_vid_out_0_vtg_ce),
-        .vtg_field_id(1'b0),
-        .vtg_hblank(v_tc_0_vtiming_out_HBLANK),
-        .vtg_hsync(v_tc_0_vtiming_out_HSYNC),
-        .vtg_vblank(v_tc_0_vtiming_out_VBLANK),
-        .vtg_vsync(v_tc_0_vtiming_out_VSYNC));
-  base_v_axi4s_vid_out_2_0 v_axi4s_vid_out_2
-       (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
-        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .fid(1'b0),
-        .locked(v_axi4s_vid_out_2_locked),
-        .s_axis_video_tdata(axi_vdma_2_M_AXIS_MM2S_TDATA),
-        .s_axis_video_tlast(axi_vdma_2_M_AXIS_MM2S_TLAST),
-        .s_axis_video_tready(axi_vdma_2_M_AXIS_MM2S_TREADY),
-        .s_axis_video_tuser(axi_vdma_2_M_AXIS_MM2S_TUSER),
-        .s_axis_video_tvalid(axi_vdma_2_M_AXIS_MM2S_TVALID),
-        .vid_active_video(v_axi4s_vid_out_2_vid_io_out_ACTIVE_VIDEO),
-        .vid_data(v_axi4s_vid_out_2_vid_io_out_DATA),
-        .vid_hsync(v_axi4s_vid_out_2_vid_io_out_HSYNC),
-        .vid_io_out_ce(1'b1),
-        .vid_io_out_clk(clk_wiz_1_dvi_clk),
-        .vid_io_out_reset(1'b0),
-        .vid_vsync(v_axi4s_vid_out_2_vid_io_out_VSYNC),
-        .vtg_active_video(v_tc_2_vtiming_out_ACTIVE_VIDEO),
-        .vtg_ce(v_axi4s_vid_out_2_vtg_ce),
-        .vtg_field_id(1'b0),
-        .vtg_hblank(v_tc_2_vtiming_out_HBLANK),
-        .vtg_hsync(v_tc_2_vtiming_out_HSYNC),
-        .vtg_vblank(v_tc_2_vtiming_out_VBLANK),
-        .vtg_vsync(v_tc_2_vtiming_out_VSYNC));
-  base_v_tc_0_0 v_tc_0
-       (.active_video_out(v_tc_1_vtiming_out_ACTIVE_VIDEO),
-        .clk(clk_wiz_0_clk_160),
-        .clken(1'b1),
-        .gen_clken(v_axi4s_vid_out_1_vtg_ce),
-        .hblank_out(v_tc_1_vtiming_out_HBLANK),
-        .hsync_out(v_tc_1_vtiming_out_HSYNC),
-        .resetn(clk_wiz_0_locked),
-        .sof_state(1'b0),
-        .vblank_out(v_tc_1_vtiming_out_VBLANK),
-        .vsync_out(v_tc_1_vtiming_out_VSYNC));
-  base_v_tc_1_0 v_tc_1
-       (.active_video_out(v_tc_0_vtiming_out_ACTIVE_VIDEO),
-        .clk(pll_clk_33m),
-        .clken(1'b1),
-        .gen_clken(v_axi4s_vid_out_0_vtg_ce),
-        .hblank_out(v_tc_0_vtiming_out_HBLANK),
-        .hsync_out(v_tc_0_vtiming_out_HSYNC),
-        .resetn(clk_wiz_0_locked),
-        .sof_state(1'b0),
-        .vblank_out(v_tc_0_vtiming_out_VBLANK),
-        .vsync_out(v_tc_0_vtiming_out_VSYNC));
-  base_v_tc_2_0 v_tc_2
-       (.active_video_out(v_tc_2_vtiming_out_ACTIVE_VIDEO),
-        .clk(clk_wiz_1_dvi_clk),
-        .clken(1'b1),
-        .gen_clken(v_axi4s_vid_out_2_vtg_ce),
-        .hblank_out(v_tc_2_vtiming_out_HBLANK),
-        .hsync_out(v_tc_2_vtiming_out_HSYNC),
-        .resetn(clk_wiz_1_locked),
-        .sof_state(1'b0),
-        .vblank_out(v_tc_2_vtiming_out_VBLANK),
-        .vsync_out(v_tc_2_vtiming_out_VSYNC));
-  base_v_vid_in_axi4s_0_0 v_vid_in_axi4s_0
-       (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
-        .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .axis_enable(1'b1),
-        .m_axis_video_tdata(v_vid_in_axi4s_1_video_out_TDATA),
-        .m_axis_video_tlast(v_vid_in_axi4s_1_video_out_TLAST),
-        .m_axis_video_tready(v_vid_in_axi4s_1_video_out_TREADY),
-        .m_axis_video_tuser(v_vid_in_axi4s_1_video_out_TUSER),
-        .m_axis_video_tvalid(v_vid_in_axi4s_1_video_out_TVALID),
+        .m_axis_tdata(video_to_axis_0_m_axis_TDATA),
+        .m_axis_tlast(video_to_axis_0_m_axis_TLAST),
+        .m_axis_tready(video_to_axis_0_m_axis_TREADY),
+        .m_axis_tuser(video_to_axis_0_m_axis_TUSER),
+        .m_axis_tvalid(video_to_axis_0_m_axis_TVALID),
         .vid_active_video(xil_camif_0_raw_ACTIVE_VIDEO),
+        .vid_clk(xil_camif_0_out_pclk),
         .vid_data(xil_camif_0_raw_DATA),
-        .vid_field_id(1'b0),
-        .vid_hblank(1'b0),
-        .vid_hsync(1'b0),
-        .vid_io_in_ce(1'b1),
-        .vid_io_in_clk(xil_camif_0_out_pclk),
-        .vid_io_in_reset(1'b0),
-        .vid_vblank(1'b0),
+        .vid_rstn(clk_wiz_0_locked),
         .vid_vsync(xil_camif_0_raw_VSYNC));
-  base_v_vid_in_axi4s_1_0 v_vid_in_axi4s_1
+  base_video_to_axis_1_0 video_to_axis_1
        (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .axis_enable(1'b1),
-        .m_axis_video_tdata(v_vid_in_axi4s_0_video_out_TDATA),
-        .m_axis_video_tlast(v_vid_in_axi4s_0_video_out_TLAST),
-        .m_axis_video_tready(v_vid_in_axi4s_0_video_out_TREADY),
-        .m_axis_video_tuser(v_vid_in_axi4s_0_video_out_TUSER),
-        .m_axis_video_tvalid(v_vid_in_axi4s_0_video_out_TVALID),
+        .m_axis_tdata(video_to_axis_1_m_axis_TDATA),
+        .m_axis_tlast(video_to_axis_1_m_axis_TLAST),
+        .m_axis_tready(video_to_axis_1_m_axis_TREADY),
+        .m_axis_tuser(video_to_axis_1_m_axis_TUSER),
+        .m_axis_tvalid(video_to_axis_1_m_axis_TVALID),
         .vid_active_video(xil_vip_0_rgb_ACTIVE_VIDEO),
+        .vid_clk(xil_vip_0_out_pclk),
         .vid_data(xil_vip_0_rgb_DATA),
-        .vid_field_id(1'b0),
-        .vid_hblank(1'b0),
-        .vid_hsync(1'b0),
-        .vid_io_in_ce(1'b1),
-        .vid_io_in_clk(xil_vip_0_out_pclk),
-        .vid_io_in_reset(1'b0),
-        .vid_vblank(1'b0),
+        .vid_rstn(axis_to_video_0_locked),
         .vid_vsync(xil_vip_0_rgb_VSYNC));
-  base_v_vid_in_axi4s_2_0 v_vid_in_axi4s_2
+  base_video_to_axis_2_0 video_to_axis_2
        (.aclk(processing_system7_0_FCLK_CLK0),
-        .aclken(1'b1),
         .aresetn(rst_ps7_0_100M_peripheral_aresetn),
-        .axis_enable(1'b1),
-        .m_axis_video_tdata(v_vid_in_axi4s_2_video_out_TDATA),
-        .m_axis_video_tlast(v_vid_in_axi4s_2_video_out_TLAST),
-        .m_axis_video_tready(v_vid_in_axi4s_2_video_out_TREADY),
-        .m_axis_video_tuser(v_vid_in_axi4s_2_video_out_TUSER),
-        .m_axis_video_tvalid(v_vid_in_axi4s_2_video_out_TVALID),
+        .m_axis_tdata(video_to_axis_2_m_axis_TDATA),
+        .m_axis_tlast(video_to_axis_2_m_axis_TLAST),
+        .m_axis_tready(video_to_axis_2_m_axis_TREADY),
+        .m_axis_tuser(video_to_axis_2_m_axis_TUSER),
+        .m_axis_tvalid(video_to_axis_2_m_axis_TVALID),
         .vid_active_video(xil_vip_1_rgb_ACTIVE_VIDEO),
+        .vid_clk(xil_vip_1_out_pclk),
         .vid_data(xil_vip_1_rgb_DATA),
-        .vid_field_id(1'b0),
-        .vid_hblank(1'b0),
-        .vid_hsync(1'b0),
-        .vid_io_in_ce(1'b1),
-        .vid_io_in_clk(xil_vip_1_out_pclk),
-        .vid_io_in_reset(1'b0),
-        .vid_vblank(1'b0),
+        .vid_rstn(axis_to_video_0_locked),
         .vid_vsync(xil_vip_1_rgb_VSYNC));
   base_xil_camif_0_0 xil_camif_0
        (.cam_data(camera_0_1_DATA),
@@ -1547,15 +1445,15 @@ module base
         .s00_axi_wstrb(ps7_0_axi_periph_M06_AXI_WSTRB),
         .s00_axi_wvalid(ps7_0_axi_periph_M06_AXI_WVALID));
   base_xil_isp_lite_0_0 xil_isp_lite_0
-       (.in_href(v_axi4s_vid_out_1_vid_io_out_ACTIVE_VIDEO),
-        .in_raw(v_axi4s_vid_out_1_vid_io_out_DATA),
-        .in_vsync(v_axi4s_vid_out_1_vid_io_out_VSYNC),
+       (.in_href(axis_to_video_0_vid_out_ACTIVE_VIDEO),
+        .in_raw(axis_to_video_0_vid_out_DATA),
+        .in_vsync(axis_to_video_0_vid_out_VSYNC),
         .irq(xil_isp_lite_0_irq),
         .out_href(xil_isp_lite_0_yuv_ACTIVE_VIDEO),
         .out_vsync(xil_isp_lite_0_yuv_VSYNC),
         .out_yuv(xil_isp_lite_0_yuv_DATA),
         .pclk(clk_wiz_0_clk_160),
-        .rst_n(v_axi4s_vid_out_1_locked),
+        .rst_n(axis_to_video_0_locked),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK1),
         .s00_axi_araddr(ps7_0_axi_periph_M05_AXI_ARADDR[13:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -1587,7 +1485,7 @@ module base
         .out_rgb(xil_vip_0_rgb_DATA),
         .out_vsync(xil_vip_0_rgb_VSYNC),
         .pclk(clk_wiz_0_clk_160),
-        .rst_n(v_axi4s_vid_out_1_locked),
+        .rst_n(axis_to_video_0_locked),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK1),
         .s00_axi_araddr(ps7_0_axi_periph_M02_AXI_ARADDR[11:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),
@@ -1619,7 +1517,7 @@ module base
         .out_rgb(xil_vip_1_rgb_DATA),
         .out_vsync(xil_vip_1_rgb_VSYNC),
         .pclk(clk_wiz_0_clk_160),
-        .rst_n(v_axi4s_vid_out_1_locked),
+        .rst_n(axis_to_video_0_locked),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK1),
         .s00_axi_araddr(ps7_0_axi_periph_M03_AXI_ARADDR[11:0]),
         .s00_axi_aresetn(rst_ps7_0_50M_peripheral_aresetn),

@@ -1,4 +1,4 @@
-22:52:18 **** Incremental Build of configuration Debug for project base ****
+20:32:29 **** Build of configuration Debug for project base ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -35,6 +35,21 @@ At top level:
       |                            ^~~~~~~~~~~~~~~~
 'Finished building: ../src/main.c'
 ' '
+'Building file: ../src/ov5640_init.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
+'Finished building: ../src/ov5640_init.c'
+' '
+'Building file: ../src/sys_intr.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sys_intr.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/sys_intr.d" -MT"src/sys_intr.o" -o "src/sys_intr.o" "../src/sys_intr.c"
+'Finished building: ../src/sys_intr.c'
+' '
+'Building file: ../src/vdma_api.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma_api.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/vdma_api.d" -MT"src/vdma_api.o" -o "src/vdma_api.o" "../src/vdma_api.c"
+'Finished building: ../src/vdma_api.c'
+' '
 'Building target: base.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "base.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
@@ -47,5 +62,5 @@ arm-none-eabi-size base.elf  |tee "base.elf.size"
 'Finished building: base.elf.size'
 ' '
 
-22:52:19 Build Finished (took 674ms)
+20:32:30 Build Finished (took 1s.44ms)
 

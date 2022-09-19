@@ -6,7 +6,9 @@ set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets cam_pclk_IBUF]
 set_clock_groups -async -group [get_clocks cam_pclk] \
         -group [get_clocks clk_fpga_0] -group [get_clocks clk_fpga_1] \
         -group [get_clocks camif_xclk_base_clk_wiz_0_0] \
-        -group [get_clocks isp_pclk_base_clk_wiz_0_0]
+        -group [get_clocks isp_pclk_base_clk_wiz_0_0] \
+        -group [get_clocks lcd_clk_base_clk_wiz_0_0] \
+        -group [get_clocks dvi_clk_base_clk_wiz_1_0_1]
 
 #----------------------ÉãÏñÍ·½Ó¿Ú---------------------------
 #camera1

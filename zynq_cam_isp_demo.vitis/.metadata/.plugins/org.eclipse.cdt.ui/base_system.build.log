@@ -1,10 +1,8 @@
-01:04:02 **** Build of configuration Debug for project base_system ****
-make all 
-Generating bif file for the system project
-generate_system_bif.bat 5797 D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/base_wrapper.xpfm standalone_ps7_cortexa9_0 D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_system/Debug/system.bif
-sdcard_gen --xpfm D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/base_wrapper.xpfm --sys_config base_wrapper --bif D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_system/Debug/system.bif --bitstream D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit --elf D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf,ps7_cortexa9_0
-creating BOOT.BIN using D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
-Running C:/Xilinx/Vitis/2021.1/bin/bootgen  -image D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+20:31:33 **** Clean-only build of configuration Debug for project base_system ****
+make clean 
+rm -rf ./_sds
+rm -rf package
+rm -f system.bif
 
-01:04:06 Build Finished (took 4s.453ms)
+20:31:33 Build Finished (took 110ms)
 

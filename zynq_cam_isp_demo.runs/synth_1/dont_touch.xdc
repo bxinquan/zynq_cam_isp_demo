@@ -15,15 +15,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_rst_ps
 # IP: bd/base/ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_DVI_Transmitter_0_0 || ORIG_REF_NAME==base_DVI_Transmitter_0_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_v_vid_in_axi4s_2_0/base_v_vid_in_axi4s_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_2_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_2_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_vid_in_axi4s_1_0/base_v_vid_in_axi4s_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_1_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_vid_in_axi4s_0_0/base_v_vid_in_axi4s_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_vid_in_axi4s_0_0 || ORIG_REF_NAME==base_v_vid_in_axi4s_0_0} -quiet] -quiet
-
 # IP: bd/base/ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_rst_ps7_0_50M_0 || ORIG_REF_NAME==base_rst_ps7_0_50M_0} -quiet] -quiet
 
@@ -66,24 +57,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xbar_0
 # IP: bd/base/ip/base_ps7_0_axi_periph_0/base_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_ps7_0_axi_periph_0 || ORIG_REF_NAME==base_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_v_axi4s_vid_out_0_0/base_v_axi4s_vid_out_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_0_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_axi4s_vid_out_1_0/base_v_axi4s_vid_out_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_1_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_axi4s_vid_out_2_0/base_v_axi4s_vid_out_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_axi4s_vid_out_2_0 || ORIG_REF_NAME==base_v_axi4s_vid_out_2_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_0_0/base_v_tc_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_0_0 || ORIG_REF_NAME==base_v_tc_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_1_0/base_v_tc_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_1_0 || ORIG_REF_NAME==base_v_tc_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_v_tc_2_0/base_v_tc_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_v_tc_2_0 || ORIG_REF_NAME==base_v_tc_2_0} -quiet] -quiet
-
 # IP: bd/base/ip/base_xlconcat_0_0/base_xlconcat_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xlconcat_0_0 || ORIG_REF_NAME==base_xlconcat_0_0} -quiet] -quiet
 
@@ -98,6 +71,24 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vi
 
 # IP: bd/base/ip/base_xil_vip_1_0/base_xil_vip_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vip_1_0 || ORIG_REF_NAME==base_xil_vip_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_0_0/base_video_to_axis_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_0_0 || ORIG_REF_NAME==base_video_to_axis_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_1_0/base_video_to_axis_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_1_0 || ORIG_REF_NAME==base_video_to_axis_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_2_0 || ORIG_REF_NAME==base_video_to_axis_2_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axis_to_video_0_0/base_axis_to_video_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_to_video_0_0 || ORIG_REF_NAME==base_axis_to_video_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axis_to_video_1_0/base_axis_to_video_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_to_video_1_0 || ORIG_REF_NAME==base_axis_to_video_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_axis_to_video_2_0/base_axis_to_video_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_to_video_2_0 || ORIG_REF_NAME==base_axis_to_video_2_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet

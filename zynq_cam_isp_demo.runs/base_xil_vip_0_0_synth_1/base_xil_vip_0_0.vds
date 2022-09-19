@@ -2,14 +2,15 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Jul 20 00:49:31 2022
-# Process ID: 29268
+# Start of session at: Sun Sep 18 22:47:53 2022
+# Process ID: 58340
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_vip_0_0_synth_1
 # Command line: vivado.exe -log base_xil_vip_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_xil_vip_0_0.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_vip_0_0_synth_1/base_xil_vip_0_0.vds
 # Journal file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_vip_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source base_xil_vip_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1262.594 ; gain = 56.379
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
@@ -20,96 +21,96 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 28560
+INFO: [Synth 8-7075] Helper process launched with PID 74048
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:09 . Memory (MB): peak = 1197.219 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'base_xil_vip_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_vip_0_0/synth/base_xil_vip_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/xil_vip_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/xil_vip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/xil_vip_v1_0_S00_AXI.v:530]
-INFO: [Synth 8-6157] synthesizing module 'vip_top' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:9]
-INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:200]
-INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:200]
-INFO: [Synth 8-6157] synthesizing module 'vip_hist_equ' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_hist_equ.v:12]
-INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:335]
+INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/xil_vip_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_vip_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/xil_vip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/xil_vip_v1_0_S00_AXI.v:530]
+INFO: [Synth 8-6157] synthesizing module 'vip_top' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:200]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:200]
+INFO: [Synth 8-6157] synthesizing module 'vip_hist_equ' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_hist_equ.v:12]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:491]
 INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
 INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:335]
-INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:277]
-INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:277]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:433]
 INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
 INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'vip_hist_equ' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_hist_equ.v:12]
-INFO: [Synth 8-6157] synthesizing module 'vip_sobel' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_sobel.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'vip_hist_equ' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_hist_equ.v:12]
+INFO: [Synth 8-6157] synthesizing module 'vip_sobel' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_sobel.v:31]
 INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:91]
 INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
 INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:15]
 INFO: [Synth 8-6155] done synthesizing module 'shift_register' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'vip_sobel' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_sobel.v:31]
-INFO: [Synth 8-6157] synthesizing module 'vip_yuv2rgb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_yuv2rgb.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'vip_yuv2rgb' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_yuv2rgb.v:14]
-INFO: [Synth 8-6157] synthesizing module 'vip_crop' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_crop.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'vip_crop' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_crop.v:13]
-INFO: [Synth 8-6157] synthesizing module 'vip_dscale' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_dscale.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'vip_dscale' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_dscale.v:13]
-INFO: [Synth 8-6157] synthesizing module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_osd.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_sobel' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_sobel.v:31]
+INFO: [Synth 8-6157] synthesizing module 'vip_yuv2rgb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_yuv2rgb.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'vip_yuv2rgb' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_yuv2rgb.v:14]
+INFO: [Synth 8-6157] synthesizing module 'vip_crop' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_crop.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_crop' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_crop.v:13]
+INFO: [Synth 8-6157] synthesizing module 'vip_dscale' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_dscale.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_dscale' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_dscale.v:13]
+INFO: [Synth 8-6157] synthesizing module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_osd.v:13]
 INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (11#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'vip_osd' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_osd.v:13]
-WARNING: [Synth 8-689] width (16) of port connection 'osd_x' does not match port width (12) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:159]
-WARNING: [Synth 8-689] width (16) of port connection 'osd_y' does not match port width (11) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:159]
-WARNING: [Synth 8-689] width (16) of port connection 'osd_w' does not match port width (12) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:159]
-WARNING: [Synth 8-689] width (16) of port connection 'osd_h' does not match port width (11) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:159]
-INFO: [Synth 8-6157] synthesizing module 'vip_yuv444to422' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_yuv444to422.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'vip_yuv444to422' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_yuv444to422.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'vip_top' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/vip/vip_top.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0_S00_AXI' (15#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/xil_vip_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0' (16#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/60e6/hdl/xil_vip_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'vip_osd' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_osd.v:13]
+WARNING: [Synth 8-689] width (16) of port connection 'osd_x' does not match port width (12) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:159]
+WARNING: [Synth 8-689] width (16) of port connection 'osd_y' does not match port width (11) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:159]
+WARNING: [Synth 8-689] width (16) of port connection 'osd_w' does not match port width (12) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:159]
+WARNING: [Synth 8-689] width (16) of port connection 'osd_h' does not match port width (11) of module 'vip_osd' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:159]
+INFO: [Synth 8-6157] synthesizing module 'vip_yuv444to422' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_yuv444to422.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_yuv444to422' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_yuv444to422.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'vip_top' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/vip/vip_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0_S00_AXI' (15#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/xil_vip_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_vip_v1_0' (16#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/af4b/hdl/xil_vip_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'base_xil_vip_0_0' (17#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_vip_0_0/synth/base_xil_vip_0_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:12 . Memory (MB): peak = 1197.219 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:21 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1197.219 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:13 . Memory (MB): peak = 1197.219 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:23 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.140 . Memory (MB): peak = 1197.219 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.218 . Memory (MB): peak = 1262.594 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1251.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1262.594 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.329 . Memory (MB): peak = 1253.832 ; gain = 2.039
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.403 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.832 ; gain = 56.613
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:47 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.832 ; gain = 56.613
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:47 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.832 ; gain = 56.613
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:47 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 1253.832 ; gain = 56.613
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:49 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -195,7 +196,7 @@ DSP Report: operator img_Y_r10 is absorbed into DSP img_Y_r10.
 DSP Report: Generating DSP img_Cb_r20, operation Mode is: (A:0x409)*B.
 DSP Report: operator img_Cb_r20 is absorbed into DSP img_Cb_r20.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:35 . Memory (MB): peak = 1253.832 ; gain = 56.613
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:01:06 . Memory (MB): peak = 1262.594 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -233,13 +234,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:38 ; elapsed = 00:00:43 . Memory (MB): peak = 1270.102 ; gain = 72.883
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:01:15 . Memory (MB): peak = 1271.039 ; gain = 8.445
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:38 ; elapsed = 00:00:44 . Memory (MB): peak = 1277.996 ; gain = 80.777
+Finished Timing Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:01:16 . Memory (MB): peak = 1278.980 ; gain = 16.387
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -271,7 +272,7 @@ INFO: [Synth 8-7052] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/
 INFO: [Synth 8-7052] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/xil_vip_v1_0_S00_AXI_inst/vip_top_i0/osd_i0/osd_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:39 ; elapsed = 00:00:45 . Memory (MB): peak = 1306.609 ; gain = 109.391
+Finished Technology Mapping : Time (s): cpu = 00:00:46 ; elapsed = 00:01:17 . Memory (MB): peak = 1308.180 ; gain = 45.586
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -289,37 +290,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1320.105 ; gain = 122.887
+Finished IO Insertion : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.824 ; gain = 60.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1320.105 ; gain = 122.887
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:49 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.824 ; gain = 60.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1320.105 ; gain = 122.887
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.824 ; gain = 60.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1320.105 ; gain = 122.887
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.824 ; gain = 60.230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1321.121 ; gain = 123.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.844 ; gain = 60.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:42 ; elapsed = 00:00:48 . Memory (MB): peak = 1321.121 ; gain = 123.902
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.844 ; gain = 60.250
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -373,18 +374,18 @@ Report Cell Usage:
 |18    |FDSE     |    23|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1321.121 ; gain = 123.902
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:20 . Memory (MB): peak = 1322.844 ; gain = 60.250
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:43 . Memory (MB): peak = 1321.121 ; gain = 67.289
-Synthesis Optimization Complete : Time (s): cpu = 00:00:43 ; elapsed = 00:00:48 . Memory (MB): peak = 1321.121 ; gain = 123.902
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:03 . Memory (MB): peak = 1322.844 ; gain = 60.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:21 . Memory (MB): peak = 1322.844 ; gain = 60.250
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.073 . Memory (MB): peak = 1321.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.102 . Memory (MB): peak = 1322.844 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 543 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1321.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1322.844 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -392,10 +393,10 @@ Synth Design complete, checksum: 407f18a0
 INFO: [Common 17-83] Releasing license: Synthesis
 64 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:00:54 . Memory (MB): peak = 1321.121 ; gain = 123.902
+synth_design: Time (s): cpu = 00:00:56 ; elapsed = 00:01:31 . Memory (MB): peak = 1322.844 ; gain = 60.250
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_vip_0_0_synth_1/base_xil_vip_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_vip_0_0, cache-ID = b28fa8a1f46c92aa
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_vip_0_0, cache-ID = c04c74064d325fc9
 INFO: [Coretcl 2-1174] Renamed 27 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_vip_0_0_synth_1/base_xil_vip_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_xil_vip_0_0_utilization_synth.rpt -pb base_xil_vip_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jul 20 00:50:37 2022...
+INFO: [Common 17-206] Exiting Vivado at Sun Sep 18 22:50:35 2022...
