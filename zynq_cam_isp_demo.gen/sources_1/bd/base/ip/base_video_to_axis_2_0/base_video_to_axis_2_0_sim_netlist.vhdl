@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Mon Sep 19 20:23:14 2022
+-- Date        : Thu Sep 22 21:40:04 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0_sim_netlist.vhdl
@@ -27,6 +27,7 @@ entity base_video_to_axis_2_0_full_dp_ram is
     waddr_reg : in STD_LOGIC_VECTOR ( 10 downto 0 );
     Q : in STD_LOGIC_VECTOR ( 11 downto 0 );
     overflow_0 : in STD_LOGIC_VECTOR ( 0 to 0 );
+    m_axis_tvalid : in STD_LOGIC;
     m_axis_tready : in STD_LOGIC;
     CO : in STD_LOGIC_VECTOR ( 0 to 0 );
     rempty_carry : in STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -232,13 +233,14 @@ mem_reg_1_i_1: unisim.vcomponents.LUT2
       I1 => overflow,
       O => \^wr_flag\
     );
-mem_reg_1_i_2: unisim.vcomponents.LUT2
+mem_reg_1_i_2: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"2"
+      INIT => X"0D"
     )
         port map (
-      I0 => m_axis_tready,
-      I1 => CO(0),
+      I0 => m_axis_tvalid,
+      I1 => m_axis_tready,
+      I2 => CO(0),
       O => \^rd_flag\
     );
 mem_reg_1_i_3: unisim.vcomponents.LUT2
@@ -421,24 +423,27 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity base_video_to_axis_2_0_async_fifo is
   port (
+    aresetn_0 : out STD_LOGIC;
     vid_rstn_0 : out STD_LOGIC;
+    m_axis_tready_0 : out STD_LOGIC;
     q_b : out STD_LOGIC_VECTOR ( 25 downto 0 );
     overflow : out STD_LOGIC;
-    m_axis_tvalid : out STD_LOGIC;
     aresetn : in STD_LOGIC;
     vid_rstn : in STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tvalid : in STD_LOGIC;
     vid_clk : in STD_LOGIC;
     aclk : in STD_LOGIC;
     wdata_a : in STD_LOGIC_VECTOR ( 24 downto 0 );
     prev_active_video : in STD_LOGIC;
-    vid_active_video : in STD_LOGIC;
-    m_axis_tready : in STD_LOGIC
+    vid_active_video : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of base_video_to_axis_2_0_async_fifo : entity is "async_fifo";
 end base_video_to_axis_2_0_async_fifo;
 
 architecture STRUCTURE of base_video_to_axis_2_0_async_fifo is
+  signal \^aresetn_0\ : STD_LOGIC;
   signal \^overflow\ : STD_LOGIC;
   signal r2w_rptr1 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal r2w_rptr2 : STD_LOGIC_VECTOR ( 11 downto 0 );
@@ -484,7 +489,6 @@ architecture STRUCTURE of base_video_to_axis_2_0_async_fifo is
   signal rptr : STD_LOGIC_VECTOR ( 10 downto 0 );
   signal \^vid_rstn_0\ : STD_LOGIC;
   signal w2r_wptr1 : STD_LOGIC_VECTOR ( 11 downto 0 );
-  signal \w2r_wptr1[11]_i_1_n_0\ : STD_LOGIC;
   signal w2r_wptr2 : STD_LOGIC_VECTOR ( 11 downto 0 );
   signal \waddr[0]_i_2_n_0\ : STD_LOGIC;
   signal waddr_reg : STD_LOGIC_VECTOR ( 10 downto 0 );
@@ -550,16 +554,9 @@ architecture STRUCTURE of base_video_to_axis_2_0_async_fifo is
   attribute ADDER_THRESHOLD of \waddr_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \waddr_reg[8]_i_1\ : label is 11;
 begin
+  aresetn_0 <= \^aresetn_0\;
   overflow <= \^overflow\;
   vid_rstn_0 <= \^vid_rstn_0\;
-m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => rempty,
-      O => m_axis_tvalid
-    );
 \r2w_rptr1[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
@@ -871,7 +868,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[0]_i_1_n_7\,
       Q => raddr_reg(0)
     );
@@ -895,7 +892,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[8]_i_1_n_5\,
       Q => raddr_reg(10)
     );
@@ -903,7 +900,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[8]_i_1_n_4\,
       Q => \raddr_reg__0\(11)
     );
@@ -911,7 +908,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[0]_i_1_n_6\,
       Q => raddr_reg(1)
     );
@@ -919,7 +916,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[0]_i_1_n_5\,
       Q => raddr_reg(2)
     );
@@ -927,7 +924,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[0]_i_1_n_4\,
       Q => raddr_reg(3)
     );
@@ -935,7 +932,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[4]_i_1_n_7\,
       Q => raddr_reg(4)
     );
@@ -958,7 +955,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[4]_i_1_n_6\,
       Q => raddr_reg(5)
     );
@@ -966,7 +963,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[4]_i_1_n_5\,
       Q => raddr_reg(6)
     );
@@ -974,7 +971,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[4]_i_1_n_4\,
       Q => raddr_reg(7)
     );
@@ -982,7 +979,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[8]_i_1_n_7\,
       Q => raddr_reg(8)
     );
@@ -1006,7 +1003,7 @@ m_axis_tvalid_INST_0: unisim.vcomponents.LUT1
      port map (
       C => aclk,
       CE => rd_flag,
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \raddr_reg[8]_i_1_n_6\,
       Q => raddr_reg(9)
     );
@@ -1020,6 +1017,7 @@ ram: entity work.base_video_to_axis_2_0_full_dp_ram
       S(0) => ram_n_4,
       aclk => aclk,
       m_axis_tready => m_axis_tready,
+      m_axis_tvalid => m_axis_tvalid,
       overflow => \^overflow\,
       overflow_0(0) => \waddr_reg__0\(11),
       prev_active_video => prev_active_video,
@@ -1053,6 +1051,24 @@ rempty_carry: unisim.vcomponents.CARRY4
       S(1) => ram_n_8,
       S(0) => ram_n_9
     );
+tvalid_i_1: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"75"
+    )
+        port map (
+      I0 => rempty,
+      I1 => m_axis_tready,
+      I2 => m_axis_tvalid,
+      O => m_axis_tready_0
+    );
+tvalid_i_2: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => aresetn,
+      O => \^aresetn_0\
+    );
 \w2r_wptr1[0]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"6"
@@ -1070,14 +1086,6 @@ rempty_carry: unisim.vcomponents.CARRY4
       I0 => \waddr_reg__0\(11),
       I1 => waddr_reg(10),
       O => wptr(10)
-    );
-\w2r_wptr1[11]_i_1\: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => aresetn,
-      O => \w2r_wptr1[11]_i_1_n_0\
     );
 \w2r_wptr1[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
@@ -1164,7 +1172,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(0),
       Q => w2r_wptr1(0)
     );
@@ -1172,7 +1180,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(10),
       Q => w2r_wptr1(10)
     );
@@ -1180,7 +1188,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => \waddr_reg__0\(11),
       Q => w2r_wptr1(11)
     );
@@ -1188,7 +1196,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(1),
       Q => w2r_wptr1(1)
     );
@@ -1196,7 +1204,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(2),
       Q => w2r_wptr1(2)
     );
@@ -1204,7 +1212,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(3),
       Q => w2r_wptr1(3)
     );
@@ -1212,7 +1220,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(4),
       Q => w2r_wptr1(4)
     );
@@ -1220,7 +1228,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(5),
       Q => w2r_wptr1(5)
     );
@@ -1228,7 +1236,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(6),
       Q => w2r_wptr1(6)
     );
@@ -1236,7 +1244,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(7),
       Q => w2r_wptr1(7)
     );
@@ -1244,7 +1252,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(8),
       Q => w2r_wptr1(8)
     );
@@ -1252,7 +1260,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => wptr(9),
       Q => w2r_wptr1(9)
     );
@@ -1260,7 +1268,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(0),
       Q => w2r_wptr2(0)
     );
@@ -1268,7 +1276,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(10),
       Q => w2r_wptr2(10)
     );
@@ -1276,7 +1284,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(11),
       Q => w2r_wptr2(11)
     );
@@ -1284,7 +1292,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(1),
       Q => w2r_wptr2(1)
     );
@@ -1292,7 +1300,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(2),
       Q => w2r_wptr2(2)
     );
@@ -1300,7 +1308,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(3),
       Q => w2r_wptr2(3)
     );
@@ -1308,7 +1316,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(4),
       Q => w2r_wptr2(4)
     );
@@ -1316,7 +1324,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(5),
       Q => w2r_wptr2(5)
     );
@@ -1324,7 +1332,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(6),
       Q => w2r_wptr2(6)
     );
@@ -1332,7 +1340,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(7),
       Q => w2r_wptr2(7)
     );
@@ -1340,7 +1348,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(8),
       Q => w2r_wptr2(8)
     );
@@ -1348,7 +1356,7 @@ rempty_carry: unisim.vcomponents.CARRY4
      port map (
       C => aclk,
       CE => '1',
-      CLR => \w2r_wptr1[11]_i_1_n_0\,
+      CLR => \^aresetn_0\,
       D => w2r_wptr1(9),
       Q => w2r_wptr2(9)
     );
@@ -1543,25 +1551,31 @@ end base_video_to_axis_2_0_video_to_axis;
 
 architecture STRUCTURE of base_video_to_axis_2_0_video_to_axis is
   signal fifo_n_0 : STD_LOGIC;
+  signal fifo_n_1 : STD_LOGIC;
+  signal fifo_n_2 : STD_LOGIC;
   signal frmsync : STD_LOGIC;
   signal frmsync_i_1_n_0 : STD_LOGIC;
+  signal \^m_axis_tvalid\ : STD_LOGIC;
   signal prev_active_video : STD_LOGIC;
   signal prev_data : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal prev_vsync : STD_LOGIC;
 begin
+  m_axis_tvalid <= \^m_axis_tvalid\;
 fifo: entity work.base_video_to_axis_2_0_async_fifo
      port map (
       aclk => aclk,
       aresetn => aresetn,
+      aresetn_0 => fifo_n_0,
       m_axis_tready => m_axis_tready,
-      m_axis_tvalid => m_axis_tvalid,
+      m_axis_tready_0 => fifo_n_2,
+      m_axis_tvalid => \^m_axis_tvalid\,
       overflow => overflow,
       prev_active_video => prev_active_video,
       q_b(25 downto 0) => q_b(25 downto 0),
       vid_active_video => vid_active_video,
       vid_clk => vid_clk,
       vid_rstn => vid_rstn,
-      vid_rstn_0 => fifo_n_0,
+      vid_rstn_0 => fifo_n_1,
       wdata_a(24) => frmsync,
       wdata_a(23 downto 0) => prev_data(23 downto 0)
     );
@@ -1580,7 +1594,7 @@ frmsync_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => frmsync_i_1_n_0,
       Q => frmsync
     );
@@ -1588,7 +1602,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_active_video,
       Q => prev_active_video
     );
@@ -1596,7 +1610,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(0),
       Q => prev_data(0)
     );
@@ -1604,7 +1618,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(10),
       Q => prev_data(10)
     );
@@ -1612,7 +1626,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(11),
       Q => prev_data(11)
     );
@@ -1620,7 +1634,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(12),
       Q => prev_data(12)
     );
@@ -1628,7 +1642,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(13),
       Q => prev_data(13)
     );
@@ -1636,7 +1650,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(14),
       Q => prev_data(14)
     );
@@ -1644,7 +1658,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(15),
       Q => prev_data(15)
     );
@@ -1652,7 +1666,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(16),
       Q => prev_data(16)
     );
@@ -1660,7 +1674,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(17),
       Q => prev_data(17)
     );
@@ -1668,7 +1682,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(18),
       Q => prev_data(18)
     );
@@ -1676,7 +1690,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(19),
       Q => prev_data(19)
     );
@@ -1684,7 +1698,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(1),
       Q => prev_data(1)
     );
@@ -1692,7 +1706,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(20),
       Q => prev_data(20)
     );
@@ -1700,7 +1714,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(21),
       Q => prev_data(21)
     );
@@ -1708,7 +1722,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(22),
       Q => prev_data(22)
     );
@@ -1716,7 +1730,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(23),
       Q => prev_data(23)
     );
@@ -1724,7 +1738,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(2),
       Q => prev_data(2)
     );
@@ -1732,7 +1746,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(3),
       Q => prev_data(3)
     );
@@ -1740,7 +1754,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(4),
       Q => prev_data(4)
     );
@@ -1748,7 +1762,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(5),
       Q => prev_data(5)
     );
@@ -1756,7 +1770,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(6),
       Q => prev_data(6)
     );
@@ -1764,7 +1778,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(7),
       Q => prev_data(7)
     );
@@ -1772,7 +1786,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(8),
       Q => prev_data(8)
     );
@@ -1780,7 +1794,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_data(9),
       Q => prev_data(9)
     );
@@ -1788,9 +1802,17 @@ prev_vsync_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
       CE => '1',
-      CLR => fifo_n_0,
+      CLR => fifo_n_1,
       D => vid_vsync,
       Q => prev_vsync
+    );
+tvalid_reg: unisim.vcomponents.FDCE
+     port map (
+      C => aclk,
+      CE => '1',
+      CLR => fifo_n_0,
+      D => fifo_n_2,
+      Q => \^m_axis_tvalid\
     );
 end STRUCTURE;
 library IEEE;

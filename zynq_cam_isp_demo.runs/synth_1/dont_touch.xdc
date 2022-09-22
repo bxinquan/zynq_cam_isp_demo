@@ -72,15 +72,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vi
 # IP: bd/base/ip/base_xil_vip_1_0/base_xil_vip_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_xil_vip_1_0 || ORIG_REF_NAME==base_xil_vip_1_0} -quiet] -quiet
 
-# IP: bd/base/ip/base_video_to_axis_0_0/base_video_to_axis_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_0_0 || ORIG_REF_NAME==base_video_to_axis_0_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_video_to_axis_1_0/base_video_to_axis_1_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_1_0 || ORIG_REF_NAME==base_video_to_axis_1_0} -quiet] -quiet
-
-# IP: bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_2_0 || ORIG_REF_NAME==base_video_to_axis_2_0} -quiet] -quiet
-
 # IP: bd/base/ip/base_axis_to_video_0_0/base_axis_to_video_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_to_video_0_0 || ORIG_REF_NAME==base_axis_to_video_0_0} -quiet] -quiet
 
@@ -89,6 +80,15 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_t
 
 # IP: bd/base/ip/base_axis_to_video_2_0/base_axis_to_video_2_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_axis_to_video_2_0 || ORIG_REF_NAME==base_axis_to_video_2_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_0_0/base_video_to_axis_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_0_0 || ORIG_REF_NAME==base_video_to_axis_0_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_1_0/base_video_to_axis_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_1_0 || ORIG_REF_NAME==base_video_to_axis_1_0} -quiet] -quiet
+
+# IP: bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_video_to_axis_2_0 || ORIG_REF_NAME==base_video_to_axis_2_0} -quiet] -quiet
 
 # IP: bd/base/ip/base_auto_pc_0/base_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==base_auto_pc_0 || ORIG_REF_NAME==base_auto_pc_0} -quiet] -quiet

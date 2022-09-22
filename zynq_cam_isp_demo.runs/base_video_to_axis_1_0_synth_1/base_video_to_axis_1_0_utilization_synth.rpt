@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon Sep 19 20:23:14 2022
+| Date         : Thu Sep 22 21:40:04 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file base_video_to_axis_1_0_utilization_synth.rpt -pb base_video_to_axis_1_0_utilization_synth.pb
 | Design       : base_video_to_axis_1_0
@@ -33,8 +33,8 @@ Table of Contents
 | Slice LUTs*             |   47 |     0 |          0 |     53200 |  0.09 |
 |   LUT as Logic          |   47 |     0 |          0 |     53200 |  0.09 |
 |   LUT as Memory         |    0 |     0 |          0 |     17400 |  0.00 |
-| Slice Registers         |   93 |     0 |          0 |    106400 |  0.09 |
-|   Register as Flip Flop |   93 |     0 |          0 |    106400 |  0.09 |
+| Slice Registers         |   94 |     0 |          0 |    106400 |  0.09 |
+|   Register as Flip Flop |   94 |     0 |          0 |    106400 |  0.09 |
 |   Register as Latch     |    0 |     0 |          0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |     13300 |  0.00 |
@@ -55,7 +55,7 @@ Table of Contents
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 93    |          Yes |           - |        Reset |
+| 94    |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
 | 0     |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
@@ -147,13 +147,13 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDCE     |   93 |        Flop & Latch |
-| LUT2     |   27 |                 LUT |
+| FDCE     |   94 |        Flop & Latch |
+| LUT2     |   26 |                 LUT |
 | LUT4     |   13 |                 LUT |
 | LUT5     |   10 |                 LUT |
 | LUT6     |    6 |                 LUT |
-| LUT1     |    5 |                 LUT |
-| LUT3     |    4 |                 LUT |
+| LUT3     |    6 |                 LUT |
+| LUT1     |    4 |                 LUT |
 | CARRY4   |    2 |          CarryLogic |
 | RAMB36E1 |    1 |        Block Memory |
 +----------+------+---------------------+

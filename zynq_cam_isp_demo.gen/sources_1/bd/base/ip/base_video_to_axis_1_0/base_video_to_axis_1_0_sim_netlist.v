@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Mon Sep 19 20:23:14 2022
+// Date        : Thu Sep 22 21:40:04 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_video_to_axis_1_0/base_video_to_axis_1_0_sim_netlist.v
@@ -73,35 +73,41 @@ endmodule
 (* ORIG_REF_NAME = "async_fifo" *) 
 module base_video_to_axis_1_0_async_fifo
    (DOBDO,
+    aresetn_0,
     vid_rstn_0,
+    m_axis_tready_0,
     overflow,
-    m_axis_tvalid,
     vid_clk,
     aclk,
     DIADI,
     aresetn,
     vid_rstn,
+    m_axis_tready,
+    m_axis_tvalid,
     prev_active_video,
-    vid_active_video,
-    m_axis_tready);
+    vid_active_video);
   output [25:0]DOBDO;
+  output aresetn_0;
   output vid_rstn_0;
+  output m_axis_tready_0;
   output overflow;
-  output m_axis_tvalid;
   input vid_clk;
   input aclk;
   input [24:0]DIADI;
   input aresetn;
   input vid_rstn;
+  input m_axis_tready;
+  input m_axis_tvalid;
   input prev_active_video;
   input vid_active_video;
-  input m_axis_tready;
 
   wire [24:0]DIADI;
   wire [25:0]DOBDO;
   wire aclk;
   wire aresetn;
+  wire aresetn_0;
   wire m_axis_tready;
+  wire m_axis_tready_0;
   wire m_axis_tvalid;
   wire overflow;
   wire [10:0]p_0_in;
@@ -131,7 +137,6 @@ module base_video_to_axis_1_0_async_fifo
   wire vid_rstn;
   wire vid_rstn_0;
   wire [10:0]w2r_wptr1;
-  wire \w2r_wptr1[10]_i_1_n_0 ;
   wire [10:0]w2r_wptr2;
   wire \waddr[10]_i_2_n_0 ;
   wire [9:0]waddr_reg;
@@ -144,11 +149,6 @@ module base_video_to_axis_1_0_async_fifo
   wire [3:0]NLW_rempty_carry_O_UNCONNECTED;
   wire [3:0]NLW_wfull_carry_O_UNCONNECTED;
 
-  LUT1 #(
-    .INIT(2'h1)) 
-    m_axis_tvalid_INST_0
-       (.I0(rempty),
-        .O(m_axis_tvalid));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h6)) 
@@ -462,67 +462,67 @@ module base_video_to_axis_1_0_async_fifo
   FDCE \raddr_reg[0] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[0]),
         .Q(raddr_reg[0]));
   FDCE \raddr_reg[10] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[10]),
         .Q(raddr_reg__0));
   FDCE \raddr_reg[1] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[1]),
         .Q(raddr_reg[1]));
   FDCE \raddr_reg[2] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[2]),
         .Q(raddr_reg[2]));
   FDCE \raddr_reg[3] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[3]),
         .Q(raddr_reg[3]));
   FDCE \raddr_reg[4] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[4]),
         .Q(raddr_reg[4]));
   FDCE \raddr_reg[5] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[5]),
         .Q(raddr_reg[5]));
   FDCE \raddr_reg[6] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[6]),
         .Q(raddr_reg[6]));
   FDCE \raddr_reg[7] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[7]),
         .Q(raddr_reg[7]));
   FDCE \raddr_reg[8] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[8]),
         .Q(raddr_reg[8]));
   FDCE \raddr_reg[9] 
        (.C(aclk),
         .CE(rd_flag),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(p_0_in__0[9]),
         .Q(raddr_reg[9]));
   base_video_to_axis_1_0_full_dp_ram ram
@@ -533,6 +533,7 @@ module base_video_to_axis_1_0_async_fifo
         .S({ram_n_28,ram_n_29,ram_n_30,ram_n_31}),
         .aclk(aclk),
         .m_axis_tready(m_axis_tready),
+        .m_axis_tvalid(m_axis_tvalid),
         .overflow(overflow),
         .prev_active_video(prev_active_video),
         .raddr_reg(raddr_reg),
@@ -552,6 +553,18 @@ module base_video_to_axis_1_0_async_fifo
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(NLW_rempty_carry_O_UNCONNECTED[3:0]),
         .S({ram_n_32,ram_n_33,ram_n_34,ram_n_35}));
+  LUT3 #(
+    .INIT(8'h75)) 
+    tvalid_i_1
+       (.I0(rempty),
+        .I1(m_axis_tready),
+        .I2(m_axis_tvalid),
+        .O(m_axis_tready_0));
+  LUT1 #(
+    .INIT(2'h1)) 
+    tvalid_i_2
+       (.I0(aresetn),
+        .O(aresetn_0));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h6)) 
@@ -559,11 +572,6 @@ module base_video_to_axis_1_0_async_fifo
        (.I0(waddr_reg[1]),
         .I1(waddr_reg[0]),
         .O(wptr[0]));
-  LUT1 #(
-    .INIT(2'h1)) 
-    \w2r_wptr1[10]_i_1 
-       (.I0(aresetn),
-        .O(\w2r_wptr1[10]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h6)) 
@@ -630,133 +638,133 @@ module base_video_to_axis_1_0_async_fifo
   FDCE \w2r_wptr1_reg[0] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[0]),
         .Q(w2r_wptr1[0]));
   FDCE \w2r_wptr1_reg[10] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(waddr_reg__0),
         .Q(w2r_wptr1[10]));
   FDCE \w2r_wptr1_reg[1] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[1]),
         .Q(w2r_wptr1[1]));
   FDCE \w2r_wptr1_reg[2] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[2]),
         .Q(w2r_wptr1[2]));
   FDCE \w2r_wptr1_reg[3] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[3]),
         .Q(w2r_wptr1[3]));
   FDCE \w2r_wptr1_reg[4] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[4]),
         .Q(w2r_wptr1[4]));
   FDCE \w2r_wptr1_reg[5] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[5]),
         .Q(w2r_wptr1[5]));
   FDCE \w2r_wptr1_reg[6] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[6]),
         .Q(w2r_wptr1[6]));
   FDCE \w2r_wptr1_reg[7] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[7]),
         .Q(w2r_wptr1[7]));
   FDCE \w2r_wptr1_reg[8] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[8]),
         .Q(w2r_wptr1[8]));
   FDCE \w2r_wptr1_reg[9] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(wptr[9]),
         .Q(w2r_wptr1[9]));
   FDCE \w2r_wptr2_reg[0] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[0]),
         .Q(w2r_wptr2[0]));
   FDCE \w2r_wptr2_reg[10] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[10]),
         .Q(w2r_wptr2[10]));
   FDCE \w2r_wptr2_reg[1] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[1]),
         .Q(w2r_wptr2[1]));
   FDCE \w2r_wptr2_reg[2] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[2]),
         .Q(w2r_wptr2[2]));
   FDCE \w2r_wptr2_reg[3] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[3]),
         .Q(w2r_wptr2[3]));
   FDCE \w2r_wptr2_reg[4] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[4]),
         .Q(w2r_wptr2[4]));
   FDCE \w2r_wptr2_reg[5] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[5]),
         .Q(w2r_wptr2[5]));
   FDCE \w2r_wptr2_reg[6] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[6]),
         .Q(w2r_wptr2[6]));
   FDCE \w2r_wptr2_reg[7] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[7]),
         .Q(w2r_wptr2[7]));
   FDCE \w2r_wptr2_reg[8] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[8]),
         .Q(w2r_wptr2[8]));
   FDCE \w2r_wptr2_reg[9] 
        (.C(aclk),
         .CE(1'b1),
-        .CLR(\w2r_wptr1[10]_i_1_n_0 ),
+        .CLR(aresetn_0),
         .D(w2r_wptr1[9]),
         .Q(w2r_wptr2[9]));
   LUT1 #(
@@ -954,6 +962,7 @@ module base_video_to_axis_1_0_full_dp_ram
     vid_active_video,
     Q,
     waddr_reg__0,
+    m_axis_tvalid,
     m_axis_tready,
     CO,
     rempty_carry,
@@ -973,6 +982,7 @@ module base_video_to_axis_1_0_full_dp_ram
   input vid_active_video;
   input [10:0]Q;
   input [0:0]waddr_reg__0;
+  input m_axis_tvalid;
   input m_axis_tready;
   input [0:0]CO;
   input [10:0]rempty_carry;
@@ -985,6 +995,7 @@ module base_video_to_axis_1_0_full_dp_ram
   wire [3:0]S;
   wire aclk;
   wire m_axis_tready;
+  wire m_axis_tvalid;
   wire overflow;
   wire [24:24]p_0_out;
   wire prev_active_video;
@@ -1090,11 +1101,12 @@ module base_video_to_axis_1_0_full_dp_ram
        (.I0(prev_active_video),
         .I1(overflow),
         .O(wr_flag));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT3 #(
+    .INIT(8'h0D)) 
     mem_reg_i_2
-       (.I0(m_axis_tready),
-        .I1(CO),
+       (.I0(m_axis_tvalid),
+        .I1(m_axis_tready),
+        .I2(CO),
         .O(rd_flag));
   LUT2 #(
     .INIT(4'h2)) 
@@ -1251,6 +1263,8 @@ module base_video_to_axis_1_0_video_to_axis
   wire aclk;
   wire aresetn;
   wire fifo_n_26;
+  wire fifo_n_27;
+  wire fifo_n_28;
   wire frmsync;
   wire frmsync_i_1_n_0;
   wire m_axis_tready;
@@ -1270,14 +1284,16 @@ module base_video_to_axis_1_0_video_to_axis
         .DOBDO(DOBDO),
         .aclk(aclk),
         .aresetn(aresetn),
+        .aresetn_0(fifo_n_26),
         .m_axis_tready(m_axis_tready),
+        .m_axis_tready_0(fifo_n_28),
         .m_axis_tvalid(m_axis_tvalid),
         .overflow(overflow),
         .prev_active_video(prev_active_video),
         .vid_active_video(vid_active_video),
         .vid_clk(vid_clk),
         .vid_rstn(vid_rstn),
-        .vid_rstn_0(fifo_n_26));
+        .vid_rstn_0(fifo_n_27));
   LUT4 #(
     .INIT(16'h6F66)) 
     frmsync_i_1
@@ -1289,165 +1305,171 @@ module base_video_to_axis_1_0_video_to_axis
   FDCE frmsync_reg
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(frmsync_i_1_n_0),
         .Q(frmsync));
   FDCE prev_active_video_reg
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_active_video),
         .Q(prev_active_video));
   FDCE \prev_data_reg[0] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[0]),
         .Q(prev_data[0]));
   FDCE \prev_data_reg[10] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[10]),
         .Q(prev_data[10]));
   FDCE \prev_data_reg[11] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[11]),
         .Q(prev_data[11]));
   FDCE \prev_data_reg[12] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[12]),
         .Q(prev_data[12]));
   FDCE \prev_data_reg[13] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[13]),
         .Q(prev_data[13]));
   FDCE \prev_data_reg[14] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[14]),
         .Q(prev_data[14]));
   FDCE \prev_data_reg[15] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[15]),
         .Q(prev_data[15]));
   FDCE \prev_data_reg[16] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[16]),
         .Q(prev_data[16]));
   FDCE \prev_data_reg[17] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[17]),
         .Q(prev_data[17]));
   FDCE \prev_data_reg[18] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[18]),
         .Q(prev_data[18]));
   FDCE \prev_data_reg[19] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[19]),
         .Q(prev_data[19]));
   FDCE \prev_data_reg[1] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[1]),
         .Q(prev_data[1]));
   FDCE \prev_data_reg[20] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[20]),
         .Q(prev_data[20]));
   FDCE \prev_data_reg[21] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[21]),
         .Q(prev_data[21]));
   FDCE \prev_data_reg[22] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[22]),
         .Q(prev_data[22]));
   FDCE \prev_data_reg[23] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[23]),
         .Q(prev_data[23]));
   FDCE \prev_data_reg[2] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[2]),
         .Q(prev_data[2]));
   FDCE \prev_data_reg[3] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[3]),
         .Q(prev_data[3]));
   FDCE \prev_data_reg[4] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[4]),
         .Q(prev_data[4]));
   FDCE \prev_data_reg[5] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[5]),
         .Q(prev_data[5]));
   FDCE \prev_data_reg[6] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[6]),
         .Q(prev_data[6]));
   FDCE \prev_data_reg[7] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[7]),
         .Q(prev_data[7]));
   FDCE \prev_data_reg[8] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[8]),
         .Q(prev_data[8]));
   FDCE \prev_data_reg[9] 
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_data[9]),
         .Q(prev_data[9]));
   FDCE prev_vsync_reg
        (.C(vid_clk),
         .CE(1'b1),
-        .CLR(fifo_n_26),
+        .CLR(fifo_n_27),
         .D(vid_vsync),
         .Q(prev_vsync));
+  FDCE tvalid_reg
+       (.C(aclk),
+        .CE(1'b1),
+        .CLR(fifo_n_26),
+        .D(fifo_n_28),
+        .Q(m_axis_tvalid));
 endmodule
 
 (* ORIG_REF_NAME = "video_to_axis_v1_0" *) 

@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Mon Sep 19 20:30:02 2022
+| Date         : Thu Sep 22 21:51:41 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_methodology -file base_wrapper_methodology_drc_routed.rpt -pb base_wrapper_methodology_drc_routed.pb -rpx base_wrapper_methodology_drc_routed.rpx
 | Design       : base_wrapper
@@ -6000,32 +6000,32 @@ Related violations: <none>
 
 PDRC-190#1 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X63Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X49Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[5].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#2 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X62Y37 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_0/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X48Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[6].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#3 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X79Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X55Y63 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[7].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#4 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X71Y43 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_1/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X56Y55 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[8].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#5 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X76Y42 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_MM2S_LITE_CROSSINGS.GEN_MM2S_CROSSINGS_ASYNC.MM2S_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X67Y48 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[9].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 PDRC-190#6 Warning
 Suboptimally placed synchronized register chain  
-The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X69Y31 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
+The FDRE cell base_i/axi_vdma_2/U0/AXI_LITE_REG_INTERFACE_I/GEN_S2MM_LITE_CROSSINGS.GEN_S2MM_CROSSINGS_ASYNC.S2MM_INTRPT_CROSSING_I/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3 in site SLICE_X68Y45 is part of a synchronized register chain that is suboptimally placed as the load FDRE cell base_i/axi_intc_0/U0/INTC_CORE_I/INTR_DETECT_GEN[10].ASYNC_GEN.intr_ff_reg[0] is not placed in the same (SLICE) site.
 Related violations: <none>
 
 TIMING-9#1 Warning

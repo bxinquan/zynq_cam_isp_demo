@@ -5244,3 +5244,282 @@ con
 
 20:34:13 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
 20:34:20 INFO  : Disconnected from the channel tcfchan#5.
+21:50:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\temp_xsdb_launch_script.tcl
+21:50:30 INFO  : XSCT server has started successfully.
+21:50:30 INFO  : plnx-install-location is set to ''
+21:50:30 INFO  : Successfully done setting XSCT server connection channel  
+21:50:30 INFO  : Successfully done setting workspace for the tool. 
+21:50:30 INFO  : Platform repository initialization has completed.
+21:50:31 INFO  : Registering command handlers for Vitis TCF services
+21:50:31 INFO  : Successfully done query RDI_DATADIR 
+21:50:31 INFO  : Restoring global repository preferences: 
+		 D:\Work\fpga\device-tree-xlnx-xilinx_v2021.1
+21:50:40 INFO  : Result from executing command 'removePlatformRepo': 
+21:50:45 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:52:41 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:52:44 ERROR : Error from executing command 'removePlatformRepo': ERROR: No valid directory exists at given path.
+21:54:25 INFO  : Hardware specification for platform project 'base_wrapper' is updated.
+21:54:43 INFO  : Result from executing command 'getProjects': base_wrapper;dualcam_wrapper;h264_wrapper
+21:54:43 INFO  : Result from executing command 'getPlatforms': dualcam_wrapper|D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/dualcam_wrapper.xpfm;h264_wrapper|D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/h264_wrapper/export/h264_wrapper/h264_wrapper.xpfm
+21:55:04 INFO  : Result from executing command 'getProjects': base_wrapper;dualcam_wrapper;h264_wrapper
+21:55:04 INFO  : Result from executing command 'getPlatforms': base_wrapper|D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/base_wrapper.xpfm;dualcam_wrapper|D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/dualcam_wrapper/export/dualcam_wrapper/dualcam_wrapper.xpfm;h264_wrapper|D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/h264_wrapper/export/h264_wrapper/h264_wrapper.xpfm
+21:55:10 INFO  : Checking for BSP changes to sync application flags for project 'base'...
+21:55:43 INFO  : The hardware specification used by project 'base' is out of sync with the platform. Resource files extracted from the hardware specification will be updated.
+21:55:44 INFO  : The file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base\_ide\bitstream\base_wrapper.bit' stored in project is removed.
+21:55:44 INFO  : The updated bitstream files are copied from platform to folder 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base\_ide\bitstream' in project 'base'.
+21:55:44 INFO  : The file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base\_ide\psinit\ps7_init.tcl' stored in project is removed.
+21:55:47 INFO  : The updated ps init files are copied from platform to folder 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base\_ide\psinit' in project 'base'.
+21:55:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:55:50 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:55:50 INFO  : 'jtag frequency' command is executed.
+21:55:50 INFO  : Context for 'APU' is selected.
+21:55:50 INFO  : System reset is completed.
+21:55:53 INFO  : 'after 3000' command is executed.
+21:55:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+21:55:56 INFO  : Device configured successfully with "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit"
+21:55:56 INFO  : Context for 'APU' is selected.
+21:55:57 INFO  : Hardware design and registers information is loaded from 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa'.
+21:55:57 INFO  : 'configparams force-mem-access 1' command is executed.
+21:55:57 INFO  : Context for 'APU' is selected.
+21:55:57 INFO  : Sourcing of 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl' is done.
+21:55:57 INFO  : 'ps7_init' command is executed.
+21:55:57 INFO  : 'ps7_post_config' command is executed.
+21:55:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:55:57 INFO  : The application 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:55:57 INFO  : 'configparams force-mem-access 0' command is executed.
+21:55:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:55:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:55:57 INFO  : 'con' command is executed.
+21:55:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:55:57 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
+21:56:07 INFO  : Disconnected from the channel tcfchan#7.
+21:56:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:08 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:56:08 ERROR : port closed
+21:56:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:56:08 ERROR : port closed
+21:56:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:13 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:56:13 INFO  : 'jtag frequency' command is executed.
+21:56:13 INFO  : Context for 'APU' is selected.
+21:56:13 INFO  : System reset is completed.
+21:56:16 INFO  : 'after 3000' command is executed.
+21:56:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+21:56:20 INFO  : Device configured successfully with "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit"
+21:56:20 INFO  : Context for 'APU' is selected.
+21:56:20 INFO  : Hardware design and registers information is loaded from 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa'.
+21:56:20 INFO  : 'configparams force-mem-access 1' command is executed.
+21:56:20 INFO  : Context for 'APU' is selected.
+21:56:20 INFO  : Sourcing of 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl' is done.
+21:56:20 INFO  : 'ps7_init' command is executed.
+21:56:20 INFO  : 'ps7_post_config' command is executed.
+21:56:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:20 INFO  : The application 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:56:20 INFO  : 'configparams force-mem-access 0' command is executed.
+21:56:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:56:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:21 INFO  : 'con' command is executed.
+21:56:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:56:21 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
+21:56:33 INFO  : Disconnected from the channel tcfchan#8.
+21:56:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:34 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:56:34 ERROR : port closed
+21:56:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:56:34 ERROR : port closed
+21:56:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:39 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:56:39 INFO  : 'jtag frequency' command is executed.
+21:56:39 INFO  : Context for 'APU' is selected.
+21:56:39 INFO  : System reset is completed.
+21:56:42 INFO  : 'after 3000' command is executed.
+21:56:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+21:56:46 INFO  : Device configured successfully with "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit"
+21:56:46 INFO  : Context for 'APU' is selected.
+21:56:46 INFO  : Hardware design and registers information is loaded from 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa'.
+21:56:46 INFO  : 'configparams force-mem-access 1' command is executed.
+21:56:46 INFO  : Context for 'APU' is selected.
+21:56:46 INFO  : Sourcing of 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl' is done.
+21:56:46 INFO  : 'ps7_init' command is executed.
+21:56:46 INFO  : 'ps7_post_config' command is executed.
+21:56:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:46 INFO  : The application 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:56:46 INFO  : 'configparams force-mem-access 0' command is executed.
+21:56:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:56:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:56:47 INFO  : 'con' command is executed.
+21:56:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:56:47 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
+21:56:54 INFO  : Disconnected from the channel tcfchan#9.
+21:56:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:56:55 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:56:55 ERROR : port closed
+21:56:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+21:56:55 ERROR : port closed
+21:57:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:00 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:57:00 INFO  : 'jtag frequency' command is executed.
+21:57:00 INFO  : Context for 'APU' is selected.
+21:57:00 INFO  : System reset is completed.
+21:57:03 INFO  : 'after 3000' command is executed.
+21:57:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+21:57:07 INFO  : Device configured successfully with "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit"
+21:57:07 INFO  : Context for 'APU' is selected.
+21:57:07 INFO  : Hardware design and registers information is loaded from 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa'.
+21:57:07 INFO  : 'configparams force-mem-access 1' command is executed.
+21:57:07 INFO  : Context for 'APU' is selected.
+21:57:07 INFO  : Sourcing of 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl' is done.
+21:57:07 INFO  : 'ps7_init' command is executed.
+21:57:07 INFO  : 'ps7_post_config' command is executed.
+21:57:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:08 INFO  : The application 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:57:08 INFO  : 'configparams force-mem-access 0' command is executed.
+21:57:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:57:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:08 INFO  : 'con' command is executed.
+21:57:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:57:08 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
+21:57:46 INFO  : Disconnected from the channel tcfchan#10.
+21:57:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:48 INFO  : Jtag cable 'Digilent JTAG-HS1 210512180081' is selected.
+21:57:48 INFO  : 'jtag frequency' command is executed.
+21:57:50 INFO  : Context for 'APU' is selected.
+21:57:50 INFO  : System reset is completed.
+21:57:53 INFO  : 'after 3000' command is executed.
+21:57:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}' command is executed.
+21:57:56 INFO  : Device configured successfully with "D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit"
+21:57:56 INFO  : Context for 'APU' is selected.
+21:57:56 INFO  : Hardware design and registers information is loaded from 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa'.
+21:57:56 INFO  : 'configparams force-mem-access 1' command is executed.
+21:57:56 INFO  : Context for 'APU' is selected.
+21:57:56 INFO  : Sourcing of 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl' is done.
+21:57:57 INFO  : 'ps7_init' command is executed.
+21:57:57 INFO  : 'ps7_post_config' command is executed.
+21:57:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:57 INFO  : The application 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf' is downloaded to processor 'ps7_cortexa9_0'.
+21:57:57 INFO  : 'configparams force-mem-access 0' command is executed.
+21:57:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent JTAG-HS1 210512180081" && level==0 && jtag_device_ctx=="jsn-JTAG-HS1-210512180081-23727093-0"}
+fpga -file D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/bitstream/base_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/hw/base_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base/Debug/base.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+21:57:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+21:57:57 INFO  : 'con' command is executed.
+21:57:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+21:57:57 INFO  : Launch script is exported to file 'D:\Work\fpga\zynq_cam_isp_demo\zynq_cam_isp_demo.vitis\base_system\_ide\scripts\debugger_base-default.tcl'
+21:58:12 INFO  : Disconnected from the channel tcfchan#11.
