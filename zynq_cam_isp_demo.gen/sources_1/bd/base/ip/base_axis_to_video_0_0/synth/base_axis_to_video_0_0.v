@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:axis_to_video:1.0
-// IP Revision: 6
+// IP Revision: 7
 
 (* X_CORE_INFO = "axis_to_video_v1_0,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_axis_to_video_0_0,axis_to_video_v1_0,{}" *)

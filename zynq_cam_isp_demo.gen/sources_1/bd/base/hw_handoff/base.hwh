@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep 28 20:16:10 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep 28 23:54:05 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="base" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -10562,7 +10562,7 @@
         <PERIPHERAL INSTANCE="axis_to_video_2"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/axis_to_video_0" HWVERSION="1.0" INSTANCE="axis_to_video_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_0" HWVERSION="1.0" INSTANCE="axis_to_video_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="8"/>
@@ -10648,9 +10648,9 @@
             <CONNECTION INSTANCE="xil_vip_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="xil_vip_1" PORT="rst_n"/>
             <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_rstn"/>
+            <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_ce"/>
             <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_ce"/>
-            <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_ce"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="underflow" SIGIS="undef"/>
@@ -10688,7 +10688,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/axis_to_video_1" HWVERSION="1.0" INSTANCE="axis_to_video_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_1" HWVERSION="1.0" INSTANCE="axis_to_video_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -10808,7 +10808,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="6" FULLNAME="/axis_to_video_2" HWVERSION="1.0" INSTANCE="axis_to_video_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_2" HWVERSION="1.0" INSTANCE="axis_to_video_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -15742,7 +15742,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="8"/>
@@ -15850,7 +15850,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -15958,7 +15958,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
