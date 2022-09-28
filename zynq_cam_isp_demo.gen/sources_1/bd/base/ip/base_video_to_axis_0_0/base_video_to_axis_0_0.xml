@@ -410,6 +410,41 @@
         </spirit:parameter>
       </spirit:parameters>
     </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>vid_ce</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clockenable" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clockenable_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CE</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>vid_ce</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.VID_CE.FREQ_HZ">100000000</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.VID_CE.PHASE">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.VID_CE.POLARITY">ACTIVE_LOW</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
   </spirit:busInterfaces>
   <spirit:memoryMaps>
     <spirit:memoryMap>
@@ -447,11 +482,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 22 13:39:21 UTC 2022</spirit:value>
+            <spirit:value>Wed Sep 28 12:16:10 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6dcb3dc0</spirit:value>
+            <spirit:value>9:ef757873</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -462,7 +497,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6dcb3dc0</spirit:value>
+            <spirit:value>9:ef757873</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -478,11 +513,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 22 13:39:21 UTC 2022</spirit:value>
+            <spirit:value>Wed Sep 28 12:16:10 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6dcb3dc0</spirit:value>
+            <spirit:value>9:ef757873</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -498,11 +533,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 22 13:39:21 UTC 2022</spirit:value>
+            <spirit:value>Wed Sep 28 12:16:10 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64fe78f0</spirit:value>
+            <spirit:value>9:070c5340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -518,11 +553,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 22 13:39:21 UTC 2022</spirit:value>
+            <spirit:value>Wed Sep 28 12:16:10 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:64fe78f0</spirit:value>
+            <spirit:value>9:070c5340</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -536,11 +571,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Thu Sep 22 13:40:03 UTC 2022</spirit:value>
+            <spirit:value>Wed Sep 28 12:16:52 UTC 2022</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:6dcb3dc0</spirit:value>
+            <spirit:value>9:ef757873</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -561,6 +596,19 @@
       </spirit:port>
       <spirit:port>
         <spirit:name>vid_rstn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vid_ce</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:wireTypeDefs>
@@ -752,11 +800,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d07d/hdl/video_to_axis.v</spirit:name>
+        <spirit:name>../../ipshared/df35/hdl/video_to_axis.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d07d/hdl/video_to_axis_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/df35/hdl/video_to_axis_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -775,11 +823,11 @@
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d07d/hdl/video_to_axis.v</spirit:name>
+        <spirit:name>../../ipshared/df35/hdl/video_to_axis.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/d07d/hdl/video_to_axis_v1_0.v</spirit:name>
+        <spirit:name>../../ipshared/df35/hdl/video_to_axis_v1_0.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
       </spirit:file>
     </spirit:fileSet>
@@ -848,7 +896,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>video_to_axis_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>5</xilinx:coreRevision>
+      <xilinx:coreRevision>7</xilinx:coreRevision>
       <xilinx:tags>
         <xilinx:tag xilinx:name="ui.data.coregen.df@1c1b2f52_ARCHIVE_LOCATION">d:/Work/fpga/zynq_soc_test/ip_repo/video_to_axis_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@2df6020a_ARCHIVE_LOCATION">d:/Work/fpga/zynq_soc_test/ip_repo/video_to_axis_1.0</xilinx:tag>
@@ -940,6 +988,22 @@
         <xilinx:tag xilinx:name="ui.data.coregen.df@7034713e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@61b72df8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
         <xilinx:tag xilinx:name="ui.data.coregen.df@462ec581_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@7c35c8de_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2e3b9ff2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@2a0a260b_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@67efd658_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4d1428ac_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1a19eabd_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@3a89c7b9_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@26794c7e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1b122e1f_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@70d7e7fe_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@30388df8_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@127d1526_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1597ac81_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@4b358dee_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@695f10f2_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.df@1367e55e_ARCHIVE_LOCATION">d:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo/video_to_axis_1.0</xilinx:tag>
       </xilinx:tags>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ACLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
@@ -961,6 +1025,9 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TDEST_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.M_AXIS.TUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CE.FREQ_HZ" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CE.PHASE" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CE.POLARITY" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CLK.ASSOCIATED_RESET" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.VID_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
@@ -973,12 +1040,12 @@
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2021.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="16fb38c7"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="424ef9a4"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="5dd46fd6"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="d5cf6dbe"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="bffb6d4c"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8e089c54"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c5d7db9b"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="5bba7640"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="f7b6cc64"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="528c6ff4"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

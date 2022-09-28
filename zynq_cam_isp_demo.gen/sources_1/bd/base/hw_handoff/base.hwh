@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep 22 21:39:21 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep 28 20:16:10 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="base" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -10649,6 +10649,8 @@
             <CONNECTION INSTANCE="xil_vip_1" PORT="rst_n"/>
             <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_rstn"/>
+            <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_ce"/>
+            <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_ce"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="underflow" SIGIS="undef"/>
@@ -11544,6 +11546,7 @@
             <CONNECTION INSTANCE="axis_to_video_0" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="axis_to_video_1" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="video_to_axis_0" PORT="vid_rstn"/>
+            <CONNECTION INSTANCE="video_to_axis_0" PORT="vid_ce"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -15739,7 +15742,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="8"/>
@@ -15754,6 +15757,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vid_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vid_ce" POLARITY="ACTIVE_LOW" SIGIS="ce" SIGNAME="clk_wiz_0_locked">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
           </CONNECTIONS>
@@ -15842,7 +15850,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -15857,6 +15865,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vid_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="axis_to_video_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_to_video_0" PORT="locked"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vid_ce" POLARITY="ACTIVE_LOW" SIGIS="ce" SIGNAME="axis_to_video_0_locked">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_to_video_0" PORT="locked"/>
           </CONNECTIONS>
@@ -15945,7 +15958,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="5" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="7" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -15960,6 +15973,11 @@
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="vid_rstn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="axis_to_video_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_to_video_0" PORT="locked"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="vid_ce" POLARITY="ACTIVE_LOW" SIGIS="ce" SIGNAME="axis_to_video_0_locked">
           <CONNECTIONS>
             <CONNECTION INSTANCE="axis_to_video_0" PORT="locked"/>
           </CONNECTIONS>

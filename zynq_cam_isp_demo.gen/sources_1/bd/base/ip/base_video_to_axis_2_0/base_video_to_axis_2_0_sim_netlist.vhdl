@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Sep 22 21:40:04 2022
+-- Date        : Wed Sep 28 20:16:52 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0_sim_netlist.vhdl
@@ -21,6 +21,7 @@ entity base_video_to_axis_2_0_full_dp_ram is
     rd_flag : out STD_LOGIC;
     \w2r_wptr2_reg[9]\ : out STD_LOGIC_VECTOR ( 3 downto 0 );
     q_b : out STD_LOGIC_VECTOR ( 25 downto 0 );
+    vid_ce : in STD_LOGIC;
     prev_active_video : in STD_LOGIC;
     overflow : in STD_LOGIC;
     vid_active_video : in STD_LOGIC;
@@ -224,13 +225,14 @@ mem_reg_1: unisim.vcomponents.RAMB18E1
       WEA(0) => '1',
       WEBWE(3 downto 0) => B"0000"
     );
-mem_reg_1_i_1: unisim.vcomponents.LUT2
+mem_reg_1_i_1: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"2"
+      INIT => X"08"
     )
         port map (
-      I0 => prev_active_video,
-      I1 => overflow,
+      I0 => vid_ce,
+      I1 => prev_active_video,
+      I2 => overflow,
       O => \^wr_flag\
     );
 mem_reg_1_i_2: unisim.vcomponents.LUT3
@@ -435,6 +437,7 @@ entity base_video_to_axis_2_0_async_fifo is
     vid_clk : in STD_LOGIC;
     aclk : in STD_LOGIC;
     wdata_a : in STD_LOGIC_VECTOR ( 24 downto 0 );
+    vid_ce : in STD_LOGIC;
     prev_active_video : in STD_LOGIC;
     vid_active_video : in STD_LOGIC
   );
@@ -1027,6 +1030,7 @@ ram: entity work.base_video_to_axis_2_0_full_dp_ram
       rempty_carry(11 downto 0) => w2r_wptr2(11 downto 0),
       rempty_carry_0(0) => \raddr_reg__0\(11),
       vid_active_video => vid_active_video,
+      vid_ce => vid_ce,
       vid_clk => vid_clk,
       \w2r_wptr2_reg[9]\(3) => ram_n_6,
       \w2r_wptr2_reg[9]\(2) => ram_n_7,
@@ -1538,6 +1542,7 @@ entity base_video_to_axis_2_0_video_to_axis is
     m_axis_tvalid : out STD_LOGIC;
     vid_clk : in STD_LOGIC;
     aclk : in STD_LOGIC;
+    vid_ce : in STD_LOGIC;
     vid_active_video : in STD_LOGIC;
     vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
     vid_vsync : in STD_LOGIC;
@@ -1553,8 +1558,8 @@ architecture STRUCTURE of base_video_to_axis_2_0_video_to_axis is
   signal fifo_n_0 : STD_LOGIC;
   signal fifo_n_1 : STD_LOGIC;
   signal fifo_n_2 : STD_LOGIC;
-  signal frmsync : STD_LOGIC;
   signal frmsync_i_1_n_0 : STD_LOGIC;
+  signal frmsync_reg_n_0 : STD_LOGIC;
   signal \^m_axis_tvalid\ : STD_LOGIC;
   signal prev_active_video : STD_LOGIC;
   signal prev_data : STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -1573,21 +1578,23 @@ fifo: entity work.base_video_to_axis_2_0_async_fifo
       prev_active_video => prev_active_video,
       q_b(25 downto 0) => q_b(25 downto 0),
       vid_active_video => vid_active_video,
+      vid_ce => vid_ce,
       vid_clk => vid_clk,
       vid_rstn => vid_rstn,
       vid_rstn_0 => fifo_n_1,
-      wdata_a(24) => frmsync,
+      wdata_a(24) => frmsync_reg_n_0,
       wdata_a(23 downto 0) => prev_data(23 downto 0)
     );
-frmsync_i_1: unisim.vcomponents.LUT4
+frmsync_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"6F66"
+      INIT => X"7FF70AA0"
     )
         port map (
-      I0 => vid_vsync,
-      I1 => prev_vsync,
-      I2 => prev_active_video,
-      I3 => frmsync,
+      I0 => vid_ce,
+      I1 => prev_active_video,
+      I2 => prev_vsync,
+      I3 => vid_vsync,
+      I4 => frmsync_reg_n_0,
       O => frmsync_i_1_n_0
     );
 frmsync_reg: unisim.vcomponents.FDCE
@@ -1596,12 +1603,12 @@ frmsync_reg: unisim.vcomponents.FDCE
       CE => '1',
       CLR => fifo_n_1,
       D => frmsync_i_1_n_0,
-      Q => frmsync
+      Q => frmsync_reg_n_0
     );
 prev_active_video_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_active_video,
       Q => prev_active_video
@@ -1609,7 +1616,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[0]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(0),
       Q => prev_data(0)
@@ -1617,7 +1624,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(10),
       Q => prev_data(10)
@@ -1625,7 +1632,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(11),
       Q => prev_data(11)
@@ -1633,7 +1640,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(12),
       Q => prev_data(12)
@@ -1641,7 +1648,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(13),
       Q => prev_data(13)
@@ -1649,7 +1656,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(14),
       Q => prev_data(14)
@@ -1657,7 +1664,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(15),
       Q => prev_data(15)
@@ -1665,7 +1672,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[16]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(16),
       Q => prev_data(16)
@@ -1673,7 +1680,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[17]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(17),
       Q => prev_data(17)
@@ -1681,7 +1688,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[18]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(18),
       Q => prev_data(18)
@@ -1689,7 +1696,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[19]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(19),
       Q => prev_data(19)
@@ -1697,7 +1704,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[1]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(1),
       Q => prev_data(1)
@@ -1705,7 +1712,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[20]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(20),
       Q => prev_data(20)
@@ -1713,7 +1720,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[21]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(21),
       Q => prev_data(21)
@@ -1721,7 +1728,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[22]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(22),
       Q => prev_data(22)
@@ -1729,7 +1736,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[23]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(23),
       Q => prev_data(23)
@@ -1737,7 +1744,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[2]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(2),
       Q => prev_data(2)
@@ -1745,7 +1752,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[3]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(3),
       Q => prev_data(3)
@@ -1753,7 +1760,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[4]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(4),
       Q => prev_data(4)
@@ -1761,7 +1768,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[5]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(5),
       Q => prev_data(5)
@@ -1769,7 +1776,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[6]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(6),
       Q => prev_data(6)
@@ -1777,7 +1784,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[7]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(7),
       Q => prev_data(7)
@@ -1785,7 +1792,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(8),
       Q => prev_data(8)
@@ -1793,7 +1800,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 \prev_data_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_data(9),
       Q => prev_data(9)
@@ -1801,7 +1808,7 @@ prev_active_video_reg: unisim.vcomponents.FDCE
 prev_vsync_reg: unisim.vcomponents.FDCE
      port map (
       C => vid_clk,
-      CE => '1',
+      CE => vid_ce,
       CLR => fifo_n_1,
       D => vid_vsync,
       Q => prev_vsync
@@ -1826,6 +1833,7 @@ entity base_video_to_axis_2_0_video_to_axis_v1_0 is
     m_axis_tvalid : out STD_LOGIC;
     vid_clk : in STD_LOGIC;
     aclk : in STD_LOGIC;
+    vid_ce : in STD_LOGIC;
     vid_active_video : in STD_LOGIC;
     vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
     vid_vsync : in STD_LOGIC;
@@ -1848,6 +1856,7 @@ video_to_axis_inst: entity work.base_video_to_axis_2_0_video_to_axis
       overflow => overflow,
       q_b(25 downto 0) => q_b(25 downto 0),
       vid_active_video => vid_active_video,
+      vid_ce => vid_ce,
       vid_clk => vid_clk,
       vid_data(23 downto 0) => vid_data(23 downto 0),
       vid_rstn => vid_rstn,
@@ -1862,6 +1871,7 @@ entity base_video_to_axis_2_0 is
   port (
     vid_clk : in STD_LOGIC;
     vid_rstn : in STD_LOGIC;
+    vid_ce : in STD_LOGIC;
     vid_vsync : in STD_LOGIC;
     vid_active_video : in STD_LOGIC;
     vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -1897,6 +1907,8 @@ architecture STRUCTURE of base_video_to_axis_2_0 is
   attribute X_INTERFACE_PARAMETER of m_axis_tuser : signal is "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 3, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 1, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 1, FREQ_HZ 120000000, PHASE 0.0, CLK_DOMAIN base_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of m_axis_tvalid : signal is "xilinx.com:interface:axis:1.0 m_axis TVALID";
   attribute X_INTERFACE_INFO of vid_active_video : signal is "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO";
+  attribute X_INTERFACE_INFO of vid_ce : signal is "xilinx.com:signal:clockenable:1.0 vid_ce CE";
+  attribute X_INTERFACE_PARAMETER of vid_ce : signal is "XIL_INTERFACENAME vid_ce, FREQ_HZ 100000000, PHASE 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of vid_clk : signal is "xilinx.com:signal:clock:1.0 vid_clk CLK";
   attribute X_INTERFACE_PARAMETER of vid_clk : signal is "XIL_INTERFACENAME vid_clk, ASSOCIATED_RESET vid_rstn, ASSOCIATED_BUSIF vid_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN base_xil_vip_1_0_out_pclk, INSERT_VIP 0";
   attribute X_INTERFACE_INFO of vid_rstn : signal is "xilinx.com:signal:reset:1.0 vid_rstn RST";
@@ -1916,6 +1928,7 @@ inst: entity work.base_video_to_axis_2_0_video_to_axis_v1_0
       q_b(24) => m_axis_tlast,
       q_b(23 downto 0) => m_axis_tdata(23 downto 0),
       vid_active_video => vid_active_video,
+      vid_ce => vid_ce,
       vid_clk => vid_clk,
       vid_data(23 downto 0) => vid_data(23 downto 0),
       vid_rstn => vid_rstn,

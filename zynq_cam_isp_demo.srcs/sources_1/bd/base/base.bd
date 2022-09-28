@@ -3861,6 +3861,9 @@
         "xci_path": "ip\\base_video_to_axis_2_0\\base_video_to_axis_2_0.xci",
         "inst_hier_path": "video_to_axis_2",
         "parameters": {
+          "ADDR_BITS": {
+            "value": "11"
+          },
           "DATA_BITS": {
             "value": "24"
           }
@@ -4159,7 +4162,9 @@
           "xil_vip_0/rst_n",
           "xil_vip_1/rst_n",
           "video_to_axis_1/vid_rstn",
-          "video_to_axis_2/vid_rstn"
+          "video_to_axis_2/vid_rstn",
+          "video_to_axis_2/vid_ce",
+          "video_to_axis_1/vid_ce"
         ]
       },
       "axis_to_video_1_vid_active_video": {
@@ -4224,7 +4229,8 @@
           "clk_wiz_0/locked",
           "axis_to_video_0/vid_rstn",
           "axis_to_video_1/vid_rstn",
-          "video_to_axis_0/vid_rstn"
+          "video_to_axis_0/vid_rstn",
+          "video_to_axis_0/vid_ce"
         ]
       },
       "clk_wiz_1_dvi_clk": {

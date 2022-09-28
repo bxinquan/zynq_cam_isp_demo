@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu Sep 22 21:39:20 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep 28 20:16:09 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="bd_60ff" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -2302,7 +2302,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/m00_nodes/m00_aw_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_aw_node" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
+    <MODULE COREREVISION="13" FULLNAME="/m00_nodes/m00_aw_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_aw_node" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -2410,7 +2410,7 @@
         <PARAMETER NAME="S14_PRIORITY_ARB" VALUE="0"/>
         <PARAMETER NAME="S15_PRIORITY_ARB" VALUE="0"/>
         <PARAMETER NAME="Component_Name" VALUE="bd_60ff_m00awn_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="120000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
@@ -2500,7 +2500,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="S_SC" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="S_SC" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_payld"/>
@@ -2509,7 +2509,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="M_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="M_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="m_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="m_sc_payld"/>
@@ -2518,7 +2518,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="M_AXIS_ARB" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="M_AXIS_ARB" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -2946,7 +2946,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="13" FULLNAME="/m00_nodes/m00_w_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_w_node" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
+    <MODULE COREREVISION="13" FULLNAME="/m00_nodes/m00_w_node" HWVERSION="1.0" INSTANCE="m00_nodes_m00_w_node" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="sc_node" VLNV="xilinx.com:ip:sc_node:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -3054,7 +3054,7 @@
         <PARAMETER NAME="S14_PRIORITY_ARB" VALUE="0"/>
         <PARAMETER NAME="S15_PRIORITY_ARB" VALUE="0"/>
         <PARAMETER NAME="Component_Name" VALUE="bd_60ff_m00wn_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
         <PORT CLKFREQUENCY="120000000" DIR="I" NAME="s_sc_aclk" SIGIS="clk" SIGNAME="External_Ports_aclk">
@@ -3144,7 +3144,7 @@
         </PORT>
       </PORTS>
       <BUSINTERFACES>
-        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="S_SC" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="S_SC" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_payld"/>
@@ -3153,7 +3153,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="M_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="M_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="m_sc_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="m_sc_payld"/>
@@ -3162,7 +3162,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="S_AXIS_ARB" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_AXIS_ARB" NAME="S_AXIS_ARB" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="2"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -3578,7 +3578,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_ar_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="S_SC_AW" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_aw_node_M_SC" NAME="S_SC_AW" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_aw_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_aw_payld"/>
@@ -3587,7 +3587,7 @@
             <PORTMAP LOGICAL="SEND" PHYSICAL="s_sc_aw_send"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="S_SC_W" TYPE="TARGET" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="m00_nodes_m00_w_node_M_SC" NAME="S_SC_W" TYPE="SLAVE" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="INFO" PHYSICAL="s_sc_w_info"/>
             <PORTMAP LOGICAL="PAYLD" PHYSICAL="s_sc_w_payld"/>
@@ -35981,7 +35981,7 @@
             <PORTMAP LOGICAL="RECV" PHYSICAL="s_sc_recv"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="M00_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_aw_switchboard_M00_SC" NAME="M00_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="RECV" PHYSICAL="m_sc_recv"/>
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>
@@ -37291,7 +37291,7 @@
             <PORTMAP LOGICAL="RECV" PHYSICAL="s_sc_recv"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="M00_SC" TYPE="INITIATOR" VLNV="xilinx.com:interface:sc:1.0">
+        <BUSINTERFACE BUSNAME="switchboards_w_switchboard_M00_SC" NAME="M00_SC" TYPE="MASTER" VLNV="xilinx.com:interface:sc:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="RECV" PHYSICAL="m_sc_recv"/>
             <PORTMAP LOGICAL="SEND" PHYSICAL="m_sc_send"/>

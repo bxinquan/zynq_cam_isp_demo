@@ -3,6 +3,9 @@
 module tb_video_to_axis();
 	reg xclk = 0;
 	always #5 xclk <= ~xclk;
+	
+	reg vid_ce = 1;
+	//always #10 vid_ce <= ~vid_ce;
 
 	reg aclk = 0;
 	always #3 aclk <= ~aclk;
@@ -51,6 +54,7 @@ module tb_video_to_axis();
 		(
 			.vid_clk          (in_pclk),
 			.vid_rstn         (rst_n),
+			.vid_ce           (vid_ce),
 			.vid_vsync        (in_vsync),
 			.vid_active_video (in_href),
 			.vid_data         (in_data),

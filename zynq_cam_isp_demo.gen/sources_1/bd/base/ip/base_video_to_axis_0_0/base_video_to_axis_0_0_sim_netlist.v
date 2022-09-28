@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Thu Sep 22 21:40:03 2022
+// Date        : Wed Sep 28 20:16:52 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_video_to_axis_0_0/base_video_to_axis_0_0_sim_netlist.v
@@ -17,6 +17,7 @@
 module base_video_to_axis_0_0
    (vid_clk,
     vid_rstn,
+    vid_ce,
     vid_vsync,
     vid_active_video,
     vid_data,
@@ -30,6 +31,7 @@ module base_video_to_axis_0_0
     overflow);
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 vid_clk CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_clk, ASSOCIATED_RESET vid_rstn, ASSOCIATED_BUSIF vid_in, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN base_xil_camif_0_0_out_pclk, INSERT_VIP 0" *) input vid_clk;
   (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_rstn RST" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) input vid_rstn;
+  (* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 vid_ce CE" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_ce, FREQ_HZ 100000000, PHASE 0, POLARITY ACTIVE_LOW" *) input vid_ce;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_in VSYNC" *) input vid_vsync;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO" *) input vid_active_video;
   (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_in DATA" *) input [7:0]vid_data;
@@ -51,6 +53,7 @@ module base_video_to_axis_0_0
   wire m_axis_tvalid;
   wire overflow;
   wire vid_active_video;
+  wire vid_ce;
   wire vid_clk;
   wire [7:0]vid_data;
   wire vid_rstn;
@@ -64,6 +67,7 @@ module base_video_to_axis_0_0
         .overflow(overflow),
         .q_b({m_axis_tuser,m_axis_tlast,m_axis_tdata}),
         .vid_active_video(vid_active_video),
+        .vid_ce(vid_ce),
         .vid_clk(vid_clk),
         .vid_data(vid_data),
         .vid_rstn(vid_rstn),
@@ -84,6 +88,7 @@ module base_video_to_axis_0_0_async_fifo
     vid_clk,
     aclk,
     wdata_a,
+    vid_ce,
     prev_active_video,
     vid_active_video);
   output aresetn_0;
@@ -98,6 +103,7 @@ module base_video_to_axis_0_0_async_fifo
   input vid_clk;
   input aclk;
   input [8:0]wdata_a;
+  input vid_ce;
   input prev_active_video;
   input vid_active_video;
 
@@ -158,6 +164,7 @@ module base_video_to_axis_0_0_async_fifo
   wire rempty_carry_n_3;
   wire [11:0]rptr;
   wire vid_active_video;
+  wire vid_ce;
   wire vid_clk;
   wire vid_rstn;
   wire vid_rstn_0;
@@ -591,6 +598,7 @@ module base_video_to_axis_0_0_async_fifo
         .raddr_reg__0(raddr_reg__0),
         .rd_flag(rd_flag),
         .vid_active_video(vid_active_video),
+        .vid_ce(vid_ce),
         .vid_clk(vid_clk),
         .waddr_reg(waddr_reg),
         .waddr_reg__0(waddr_reg__0),
@@ -1144,6 +1152,7 @@ module base_video_to_axis_0_0_full_dp_ram
     q_b,
     raddr_reg__0,
     Q,
+    vid_ce,
     prev_active_video,
     overflow,
     vid_active_video,
@@ -1164,6 +1173,7 @@ module base_video_to_axis_0_0_full_dp_ram
   output [9:0]q_b;
   input [0:0]raddr_reg__0;
   input [0:0]Q;
+  input vid_ce;
   input prev_active_video;
   input overflow;
   input vid_active_video;
@@ -1194,6 +1204,7 @@ module base_video_to_axis_0_0_full_dp_ram
   wire [0:0]raddr_reg__0;
   wire rd_flag;
   wire vid_active_video;
+  wire vid_ce;
   wire vid_clk;
   wire [11:0]waddr_reg;
   wire [0:0]waddr_reg__0;
@@ -1283,11 +1294,12 @@ module base_video_to_axis_0_0_full_dp_ram
         .SBITERR(NLW_mem_reg_0_SBITERR_UNCONNECTED),
         .WEA({wr_flag,wr_flag,wr_flag,1'b1}),
         .WEBWE({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0}));
-  LUT2 #(
-    .INIT(4'h2)) 
+  LUT3 #(
+    .INIT(8'h08)) 
     mem_reg_0_i_1
-       (.I0(prev_active_video),
-        .I1(overflow),
+       (.I0(vid_ce),
+        .I1(prev_active_video),
+        .I2(overflow),
         .O(wr_flag));
   LUT3 #(
     .INIT(8'h0D)) 
@@ -1376,6 +1388,7 @@ module base_video_to_axis_0_0_video_to_axis
     m_axis_tvalid,
     vid_clk,
     aclk,
+    vid_ce,
     vid_active_video,
     vid_data,
     vid_vsync,
@@ -1387,6 +1400,7 @@ module base_video_to_axis_0_0_video_to_axis
   output m_axis_tvalid;
   input vid_clk;
   input aclk;
+  input vid_ce;
   input vid_active_video;
   input [7:0]vid_data;
   input vid_vsync;
@@ -1399,8 +1413,8 @@ module base_video_to_axis_0_0_video_to_axis
   wire fifo_n_0;
   wire fifo_n_1;
   wire fifo_n_2;
-  wire frmsync;
   wire frmsync_i_1_n_0;
+  wire frmsync_reg_n_0;
   wire m_axis_tready;
   wire m_axis_tvalid;
   wire overflow;
@@ -1409,6 +1423,7 @@ module base_video_to_axis_0_0_video_to_axis
   wire prev_vsync;
   wire [9:0]q_b;
   wire vid_active_video;
+  wire vid_ce;
   wire vid_clk;
   wire [7:0]vid_data;
   wire vid_rstn;
@@ -1425,81 +1440,83 @@ module base_video_to_axis_0_0_video_to_axis
         .prev_active_video(prev_active_video),
         .q_b(q_b),
         .vid_active_video(vid_active_video),
+        .vid_ce(vid_ce),
         .vid_clk(vid_clk),
         .vid_rstn(vid_rstn),
         .vid_rstn_0(fifo_n_1),
-        .wdata_a({frmsync,prev_data}));
-  LUT4 #(
-    .INIT(16'h6F66)) 
+        .wdata_a({frmsync_reg_n_0,prev_data}));
+  LUT5 #(
+    .INIT(32'h7FF70AA0)) 
     frmsync_i_1
-       (.I0(vid_vsync),
-        .I1(prev_vsync),
-        .I2(prev_active_video),
-        .I3(frmsync),
+       (.I0(vid_ce),
+        .I1(prev_active_video),
+        .I2(prev_vsync),
+        .I3(vid_vsync),
+        .I4(frmsync_reg_n_0),
         .O(frmsync_i_1_n_0));
   FDCE frmsync_reg
        (.C(vid_clk),
         .CE(1'b1),
         .CLR(fifo_n_1),
         .D(frmsync_i_1_n_0),
-        .Q(frmsync));
+        .Q(frmsync_reg_n_0));
   FDCE prev_active_video_reg
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_active_video),
         .Q(prev_active_video));
   FDCE \prev_data_reg[0] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[0]),
         .Q(prev_data[0]));
   FDCE \prev_data_reg[1] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[1]),
         .Q(prev_data[1]));
   FDCE \prev_data_reg[2] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[2]),
         .Q(prev_data[2]));
   FDCE \prev_data_reg[3] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[3]),
         .Q(prev_data[3]));
   FDCE \prev_data_reg[4] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[4]),
         .Q(prev_data[4]));
   FDCE \prev_data_reg[5] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[5]),
         .Q(prev_data[5]));
   FDCE \prev_data_reg[6] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[6]),
         .Q(prev_data[6]));
   FDCE \prev_data_reg[7] 
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_data[7]),
         .Q(prev_data[7]));
   FDCE prev_vsync_reg
        (.C(vid_clk),
-        .CE(1'b1),
+        .CE(vid_ce),
         .CLR(fifo_n_1),
         .D(vid_vsync),
         .Q(prev_vsync));
@@ -1518,6 +1535,7 @@ module base_video_to_axis_0_0_video_to_axis_v1_0
     m_axis_tvalid,
     vid_clk,
     aclk,
+    vid_ce,
     vid_active_video,
     vid_data,
     vid_vsync,
@@ -1529,6 +1547,7 @@ module base_video_to_axis_0_0_video_to_axis_v1_0
   output m_axis_tvalid;
   input vid_clk;
   input aclk;
+  input vid_ce;
   input vid_active_video;
   input [7:0]vid_data;
   input vid_vsync;
@@ -1543,6 +1562,7 @@ module base_video_to_axis_0_0_video_to_axis_v1_0
   wire overflow;
   wire [9:0]q_b;
   wire vid_active_video;
+  wire vid_ce;
   wire vid_clk;
   wire [7:0]vid_data;
   wire vid_rstn;
@@ -1556,6 +1576,7 @@ module base_video_to_axis_0_0_video_to_axis_v1_0
         .overflow(overflow),
         .q_b(q_b),
         .vid_active_video(vid_active_video),
+        .vid_ce(vid_ce),
         .vid_clk(vid_clk),
         .vid_data(vid_data),
         .vid_rstn(vid_rstn),

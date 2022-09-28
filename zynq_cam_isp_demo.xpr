@@ -61,7 +61,7 @@
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
-    <Option Name="WTXSimLaunchSim" Val="6"/>
+    <Option Name="WTXSimLaunchSim" Val="15"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -97,71 +97,71 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci">
-          <Proxy FileSetName="base_clk_wiz_1_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_intc_0_0/base_axi_intc_0_0.xci">
           <Proxy FileSetName="base_axi_intc_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_processing_system7_0_0/base_processing_system7_0_0.xci">
-          <Proxy FileSetName="base_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="base_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci">
-          <Proxy FileSetName="base_clk_wiz_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_iic_0/base_axi_iic_0.xci">
-          <Proxy FileSetName="base_axi_iic_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xci">
-          <Proxy FileSetName="base_rst_ps7_0_100M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci">
-          <Proxy FileSetName="base_axi_vdma_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci">
-          <Proxy FileSetName="base_DVI_Transmitter_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci">
-          <Proxy FileSetName="base_axi_vdma_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_0_0/base_axi_vdma_0_0.xci">
           <Proxy FileSetName="base_axi_vdma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axis_to_video_1_0/base_axis_to_video_1_0.xci">
-          <Proxy FileSetName="base_axis_to_video_1_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_iic_0/base_axi_iic_0.xci">
+          <Proxy FileSetName="base_axi_iic_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_video_to_axis_1_0/base_video_to_axis_1_0.xci">
-          <Proxy FileSetName="base_video_to_axis_1_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_1_0/base_axi_vdma_1_0.xci">
+          <Proxy FileSetName="base_axi_vdma_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axis_to_video_0_0/base_axis_to_video_0_0.xci">
-          <Proxy FileSetName="base_axis_to_video_0_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axi_vdma_2_0/base_axi_vdma_2_0.xci">
+          <Proxy FileSetName="base_axi_vdma_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci">
-          <Proxy FileSetName="base_xil_isp_lite_0_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_0_0/base_clk_wiz_0_0.xci">
+          <Proxy FileSetName="base_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_vip_0_0/base_xil_vip_0_0.xci">
-          <Proxy FileSetName="base_xil_vip_0_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_50M_0/base_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="base_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xbar_0/base_xbar_0.xci">
+          <Proxy FileSetName="base_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_clk_wiz_1_0/base_clk_wiz_1_0.xci">
+          <Proxy FileSetName="base_clk_wiz_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axis_to_video_2_0/base_axis_to_video_2_0.xci">
           <Proxy FileSetName="base_axis_to_video_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_video_to_axis_2_0/base_video_to_axis_2_0.xci">
-          <Proxy FileSetName="base_video_to_axis_2_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_video_to_axis_0_0/base_video_to_axis_0_0.xci">
           <Proxy FileSetName="base_video_to_axis_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_isp_lite_0_0/base_xil_isp_lite_0_0.xci">
+          <Proxy FileSetName="base_xil_isp_lite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axis_to_video_0_0/base_axis_to_video_0_0.xci">
+          <Proxy FileSetName="base_axis_to_video_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_axis_to_video_1_0/base_axis_to_video_1_0.xci">
+          <Proxy FileSetName="base_axis_to_video_1_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_camif_0_0/base_xil_camif_0_0.xci">
           <Proxy FileSetName="base_xil_camif_0_0"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_vip_0_0/base_xil_vip_0_0.xci">
+          <Proxy FileSetName="base_xil_vip_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xil_vip_1_0/base_xil_vip_1_0.xci">
           <Proxy FileSetName="base_xil_vip_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_xbar_0/base_xbar_0.xci">
-          <Proxy FileSetName="base_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_video_to_axis_1_0/base_video_to_axis_1_0.xci">
+          <Proxy FileSetName="base_video_to_axis_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_video_to_axis_2_0/base_video_to_axis_2_0.xci">
+          <Proxy FileSetName="base_video_to_axis_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_DVI_Transmitter_0_0/base_DVI_Transmitter_0_0.xci">
+          <Proxy FileSetName="base_DVI_Transmitter_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_rst_ps7_0_100M_0/base_rst_ps7_0_100M_0.xci">
+          <Proxy FileSetName="base_rst_ps7_0_100M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="base.bd" FileRelPathName="ip/base_processing_system7_0_0/base_processing_system7_0_0.xci">
+          <Proxy FileSetName="base_processing_system7_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/base/hdl/base_wrapper.v">

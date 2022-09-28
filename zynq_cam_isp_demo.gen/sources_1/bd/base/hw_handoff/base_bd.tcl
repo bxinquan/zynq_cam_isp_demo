@@ -1166,6 +1166,7 @@ proc create_root_design { parentCell } {
   # Create instance: video_to_axis_2, and set properties
   set video_to_axis_2 [ create_bd_cell -type ip -vlnv bxq.com:user:video_to_axis:1.0 video_to_axis_2 ]
   set_property -dict [ list \
+   CONFIG.ADDR_BITS {11} \
    CONFIG.DATA_BITS {24} \
  ] $video_to_axis_2
 
@@ -1268,7 +1269,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net axi_vdma_1_s2mm_introut [get_bd_pins axi_vdma_1/s2mm_introut] [get_bd_pins xlconcat_0/In8]
   connect_bd_net -net axi_vdma_2_mm2s_introut [get_bd_pins axi_vdma_2/mm2s_introut] [get_bd_pins xlconcat_0/In9]
   connect_bd_net -net axi_vdma_2_s2mm_introut [get_bd_pins axi_vdma_2/s2mm_introut] [get_bd_pins xlconcat_0/In10]
-  connect_bd_net -net axis_to_video_0_locked [get_bd_pins axis_to_video_0/locked] [get_bd_pins video_to_axis_1/vid_rstn] [get_bd_pins video_to_axis_2/vid_rstn] [get_bd_pins xil_isp_lite_0/rst_n] [get_bd_pins xil_vip_0/rst_n] [get_bd_pins xil_vip_1/rst_n]
+  connect_bd_net -net axis_to_video_0_locked [get_bd_pins axis_to_video_0/locked] [get_bd_pins video_to_axis_1/vid_ce] [get_bd_pins video_to_axis_1/vid_rstn] [get_bd_pins video_to_axis_2/vid_ce] [get_bd_pins video_to_axis_2/vid_rstn] [get_bd_pins xil_isp_lite_0/rst_n] [get_bd_pins xil_vip_0/rst_n] [get_bd_pins xil_vip_1/rst_n]
   connect_bd_net -net axis_to_video_1_vid_active_video [get_bd_ports lcd_de] [get_bd_pins axis_to_video_1/vid_active_video]
   connect_bd_net -net axis_to_video_1_vid_data [get_bd_ports lcd_rgb] [get_bd_pins axis_to_video_1/vid_data]
   connect_bd_net -net axis_to_video_1_vid_hsync [get_bd_ports lcd_hs] [get_bd_pins axis_to_video_1/vid_hsync]
@@ -1278,7 +1279,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net clk_wiz_0_cam_xclk [get_bd_ports cam_xclk] [get_bd_pins clk_wiz_0/cam_xclk]
   connect_bd_net -net clk_wiz_0_camif_xclk [get_bd_pins clk_wiz_0/camif_xclk] [get_bd_pins xil_camif_0/cam_xclk]
   connect_bd_net -net clk_wiz_0_clk_160 [get_bd_pins axis_to_video_0/vid_clk] [get_bd_pins clk_wiz_0/isp_pclk] [get_bd_pins xil_isp_lite_0/pclk] [get_bd_pins xil_vip_0/pclk] [get_bd_pins xil_vip_1/pclk]
-  connect_bd_net -net clk_wiz_0_locked [get_bd_pins axis_to_video_0/vid_rstn] [get_bd_pins axis_to_video_1/vid_rstn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins video_to_axis_0/vid_rstn]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_pins axis_to_video_0/vid_rstn] [get_bd_pins axis_to_video_1/vid_rstn] [get_bd_pins clk_wiz_0/locked] [get_bd_pins video_to_axis_0/vid_ce] [get_bd_pins video_to_axis_0/vid_rstn]
   connect_bd_net -net clk_wiz_1_dvi_clk [get_bd_pins DVI_Transmitter_0/pclk] [get_bd_pins axis_to_video_2/vid_clk] [get_bd_pins clk_wiz_1/dvi_clk]
   connect_bd_net -net clk_wiz_1_dvi_clk_x5 [get_bd_pins DVI_Transmitter_0/pclk_x5] [get_bd_pins clk_wiz_1/dvi_clk_x5]
   connect_bd_net -net clk_wiz_1_locked [get_bd_pins axis_to_video_2/vid_rstn] [get_bd_pins clk_wiz_1/locked]

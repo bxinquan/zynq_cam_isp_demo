@@ -1,65 +1,9 @@
 Nothing to build in platform 'base_wrapper'
 
-21:55:11 **** Build of configuration Debug for project base ****
+20:28:03 **** Incremental Build of configuration Debug for project base ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c: In function 'vip_init_osd':
-../src/main.c:567:44: warning: format '%X' expects argument of type 'unsigned int', but argument 6 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-  567 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-      |                                         ~~~^
-      |                                            |
-      |                                            unsigned int
-      |                                         %08lX
-../src/main.c:567:49: warning: format '%X' expects argument of type 'unsigned int', but argument 7 has type 'u32' {aka 'long unsigned int'} [-Wformat=]
-  567 |  printf("osd rect:%lu,%lu,%lu,%lu fg/bg:%08X,%08X\n",
-      |                                              ~~~^
-      |                                                 |
-      |                                                 unsigned int
-      |                                              %08lX
-At top level:
-../src/main.c:627:28: warning: 'colorCurveTbl_8' defined but not used [-Wunused-const-variable=]
-  627 | static const unsigned char colorCurveTbl_8[9][2] = {
-      |                            ^~~~~~~~~~~~~~~
-../src/main.c:615:28: warning: 'colorCurveTbl_6' defined but not used [-Wunused-const-variable=]
-  615 | static const unsigned char colorCurveTbl_6[9][2] = {
-      |                            ^~~~~~~~~~~~~~~
-../src/main.c:595:28: warning: 'spaceWeightTbl_8' defined but not used [-Wunused-const-variable=]
-  595 | static const unsigned char spaceWeightTbl_8[7*7] = {
-      |                            ^~~~~~~~~~~~~~~~
-../src/main.c:585:28: warning: 'spaceWeightTbl_6' defined but not used [-Wunused-const-variable=]
-  585 | static const unsigned char spaceWeightTbl_6[7*7] = {
-      |                            ^~~~~~~~~~~~~~~~
-'Finished building: ../src/main.c'
-' '
-'Building file: ../src/ov5640_init.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/ov5640_init.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/ov5640_init.d" -MT"src/ov5640_init.o" -o "src/ov5640_init.o" "../src/ov5640_init.c"
-'Finished building: ../src/ov5640_init.c'
-' '
-'Building file: ../src/sys_intr.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/sys_intr.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/sys_intr.d" -MT"src/sys_intr.o" -o "src/sys_intr.o" "../src/sys_intr.c"
-'Finished building: ../src/sys_intr.c'
-' '
-'Building file: ../src/vdma_api.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/vdma_api.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/vdma_api.d" -MT"src/vdma_api.o" -o "src/vdma_api.o" "../src/vdma_api.c"
-'Finished building: ../src/vdma_api.c'
-' '
-'Building target: base.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.vitis/base_wrapper/export/base_wrapper/sw/base_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "base.elf"  ./src/main.o ./src/ov5640_init.o ./src/sys_intr.o ./src/vdma_api.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group
-'Finished building target: base.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size base.elf  |tee "base.elf.size"
-   text	   data	    bss	    dec	    hex	filename
- 100771	   3908	  24128	 128807	  1f727	base.elf
-'Finished building: base.elf.size'
-' '
+make[1]: Nothing to be done for 'main-build'.

@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Thu Sep 22 21:40:04 2022
+-- Date        : Wed Sep 28 20:16:52 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_video_to_axis_2_0/base_video_to_axis_2_0_stub.vhdl
@@ -16,6 +16,7 @@ entity base_video_to_axis_2_0 is
   Port ( 
     vid_clk : in STD_LOGIC;
     vid_rstn : in STD_LOGIC;
+    vid_ce : in STD_LOGIC;
     vid_vsync : in STD_LOGIC;
     vid_active_video : in STD_LOGIC;
     vid_data : in STD_LOGIC_VECTOR ( 23 downto 0 );
@@ -35,7 +36,7 @@ architecture stub of base_video_to_axis_2_0 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "vid_clk,vid_rstn,vid_vsync,vid_active_video,vid_data[23:0],aclk,aresetn,m_axis_tdata[23:0],m_axis_tvalid,m_axis_tready,m_axis_tlast,m_axis_tuser,overflow";
+attribute black_box_pad_pin of stub : architecture is "vid_clk,vid_rstn,vid_ce,vid_vsync,vid_active_video,vid_data[23:0],aclk,aresetn,m_axis_tdata[23:0],m_axis_tvalid,m_axis_tready,m_axis_tlast,m_axis_tuser,overflow";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "video_to_axis_v1_0,Vivado 2021.1";
 begin

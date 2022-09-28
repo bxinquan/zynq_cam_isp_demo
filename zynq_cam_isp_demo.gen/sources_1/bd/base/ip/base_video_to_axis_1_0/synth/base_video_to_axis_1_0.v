@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:video_to_axis:1.0
-// IP Revision: 5
+// IP Revision: 7
 
 (* X_CORE_INFO = "video_to_axis_v1_0,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_video_to_axis_1_0,video_to_axis_v1_0,{}" *)
@@ -56,6 +56,7 @@
 module base_video_to_axis_1_0 (
   vid_clk,
   vid_rstn,
+  vid_ce,
   vid_vsync,
   vid_active_video,
   vid_data,
@@ -75,6 +76,9 @@ input wire vid_clk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_rstn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 vid_rstn RST" *)
 input wire vid_rstn;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME vid_ce, FREQ_HZ 100000000, PHASE 0, POLARITY ACTIVE_LOW" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clockenable:1.0 vid_ce CE" *)
+input wire vid_ce;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_in VSYNC" *)
 input wire vid_vsync;
 (* X_INTERFACE_INFO = "xilinx.com:interface:vid_io:1.0 vid_in ACTIVE_VIDEO" *)
@@ -106,6 +110,7 @@ output wire overflow;
   ) inst (
     .vid_clk(vid_clk),
     .vid_rstn(vid_rstn),
+    .vid_ce(vid_ce),
     .vid_vsync(vid_vsync),
     .vid_active_video(vid_active_video),
     .vid_data(vid_data),

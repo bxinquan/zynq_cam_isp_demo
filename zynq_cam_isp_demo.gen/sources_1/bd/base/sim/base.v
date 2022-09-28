@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-//Date        : Thu Sep 22 21:39:13 2022
+//Date        : Wed Sep 28 20:16:02 2022
 //Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 //Command     : generate_target base.bd
 //Design      : base
@@ -1382,6 +1382,7 @@ module base
         .m_axis_tuser(video_to_axis_0_m_axis_TUSER),
         .m_axis_tvalid(video_to_axis_0_m_axis_TVALID),
         .vid_active_video(xil_camif_0_raw_ACTIVE_VIDEO),
+        .vid_ce(clk_wiz_0_locked),
         .vid_clk(xil_camif_0_out_pclk),
         .vid_data(xil_camif_0_raw_DATA),
         .vid_rstn(clk_wiz_0_locked),
@@ -1395,6 +1396,7 @@ module base
         .m_axis_tuser(video_to_axis_1_m_axis_TUSER),
         .m_axis_tvalid(video_to_axis_1_m_axis_TVALID),
         .vid_active_video(xil_vip_0_rgb_ACTIVE_VIDEO),
+        .vid_ce(axis_to_video_0_locked),
         .vid_clk(xil_vip_0_out_pclk),
         .vid_data(xil_vip_0_rgb_DATA),
         .vid_rstn(axis_to_video_0_locked),
@@ -1408,6 +1410,7 @@ module base
         .m_axis_tuser(video_to_axis_2_m_axis_TUSER),
         .m_axis_tvalid(video_to_axis_2_m_axis_TVALID),
         .vid_active_video(xil_vip_1_rgb_ACTIVE_VIDEO),
+        .vid_ce(axis_to_video_0_locked),
         .vid_clk(xil_vip_1_out_pclk),
         .vid_data(xil_vip_1_rgb_DATA),
         .vid_rstn(axis_to_video_0_locked),
