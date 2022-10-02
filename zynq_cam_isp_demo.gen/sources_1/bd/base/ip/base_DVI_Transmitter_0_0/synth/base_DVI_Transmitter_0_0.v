@@ -48,7 +48,7 @@
 
 
 // IP VLNV: openedv.com:user:DVI_Transmitter:1.0
-// IP Revision: 1
+// IP Revision: 2
 
 (* X_CORE_INFO = "dvi_transmitter_top,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_DVI_Transmitter_0_0,dvi_transmitter_top,{}" *)

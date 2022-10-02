@@ -2,15 +2,14 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sun Sep 18 22:47:53 2022
-# Process ID: 76944
+# Start of session at: Mon Oct  3 02:12:21 2022
+# Process ID: 30120
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1
 # Command line: vivado.exe -log base_xil_isp_lite_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_xil_isp_lite_0_0.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/base_xil_isp_lite_0_0.vds
 # Journal file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source base_xil_isp_lite_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:02 ; elapsed = 00:00:15 . Memory (MB): peak = 1316.398 ; gain = 109.387
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Work/fpga/zynq_cam_isp_demo/xil_ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.1/data/ip'.
@@ -21,130 +20,135 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 50600
+INFO: [Synth 8-7075] Helper process launched with PID 43352
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1222.625 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'base_xil_isp_lite_0_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_isp_lite_0_0/synth/base_xil_isp_lite_0_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/xil_isp_lite_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/xil_isp_lite_v1_0_S00_AXI.v:742]
-INFO: [Synth 8-6157] synthesizing module 'isp_top' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:9]
-INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6157] synthesizing module 'isp_dpc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_dpc.v:22]
-INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_dpc.v:117]
-INFO: [Synth 8-6155] done synthesizing module 'isp_dpc' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_dpc.v:22]
-INFO: [Synth 8-6157] synthesizing module 'isp_blc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_blc.v:13]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_blc.v:88]
-INFO: [Synth 8-6155] done synthesizing module 'isp_blc' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_blc.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_bnr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_bnr.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'isp_bnr' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_bnr.v:14]
-INFO: [Synth 8-6157] synthesizing module 'isp_dgain' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_dgain.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'isp_dgain' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_dgain.v:14]
-INFO: [Synth 8-6157] synthesizing module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_ae.v:13]
-WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_ae.v:136]
-INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6155] done synthesizing module 'isp_stat_ae' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_ae.v:13]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_x' does not match port width (12) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_y' does not match port width (11) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_w' does not match port width (12) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:149]
-WARNING: [Synth 8-689] width (16) of port connection 'rect_h' does not match port width (11) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:149]
-INFO: [Synth 8-6157] synthesizing module 'isp_demosaic' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:549]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:656]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:759]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:798]
-INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:833]
-INFO: [Synth 8-6155] done synthesizing module 'isp_demosaic' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_demosaic.v:549]
-INFO: [Synth 8-6157] synthesizing module 'vid_mux__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6155] done synthesizing module 'vid_mux__parameterized0' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:316]
-INFO: [Synth 8-6157] synthesizing module 'isp_stat_awb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_awb.v:13]
-WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_awb.v:158]
-WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_awb.v:159]
-WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_awb.v:160]
-INFO: [Synth 8-6157] synthesizing module 'hist_stat__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:15]
-INFO: [Synth 8-6155] done synthesizing module 'hist_stat__parameterized0' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:491]
-INFO: [Synth 8-6155] done synthesizing module 'isp_stat_awb' (11#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_stat_awb.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_wb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_wb.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_wb' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_wb.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_ccm' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_ccm.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_ccm' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_ccm.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_csc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_csc.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_csc' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_csc.v:13]
-INFO: [Synth 8-6157] synthesizing module 'isp_gamma' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_gamma.v:15]
-INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (15#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:46]
-INFO: [Synth 8-6155] done synthesizing module 'isp_gamma' (16#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_gamma.v:15]
-INFO: [Synth 8-6157] synthesizing module 'data_delay' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6155] done synthesizing module 'data_delay' (17#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6157] synthesizing module 'isp_2dnr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_2dnr.v:16]
-INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:433]
-INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (18#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:433]
-INFO: [Synth 8-6155] done synthesizing module 'isp_2dnr' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_2dnr.v:16]
-INFO: [Synth 8-6157] synthesizing module 'data_delay__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6155] done synthesizing module 'data_delay__parameterized0' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:286]
-INFO: [Synth 8-6157] synthesizing module 'isp_ee' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_ee.v:13]
-INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_utils.v:91]
-INFO: [Synth 8-6155] done synthesizing module 'isp_ee' (20#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_ee.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'isp_top' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/isp_lite/isp_top.v:9]
-INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0_S00_AXI' (22#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0' (23#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/9637/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/xil_isp_lite_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'xil_isp_lite_v1_0_S00_AXI' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/xil_isp_lite_v1_0_S00_AXI.v:742]
+INFO: [Synth 8-6157] synthesizing module 'isp_top' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:9]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_dpc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'shift_register' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_dpc.v:117]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dpc' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_dpc.v:22]
+INFO: [Synth 8-6157] synthesizing module 'isp_blc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_blc.v:88]
+INFO: [Synth 8-6155] done synthesizing module 'isp_blc' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_blc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_bnr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_bnr' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_bnr.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_dgain' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'isp_dgain' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_dgain.v:14]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_ae.v:136]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized0' (7#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat' (8#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_ae' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_ae.v:13]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_x' does not match port width (12) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_y' does not match port width (11) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_w' does not match port width (12) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:149]
+WARNING: [Synth 8-689] width (16) of port connection 'rect_h' does not match port width (11) of module 'isp_stat_ae' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:149]
+INFO: [Synth 8-6157] synthesizing module 'isp_demosaic' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized0' (9#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:656]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:759]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:798]
+INFO: [Synth 8-226] default block is never used [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:833]
+INFO: [Synth 8-6155] done synthesizing module 'isp_demosaic' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_demosaic.v:549]
+INFO: [Synth 8-6157] synthesizing module 'vid_mux__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6155] done synthesizing module 'vid_mux__parameterized0' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:316]
+INFO: [Synth 8-6157] synthesizing module 'isp_stat_awb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_awb.v:13]
+WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_awb.v:158]
+WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_awb.v:159]
+WARNING: [Synth 8-4447] negative replication count -1 - replication ignored [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_awb.v:160]
+INFO: [Synth 8-6157] synthesizing module 'hist_stat__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6157] synthesizing module 'simple_dp_ram__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'simple_dp_ram__parameterized1' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:15]
+INFO: [Synth 8-6155] done synthesizing module 'hist_stat__parameterized0' (10#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:491]
+INFO: [Synth 8-6155] done synthesizing module 'isp_stat_awb' (11#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_stat_awb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_wb' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_wb' (12#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_wb.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_ccm' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ccm' (13#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_ccm.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_csc' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_csc' (14#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_csc.v:13]
+INFO: [Synth 8-6157] synthesizing module 'isp_gamma' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (15#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:46]
+INFO: [Synth 8-6155] done synthesizing module 'isp_gamma' (16#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_gamma.v:15]
+INFO: [Synth 8-6157] synthesizing module 'data_delay' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay' (17#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_2dnr' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'shift_div_uint' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'shift_div_uint' (18#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:433]
+INFO: [Synth 8-6155] done synthesizing module 'isp_2dnr' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_2dnr.v:16]
+INFO: [Synth 8-6157] synthesizing module 'data_delay__parameterized0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6155] done synthesizing module 'data_delay__parameterized0' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:286]
+INFO: [Synth 8-6157] synthesizing module 'isp_ee' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6157] synthesizing module 'shift_register__parameterized1' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'shift_register__parameterized1' (19#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_utils.v:91]
+INFO: [Synth 8-6155] done synthesizing module 'isp_ee' (20#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_ee.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'isp_top' (21#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/isp_lite/isp_top.v:9]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0_S00_AXI' (22#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/xil_isp_lite_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'xil_isp_lite_v1_0' (23#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/766c/hdl/xil_isp_lite_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'base_xil_isp_lite_0_0' (24#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_isp_lite_0_0/synth/base_xil_isp_lite_0_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:41 ; elapsed = 00:01:08 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:39 ; elapsed = 00:00:42 . Memory (MB): peak = 1309.176 ; gain = 86.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:42 ; elapsed = 00:01:09 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1309.176 ; gain = 86.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:42 ; elapsed = 00:01:09 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1309.176 ; gain = 86.551
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.239 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.278 . Memory (MB): peak = 1309.176 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_isp_lite_0_0/hdl/xil_isp_lite_v1_0_ooc.xdc] for cell 'inst'
+Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1341.281 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1361.961 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.449 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.396 . Memory (MB): peak = 1366.383 ; gain = 4.422
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished Constraint Validation : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for inst. (constraint file  D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:01:18 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:55 ; elapsed = 00:01:23 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -353,60 +357,60 @@ DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 DSP Report: Generating DSP p_0_out, operation Mode is: A*B.
 DSP Report: operator p_0_out is absorbed into DSP p_0_out.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:22 ; elapsed = 00:01:50 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:26 ; elapsed = 00:01:31 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                          | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | gamma_i0/table_ram/mem_reg                      | 256 x 8(READ_FIRST)    | W | R | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                               | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | gamma_i0/table_ram/mem_reg                      | 256 x 8(READ_FIRST)    | W | R | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
@@ -473,66 +477,66 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:31 ; elapsed = 00:01:59 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:36 ; elapsed = 00:01:41 . Memory (MB): peak = 1366.383 ; gain = 143.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:31 ; elapsed = 00:01:59 . Memory (MB): peak = 1350.281 ; gain = 9.000
+Finished Timing Optimization : Time (s): cpu = 00:01:42 ; elapsed = 00:01:47 . Memory (MB): peak = 1446.133 ; gain = 223.508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                          | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|nr2d_y0i_2/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | gamma_i0/table_ram/mem_reg                      | 256 x 8(READ_FIRST)    | W | R | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|base_xil_isp_lite_0_0                | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-|isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
-+-------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                               | RTL Object                                      | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/nr2d_y0i_2/linebuffer                | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/ee_i0                  | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/ping_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_ae_i0         | hist_ram_raw/pong_ram/mem_reg                   | 1 K x 32(READ_FIRST)   | W |   | 1 K x 32(WRITE_FIRST)  |   | R | Port A and B     | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[0].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[1].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[2].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[3].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[4].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/demosaic_i0/linebuffer | gen_ram_inst[5].u_ram/mem_reg                   | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_r/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_g/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/ping_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst/isp_top_i0i_4/isp_stat_awb_i0        | hist_ram_b/pong_ram/mem_reg                     | 256 x 32(READ_FIRST)   | W |   | 256 x 32(WRITE_FIRST)  |   | R | Port A and B     | 1      | 0      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[0].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[1].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | bnr_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | gamma_i0/table_ram/mem_reg                      | 256 x 8(READ_FIRST)    | W | R | 256 x 8(WRITE_FIRST)   |   | R | Port A and B     | 1      | 0      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_u/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[0].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[1].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[2].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[3].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[4].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst                                      | nr2d_shift_v/gen_ram_inst[5].u_ram/mem_reg      | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[0].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[1].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[2].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
+|inst/isp_top_i0i_5/dpc_i0                 | linebuffer/gen_ram_inst[3].u_ram/mem_reg        | 2 K x 9(READ_FIRST)    | W | R |                        |   |   | Port A           | 0      | 1      | 
++------------------------------------------+-------------------------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -585,7 +589,7 @@ INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_
 INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[2].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/linebuffer/gen_ram_inst[3].u_ram/mem_reg (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:37 ; elapsed = 00:02:05 . Memory (MB): peak = 1422.395 ; gain = 81.113
+Finished Technology Mapping : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 1489.406 ; gain = 266.781
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -603,64 +607,64 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:41 ; elapsed = 00:02:09 . Memory (MB): peak = 1428.105 ; gain = 86.824
+Finished IO Insertion : Time (s): cpu = 00:01:57 ; elapsed = 00:02:03 . Memory (MB): peak = 1491.082 ; gain = 268.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:41 ; elapsed = 00:02:09 . Memory (MB): peak = 1428.105 ; gain = 86.824
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:57 ; elapsed = 00:02:03 . Memory (MB): peak = 1491.082 ; gain = 268.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:42 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.105 ; gain = 86.824
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.082 ; gain = 268.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:42 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.105 ; gain = 86.824
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.082 ; gain = 268.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.195 ; gain = 86.914
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.094 ; gain = 268.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.195 ; gain = 86.914
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.094 ; gain = 268.469
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Static Shift Register Report:
-+----------------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|Module Name           | RTL Name                                                                         | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
-+----------------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/href_dly_reg[35]          | 36     | 1     | YES          | NO                 | YES               | 0      | 2       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/vsync_dly_reg[35]         | 36     | 1     | YES          | NO                 | YES               | 0      | 2       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg[5]             | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/vsync_dly_reg[5]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/u_dly_reg[5][8]             | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/v_dly_reg[5][8]             | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/href_dly_reg[3]            | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/vsync_dly_reg[3]           | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/href_dly_reg[8]       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/vsync_dly_reg[8]      | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p75_reg[8]            | 4      | 9     | YES          | NO                 | YES               | 9      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/href_dly_reg[9]            | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg[9]           | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/href_dly_reg[6]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/vsync_dly_reg[6]           | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_v/data_buff_reg[35][8] | 36     | 8     | YES          | NO                 | YES               | 0      | 16      | 
-|base_xil_isp_lite_0_0 | inst/xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_u/data_buff_reg[35][8] | 36     | 8     | YES          | NO                 | YES               | 0      | 16      | 
-+----------------------+----------------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name       | RTL Name                                                                    | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/href_dly_reg[35]          | 36     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_y0/vsync_dly_reg[35]         | 36     | 1     | YES          | NO                 | YES               | 0      | 2       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/href_dly_reg[5]             | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/vsync_dly_reg[5]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/u_dly_reg[5][8]             | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ee_i0/v_dly_reg[5][8]             | 6      | 8     | YES          | NO                 | YES               | 8      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/href_dly_reg[3]            | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/ccm_i0/vsync_dly_reg[3]           | 4      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/href_dly_reg[8]       | 8      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/vsync_dly_reg[8]      | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/demosaic_i0/p75_reg[8]            | 4      | 9     | YES          | NO                 | YES               | 9      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/href_dly_reg[9]            | 9      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/dpc_i0/vsync_dly_reg[9]           | 10     | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/href_dly_reg[6]            | 6      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/bnr_i0/vsync_dly_reg[6]           | 7      | 1     | YES          | NO                 | YES               | 1      | 0       | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_v/data_buff_reg[35][8] | 36     | 8     | YES          | NO                 | YES               | 0      | 16      | 
+|xil_isp_lite_v1_0 | xil_isp_lite_v1_0_S00_AXI_inst/isp_top_i0/nr2d_delay_u/data_buff_reg[35][8] | 36     | 8     | YES          | NO                 | YES               | 0      | 16      | 
++------------------+-----------------------------------------------------------------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -698,29 +702,29 @@ Report Cell Usage:
 |19    |FDSE     |   338|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.195 ; gain = 86.914
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.094 ; gain = 268.469
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:56 ; elapsed = 00:02:07 . Memory (MB): peak = 1428.195 ; gain = 77.914
-Synthesis Optimization Complete : Time (s): cpu = 00:01:43 ; elapsed = 00:02:11 . Memory (MB): peak = 1428.195 ; gain = 86.914
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:16 ; elapsed = 00:02:01 . Memory (MB): peak = 1491.094 ; gain = 211.262
+Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:06 . Memory (MB): peak = 1491.094 ; gain = 268.469
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.340 . Memory (MB): peak = 1440.215 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.335 . Memory (MB): peak = 1503.129 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 3144 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1446.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1508.836 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete, checksum: a7c57c11
+Synth Design complete, checksum: fbb5dc5f
 INFO: [Common 17-83] Releasing license: Synthesis
 131 Infos, 8 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:52 ; elapsed = 00:02:25 . Memory (MB): peak = 1446.305 ; gain = 105.023
+synth_design: Time (s): cpu = 00:02:09 ; elapsed = 00:02:17 . Memory (MB): peak = 1508.836 ; gain = 286.211
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/base_xil_isp_lite_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_isp_lite_0_0, cache-ID = a25b747cd4fcf39f
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_xil_isp_lite_0_0, cache-ID = c5572751a33bae57
 INFO: [Coretcl 2-1174] Renamed 87 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_xil_isp_lite_0_0_synth_1/base_xil_isp_lite_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_xil_isp_lite_0_0_utilization_synth.rpt -pb base_xil_isp_lite_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep 18 22:51:40 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  3 02:14:59 2022...

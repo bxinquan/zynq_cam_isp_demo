@@ -1,7 +1,7 @@
 // Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-// Date        : Sun Sep 18 22:50:14 2022
+// Date        : Mon Oct  3 02:13:05 2022
 // Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0_sim_netlist.v
@@ -105,6 +105,8 @@ module base_xil_camif_0_0
   wire [31:0]s00_axi_wdata;
   wire s00_axi_wready;
   wire s00_axi_wvalid;
+  wire [1:0]NLW_inst_s00_axi_bresp_UNCONNECTED;
+  wire [1:0]NLW_inst_s00_axi_rresp_UNCONNECTED;
 
   assign s00_axi_bresp[1] = \<const0> ;
   assign s00_axi_bresp[0] = \<const0> ;
@@ -112,32 +114,49 @@ module base_xil_camif_0_0
   assign s00_axi_rresp[0] = \<const0> ;
   GND GND
        (.G(\<const0> ));
+  (* BITS = "8" *) 
+  (* COLORBAR_BAYER = "3" *) 
+  (* COLORBAR_H_BACK = "50" *) 
+  (* COLORBAR_H_DISP = "2592" *) 
+  (* COLORBAR_H_FRONT = "50" *) 
+  (* COLORBAR_H_PULSE = "100" *) 
+  (* COLORBAR_V_BACK = "5" *) 
+  (* COLORBAR_V_DISP = "1944" *) 
+  (* COLORBAR_V_FRONT = "5" *) 
+  (* COLORBAR_V_PULSE = "10" *) 
+  (* C_S00_AXI_ADDR_WIDTH = "5" *) 
+  (* C_S00_AXI_DATA_WIDTH = "32" *) 
   base_xil_camif_0_0_xil_camif_v1_0 inst
-       (.S_AXI_ARREADY(s00_axi_arready),
-        .S_AXI_AWREADY(s00_axi_awready),
-        .S_AXI_WREADY(s00_axi_wready),
-        .cam_data(cam_data),
+       (.cam_data(cam_data),
         .cam_href(cam_href),
         .cam_pclk(cam_pclk),
-        .cam_pclk_0(out_pclk),
         .cam_vsync(cam_vsync),
         .cam_xclk(cam_xclk),
         .irq(irq),
         .out_href(out_href),
+        .out_pclk(out_pclk),
         .out_raw(out_raw),
         .out_vsync(out_vsync),
         .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr[4:2]),
+        .s00_axi_araddr({s00_axi_araddr[4:2],1'b0,1'b0}),
         .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arprot({1'b0,1'b0,1'b0}),
+        .s00_axi_arready(s00_axi_arready),
         .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr[4:2]),
+        .s00_axi_awaddr({s00_axi_awaddr[4:2],1'b0,1'b0}),
+        .s00_axi_awprot({1'b0,1'b0,1'b0}),
+        .s00_axi_awready(s00_axi_awready),
         .s00_axi_awvalid(s00_axi_awvalid),
         .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bresp(NLW_inst_s00_axi_bresp_UNCONNECTED[1:0]),
         .s00_axi_bvalid(s00_axi_bvalid),
         .s00_axi_rdata(s00_axi_rdata),
         .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rresp(NLW_inst_s00_axi_rresp_UNCONNECTED[1:0]),
         .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata[1:0]),
+        .s00_axi_wdata({1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,1'b0,s00_axi_wdata[1:0]}),
+        .s00_axi_wready(s00_axi_wready),
+        .s00_axi_wstrb({1'b0,1'b0,1'b0,1'b0}),
         .s00_axi_wvalid(s00_axi_wvalid));
 endmodule
 
@@ -289,7 +308,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(\line_cnt_reg_n_0_[8] ),
         .I5(\line_cnt_reg_n_0_[7] ),
         .O(dvp_href_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h7)) 
     dvp_href_i_4
@@ -404,7 +423,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(\line_cnt_reg_n_0_[3] ),
         .I5(\line_cnt_reg_n_0_[5] ),
         .O(\line_cnt[10]_i_6_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \line_cnt[1]_i_1 
@@ -412,7 +431,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I1(\line_cnt_reg_n_0_[1] ),
         .I2(\line_cnt_reg_n_0_[0] ),
         .O(\line_cnt[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT4 #(
     .INIT(16'h2888)) 
     \line_cnt[2]_i_1 
@@ -421,7 +440,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(\line_cnt_reg_n_0_[0] ),
         .I3(\line_cnt_reg_n_0_[1] ),
         .O(\line_cnt[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h28888888)) 
     \line_cnt[3]_i_1 
@@ -451,14 +470,14 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(\line_cnt_reg_n_0_[3] ),
         .I5(\line_cnt_reg_n_0_[4] ),
         .O(\line_cnt[5]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h7)) 
     \line_cnt[5]_i_2 
        (.I0(\line_cnt_reg_n_0_[0] ),
         .I1(\line_cnt_reg_n_0_[1] ),
         .O(\line_cnt[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \line_cnt[6]_i_1 
@@ -476,7 +495,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(\line_cnt_reg_n_0_[0] ),
         .I5(\line_cnt_reg_n_0_[5] ),
         .O(\line_cnt[6]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \line_cnt[7]_i_1 
@@ -484,7 +503,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I1(\line_cnt_reg_n_0_[7] ),
         .I2(\line_cnt[10]_i_5_n_0 ),
         .O(\line_cnt[7]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'h2888)) 
     \line_cnt[8]_i_1 
@@ -493,7 +512,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(\line_cnt[10]_i_5_n_0 ),
         .I3(\line_cnt_reg_n_0_[7] ),
         .O(\line_cnt[8]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'h28888888)) 
     \line_cnt[9]_i_1 
@@ -569,7 +588,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .CLR(module_reset),
         .D(\line_cnt[9]_i_1_n_0 ),
         .Q(\line_cnt_reg_n_0_[9] ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     out_href_i_1
@@ -577,7 +596,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I1(out_vsync_reg),
         .I2(cam_href),
         .O(dvp_href_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[0]_i_1 
@@ -586,7 +605,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[0]),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[1]_i_1 
@@ -595,7 +614,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[1]),
         .O(D[1]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[2]_i_1 
@@ -604,7 +623,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[2]),
         .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[3]_i_1 
@@ -613,7 +632,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[3]),
         .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[4]_i_1 
@@ -622,7 +641,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[4]),
         .O(D[4]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[5]_i_1 
@@ -631,7 +650,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[5]),
         .O(D[5]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[6]_i_1 
@@ -640,7 +659,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[6]),
         .O(D[6]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
     .INIT(16'h8F80)) 
     \out_raw[7]_i_1 
@@ -649,7 +668,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(out_vsync_reg),
         .I3(cam_data[7]),
         .O(D[7]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     out_vsync_i_1
@@ -667,14 +686,14 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(\pix_cnt[0]_i_5_n_0 ),
         .I5(pix_cnt[0]),
         .O(p_0_in[0]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \pix_cnt[0]_i_2 
        (.I0(pix_cnt[9]),
         .I1(pix_cnt[10]),
         .O(\pix_cnt[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT3 #(
     .INIT(8'h7F)) 
     \pix_cnt[0]_i_3 
@@ -694,13 +713,14 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
        (.I0(pix_cnt[8]),
         .I1(pix_cnt[10]),
         .O(\pix_cnt[0]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[10]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[10]),
         .O(p_0_in[10]));
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[11]_i_1 
@@ -733,63 +753,62 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(pix_cnt[10]),
         .I5(pix_cnt[9]),
         .O(\pix_cnt[11]_i_5_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[1]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[1]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[2]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[2]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[3]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[3]),
         .O(p_0_in[3]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[4]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[4]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[5]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[5]),
         .O(p_0_in[5]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[6]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[6]),
         .O(p_0_in[6]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[7]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[7]),
         .O(p_0_in[7]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[8]_i_1 
        (.I0(\pix_cnt[11]_i_2_n_0 ),
         .I1(pix_cnt0[8]),
         .O(p_0_in[8]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \pix_cnt[9]_i_1 
@@ -912,7 +931,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(pix_cnt[5]),
         .I5(pix_cnt[7]),
         .O(\raw_data[7]_i_10_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \raw_data[7]_i_11 
@@ -947,7 +966,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(pix_cnt[5]),
         .I5(pix_cnt[8]),
         .O(\raw_data[7]_i_14_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h00101010)) 
     \raw_data[7]_i_15 
@@ -967,7 +986,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(pix_cnt[6]),
         .I5(pix_cnt[7]),
         .O(\raw_data[7]_i_16_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'hF8000000)) 
     \raw_data[7]_i_17 
@@ -977,7 +996,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I3(pix_cnt[6]),
         .I4(pix_cnt[7]),
         .O(\raw_data[7]_i_17_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h02)) 
     \raw_data[7]_i_18 
@@ -1011,7 +1030,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
        (.I0(pix_cnt[9]),
         .I1(pix_cnt[11]),
         .O(\raw_data[7]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \raw_data[7]_i_21 
@@ -1039,7 +1058,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I4(pix_cnt[3]),
         .I5(pix_cnt[4]),
         .O(\raw_data[7]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h1000)) 
     \raw_data[7]_i_24 
@@ -1048,7 +1067,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(pix_cnt[9]),
         .I3(pix_cnt[11]),
         .O(\raw_data[7]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h88888880)) 
     \raw_data[7]_i_25 
@@ -1058,7 +1077,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I3(pix_cnt[3]),
         .I4(pix_cnt[4]),
         .O(\raw_data[7]_i_25_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT4 #(
     .INIT(16'hFEEE)) 
     \raw_data[7]_i_26 
@@ -1067,7 +1086,7 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .I2(pix_cnt[7]),
         .I3(pix_cnt[6]),
         .O(\raw_data[7]_i_26_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
     .INIT(16'h0400)) 
     \raw_data[7]_i_27 
@@ -1151,8 +1170,140 @@ module base_xil_camif_0_0_dvp_raw_timing_colorbar
         .Q(raw_data));
 endmodule
 
+(* BITS = "8" *) (* COLORBAR_BAYER = "3" *) (* COLORBAR_H_BACK = "50" *) 
+(* COLORBAR_H_DISP = "2592" *) (* COLORBAR_H_FRONT = "50" *) (* COLORBAR_H_PULSE = "100" *) 
+(* COLORBAR_V_BACK = "5" *) (* COLORBAR_V_DISP = "1944" *) (* COLORBAR_V_FRONT = "5" *) 
+(* COLORBAR_V_PULSE = "10" *) (* C_S00_AXI_ADDR_WIDTH = "5" *) (* C_S00_AXI_DATA_WIDTH = "32" *) 
 (* ORIG_REF_NAME = "xil_camif_v1_0" *) 
 module base_xil_camif_0_0_xil_camif_v1_0
+   (irq,
+    cam_xclk,
+    cam_pclk,
+    cam_href,
+    cam_vsync,
+    cam_data,
+    out_pclk,
+    out_href,
+    out_vsync,
+    out_raw,
+    s00_axi_aclk,
+    s00_axi_aresetn,
+    s00_axi_awaddr,
+    s00_axi_awprot,
+    s00_axi_awvalid,
+    s00_axi_awready,
+    s00_axi_wdata,
+    s00_axi_wstrb,
+    s00_axi_wvalid,
+    s00_axi_wready,
+    s00_axi_bresp,
+    s00_axi_bvalid,
+    s00_axi_bready,
+    s00_axi_araddr,
+    s00_axi_arprot,
+    s00_axi_arvalid,
+    s00_axi_arready,
+    s00_axi_rdata,
+    s00_axi_rresp,
+    s00_axi_rvalid,
+    s00_axi_rready);
+  output irq;
+  input cam_xclk;
+  input cam_pclk;
+  input cam_href;
+  input cam_vsync;
+  input [7:0]cam_data;
+  output out_pclk;
+  output out_href;
+  output out_vsync;
+  output [7:0]out_raw;
+  input s00_axi_aclk;
+  input s00_axi_aresetn;
+  input [4:0]s00_axi_awaddr;
+  input [2:0]s00_axi_awprot;
+  input s00_axi_awvalid;
+  output s00_axi_awready;
+  input [31:0]s00_axi_wdata;
+  input [3:0]s00_axi_wstrb;
+  input s00_axi_wvalid;
+  output s00_axi_wready;
+  output [1:0]s00_axi_bresp;
+  output s00_axi_bvalid;
+  input s00_axi_bready;
+  input [4:0]s00_axi_araddr;
+  input [2:0]s00_axi_arprot;
+  input s00_axi_arvalid;
+  output s00_axi_arready;
+  output [31:0]s00_axi_rdata;
+  output [1:0]s00_axi_rresp;
+  output s00_axi_rvalid;
+  input s00_axi_rready;
+
+  wire \<const0> ;
+  wire [7:0]cam_data;
+  wire cam_href;
+  wire cam_pclk;
+  wire cam_vsync;
+  wire cam_xclk;
+  wire irq;
+  wire out_href;
+  wire out_pclk;
+  wire [7:0]out_raw;
+  wire out_vsync;
+  wire s00_axi_aclk;
+  wire [4:0]s00_axi_araddr;
+  wire s00_axi_aresetn;
+  wire s00_axi_arready;
+  wire s00_axi_arvalid;
+  wire [4:0]s00_axi_awaddr;
+  wire s00_axi_awready;
+  wire s00_axi_awvalid;
+  wire s00_axi_bready;
+  wire s00_axi_bvalid;
+  wire [31:0]s00_axi_rdata;
+  wire s00_axi_rready;
+  wire s00_axi_rvalid;
+  wire [31:0]s00_axi_wdata;
+  wire s00_axi_wready;
+  wire s00_axi_wvalid;
+
+  assign s00_axi_bresp[1] = \<const0> ;
+  assign s00_axi_bresp[0] = \<const0> ;
+  assign s00_axi_rresp[1] = \<const0> ;
+  assign s00_axi_rresp[0] = \<const0> ;
+  GND GND
+       (.G(\<const0> ));
+  base_xil_camif_0_0_xil_camif_v1_0_S00_AXI xil_camif_v1_0_S00_AXI_inst
+       (.S_AXI_ARREADY(s00_axi_arready),
+        .S_AXI_AWREADY(s00_axi_awready),
+        .S_AXI_WREADY(s00_axi_wready),
+        .cam_data(cam_data),
+        .cam_href(cam_href),
+        .cam_pclk(cam_pclk),
+        .cam_pclk_0(out_pclk),
+        .cam_vsync(cam_vsync),
+        .cam_xclk(cam_xclk),
+        .irq(irq),
+        .out_href(out_href),
+        .out_raw(out_raw),
+        .out_vsync(out_vsync),
+        .s00_axi_aclk(s00_axi_aclk),
+        .s00_axi_araddr(s00_axi_araddr[4:2]),
+        .s00_axi_aresetn(s00_axi_aresetn),
+        .s00_axi_arvalid(s00_axi_arvalid),
+        .s00_axi_awaddr(s00_axi_awaddr[4:2]),
+        .s00_axi_awvalid(s00_axi_awvalid),
+        .s00_axi_bready(s00_axi_bready),
+        .s00_axi_bvalid(s00_axi_bvalid),
+        .s00_axi_rdata(s00_axi_rdata),
+        .s00_axi_rready(s00_axi_rready),
+        .s00_axi_rvalid(s00_axi_rvalid),
+        .s00_axi_wdata(s00_axi_wdata[1:0]),
+        .s00_axi_wvalid(s00_axi_wvalid));
+endmodule
+
+(* ORIG_REF_NAME = "xil_camif_v1_0_S00_AXI" *) 
+module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
    (cam_pclk_0,
     out_href,
     out_vsync,
@@ -1209,118 +1360,6 @@ module base_xil_camif_0_0_xil_camif_v1_0
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
   wire S_AXI_WREADY;
-  wire [7:0]cam_data;
-  wire cam_href;
-  wire cam_pclk;
-  wire cam_pclk_0;
-  wire cam_vsync;
-  wire cam_xclk;
-  wire irq;
-  wire out_href;
-  wire [7:0]out_raw;
-  wire out_vsync;
-  wire s00_axi_aclk;
-  wire [2:0]s00_axi_araddr;
-  wire s00_axi_aresetn;
-  wire s00_axi_arvalid;
-  wire [2:0]s00_axi_awaddr;
-  wire s00_axi_awvalid;
-  wire s00_axi_bready;
-  wire s00_axi_bvalid;
-  wire [31:0]s00_axi_rdata;
-  wire s00_axi_rready;
-  wire s00_axi_rvalid;
-  wire [1:0]s00_axi_wdata;
-  wire s00_axi_wvalid;
-
-  base_xil_camif_0_0_xil_camif_v1_0_S00_AXI xil_camif_v1_0_S00_AXI_inst
-       (.CLK(cam_pclk_0),
-        .S_AXI_ARREADY(S_AXI_ARREADY),
-        .S_AXI_AWREADY(S_AXI_AWREADY),
-        .S_AXI_WREADY(S_AXI_WREADY),
-        .cam_data(cam_data),
-        .cam_href(cam_href),
-        .cam_pclk(cam_pclk),
-        .cam_vsync(cam_vsync),
-        .cam_xclk(cam_xclk),
-        .irq(irq),
-        .out_href(out_href),
-        .out_raw(out_raw),
-        .out_vsync(out_vsync),
-        .s00_axi_aclk(s00_axi_aclk),
-        .s00_axi_araddr(s00_axi_araddr),
-        .s00_axi_aresetn(s00_axi_aresetn),
-        .s00_axi_arvalid(s00_axi_arvalid),
-        .s00_axi_awaddr(s00_axi_awaddr),
-        .s00_axi_awvalid(s00_axi_awvalid),
-        .s00_axi_bready(s00_axi_bready),
-        .s00_axi_bvalid(s00_axi_bvalid),
-        .s00_axi_rdata(s00_axi_rdata),
-        .s00_axi_rready(s00_axi_rready),
-        .s00_axi_rvalid(s00_axi_rvalid),
-        .s00_axi_wdata(s00_axi_wdata),
-        .s00_axi_wvalid(s00_axi_wvalid));
-endmodule
-
-(* ORIG_REF_NAME = "xil_camif_v1_0_S00_AXI" *) 
-module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
-   (CLK,
-    out_href,
-    out_vsync,
-    S_AXI_AWREADY,
-    S_AXI_WREADY,
-    out_raw,
-    S_AXI_ARREADY,
-    s00_axi_rdata,
-    irq,
-    s00_axi_rvalid,
-    s00_axi_bvalid,
-    cam_pclk,
-    cam_xclk,
-    s00_axi_aclk,
-    s00_axi_awaddr,
-    s00_axi_awvalid,
-    s00_axi_wvalid,
-    s00_axi_araddr,
-    s00_axi_arvalid,
-    cam_vsync,
-    cam_href,
-    cam_data,
-    s00_axi_aresetn,
-    s00_axi_wdata,
-    s00_axi_bready,
-    s00_axi_rready);
-  output CLK;
-  output out_href;
-  output out_vsync;
-  output S_AXI_AWREADY;
-  output S_AXI_WREADY;
-  output [7:0]out_raw;
-  output S_AXI_ARREADY;
-  output [31:0]s00_axi_rdata;
-  output irq;
-  output s00_axi_rvalid;
-  output s00_axi_bvalid;
-  input cam_pclk;
-  input cam_xclk;
-  input s00_axi_aclk;
-  input [2:0]s00_axi_awaddr;
-  input s00_axi_awvalid;
-  input s00_axi_wvalid;
-  input [2:0]s00_axi_araddr;
-  input s00_axi_arvalid;
-  input cam_vsync;
-  input cam_href;
-  input [7:0]cam_data;
-  input s00_axi_aresetn;
-  input [1:0]s00_axi_wdata;
-  input s00_axi_bready;
-  input s00_axi_rready;
-
-  wire CLK;
-  wire S_AXI_ARREADY;
-  wire S_AXI_AWREADY;
-  wire S_AXI_WREADY;
   wire aw_en_i_1_n_0;
   wire aw_en_reg_n_0;
   wire \axi_araddr[2]_i_1_n_0 ;
@@ -1371,6 +1410,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
   wire [7:0]cam_data;
   wire cam_href;
   wire cam_pclk;
+  wire cam_pclk_0;
   wire cam_vsync;
   wire cam_xclk;
   wire colorbar_en_i_1_n_0;
@@ -2326,7 +2366,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
        (.I0(dvp_frame_cnt_reg[0]),
         .O(\dvp_frame_cnt[0]_i_2_n_0 ));
   FDCE \dvp_frame_cnt_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[0]_i_1_n_7 ),
@@ -2340,19 +2380,19 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[0]_i_1_n_4 ,\dvp_frame_cnt_reg[0]_i_1_n_5 ,\dvp_frame_cnt_reg[0]_i_1_n_6 ,\dvp_frame_cnt_reg[0]_i_1_n_7 }),
         .S({dvp_frame_cnt_reg[3:1],\dvp_frame_cnt[0]_i_2_n_0 }));
   FDCE \dvp_frame_cnt_reg[10] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[8]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[10]));
   FDCE \dvp_frame_cnt_reg[11] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[8]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[11]));
   FDCE \dvp_frame_cnt_reg[12] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[12]_i_1_n_7 ),
@@ -2366,25 +2406,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[12]_i_1_n_4 ,\dvp_frame_cnt_reg[12]_i_1_n_5 ,\dvp_frame_cnt_reg[12]_i_1_n_6 ,\dvp_frame_cnt_reg[12]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[15:12]));
   FDCE \dvp_frame_cnt_reg[13] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[12]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[13]));
   FDCE \dvp_frame_cnt_reg[14] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[12]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[14]));
   FDCE \dvp_frame_cnt_reg[15] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[12]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[15]));
   FDCE \dvp_frame_cnt_reg[16] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[16]_i_1_n_7 ),
@@ -2398,31 +2438,31 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[16]_i_1_n_4 ,\dvp_frame_cnt_reg[16]_i_1_n_5 ,\dvp_frame_cnt_reg[16]_i_1_n_6 ,\dvp_frame_cnt_reg[16]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[19:16]));
   FDCE \dvp_frame_cnt_reg[17] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[16]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[17]));
   FDCE \dvp_frame_cnt_reg[18] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[16]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[18]));
   FDCE \dvp_frame_cnt_reg[19] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[16]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[19]));
   FDCE \dvp_frame_cnt_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[0]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[1]));
   FDCE \dvp_frame_cnt_reg[20] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[20]_i_1_n_7 ),
@@ -2436,25 +2476,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[20]_i_1_n_4 ,\dvp_frame_cnt_reg[20]_i_1_n_5 ,\dvp_frame_cnt_reg[20]_i_1_n_6 ,\dvp_frame_cnt_reg[20]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[23:20]));
   FDCE \dvp_frame_cnt_reg[21] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[20]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[21]));
   FDCE \dvp_frame_cnt_reg[22] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[20]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[22]));
   FDCE \dvp_frame_cnt_reg[23] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[20]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[23]));
   FDCE \dvp_frame_cnt_reg[24] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[24]_i_1_n_7 ),
@@ -2468,25 +2508,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[24]_i_1_n_4 ,\dvp_frame_cnt_reg[24]_i_1_n_5 ,\dvp_frame_cnt_reg[24]_i_1_n_6 ,\dvp_frame_cnt_reg[24]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[27:24]));
   FDCE \dvp_frame_cnt_reg[25] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[24]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[25]));
   FDCE \dvp_frame_cnt_reg[26] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[24]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[26]));
   FDCE \dvp_frame_cnt_reg[27] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[24]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[27]));
   FDCE \dvp_frame_cnt_reg[28] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[28]_i_1_n_7 ),
@@ -2500,37 +2540,37 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[28]_i_1_n_4 ,\dvp_frame_cnt_reg[28]_i_1_n_5 ,\dvp_frame_cnt_reg[28]_i_1_n_6 ,\dvp_frame_cnt_reg[28]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[31:28]));
   FDCE \dvp_frame_cnt_reg[29] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[28]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[29]));
   FDCE \dvp_frame_cnt_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[0]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[2]));
   FDCE \dvp_frame_cnt_reg[30] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[28]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[30]));
   FDCE \dvp_frame_cnt_reg[31] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[28]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[31]));
   FDCE \dvp_frame_cnt_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[0]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[3]));
   FDCE \dvp_frame_cnt_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[4]_i_1_n_7 ),
@@ -2544,25 +2584,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[4]_i_1_n_4 ,\dvp_frame_cnt_reg[4]_i_1_n_5 ,\dvp_frame_cnt_reg[4]_i_1_n_6 ,\dvp_frame_cnt_reg[4]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[7:4]));
   FDCE \dvp_frame_cnt_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[4]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[5]));
   FDCE \dvp_frame_cnt_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[4]_i_1_n_5 ),
         .Q(dvp_frame_cnt_reg[6]));
   FDCE \dvp_frame_cnt_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[4]_i_1_n_4 ),
         .Q(dvp_frame_cnt_reg[7]));
   FDCE \dvp_frame_cnt_reg[8] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[8]_i_1_n_7 ),
@@ -2576,103 +2616,103 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\dvp_frame_cnt_reg[8]_i_1_n_4 ,\dvp_frame_cnt_reg[8]_i_1_n_5 ,\dvp_frame_cnt_reg[8]_i_1_n_6 ,\dvp_frame_cnt_reg[8]_i_1_n_7 }),
         .S(dvp_frame_cnt_reg[11:8]));
   FDCE \dvp_frame_cnt_reg[9] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(\dvp_frame_cnt_reg[8]_i_1_n_6 ),
         .Q(dvp_frame_cnt_reg[9]));
   FDCE \dvp_height_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[0]),
         .Q(dvp_height[0]));
   FDCE \dvp_height_reg[10] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[10]),
         .Q(dvp_height[10]));
   FDCE \dvp_height_reg[11] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[11]),
         .Q(dvp_height[11]));
   FDCE \dvp_height_reg[12] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[12]),
         .Q(dvp_height[12]));
   FDCE \dvp_height_reg[13] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[13]),
         .Q(dvp_height[13]));
   FDCE \dvp_height_reg[14] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[14]),
         .Q(dvp_height[14]));
   FDCE \dvp_height_reg[15] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[15]),
         .Q(dvp_height[15]));
   FDCE \dvp_height_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[1]),
         .Q(dvp_height[1]));
   FDCE \dvp_height_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[2]),
         .Q(dvp_height[2]));
   FDCE \dvp_height_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[3]),
         .Q(dvp_height[3]));
   FDCE \dvp_height_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[4]),
         .Q(dvp_height[4]));
   FDCE \dvp_height_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[5]),
         .Q(dvp_height[5]));
   FDCE \dvp_height_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[6]),
         .Q(dvp_height[6]));
   FDCE \dvp_height_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[7]),
         .Q(dvp_height[7]));
   FDCE \dvp_height_reg[8] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[8]),
         .Q(dvp_height[8]));
   FDCE \dvp_height_reg[9] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(line_cnt_reg[9]),
@@ -2684,97 +2724,97 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I1(prev_vsync),
         .O(dvp_width0));
   FDCE \dvp_width_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[0]),
         .Q(dvp_width[0]));
   FDCE \dvp_width_reg[10] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[10]),
         .Q(dvp_width[10]));
   FDCE \dvp_width_reg[11] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[11]),
         .Q(dvp_width[11]));
   FDCE \dvp_width_reg[12] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[12]),
         .Q(dvp_width[12]));
   FDCE \dvp_width_reg[13] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[13]),
         .Q(dvp_width[13]));
   FDCE \dvp_width_reg[14] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[14]),
         .Q(dvp_width[14]));
   FDCE \dvp_width_reg[15] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[15]),
         .Q(dvp_width[15]));
   FDCE \dvp_width_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[1]),
         .Q(dvp_width[1]));
   FDCE \dvp_width_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[2]),
         .Q(dvp_width[2]));
   FDCE \dvp_width_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[3]),
         .Q(dvp_width[3]));
   FDCE \dvp_width_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[4]),
         .Q(dvp_width[4]));
   FDCE \dvp_width_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[5]),
         .Q(dvp_width[5]));
   FDCE \dvp_width_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[6]),
         .Q(dvp_width[6]));
   FDCE \dvp_width_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[7]),
         .Q(dvp_width[7]));
   FDCE \dvp_width_reg[8] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[8]),
         .Q(dvp_width[8]));
   FDCE \dvp_width_reg[9] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(dvp_width0),
         .CLR(module_reset),
         .D(pix_cnt_reg[9]),
@@ -2985,7 +3025,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I2(prev_vsync),
         .O(\line_cnt[8]_i_5_n_0 ));
   FDCE \line_cnt_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[0]_i_2_n_7 ),
@@ -2999,19 +3039,19 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\line_cnt_reg[0]_i_2_n_4 ,\line_cnt_reg[0]_i_2_n_5 ,\line_cnt_reg[0]_i_2_n_6 ,\line_cnt_reg[0]_i_2_n_7 }),
         .S({\line_cnt[0]_i_4_n_0 ,\line_cnt[0]_i_5_n_0 ,\line_cnt[0]_i_6_n_0 ,\line_cnt[0]_i_7_n_0 }));
   FDCE \line_cnt_reg[10] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[8]_i_1_n_5 ),
         .Q(line_cnt_reg[10]));
   FDCE \line_cnt_reg[11] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[8]_i_1_n_4 ),
         .Q(line_cnt_reg[11]));
   FDCE \line_cnt_reg[12] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[12]_i_1_n_7 ),
@@ -3025,43 +3065,43 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\line_cnt_reg[12]_i_1_n_4 ,\line_cnt_reg[12]_i_1_n_5 ,\line_cnt_reg[12]_i_1_n_6 ,\line_cnt_reg[12]_i_1_n_7 }),
         .S({\line_cnt[12]_i_2_n_0 ,\line_cnt[12]_i_3_n_0 ,\line_cnt[12]_i_4_n_0 ,\line_cnt[12]_i_5_n_0 }));
   FDCE \line_cnt_reg[13] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[12]_i_1_n_6 ),
         .Q(line_cnt_reg[13]));
   FDCE \line_cnt_reg[14] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[12]_i_1_n_5 ),
         .Q(line_cnt_reg[14]));
   FDCE \line_cnt_reg[15] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[12]_i_1_n_4 ),
         .Q(line_cnt_reg[15]));
   FDCE \line_cnt_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[0]_i_2_n_6 ),
         .Q(line_cnt_reg[1]));
   FDCE \line_cnt_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[0]_i_2_n_5 ),
         .Q(line_cnt_reg[2]));
   FDCE \line_cnt_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[0]_i_2_n_4 ),
         .Q(line_cnt_reg[3]));
   FDCE \line_cnt_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[4]_i_1_n_7 ),
@@ -3075,25 +3115,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\line_cnt_reg[4]_i_1_n_4 ,\line_cnt_reg[4]_i_1_n_5 ,\line_cnt_reg[4]_i_1_n_6 ,\line_cnt_reg[4]_i_1_n_7 }),
         .S({\line_cnt[4]_i_2_n_0 ,\line_cnt[4]_i_3_n_0 ,\line_cnt[4]_i_4_n_0 ,\line_cnt[4]_i_5_n_0 }));
   FDCE \line_cnt_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[4]_i_1_n_6 ),
         .Q(line_cnt_reg[5]));
   FDCE \line_cnt_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[4]_i_1_n_5 ),
         .Q(line_cnt_reg[6]));
   FDCE \line_cnt_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[4]_i_1_n_4 ),
         .Q(line_cnt_reg[7]));
   FDCE \line_cnt_reg[8] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[8]_i_1_n_7 ),
@@ -3107,7 +3147,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\line_cnt_reg[8]_i_1_n_4 ,\line_cnt_reg[8]_i_1_n_5 ,\line_cnt_reg[8]_i_1_n_6 ,\line_cnt_reg[8]_i_1_n_7 }),
         .S({\line_cnt[8]_i_2_n_0 ,\line_cnt[8]_i_3_n_0 ,\line_cnt[8]_i_4_n_0 ,\line_cnt[8]_i_5_n_0 }));
   FDCE \line_cnt_reg[9] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(\line_cnt[0]_i_1__0_n_0 ),
         .CLR(module_reset),
         .D(\line_cnt_reg[8]_i_1_n_6 ),
@@ -3137,7 +3177,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .Q(module_reset),
         .S(axi_awready_i_1_n_0));
   FDCE out_href_reg
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_1),
@@ -3149,51 +3189,51 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I1(colorbar_en_reg_n_0),
         .I2(cam_xclk),
         .I3(module_reset),
-        .O(CLK));
+        .O(cam_pclk_0));
   FDCE \out_raw_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_9),
         .Q(out_raw[0]));
   FDCE \out_raw_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_8),
         .Q(out_raw[1]));
   FDCE \out_raw_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_7),
         .Q(out_raw[2]));
   FDCE \out_raw_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_6),
         .Q(out_raw[3]));
   FDCE \out_raw_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_5),
         .Q(out_raw[4]));
   FDCE \out_raw_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_4),
         .Q(out_raw[5]));
   FDCE \out_raw_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_3),
         .Q(out_raw[6]));
   FDCE \out_raw_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_2),
@@ -3205,7 +3245,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .Q(out_vsync_prev),
         .R(1'b0));
   FDCE out_vsync_reg
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .CLR(module_reset),
         .D(dvp_colorbar_timing_generator_n_0),
@@ -3330,7 +3370,7 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .I2(out_href),
         .O(\pix_cnt[8]_i_5_n_0 ));
   FDCE \pix_cnt_reg[0] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[0]_i_1_n_7 ),
@@ -3344,19 +3384,19 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\pix_cnt_reg[0]_i_1_n_4 ,\pix_cnt_reg[0]_i_1_n_5 ,\pix_cnt_reg[0]_i_1_n_6 ,\pix_cnt_reg[0]_i_1_n_7 }),
         .S({\pix_cnt[0]_i_3__0_n_0 ,\pix_cnt[0]_i_4__0_n_0 ,\pix_cnt[0]_i_5__0_n_0 ,\pix_cnt[0]_i_6_n_0 }));
   FDCE \pix_cnt_reg[10] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[8]_i_1_n_5 ),
         .Q(pix_cnt_reg[10]));
   FDCE \pix_cnt_reg[11] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[8]_i_1_n_4 ),
         .Q(pix_cnt_reg[11]));
   FDCE \pix_cnt_reg[12] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[12]_i_1_n_7 ),
@@ -3370,43 +3410,43 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\pix_cnt_reg[12]_i_1_n_4 ,\pix_cnt_reg[12]_i_1_n_5 ,\pix_cnt_reg[12]_i_1_n_6 ,\pix_cnt_reg[12]_i_1_n_7 }),
         .S({\pix_cnt[12]_i_2_n_0 ,\pix_cnt[12]_i_3_n_0 ,\pix_cnt[12]_i_4_n_0 ,\pix_cnt[12]_i_5_n_0 }));
   FDCE \pix_cnt_reg[13] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[12]_i_1_n_6 ),
         .Q(pix_cnt_reg[13]));
   FDCE \pix_cnt_reg[14] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[12]_i_1_n_5 ),
         .Q(pix_cnt_reg[14]));
   FDCE \pix_cnt_reg[15] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[12]_i_1_n_4 ),
         .Q(pix_cnt_reg[15]));
   FDCE \pix_cnt_reg[1] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[0]_i_1_n_6 ),
         .Q(pix_cnt_reg[1]));
   FDCE \pix_cnt_reg[2] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[0]_i_1_n_5 ),
         .Q(pix_cnt_reg[2]));
   FDCE \pix_cnt_reg[3] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[0]_i_1_n_4 ),
         .Q(pix_cnt_reg[3]));
   FDCE \pix_cnt_reg[4] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[4]_i_1_n_7 ),
@@ -3420,25 +3460,25 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\pix_cnt_reg[4]_i_1_n_4 ,\pix_cnt_reg[4]_i_1_n_5 ,\pix_cnt_reg[4]_i_1_n_6 ,\pix_cnt_reg[4]_i_1_n_7 }),
         .S({\pix_cnt[4]_i_2_n_0 ,\pix_cnt[4]_i_3_n_0 ,\pix_cnt[4]_i_4_n_0 ,\pix_cnt[4]_i_5_n_0 }));
   FDCE \pix_cnt_reg[5] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[4]_i_1_n_6 ),
         .Q(pix_cnt_reg[5]));
   FDCE \pix_cnt_reg[6] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[4]_i_1_n_5 ),
         .Q(pix_cnt_reg[6]));
   FDCE \pix_cnt_reg[7] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[4]_i_1_n_4 ),
         .Q(pix_cnt_reg[7]));
   FDCE \pix_cnt_reg[8] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[8]_i_1_n_7 ),
@@ -3452,19 +3492,19 @@ module base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
         .O({\pix_cnt_reg[8]_i_1_n_4 ,\pix_cnt_reg[8]_i_1_n_5 ,\pix_cnt_reg[8]_i_1_n_6 ,\pix_cnt_reg[8]_i_1_n_7 }),
         .S({\pix_cnt[8]_i_2_n_0 ,\pix_cnt[8]_i_3_n_0 ,\pix_cnt[8]_i_4_n_0 ,\pix_cnt[8]_i_5_n_0 }));
   FDCE \pix_cnt_reg[9] 
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(out_href),
         .CLR(module_reset),
         .D(\pix_cnt_reg[8]_i_1_n_6 ),
         .Q(pix_cnt_reg[9]));
   FDRE prev_href_reg
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .D(out_href),
         .Q(prev_href),
         .R(1'b0));
   FDRE prev_vsync_reg
-       (.C(CLK),
+       (.C(cam_pclk_0),
         .CE(1'b1),
         .D(out_vsync),
         .Q(prev_vsync),

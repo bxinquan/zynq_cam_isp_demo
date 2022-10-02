@@ -13,7 +13,6 @@
     "design_tree": {
       "processing_system7_0": "",
       "rst_ps7_0_100M": "",
-      "DVI_Transmitter_0": "",
       "rst_ps7_0_50M": "",
       "axi_iic": "",
       "axi_intc_0": "",
@@ -42,16 +41,17 @@
         "m08_couplers": {}
       },
       "xlconcat_0": "",
-      "xil_camif_0": "",
-      "xil_isp_lite_0": "",
-      "xil_vip_0": "",
-      "xil_vip_1": "",
+      "DVI_Transmitter_0": "",
       "axis_to_video_0": "",
       "axis_to_video_1": "",
       "axis_to_video_2": "",
       "video_to_axis_0": "",
       "video_to_axis_1": "",
-      "video_to_axis_2": ""
+      "video_to_axis_2": "",
+      "xil_camif_0": "",
+      "xil_isp_lite_0": "",
+      "xil_vip_0": "",
+      "xil_vip_1": ""
     },
     "interface_ports": {
       "DDR": {
@@ -1998,12 +1998,6 @@
         "xci_path": "ip\\base_rst_ps7_0_100M_0\\base_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       },
-      "DVI_Transmitter_0": {
-        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
-        "xci_name": "base_DVI_Transmitter_0_0",
-        "xci_path": "ip\\base_DVI_Transmitter_0_0\\base_DVI_Transmitter_0_0.xci",
-        "inst_hier_path": "DVI_Transmitter_0"
-      },
       "rst_ps7_0_50M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "base_rst_ps7_0_50M_0",
@@ -3639,106 +3633,11 @@
           }
         }
       },
-      "xil_camif_0": {
-        "vlnv": "bxq.com:user:xil_camif:1.0",
-        "xci_name": "base_xil_camif_0_0",
-        "xci_path": "ip\\base_xil_camif_0_0\\base_xil_camif_0_0.xci",
-        "inst_hier_path": "xil_camif_0",
-        "parameters": {
-          "COLORBAR_BAYER": {
-            "value": "3"
-          },
-          "COLORBAR_H_BACK": {
-            "value": "50"
-          },
-          "COLORBAR_H_DISP": {
-            "value": "2592"
-          },
-          "COLORBAR_H_FRONT": {
-            "value": "50"
-          },
-          "COLORBAR_H_PULSE": {
-            "value": "100"
-          },
-          "COLORBAR_V_BACK": {
-            "value": "5"
-          },
-          "COLORBAR_V_DISP": {
-            "value": "1944"
-          },
-          "COLORBAR_V_FRONT": {
-            "value": "5"
-          },
-          "COLORBAR_V_PULSE": {
-            "value": "10"
-          }
-        }
-      },
-      "xil_isp_lite_0": {
-        "vlnv": "bxq.com:user:xil_isp_lite:1.0",
-        "xci_name": "base_xil_isp_lite_0_0",
-        "xci_path": "ip\\base_xil_isp_lite_0_0\\base_xil_isp_lite_0_0.xci",
-        "inst_hier_path": "xil_isp_lite_0",
-        "parameters": {
-          "BAYER": {
-            "value": "3"
-          },
-          "EXT_BITS": {
-            "value": "1"
-          },
-          "FEATURE_FULL": {
-            "value": "true"
-          },
-          "HEIGHT": {
-            "value": "1944"
-          },
-          "IO_BITS": {
-            "value": "8"
-          },
-          "WIDTH": {
-            "value": "2592"
-          },
-          "YUV_AUX_NUM": {
-            "value": "1"
-          }
-        }
-      },
-      "xil_vip_0": {
-        "vlnv": "bxq.com:user:xil_vip:1.0",
-        "xci_name": "base_xil_vip_0_0",
-        "xci_path": "ip\\base_xil_vip_0_0\\base_xil_vip_0_0.xci",
-        "inst_hier_path": "xil_vip_0",
-        "parameters": {
-          "BITS": {
-            "value": "8"
-          },
-          "FEATURE_FULL": {
-            "value": "true"
-          },
-          "HEIGHT": {
-            "value": "1944"
-          },
-          "WIDTH": {
-            "value": "2592"
-          }
-        }
-      },
-      "xil_vip_1": {
-        "vlnv": "bxq.com:user:xil_vip:1.0",
-        "xci_name": "base_xil_vip_1_0",
-        "xci_path": "ip\\base_xil_vip_1_0\\base_xil_vip_1_0.xci",
-        "inst_hier_path": "xil_vip_1",
-        "parameters": {
-          "FEATURE_FULL": {
-            "value": "true"
-          },
-          "HEIGHT": {
-            "value": "1944"
-          },
-          "WIDTH": {
-            "value": "2592"
-          }
-        }
+      "DVI_Transmitter_0": {
+        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
+        "xci_name": "base_DVI_Transmitter_0_0",
+        "xci_path": "ip\\base_DVI_Transmitter_0_0\\base_DVI_Transmitter_0_0.xci",
+        "inst_hier_path": "DVI_Transmitter_0"
       },
       "axis_to_video_0": {
         "vlnv": "bxq.com:user:axis_to_video:1.0",
@@ -3866,6 +3765,107 @@
           },
           "DATA_BITS": {
             "value": "24"
+          }
+        }
+      },
+      "xil_camif_0": {
+        "vlnv": "bxq.com:user:xil_camif:1.0",
+        "xci_name": "base_xil_camif_0_0",
+        "xci_path": "ip\\base_xil_camif_0_0\\base_xil_camif_0_0.xci",
+        "inst_hier_path": "xil_camif_0",
+        "parameters": {
+          "COLORBAR_BAYER": {
+            "value": "3"
+          },
+          "COLORBAR_H_BACK": {
+            "value": "50"
+          },
+          "COLORBAR_H_DISP": {
+            "value": "2592"
+          },
+          "COLORBAR_H_FRONT": {
+            "value": "50"
+          },
+          "COLORBAR_H_PULSE": {
+            "value": "100"
+          },
+          "COLORBAR_V_BACK": {
+            "value": "5"
+          },
+          "COLORBAR_V_DISP": {
+            "value": "1944"
+          },
+          "COLORBAR_V_FRONT": {
+            "value": "5"
+          },
+          "COLORBAR_V_PULSE": {
+            "value": "10"
+          }
+        }
+      },
+      "xil_isp_lite_0": {
+        "vlnv": "bxq.com:user:xil_isp_lite:1.0",
+        "xci_name": "base_xil_isp_lite_0_0",
+        "xci_path": "ip\\base_xil_isp_lite_0_0\\base_xil_isp_lite_0_0.xci",
+        "inst_hier_path": "xil_isp_lite_0",
+        "parameters": {
+          "BAYER": {
+            "value": "3"
+          },
+          "EXT_BITS": {
+            "value": "1"
+          },
+          "FEATURE_FULL": {
+            "value": "true"
+          },
+          "HEIGHT": {
+            "value": "1944"
+          },
+          "IO_BITS": {
+            "value": "8"
+          },
+          "WIDTH": {
+            "value": "2592"
+          },
+          "YUV_AUX_NUM": {
+            "value": "1"
+          }
+        }
+      },
+      "xil_vip_0": {
+        "vlnv": "bxq.com:user:xil_vip:1.0",
+        "xci_name": "base_xil_vip_0_0",
+        "xci_path": "ip\\base_xil_vip_0_0\\base_xil_vip_0_0.xci",
+        "inst_hier_path": "xil_vip_0",
+        "parameters": {
+          "BITS": {
+            "value": "8"
+          },
+          "FEATURE_FULL": {
+            "value": "true"
+          },
+          "HEIGHT": {
+            "value": "1944"
+          },
+          "WIDTH": {
+            "value": "2592"
+          }
+        }
+      },
+      "xil_vip_1": {
+        "vlnv": "bxq.com:user:xil_vip:1.0",
+        "xci_name": "base_xil_vip_1_0",
+        "xci_path": "ip\\base_xil_vip_1_0\\base_xil_vip_1_0.xci",
+        "inst_hier_path": "xil_vip_1",
+        "parameters": {
+          "FEATURE_FULL": {
+            "value": "true"
+          },
+          "HEIGHT": {
+            "value": "1944"
+          },
+          "WIDTH": {
+            "value": "2592"
           }
         }
       }
@@ -4158,13 +4158,13 @@
       "axis_to_video_0_locked": {
         "ports": [
           "axis_to_video_0/locked",
-          "xil_isp_lite_0/rst_n",
-          "xil_vip_0/rst_n",
-          "xil_vip_1/rst_n",
           "video_to_axis_1/vid_rstn",
           "video_to_axis_1/vid_ce",
           "video_to_axis_2/vid_rstn",
-          "video_to_axis_2/vid_ce"
+          "video_to_axis_2/vid_ce",
+          "xil_isp_lite_0/rst_n",
+          "xil_vip_0/rst_n",
+          "xil_vip_1/rst_n"
         ]
       },
       "axis_to_video_1_vid_active_video": {
@@ -4218,10 +4218,10 @@
       "clk_wiz_0_clk_160": {
         "ports": [
           "clk_wiz_0/isp_pclk",
+          "axis_to_video_0/vid_clk",
           "xil_isp_lite_0/pclk",
           "xil_vip_0/pclk",
-          "xil_vip_1/pclk",
-          "axis_to_video_0/vid_clk"
+          "xil_vip_1/pclk"
         ]
       },
       "clk_wiz_0_locked": {

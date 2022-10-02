@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:xil_vip:1.0
-// IP Revision: 40
+// IP Revision: 44
 
 (* X_CORE_INFO = "xil_vip_v1_0,Vivado 2021.1" *)
 (* CHECK_LICENSE_TYPE = "base_xil_vip_1_0,xil_vip_v1_0,{}" *)

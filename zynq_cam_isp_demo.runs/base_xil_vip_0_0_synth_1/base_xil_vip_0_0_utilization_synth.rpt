@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Sun Sep 18 22:50:34 2022
+| Date         : Mon Oct  3 02:13:34 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_utilization -file base_xil_vip_0_0_utilization_synth.rpt -pb base_xil_vip_0_0_utilization_synth.pb
 | Design       : base_xil_vip_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 2701 |     0 |          0 |     53200 |  5.08 |
-|   LUT as Logic             | 2656 |     0 |          0 |     53200 |  4.99 |
+| Slice LUTs*                | 2705 |     0 |          0 |     53200 |  5.08 |
+|   LUT as Logic             | 2660 |     0 |          0 |     53200 |  5.00 |
 |   LUT as Memory            |   45 |     0 |          0 |     17400 |  0.26 |
 |     LUT as Distributed RAM |    0 |     0 |            |           |       |
 |     LUT as Shift Register  |   45 |     0 |            |           |       |
@@ -152,13 +152,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDCE     | 2955 |        Flop & Latch |
-| LUT2     | 2087 |                 LUT |
-| LUT3     |  914 |                 LUT |
+| LUT2     | 2080 |                 LUT |
+| LUT3     |  918 |                 LUT |
 | FDRE     |  542 |        Flop & Latch |
 | CARRY4   |  533 |          CarryLogic |
-| LUT4     |  402 |                 LUT |
-| LUT6     |  175 |                 LUT |
-| LUT5     |  172 |                 LUT |
+| LUT4     |  400 |                 LUT |
+| LUT5     |  178 |                 LUT |
+| LUT6     |  174 |                 LUT |
 | LUT1     |  134 |                 LUT |
 | SRL16E   |   28 |  Distributed Memory |
 | FDSE     |   23 |        Flop & Latch |

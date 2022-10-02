@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date         : Thu Sep 29 00:06:06 2022
+| Date         : Mon Oct  3 02:28:36 2022
 | Host         : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command      : report_drc -file base_wrapper_drc_routed.rpt -pb base_wrapper_drc_routed.pb -rpx base_wrapper_drc_routed.rpx
 | Design       : base_wrapper
@@ -20,7 +20,7 @@ Table of Contents
 1. REPORT SUMMARY
 -----------------
             Netlist: netlist
-          Floorplan: checkpoint_base_wrapper_opt
+          Floorplan: design_1
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
@@ -878,7 +878,7 @@ Related violations: <none>
 
 PDRC-153#1 Warning
 Gated clock check  
-Net base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/CLK is a gated clock net sourced by a combinational pin base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/out_pclk_INST_0/O, cell base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/out_pclk_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+Net base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/cam_pclk_0 is a gated clock net sourced by a combinational pin base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/out_pclk_INST_0/O, cell base_i/xil_camif_0/inst/xil_camif_v1_0_S00_AXI_inst/out_pclk_INST_0. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
 Related violations: <none>
 
 PDRC-153#2 Warning

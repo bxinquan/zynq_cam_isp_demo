@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
-| Date             : Thu Sep 29 00:06:37 2022
+| Date             : Mon Oct  3 02:29:08 2022
 | Host             : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 | Command          : report_power -file base_wrapper_power_routed.rpt -pb base_wrapper_power_summary_routed.pb -rpx base_wrapper_power_routed.rpx
 | Design           : base_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.458        |
+| Total On-Chip Power (W)  | 2.459        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.279        |
+| Dynamic (W)              | 2.280        |
 | Device Static (W)        | 0.179        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 56.6         |
@@ -54,21 +54,21 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.167 |       15 |       --- |             --- |
 | Slice Logic              |     0.052 |    88986 |       --- |             --- |
-|   LUT as Logic           |     0.041 |    31279 |     53200 |           58.80 |
+|   LUT as Logic           |     0.041 |    31305 |     53200 |           58.84 |
 |   CARRY4                 |     0.007 |     4580 |     13300 |           34.44 |
 |   Register               |     0.002 |    36255 |    106400 |           34.07 |
 |   LUT as Distributed RAM |     0.002 |      888 |     17400 |            5.10 |
 |   LUT as Shift Register  |    <0.001 |      736 |     17400 |            4.23 |
 |   F7/F8 Muxes            |    <0.001 |      101 |     53200 |            0.19 |
 |   Others                 |     0.000 |     1901 |       --- |             --- |
-| Signals                  |     0.045 |    57730 |       --- |             --- |
+| Signals                  |     0.046 |    57716 |       --- |             --- |
 | Block RAM                |     0.038 |       81 |       140 |           57.86 |
 | MMCM                     |     0.268 |        2 |         4 |           50.00 |
 | DSPs                     |     0.002 |       57 |       220 |           25.91 |
 | I/O                      |     0.171 |       59 |       125 |           47.20 |
 | PS7                      |     1.536 |        1 |       --- |             --- |
 | Static Power             |     0.179 |          |           |                 |
-| Total                    |     2.458 |          |           |                 |
+| Total                    |     2.459 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.331 |       0.305 |      0.025 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.332 |       0.306 |      0.026 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.168 |       0.149 |      0.018 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.052 |       0.051 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -165,19 +165,19 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| base_wrapper             |     2.279 |
+| base_wrapper             |     2.280 |
 |   GPIO_EMIO_tri_iobuf_0  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_1  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_2  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_3  |     0.003 |
 |   GPIO_EMIO_tri_iobuf_4  |     0.003 |
-|   base_i                 |     2.241 |
+|   base_i                 |     2.242 |
 |     DVI_Transmitter_0    |     0.139 |
 |       inst               |     0.139 |
 |     axi_iic              |     0.001 |
 |       U0                 |     0.001 |
-|     axi_smc              |     0.047 |
-|       inst               |     0.047 |
+|     axi_smc              |     0.046 |
+|       inst               |     0.046 |
 |     axi_vdma_0           |     0.018 |
 |       U0                 |     0.018 |
 |     axi_vdma_1           |     0.019 |
@@ -201,7 +201,7 @@ Table of Contents
 |     xil_camif_0          |     0.003 |
 |       inst               |     0.003 |
 |     xil_isp_lite_0       |     0.104 |
-|       inst               |     0.103 |
+|       inst               |     0.104 |
 |     xil_vip_0            |     0.032 |
 |       inst               |     0.032 |
 |     xil_vip_1            |     0.032 |

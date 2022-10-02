@@ -12,7 +12,6 @@
     "design_tree": {
       "processing_system7_0": "",
       "rst_ps7_0_100M": "",
-      "DVI_Transmitter_0": "",
       "v_vid_in_axi4s_1": "",
       "v_vid_in_axi4s_0": "",
       "rst_ps7_0_50M": "",
@@ -49,6 +48,7 @@
       "v_tc_0": "",
       "v_tc_1": "",
       "xlconcat_0": "",
+      "DVI_Transmitter_0": "",
       "xil_camif_0": "",
       "xil_camif_1": "",
       "xil_isp_lite_0": "",
@@ -1909,12 +1909,6 @@
         "xci_path": "ip\\dualcam_rst_ps7_0_100M_0\\dualcam_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       },
-      "DVI_Transmitter_0": {
-        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
-        "xci_name": "dualcam_DVI_Transmitter_0_0",
-        "xci_path": "ip\\dualcam_DVI_Transmitter_0_0\\dualcam_DVI_Transmitter_0_0.xci",
-        "inst_hier_path": "DVI_Transmitter_0"
-      },
       "v_vid_in_axi4s_1": {
         "vlnv": "xilinx.com:ip:v_vid_in_axi4s:4.0",
         "xci_name": "dualcam_v_vid_in_axi4s_1_0",
@@ -3768,6 +3762,12 @@
           }
         }
       },
+      "DVI_Transmitter_0": {
+        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
+        "xci_name": "dualcam_DVI_Transmitter_0_0",
+        "xci_path": "ip\\dualcam_DVI_Transmitter_0_0\\dualcam_DVI_Transmitter_0_0.xci",
+        "inst_hier_path": "DVI_Transmitter_0"
+      },
       "xil_camif_0": {
         "vlnv": "bxq.com:user:xil_camif:1.0",
         "xci_name": "dualcam_xil_camif_0_0",
@@ -4260,9 +4260,9 @@
       "clk_wiz_1_dvi_clk": {
         "ports": [
           "clk_wiz_1/dvi_clk",
-          "DVI_Transmitter_0/pclk",
           "v_axi4s_vid_out_1/vid_io_out_clk",
-          "v_tc_1/clk"
+          "v_tc_1/clk",
+          "DVI_Transmitter_0/pclk"
         ]
       },
       "clk_wiz_1_dvi_clk_x5": {

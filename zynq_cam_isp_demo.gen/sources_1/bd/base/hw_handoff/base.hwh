@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Sep 28 23:54:05 2022" VIVADOVERSION="2021.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Oct  3 02:12:10 2022" VIVADOVERSION="2021.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z020" NAME="base" PACKAGE="clg400" SPEEDGRADE="-2"/>
 
@@ -326,7 +326,7 @@
   </EXTERNALINTERFACES>
 
   <MODULES>
-    <MODULE COREREVISION="1" FULLNAME="/DVI_Transmitter_0" HWVERSION="1.0" INSTANCE="DVI_Transmitter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DVI_Transmitter" VLNV="openedv.com:user:DVI_Transmitter:1.0">
+    <MODULE COREREVISION="2" FULLNAME="/DVI_Transmitter_0" HWVERSION="1.0" INSTANCE="DVI_Transmitter_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="DVI_Transmitter" VLNV="openedv.com:user:DVI_Transmitter:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="Component_Name" VALUE="base_DVI_Transmitter_0_0"/>
@@ -10562,7 +10562,7 @@
         <PERIPHERAL INSTANCE="axis_to_video_2"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_0" HWVERSION="1.0" INSTANCE="axis_to_video_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/axis_to_video_0" HWVERSION="1.0" INSTANCE="axis_to_video_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="8"/>
@@ -10644,13 +10644,13 @@
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="axis_to_video_0_locked">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="xil_isp_lite_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="xil_vip_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="xil_vip_1" PORT="rst_n"/>
             <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="video_to_axis_1" PORT="vid_ce"/>
             <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_rstn"/>
             <CONNECTION INSTANCE="video_to_axis_2" PORT="vid_ce"/>
+            <CONNECTION INSTANCE="xil_isp_lite_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="xil_vip_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="xil_vip_1" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="underflow" SIGIS="undef"/>
@@ -10688,7 +10688,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_1" HWVERSION="1.0" INSTANCE="axis_to_video_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/axis_to_video_1" HWVERSION="1.0" INSTANCE="axis_to_video_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -10808,7 +10808,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="7" FULLNAME="/axis_to_video_2" HWVERSION="1.0" INSTANCE="axis_to_video_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
+    <MODULE COREREVISION="8" FULLNAME="/axis_to_video_2" HWVERSION="1.0" INSTANCE="axis_to_video_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axis_to_video" VLNV="bxq.com:user:axis_to_video:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -11524,10 +11524,10 @@
         </PORT>
         <PORT CLKFREQUENCY="120000000" DIR="O" NAME="isp_pclk" SIGIS="clk" SIGNAME="clk_wiz_0_isp_pclk">
           <CONNECTIONS>
+            <CONNECTION INSTANCE="axis_to_video_0" PORT="vid_clk"/>
             <CONNECTION INSTANCE="xil_isp_lite_0" PORT="pclk"/>
             <CONNECTION INSTANCE="xil_vip_0" PORT="pclk"/>
             <CONNECTION INSTANCE="xil_vip_1" PORT="pclk"/>
-            <CONNECTION INSTANCE="axis_to_video_0" PORT="vid_clk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="33333333" DIR="O" NAME="lcd_clk" SIGIS="clk" SIGNAME="clk_wiz_0_lcd_clk">
@@ -15742,7 +15742,7 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="9" FULLNAME="/video_to_axis_0" HWVERSION="1.0" INSTANCE="video_to_axis_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="8"/>
@@ -15850,7 +15850,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="9" FULLNAME="/video_to_axis_1" HWVERSION="1.0" INSTANCE="video_to_axis_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -15958,7 +15958,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="8" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
+    <MODULE COREREVISION="9" FULLNAME="/video_to_axis_2" HWVERSION="1.0" INSTANCE="video_to_axis_2" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="video_to_axis" VLNV="bxq.com:user:video_to_axis:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="DATA_BITS" VALUE="24"/>
@@ -16066,7 +16066,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="18" FULLNAME="/xil_camif_0" HWVERSION="1.0" INSTANCE="xil_camif_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_camif" VLNV="bxq.com:user:xil_camif:1.0">
+    <MODULE COREREVISION="24" FULLNAME="/xil_camif_0" HWVERSION="1.0" INSTANCE="xil_camif_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_camif" VLNV="bxq.com:user:xil_camif:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -16320,7 +16320,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="83" FULLNAME="/xil_isp_lite_0" HWVERSION="1.0" INSTANCE="xil_isp_lite_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
+    <MODULE COREREVISION="87" FULLNAME="/xil_isp_lite_0" HWVERSION="1.0" INSTANCE="xil_isp_lite_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_isp_lite" VLNV="bxq.com:user:xil_isp_lite:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="16384" USAGE="register"/>
@@ -16581,7 +16581,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="40" FULLNAME="/xil_vip_0" HWVERSION="1.0" INSTANCE="xil_vip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
+    <MODULE COREREVISION="44" FULLNAME="/xil_vip_0" HWVERSION="1.0" INSTANCE="xil_vip_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>
@@ -16828,7 +16828,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="40" FULLNAME="/xil_vip_1" HWVERSION="1.0" INSTANCE="xil_vip_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
+    <MODULE COREREVISION="44" FULLNAME="/xil_vip_1" HWVERSION="1.0" INSTANCE="xil_vip_1" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="xil_vip" VLNV="bxq.com:user:xil_vip:1.0">
       <DOCUMENTS/>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="S00_AXI" NAME="S00_AXI_reg" RANGE="4096" USAGE="register"/>

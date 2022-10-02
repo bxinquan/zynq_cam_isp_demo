@@ -1,7 +1,7 @@
 -- Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2021.1 (win64) Build 3247384 Thu Jun 10 19:36:33 MDT 2021
--- Date        : Sun Sep 18 22:50:14 2022
+-- Date        : Mon Oct  3 02:13:05 2022
 -- Host        : LEGION-BIANXINQUAN running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_xil_camif_0_0/base_xil_camif_0_0_sim_netlist.vhdl
@@ -120,52 +120,52 @@ architecture STRUCTURE of base_xil_camif_0_0_dvp_raw_timing_colorbar is
   signal \NLW_pix_cnt_reg[11]_i_3_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
   signal \NLW_pix_cnt_reg[11]_i_3_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of dvp_href_i_4 : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \line_cnt[1]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \line_cnt[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \line_cnt[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \line_cnt[5]_i_2\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \line_cnt[6]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \line_cnt[7]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \line_cnt[8]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \line_cnt[9]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of out_href_i_1 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \out_raw[0]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \out_raw[1]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \out_raw[2]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \out_raw[3]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \out_raw[4]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \out_raw[5]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \out_raw[6]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \out_raw[7]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of out_vsync_i_1 : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \pix_cnt[0]_i_2\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \pix_cnt[0]_i_3\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \pix_cnt[10]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \pix_cnt[1]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \pix_cnt[2]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \pix_cnt[3]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \pix_cnt[4]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \pix_cnt[5]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \pix_cnt[6]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \pix_cnt[7]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \pix_cnt[8]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \pix_cnt[9]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of dvp_href_i_4 : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \line_cnt[1]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \line_cnt[2]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \line_cnt[3]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \line_cnt[5]_i_2\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \line_cnt[6]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \line_cnt[7]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \line_cnt[8]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \line_cnt[9]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of out_href_i_1 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \out_raw[0]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \out_raw[1]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \out_raw[2]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \out_raw[3]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \out_raw[4]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \out_raw[5]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \out_raw[6]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \out_raw[7]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of out_vsync_i_1 : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \pix_cnt[0]_i_2\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \pix_cnt[0]_i_3\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \pix_cnt[10]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \pix_cnt[11]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \pix_cnt[2]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \pix_cnt[3]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \pix_cnt[4]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \pix_cnt[5]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \pix_cnt[6]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \pix_cnt[7]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \pix_cnt[8]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \pix_cnt[9]_i_1\ : label is "soft_lutpair17";
   attribute ADDER_THRESHOLD : integer;
   attribute ADDER_THRESHOLD of \pix_cnt_reg[11]_i_3\ : label is 35;
   attribute ADDER_THRESHOLD of \pix_cnt_reg[4]_i_2\ : label is 35;
   attribute ADDER_THRESHOLD of \pix_cnt_reg[8]_i_2\ : label is 35;
-  attribute SOFT_HLUTNM of \raw_data[7]_i_11\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_11\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \raw_data[7]_i_12\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_15\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_17\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_18\ : label is "soft_lutpair2";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_21\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_15\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_17\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_18\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_21\ : label is "soft_lutpair3";
   attribute SOFT_HLUTNM of \raw_data[7]_i_22\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_24\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_25\ : label is "soft_lutpair1";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_26\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \raw_data[7]_i_27\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_24\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_25\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_26\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \raw_data[7]_i_27\ : label is "soft_lutpair6";
 begin
 dvp_href_i_1: unisim.vcomponents.LUT5
     generic map(
@@ -1329,7 +1329,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   port (
-    CLK : out STD_LOGIC;
+    cam_pclk_0 : out STD_LOGIC;
     out_href : out STD_LOGIC;
     out_vsync : out STD_LOGIC;
     S_AXI_AWREADY : out STD_LOGIC;
@@ -1361,7 +1361,6 @@ entity base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
 end base_xil_camif_0_0_xil_camif_v1_0_S00_AXI;
 
 architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
-  signal \^clk\ : STD_LOGIC;
   signal \^s_axi_arready\ : STD_LOGIC;
   signal \^s_axi_awready\ : STD_LOGIC;
   signal \^s_axi_wready\ : STD_LOGIC;
@@ -1412,6 +1411,7 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   signal \axi_rdata[9]_i_1_n_0\ : STD_LOGIC;
   signal axi_rvalid_i_1_n_0 : STD_LOGIC;
   signal axi_wready0 : STD_LOGIC;
+  signal \^cam_pclk_0\ : STD_LOGIC;
   signal colorbar_en_i_1_n_0 : STD_LOGIC;
   signal colorbar_en_reg_n_0 : STD_LOGIC;
   signal dvp_colorbar_timing_generator_n_0 : STD_LOGIC;
@@ -1656,10 +1656,10 @@ architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0_S00_AXI is
   attribute ADDER_THRESHOLD of \pix_cnt_reg[4]_i_1\ : label is 11;
   attribute ADDER_THRESHOLD of \pix_cnt_reg[8]_i_1\ : label is 11;
 begin
-  CLK <= \^clk\;
   S_AXI_ARREADY <= \^s_axi_arready\;
   S_AXI_AWREADY <= \^s_axi_awready\;
   S_AXI_WREADY <= \^s_axi_wready\;
+  cam_pclk_0 <= \^cam_pclk_0\;
   out_href <= \^out_href\;
   out_vsync <= \^out_vsync\;
   s00_axi_bvalid <= \^s00_axi_bvalid\;
@@ -2629,7 +2629,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[0]_i_1_n_7\,
@@ -2653,7 +2653,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[8]_i_1_n_5\,
@@ -2661,7 +2661,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[8]_i_1_n_4\,
@@ -2669,7 +2669,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[12]_i_1_n_7\,
@@ -2692,7 +2692,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[12]_i_1_n_6\,
@@ -2700,7 +2700,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[12]_i_1_n_5\,
@@ -2708,7 +2708,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[12]_i_1_n_4\,
@@ -2716,7 +2716,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[16]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[16]_i_1_n_7\,
@@ -2739,7 +2739,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[17]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[16]_i_1_n_6\,
@@ -2747,7 +2747,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[18]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[16]_i_1_n_5\,
@@ -2755,7 +2755,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[19]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[16]_i_1_n_4\,
@@ -2763,7 +2763,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[0]_i_1_n_6\,
@@ -2771,7 +2771,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[20]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[20]_i_1_n_7\,
@@ -2794,7 +2794,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[21]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[20]_i_1_n_6\,
@@ -2802,7 +2802,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[22]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[20]_i_1_n_5\,
@@ -2810,7 +2810,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[23]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[20]_i_1_n_4\,
@@ -2818,7 +2818,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[24]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[24]_i_1_n_7\,
@@ -2841,7 +2841,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[25]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[24]_i_1_n_6\,
@@ -2849,7 +2849,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[26]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[24]_i_1_n_5\,
@@ -2857,7 +2857,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[27]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[24]_i_1_n_4\,
@@ -2865,7 +2865,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[28]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[28]_i_1_n_7\,
@@ -2888,7 +2888,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[29]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[28]_i_1_n_6\,
@@ -2896,7 +2896,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[0]_i_1_n_5\,
@@ -2904,7 +2904,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[30]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[28]_i_1_n_5\,
@@ -2912,7 +2912,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[31]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[28]_i_1_n_4\,
@@ -2920,7 +2920,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[0]_i_1_n_4\,
@@ -2928,7 +2928,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[4]_i_1_n_7\,
@@ -2951,7 +2951,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[4]_i_1_n_6\,
@@ -2959,7 +2959,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[4]_i_1_n_5\,
@@ -2967,7 +2967,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[4]_i_1_n_4\,
@@ -2975,7 +2975,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[8]_i_1_n_7\,
@@ -2998,7 +2998,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_frame_cnt_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => \dvp_frame_cnt_reg[8]_i_1_n_6\,
@@ -3006,7 +3006,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(0),
@@ -3014,7 +3014,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(10),
@@ -3022,7 +3022,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(11),
@@ -3030,7 +3030,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(12),
@@ -3038,7 +3038,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(13),
@@ -3046,7 +3046,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(14),
@@ -3054,7 +3054,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(15),
@@ -3062,7 +3062,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(1),
@@ -3070,7 +3070,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(2),
@@ -3078,7 +3078,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(3),
@@ -3086,7 +3086,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(4),
@@ -3094,7 +3094,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(5),
@@ -3102,7 +3102,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(6),
@@ -3110,7 +3110,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(7),
@@ -3118,7 +3118,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(8),
@@ -3126,7 +3126,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_height_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => line_cnt_reg(9),
@@ -3143,7 +3143,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(0),
@@ -3151,7 +3151,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(10),
@@ -3159,7 +3159,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(11),
@@ -3167,7 +3167,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(12),
@@ -3175,7 +3175,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(13),
@@ -3183,7 +3183,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(14),
@@ -3191,7 +3191,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(15),
@@ -3199,7 +3199,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(1),
@@ -3207,7 +3207,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(2),
@@ -3215,7 +3215,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(3),
@@ -3223,7 +3223,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(4),
@@ -3231,7 +3231,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(5),
@@ -3239,7 +3239,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(6),
@@ -3247,7 +3247,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(7),
@@ -3255,7 +3255,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(8),
@@ -3263,7 +3263,7 @@ dvp_colorbar_timing_generator: entity work.base_xil_camif_0_0_dvp_raw_timing_col
     );
 \dvp_width_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => dvp_width0,
       CLR => module_reset,
       D => pix_cnt_reg(9),
@@ -3554,7 +3554,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[0]_i_2_n_7\,
@@ -3581,7 +3581,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[8]_i_1_n_5\,
@@ -3589,7 +3589,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[8]_i_1_n_4\,
@@ -3597,7 +3597,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[12]_i_1_n_7\,
@@ -3623,7 +3623,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[12]_i_1_n_6\,
@@ -3631,7 +3631,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[12]_i_1_n_5\,
@@ -3639,7 +3639,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[12]_i_1_n_4\,
@@ -3647,7 +3647,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[0]_i_2_n_6\,
@@ -3655,7 +3655,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[0]_i_2_n_5\,
@@ -3663,7 +3663,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[0]_i_2_n_4\,
@@ -3671,7 +3671,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[4]_i_1_n_7\,
@@ -3697,7 +3697,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[4]_i_1_n_6\,
@@ -3705,7 +3705,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[4]_i_1_n_5\,
@@ -3713,7 +3713,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[4]_i_1_n_4\,
@@ -3721,7 +3721,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[8]_i_1_n_7\,
@@ -3747,7 +3747,7 @@ irq_INST_0: unisim.vcomponents.LUT4
     );
 \line_cnt_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \line_cnt[0]_i_1__0_n_0\,
       CLR => module_reset,
       D => \line_cnt_reg[8]_i_1_n_6\,
@@ -3787,7 +3787,7 @@ module_reset_reg: unisim.vcomponents.FDSE
     );
 out_href_reg: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_1,
@@ -3802,11 +3802,11 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
       I1 => colorbar_en_reg_n_0,
       I2 => cam_xclk,
       I3 => module_reset,
-      O => \^clk\
+      O => \^cam_pclk_0\
     );
 \out_raw_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_9,
@@ -3814,7 +3814,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_8,
@@ -3822,7 +3822,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_7,
@@ -3830,7 +3830,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_6,
@@ -3838,7 +3838,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_5,
@@ -3846,7 +3846,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_4,
@@ -3854,7 +3854,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_3,
@@ -3862,7 +3862,7 @@ out_pclk_INST_0: unisim.vcomponents.LUT4
     );
 \out_raw_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_2,
@@ -3878,7 +3878,7 @@ out_vsync_prev_reg: unisim.vcomponents.FDRE
     );
 out_vsync_reg: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       CLR => module_reset,
       D => dvp_colorbar_timing_generator_n_0,
@@ -4056,7 +4056,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[0]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[0]_i_1_n_7\,
@@ -4083,7 +4083,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[10]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[8]_i_1_n_5\,
@@ -4091,7 +4091,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[11]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[8]_i_1_n_4\,
@@ -4099,7 +4099,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[12]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[12]_i_1_n_7\,
@@ -4125,7 +4125,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[13]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[12]_i_1_n_6\,
@@ -4133,7 +4133,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[14]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[12]_i_1_n_5\,
@@ -4141,7 +4141,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[15]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[12]_i_1_n_4\,
@@ -4149,7 +4149,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[1]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[0]_i_1_n_6\,
@@ -4157,7 +4157,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[2]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[0]_i_1_n_5\,
@@ -4165,7 +4165,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[3]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[0]_i_1_n_4\,
@@ -4173,7 +4173,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[4]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[4]_i_1_n_7\,
@@ -4199,7 +4199,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[5]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[4]_i_1_n_6\,
@@ -4207,7 +4207,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[6]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[4]_i_1_n_5\,
@@ -4215,7 +4215,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[7]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[4]_i_1_n_4\,
@@ -4223,7 +4223,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[8]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[8]_i_1_n_7\,
@@ -4249,7 +4249,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 \pix_cnt_reg[9]\: unisim.vcomponents.FDCE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => \^out_href\,
       CLR => module_reset,
       D => \pix_cnt_reg[8]_i_1_n_6\,
@@ -4257,7 +4257,7 @@ out_vsync_reg: unisim.vcomponents.FDCE
     );
 prev_href_reg: unisim.vcomponents.FDRE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       D => \^out_href\,
       Q => prev_href,
@@ -4265,7 +4265,7 @@ prev_href_reg: unisim.vcomponents.FDRE
     );
 prev_vsync_reg: unisim.vcomponents.FDRE
      port map (
-      C => \^clk\,
+      C => \^cam_pclk_0\,
       CE => '1',
       D => \^out_vsync\,
       Q => prev_vsync,
@@ -4288,48 +4288,86 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity base_xil_camif_0_0_xil_camif_v1_0 is
   port (
-    cam_pclk_0 : out STD_LOGIC;
+    irq : out STD_LOGIC;
+    cam_xclk : in STD_LOGIC;
+    cam_pclk : in STD_LOGIC;
+    cam_href : in STD_LOGIC;
+    cam_vsync : in STD_LOGIC;
+    cam_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    out_pclk : out STD_LOGIC;
     out_href : out STD_LOGIC;
     out_vsync : out STD_LOGIC;
-    S_AXI_AWREADY : out STD_LOGIC;
-    S_AXI_WREADY : out STD_LOGIC;
     out_raw : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    S_AXI_ARREADY : out STD_LOGIC;
-    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    irq : out STD_LOGIC;
-    s00_axi_rvalid : out STD_LOGIC;
-    s00_axi_bvalid : out STD_LOGIC;
-    cam_pclk : in STD_LOGIC;
-    cam_xclk : in STD_LOGIC;
     s00_axi_aclk : in STD_LOGIC;
-    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_awvalid : in STD_LOGIC;
-    s00_axi_wvalid : in STD_LOGIC;
-    s00_axi_araddr : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    s00_axi_arvalid : in STD_LOGIC;
-    cam_vsync : in STD_LOGIC;
-    cam_href : in STD_LOGIC;
-    cam_data : in STD_LOGIC_VECTOR ( 7 downto 0 );
     s00_axi_aresetn : in STD_LOGIC;
-    s00_axi_wdata : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_awaddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_awvalid : in STD_LOGIC;
+    s00_axi_awready : out STD_LOGIC;
+    s00_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s00_axi_wvalid : in STD_LOGIC;
+    s00_axi_wready : out STD_LOGIC;
+    s00_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_bvalid : out STD_LOGIC;
     s00_axi_bready : in STD_LOGIC;
+    s00_axi_araddr : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    s00_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    s00_axi_arvalid : in STD_LOGIC;
+    s00_axi_arready : out STD_LOGIC;
+    s00_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s00_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s00_axi_rvalid : out STD_LOGIC;
     s00_axi_rready : in STD_LOGIC
   );
+  attribute BITS : integer;
+  attribute BITS of base_xil_camif_0_0_xil_camif_v1_0 : entity is 8;
+  attribute COLORBAR_BAYER : integer;
+  attribute COLORBAR_BAYER of base_xil_camif_0_0_xil_camif_v1_0 : entity is 3;
+  attribute COLORBAR_H_BACK : integer;
+  attribute COLORBAR_H_BACK of base_xil_camif_0_0_xil_camif_v1_0 : entity is 50;
+  attribute COLORBAR_H_DISP : integer;
+  attribute COLORBAR_H_DISP of base_xil_camif_0_0_xil_camif_v1_0 : entity is 2592;
+  attribute COLORBAR_H_FRONT : integer;
+  attribute COLORBAR_H_FRONT of base_xil_camif_0_0_xil_camif_v1_0 : entity is 50;
+  attribute COLORBAR_H_PULSE : integer;
+  attribute COLORBAR_H_PULSE of base_xil_camif_0_0_xil_camif_v1_0 : entity is 100;
+  attribute COLORBAR_V_BACK : integer;
+  attribute COLORBAR_V_BACK of base_xil_camif_0_0_xil_camif_v1_0 : entity is 5;
+  attribute COLORBAR_V_DISP : integer;
+  attribute COLORBAR_V_DISP of base_xil_camif_0_0_xil_camif_v1_0 : entity is 1944;
+  attribute COLORBAR_V_FRONT : integer;
+  attribute COLORBAR_V_FRONT of base_xil_camif_0_0_xil_camif_v1_0 : entity is 5;
+  attribute COLORBAR_V_PULSE : integer;
+  attribute COLORBAR_V_PULSE of base_xil_camif_0_0_xil_camif_v1_0 : entity is 10;
+  attribute C_S00_AXI_ADDR_WIDTH : integer;
+  attribute C_S00_AXI_ADDR_WIDTH of base_xil_camif_0_0_xil_camif_v1_0 : entity is 5;
+  attribute C_S00_AXI_DATA_WIDTH : integer;
+  attribute C_S00_AXI_DATA_WIDTH of base_xil_camif_0_0_xil_camif_v1_0 : entity is 32;
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of base_xil_camif_0_0_xil_camif_v1_0 : entity is "xil_camif_v1_0";
 end base_xil_camif_0_0_xil_camif_v1_0;
 
 architecture STRUCTURE of base_xil_camif_0_0_xil_camif_v1_0 is
+  signal \<const0>\ : STD_LOGIC;
 begin
+  s00_axi_bresp(1) <= \<const0>\;
+  s00_axi_bresp(0) <= \<const0>\;
+  s00_axi_rresp(1) <= \<const0>\;
+  s00_axi_rresp(0) <= \<const0>\;
+GND: unisim.vcomponents.GND
+     port map (
+      G => \<const0>\
+    );
 xil_camif_v1_0_S00_AXI_inst: entity work.base_xil_camif_0_0_xil_camif_v1_0_S00_AXI
      port map (
-      CLK => cam_pclk_0,
-      S_AXI_ARREADY => S_AXI_ARREADY,
-      S_AXI_AWREADY => S_AXI_AWREADY,
-      S_AXI_WREADY => S_AXI_WREADY,
+      S_AXI_ARREADY => s00_axi_arready,
+      S_AXI_AWREADY => s00_axi_awready,
+      S_AXI_WREADY => s00_axi_wready,
       cam_data(7 downto 0) => cam_data(7 downto 0),
       cam_href => cam_href,
       cam_pclk => cam_pclk,
+      cam_pclk_0 => out_pclk,
       cam_vsync => cam_vsync,
       cam_xclk => cam_xclk,
       irq => irq,
@@ -4337,10 +4375,10 @@ xil_camif_v1_0_S00_AXI_inst: entity work.base_xil_camif_0_0_xil_camif_v1_0_S00_A
       out_raw(7 downto 0) => out_raw(7 downto 0),
       out_vsync => out_vsync,
       s00_axi_aclk => s00_axi_aclk,
-      s00_axi_araddr(2 downto 0) => s00_axi_araddr(2 downto 0),
+      s00_axi_araddr(2 downto 0) => s00_axi_araddr(4 downto 2),
       s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_arvalid => s00_axi_arvalid,
-      s00_axi_awaddr(2 downto 0) => s00_axi_awaddr(2 downto 0),
+      s00_axi_awaddr(2 downto 0) => s00_axi_awaddr(4 downto 2),
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
       s00_axi_bvalid => s00_axi_bvalid,
@@ -4401,6 +4439,32 @@ end base_xil_camif_0_0;
 
 architecture STRUCTURE of base_xil_camif_0_0 is
   signal \<const0>\ : STD_LOGIC;
+  signal NLW_inst_s00_axi_bresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  signal NLW_inst_s00_axi_rresp_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
+  attribute BITS : integer;
+  attribute BITS of inst : label is 8;
+  attribute COLORBAR_BAYER : integer;
+  attribute COLORBAR_BAYER of inst : label is 3;
+  attribute COLORBAR_H_BACK : integer;
+  attribute COLORBAR_H_BACK of inst : label is 50;
+  attribute COLORBAR_H_DISP : integer;
+  attribute COLORBAR_H_DISP of inst : label is 2592;
+  attribute COLORBAR_H_FRONT : integer;
+  attribute COLORBAR_H_FRONT of inst : label is 50;
+  attribute COLORBAR_H_PULSE : integer;
+  attribute COLORBAR_H_PULSE of inst : label is 100;
+  attribute COLORBAR_V_BACK : integer;
+  attribute COLORBAR_V_BACK of inst : label is 5;
+  attribute COLORBAR_V_DISP : integer;
+  attribute COLORBAR_V_DISP of inst : label is 1944;
+  attribute COLORBAR_V_FRONT : integer;
+  attribute COLORBAR_V_FRONT of inst : label is 5;
+  attribute COLORBAR_V_PULSE : integer;
+  attribute COLORBAR_V_PULSE of inst : label is 10;
+  attribute C_S00_AXI_ADDR_WIDTH : integer;
+  attribute C_S00_AXI_ADDR_WIDTH of inst : label is 5;
+  attribute C_S00_AXI_DATA_WIDTH : integer;
+  attribute C_S00_AXI_DATA_WIDTH of inst : label is 32;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of cam_href : signal is "xilinx.com:interface:vid_io:1.0 camera ACTIVE_VIDEO";
   attribute X_INTERFACE_INFO of cam_pclk : signal is "xilinx.com:signal:clock:1.0 cam_pclk CLK";
@@ -4452,31 +4516,39 @@ GND: unisim.vcomponents.GND
     );
 inst: entity work.base_xil_camif_0_0_xil_camif_v1_0
      port map (
-      S_AXI_ARREADY => s00_axi_arready,
-      S_AXI_AWREADY => s00_axi_awready,
-      S_AXI_WREADY => s00_axi_wready,
       cam_data(7 downto 0) => cam_data(7 downto 0),
       cam_href => cam_href,
       cam_pclk => cam_pclk,
-      cam_pclk_0 => out_pclk,
       cam_vsync => cam_vsync,
       cam_xclk => cam_xclk,
       irq => irq,
       out_href => out_href,
+      out_pclk => out_pclk,
       out_raw(7 downto 0) => out_raw(7 downto 0),
       out_vsync => out_vsync,
       s00_axi_aclk => s00_axi_aclk,
-      s00_axi_araddr(2 downto 0) => s00_axi_araddr(4 downto 2),
+      s00_axi_araddr(4 downto 2) => s00_axi_araddr(4 downto 2),
+      s00_axi_araddr(1 downto 0) => B"00",
       s00_axi_aresetn => s00_axi_aresetn,
+      s00_axi_arprot(2 downto 0) => B"000",
+      s00_axi_arready => s00_axi_arready,
       s00_axi_arvalid => s00_axi_arvalid,
-      s00_axi_awaddr(2 downto 0) => s00_axi_awaddr(4 downto 2),
+      s00_axi_awaddr(4 downto 2) => s00_axi_awaddr(4 downto 2),
+      s00_axi_awaddr(1 downto 0) => B"00",
+      s00_axi_awprot(2 downto 0) => B"000",
+      s00_axi_awready => s00_axi_awready,
       s00_axi_awvalid => s00_axi_awvalid,
       s00_axi_bready => s00_axi_bready,
+      s00_axi_bresp(1 downto 0) => NLW_inst_s00_axi_bresp_UNCONNECTED(1 downto 0),
       s00_axi_bvalid => s00_axi_bvalid,
       s00_axi_rdata(31 downto 0) => s00_axi_rdata(31 downto 0),
       s00_axi_rready => s00_axi_rready,
+      s00_axi_rresp(1 downto 0) => NLW_inst_s00_axi_rresp_UNCONNECTED(1 downto 0),
       s00_axi_rvalid => s00_axi_rvalid,
+      s00_axi_wdata(31 downto 2) => B"000000000000000000000000000000",
       s00_axi_wdata(1 downto 0) => s00_axi_wdata(1 downto 0),
+      s00_axi_wready => s00_axi_wready,
+      s00_axi_wstrb(3 downto 0) => B"0000",
       s00_axi_wvalid => s00_axi_wvalid
     );
 end STRUCTURE;

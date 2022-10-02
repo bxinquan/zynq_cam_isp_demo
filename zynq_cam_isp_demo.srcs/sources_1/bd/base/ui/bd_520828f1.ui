@@ -24,7 +24,6 @@ preplace portBus cam_rst_n -pg 1 -lvl 13 -x 4440 -y 160 -defaultsOSRD
 preplace portBus cam_pwdn -pg 1 -lvl 13 -x 4440 -y 60 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 12 -x 4150 -y 960 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 3 -x 1020 -y 1430 -defaultsOSRD
-preplace inst DVI_Transmitter_0 -pg 1 -lvl 12 -x 4150 -y 670 -defaultsOSRD
 preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 190 -y 860 -defaultsOSRD
 preplace inst axi_iic -pg 1 -lvl 12 -x 4150 -y 1210 -defaultsOSRD
 preplace inst axi_intc_0 -pg 1 -lvl 3 -x 1020 -y 820 -defaultsOSRD
@@ -39,16 +38,17 @@ preplace inst cmos_rst_n -pg 1 -lvl 12 -x 4150 -y 160 -defaultsOSRD
 preplace inst lcd_bl -pg 1 -lvl 12 -x 4150 -y 260 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 640 -y 280 -defaultsOSRD
 preplace inst xlconcat_0 -pg 1 -lvl 2 -x 640 -y 730 -defaultsOSRD
-preplace inst xil_camif_0 -pg 1 -lvl 3 -x 1020 -y 1110 -defaultsOSRD
-preplace inst xil_isp_lite_0 -pg 1 -lvl 7 -x 2250 -y 1190 -defaultsOSRD
-preplace inst xil_vip_0 -pg 1 -lvl 8 -x 2630 -y 980 -defaultsOSRD
-preplace inst xil_vip_1 -pg 1 -lvl 8 -x 2630 -y 1210 -defaultsOSRD
+preplace inst DVI_Transmitter_0 -pg 1 -lvl 12 -x 4150 -y 670 -defaultsOSRD
 preplace inst axis_to_video_0 -pg 1 -lvl 6 -x 1970 -y 1240 -defaultsOSRD
 preplace inst axis_to_video_1 -pg 1 -lvl 12 -x 4150 -y 1390 -defaultsOSRD
 preplace inst axis_to_video_2 -pg 1 -lvl 11 -x 3730 -y 660 -defaultsOSRD
 preplace inst video_to_axis_0 -pg 1 -lvl 4 -x 1340 -y 1120 -defaultsOSRD
 preplace inst video_to_axis_1 -pg 1 -lvl 9 -x 2930 -y 980 -defaultsOSRD
 preplace inst video_to_axis_2 -pg 1 -lvl 9 -x 2930 -y 1210 -defaultsOSRD
+preplace inst xil_camif_0 -pg 1 -lvl 3 -x 1020 -y 1110 -defaultsOSRD
+preplace inst xil_isp_lite_0 -pg 1 -lvl 7 -x 2250 -y 1190 -defaultsOSRD
+preplace inst xil_vip_0 -pg 1 -lvl 8 -x 2630 -y 980 -defaultsOSRD
+preplace inst xil_vip_1 -pg 1 -lvl 8 -x 2630 -y 1210 -defaultsOSRD
 preplace netloc DVI_Transmitter_0_tmds_oen 1 12 1 NJ 680
 preplace netloc GND_dout 1 12 1 NJ 60
 preplace netloc VCC_dout 1 12 1 NJ 160

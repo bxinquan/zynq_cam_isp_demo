@@ -2,8 +2,8 @@
 # Vivado v2021.1 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:33 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Wed Sep 28 23:54:19 2022
-# Process ID: 48556
+# Start of session at: Mon Oct  3 01:55:59 2022
+# Process ID: 26432
 # Current directory: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axis_to_video_2_0_synth_1
 # Command line: vivado.exe -log base_axis_to_video_2_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source base_axis_to_video_2_0.tcl
 # Log file: D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axis_to_video_2_0_synth_1/base_axis_to_video_2_0.vds
@@ -20,65 +20,65 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-2
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 68260
+INFO: [Synth 8-7075] Helper process launched with PID 5632
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'base_axis_to_video_2_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axis_to_video_2_0/synth/base_axis_to_video_2_0.v:56]
-INFO: [Synth 8-6157] synthesizing module 'axis_to_video_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/axis_to_video_v1_0.v:4]
-INFO: [Synth 8-6157] synthesizing module 'axis_to_video' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/axis_to_video.v:4]
-INFO: [Synth 8-6157] synthesizing module 'video_timing_gen' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/video_timing_gen.v:3]
-INFO: [Synth 8-6155] done synthesizing module 'video_timing_gen' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/video_timing_gen.v:3]
+INFO: [Synth 8-6157] synthesizing module 'axis_to_video_v1_0' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/axis_to_video_v1_0.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axis_to_video' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/axis_to_video.v:4]
+INFO: [Synth 8-6157] synthesizing module 'video_timing_gen' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/video_timing_gen.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'video_timing_gen' (1#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/video_timing_gen.v:3]
 INFO: [Synth 8-6157] synthesizing module 'async_fifo' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:212]
 INFO: [Synth 8-6157] synthesizing module 'full_dp_ram' [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'full_dp_ram' (2#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:46]
 INFO: [Synth 8-6155] done synthesizing module 'async_fifo' (3#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/xil_isp_lite_1.0/hdl/isp_lite/isp_utils.v:212]
-INFO: [Synth 8-6155] done synthesizing module 'axis_to_video' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/axis_to_video.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'axis_to_video_v1_0' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/b554/hdl/axis_to_video_v1_0.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'axis_to_video' (4#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/axis_to_video.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'axis_to_video_v1_0' (5#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ipshared/8564/hdl/axis_to_video_v1_0.v:4]
 INFO: [Synth 8-6155] done synthesizing module 'base_axis_to_video_2_0' (6#1) [d:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.gen/sources_1/bd/base/ip/base_axis_to_video_2_0/synth/base_axis_to_video_2_0.v:56]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.011 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.013 . Memory (MB): peak = 1231.355 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1231.355 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-2
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:22 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:22 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:23 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-3971] The signal "full_dp_ram:/mem_reg" was recognized as a true dual port RAM template.
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:13 ; elapsed = 00:00:23 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -117,7 +117,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:24 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:31 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -138,13 +138,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -166,7 +166,7 @@ Start Technology Mapping
 INFO: [Synth 8-7052] The timing for the instance inst/axis_to_video_inst/fifo/ram/mem_reg_0 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance inst/axis_to_video_inst/fifo/ram/mem_reg_1 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:31 . Memory (MB): peak = 1225.793 ; gain = 0.000
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:40 . Memory (MB): peak = 1231.355 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -184,37 +184,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.684 ; gain = 7.891
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.844 ; gain = 2.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.684 ; gain = 7.891
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.844 ; gain = 2.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.684 ; gain = 7.891
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.844 ; gain = 2.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.684 ; gain = 7.891
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.844 ; gain = 2.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.695 ; gain = 7.902
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.848 ; gain = 2.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.695 ; gain = 7.902
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.848 ; gain = 2.492
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -244,18 +244,18 @@ Report Cell Usage:
 |12    |FDRE     |     3|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:25 ; elapsed = 00:00:34 . Memory (MB): peak = 1233.695 ; gain = 7.902
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.848 ; gain = 2.492
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:31 . Memory (MB): peak = 1233.695 ; gain = 7.902
-Synthesis Optimization Complete : Time (s): cpu = 00:00:25 ; elapsed = 00:00:35 . Memory (MB): peak = 1233.695 ; gain = 7.902
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:42 . Memory (MB): peak = 1233.848 ; gain = 2.492
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1233.848 ; gain = 2.492
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1245.738 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1245.918 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 10 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1256.449 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1252.559 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
@@ -263,10 +263,10 @@ Synth Design complete, checksum: 3b5557eb
 INFO: [Common 17-83] Releasing license: Synthesis
 32 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:29 ; elapsed = 00:00:41 . Memory (MB): peak = 1256.449 ; gain = 30.656
+synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1252.559 ; gain = 21.203
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axis_to_video_2_0_synth_1/base_axis_to_video_2_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_axis_to_video_2_0, cache-ID = 717d04526b410acd
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP base_axis_to_video_2_0, cache-ID = 6d398ca183b86419
 INFO: [Coretcl 2-1174] Renamed 5 cell refs.
 INFO: [Common 17-1381] The checkpoint 'D:/Work/fpga/zynq_cam_isp_demo/zynq_cam_isp_demo.runs/base_axis_to_video_2_0_synth_1/base_axis_to_video_2_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file base_axis_to_video_2_0_utilization_synth.rpt -pb base_axis_to_video_2_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Sep 28 23:55:13 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Oct  3 01:57:14 2022...

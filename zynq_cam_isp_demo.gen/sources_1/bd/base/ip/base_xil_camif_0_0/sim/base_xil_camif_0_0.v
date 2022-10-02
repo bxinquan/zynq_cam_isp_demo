@@ -48,7 +48,7 @@
 
 
 // IP VLNV: bxq.com:user:xil_camif:1.0
-// IP Revision: 18
+// IP Revision: 24
 
 `timescale 1ns/1ps
 

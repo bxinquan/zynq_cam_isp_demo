@@ -13,8 +13,6 @@
       "processing_system7_0": "",
       "rst_ps7_0_100M": "",
       "v_vid_in_axi4s_0": "",
-      "DVI_Transmitter_0": "",
-      "h264enc_with_axi_0": "",
       "rst_ps7_0_30M": "",
       "v_vid_in_axi4s_1": "",
       "axi_apb_bridge_0": "",
@@ -50,6 +48,8 @@
       "v_frmbuf_wr_0": "",
       "v_tc_0": "",
       "xlconcat_0": "",
+      "DVI_Transmitter_0": "",
+      "h264enc_with_axi_0": "",
       "xil_camif_0": "",
       "xil_isp_lite_0": "",
       "xil_vip_0": "",
@@ -1902,43 +1902,6 @@
           }
         }
       },
-      "DVI_Transmitter_0": {
-        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
-        "xci_name": "h264_DVI_Transmitter_0_0",
-        "xci_path": "ip\\h264_DVI_Transmitter_0_0\\h264_DVI_Transmitter_0_0.xci",
-        "inst_hier_path": "DVI_Transmitter_0"
-      },
-      "h264enc_with_axi_0": {
-        "vlnv": "xilinx.com:user:h264enc_with_axi:1.0",
-        "xci_name": "h264_h264enc_with_axi_0_0",
-        "xci_path": "ip\\h264_h264enc_with_axi_0_0\\h264_h264enc_with_axi_0_0.xci",
-        "inst_hier_path": "h264enc_with_axi_0",
-        "interface_ports": {
-          "axi_m": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "axi_m",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            },
-            "parameters": {
-              "master_id": {
-                "value": "1"
-              }
-            }
-          }
-        },
-        "addressing": {
-          "address_spaces": {
-            "axi_m": {
-              "range": "4G",
-              "width": "32"
-            }
-          }
-        }
-      },
       "rst_ps7_0_30M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "h264_rst_ps7_0_30M_0",
@@ -3690,6 +3653,43 @@
           }
         }
       },
+      "DVI_Transmitter_0": {
+        "vlnv": "openedv.com:user:DVI_Transmitter:1.0",
+        "xci_name": "h264_DVI_Transmitter_0_0",
+        "xci_path": "ip\\h264_DVI_Transmitter_0_0\\h264_DVI_Transmitter_0_0.xci",
+        "inst_hier_path": "DVI_Transmitter_0"
+      },
+      "h264enc_with_axi_0": {
+        "vlnv": "xilinx.com:user:h264enc_with_axi:1.0",
+        "xci_name": "h264_h264enc_with_axi_0_0",
+        "xci_path": "ip\\h264_h264enc_with_axi_0_0\\h264_h264enc_with_axi_0_0.xci",
+        "inst_hier_path": "h264enc_with_axi_0",
+        "interface_ports": {
+          "axi_m": {
+            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
+            "mode": "Master",
+            "address_space_ref": "axi_m",
+            "base_address": {
+              "minimum": "0x00000000",
+              "maximum": "0xFFFFFFFF",
+              "width": "32"
+            },
+            "parameters": {
+              "master_id": {
+                "value": "1"
+              }
+            }
+          }
+        },
+        "addressing": {
+          "address_spaces": {
+            "axi_m": {
+              "range": "4G",
+              "width": "32"
+            }
+          }
+        }
+      },
       "xil_camif_0": {
         "vlnv": "bxq.com:user:xil_camif:1.0",
         "xci_name": "h264_xil_camif_0_0",
@@ -4043,9 +4043,9 @@
       "clk_wiz_1_dvi_clk": {
         "ports": [
           "clk_wiz_1/dvi_clk",
-          "DVI_Transmitter_0/pclk",
           "v_axi4s_vid_out_0/vid_io_out_clk",
-          "v_tc_0/clk"
+          "v_tc_0/clk",
+          "DVI_Transmitter_0/pclk"
         ]
       },
       "clk_wiz_1_dvi_clk_x5": {
@@ -4101,14 +4101,14 @@
           "processing_system7_0/FCLK_CLK1",
           "processing_system7_0/M_AXI_GP1_ACLK",
           "rst_ps7_0_30M/slowest_sync_clk",
-          "h264enc_with_axi_0/enc_clk",
-          "h264enc_with_axi_0/axi_clk",
           "processing_system7_0/S_AXI_HP1_ACLK",
           "axi_apb_bridge_0/s_axi_aclk",
           "axi_interconnect_0/ACLK",
           "axi_interconnect_0/S00_ACLK",
           "axi_interconnect_0/M00_ACLK",
-          "axi_smc_1/aclk"
+          "axi_smc_1/aclk",
+          "h264enc_with_axi_0/axi_clk",
+          "h264enc_with_axi_0/enc_clk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {
@@ -4148,13 +4148,13 @@
       "rst_ps7_0_30M_peripheral_aresetn": {
         "ports": [
           "rst_ps7_0_30M/peripheral_aresetn",
-          "h264enc_with_axi_0/enc_rstn",
-          "h264enc_with_axi_0/axi_rstn",
           "axi_apb_bridge_0/s_axi_aresetn",
           "axi_interconnect_0/ARESETN",
           "axi_interconnect_0/S00_ARESETN",
           "axi_interconnect_0/M00_ARESETN",
-          "axi_smc_1/aresetn"
+          "axi_smc_1/aresetn",
+          "h264enc_with_axi_0/axi_rstn",
+          "h264enc_with_axi_0/enc_rstn"
         ]
       },
       "v_axi4s_vid_out_1_locked": {
@@ -4280,19 +4280,6 @@
           }
         }
       },
-      "/h264enc_with_axi_0": {
-        "address_spaces": {
-          "axi_m": {
-            "segments": {
-              "SEG_processing_system7_0_HP1_DDR_LOWOCM": {
-                "address_block": "/processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM",
-                "offset": "0x00000000",
-                "range": "1G"
-              }
-            }
-          }
-        }
-      },
       "/axi_vdma_0": {
         "address_spaces": {
           "Data_MM2S": {
@@ -4321,6 +4308,19 @@
             "segments": {
               "SEG_processing_system7_0_HP0_DDR_LOWOCM": {
                 "address_block": "/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM",
+                "offset": "0x00000000",
+                "range": "1G"
+              }
+            }
+          }
+        }
+      },
+      "/h264enc_with_axi_0": {
+        "address_spaces": {
+          "axi_m": {
+            "segments": {
+              "SEG_processing_system7_0_HP1_DDR_LOWOCM": {
+                "address_block": "/processing_system7_0/S_AXI_HP1/HP1_DDR_LOWOCM",
                 "offset": "0x00000000",
                 "range": "1G"
               }
