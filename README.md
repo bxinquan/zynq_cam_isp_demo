@@ -31,3 +31,6 @@
     vip_dscale - 图像缩小 (宽高分别支持1/N倍缩小)
     vip_osd - 单色位图叠加 (用于叠加文字或logo图标例128x128)
 	vip_yuv444to422 - YUV444转422（做为v_frmbuf_wr源写到内存NV12,axis_422与axis_420时序相同）
+
+ZynqMP项目：https://github.com/bxinquan/zynqmp_cam_isp_demo
+Linux软件支持：https://github.com/bxinquan/zynqmp_cam_isp_demo_linux
